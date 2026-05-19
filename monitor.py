@@ -116,76 +116,98 @@ def deduplicate(articles, seen_global):
             unique.append(art)
     return unique
 
-def ai_analyze(articles, section_name, subsection_name):
+def ai_analyze_section(articles, section_name, subsections):
+    """섹션 전체를 한 번에 AI 분석 - 소주제 분류 포함"""
     if not articles:
-        return []
-    is_column = "칼럼" in subsection_name or "기고" in subsection_name or "사설" in subsection_name
-    if is_column:
-        json_format = '[{"id":0,"include":true,"summary":"요약","importance":"★★★","author":"홍길동 KAIST 교수"}]'
-    else:
-        json_format = '[{"id":0,"include":true,"summary":"요약","importance":"★★★"}]'
+        return {sub: [] for sub in subsections}
 
-    articles_json = json.dumps([{"id": i, "title": a["title"], "desc": a["desc"]} for i, a in enumerate(articles)], ensure_ascii=False)
+    is_column = section_name == "기고칼럼"
+    sub_list  = list(subsections.keys())
+
+    articles_json = json.dumps(
+        [{"id": i, "title": a["title"], "desc": a["desc"]} for i, a in enumerate(articles)],
+        ensure_ascii=False
+    )
+
+    author_guide = ""
+    if is_column:
+        author_guide = '\n- "author": 제목·설명에서 작성자 이름·소속 추출. 없으면 ""'
 
     prompt = f"""당신은 한국여성과학기술인육성재단(WISET) PR팀 언론모니터링 담당자입니다.
-WISET은 여성 과학기술인 육성, 이공계 여성 경력 지원, 과학기술 정책 관련 업무를 합니다.
 
-섹션: {section_name} > {subsection_name}
+섹션: {section_name}
+소주제 목록: {json.dumps(sub_list, ensure_ascii=False)}
 
-=== 반드시 제외할 기사 유형 ===
-- 범죄·사건·사고 뉴스 (마약, 폭행, 사기, 교통사고, 추락 등)
-- 연예·스포츠·패션·뷰티 뉴스
-- 의료·성형외과·병원 관련 뉴스 (과학기술 정책과 무관한 것)
-- 부동산·금융·주식 뉴스
-- 원장·교수·박사가 등장하더라도 과학기술기관 소속이 아닌 경우
+=== 반드시 제외할 기사 ===
+- 범죄·사건·사고 (마약, 폭행, 사기, 교통사고 등)
+- 연예·스포츠·패션·뷰티
+- 의료·성형외과 (과학기술 정책과 무관)
+- 부동산·금융·주식
+- 원장·교수가 등장해도 과학기술기관 소속이 아니면 제외
 
-=== 포함할 기사 유형 ===
-- 과기부·여성가족부·고용부 등 정부의 과학기술·여성·인재 정책 발표
-- 출연연·4대과기원·과총·여과총 등 과학기술 기관 공식 활동
-- 여성 과학자·연구자·공학자 관련 기사 (이공계 여성 관련이면 포함)
-- 이공계 여성 현황, 경력단절, 젠더혁신 관련 정책·연구
-- 과학기술 분야 오피니언·칼럼·기고·사설 (태그 없어도 내용이 과학기술 관련이면 포함)
-- WISET 직접 관련 행사·프로그램·기관장 기고
+=== 포함할 기사 ===
+- 과기부·여성가족부 등 정부의 과학기술·여성·인재 정책
+- 출연연·4대과기원·과총 등 과학기술 기관 활동
+- 여성 과학자·연구자 관련 기사 (이공계 여성 관련이면 포함)
+- 과학기술 분야 오피니언·칼럼·기고·사설
 
 기사 목록:
 {articles_json}
 
-반드시 아래 JSON 형식으로만 응답하세요:
-{json_format}
+각 기사를 분석해서 반드시 아래 JSON 형식으로만 응답하세요:
+[
+  {{
+    "id": 0,
+    "include": true,
+    "subsection": "{sub_list[0]}",
+    "summary": "30자 이내 한 줄 요약",
+    "importance": "★★★"{',\n    "author": "홍길동 KAIST 교수"' if is_column else ''}
+  }}
+]
 
-중요도 기준:
-★★★ WISET 직접 관련 또는 즉시 대응 필요
-★★☆ 업무 참고 필요
-★☆☆ 동향 파악용"""
+subsection은 반드시 소주제 목록 중 하나로만 지정하세요.
+중요도: ★★★ WISET 직접 관련 / ★★☆ 업무 참고 / ★☆☆ 동향 파악"""
 
     try:
         resp = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": CLAUDE_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": "claude-haiku-4-5-20251001", "max_tokens": 1000, "messages": [{"role": "user", "content": prompt}]},
-            timeout=30
+            json={"model": "claude-haiku-4-5-20251001", "max_tokens": 2000, "messages": [{"role": "user", "content": prompt}]},
+            timeout=60
         )
         resp.raise_for_status()
         text    = resp.json()["content"][0]["text"].strip()
         match   = re.search(r'\[.*\]', text, re.DOTALL)
         results = json.loads(match.group())
-        filtered = []
+
+        # 소주제별로 분류
+        sub_results = {sub: [] for sub in sub_list}
         for r in results:
-            if r.get("include"):
-                art = articles[r["id"]].copy()
-                art["summary"]    = r.get("summary", "")
-                art["importance"] = r.get("importance", "★☆☆")
-                art["author"]     = r.get("author", "")
-                filtered.append(art)
-        print(f"      AI: {len(articles)}건 → {len(filtered)}건")
-        return filtered
+            if not r.get("include"):
+                continue
+            art = articles[r["id"]].copy()
+            art["summary"]    = r.get("summary", "")
+            art["importance"] = r.get("importance", "★☆☆")
+            art["author"]     = r.get("author", "")
+            sub = r.get("subsection", sub_list[0])
+            if sub not in sub_results:
+                sub = sub_list[0]
+            sub_results[sub].append(art)
+
+        total = sum(len(v) for v in sub_results.values())
+        print(f"    AI: {len(articles)}건 → {total}건 선별")
+        return sub_results
+
     except Exception as e:
-        print(f"      AI 오류: {e}")
+        print(f"    AI 오류: {e}")
+        # 오류시 기존 소주제 분류 유지
+        result = {sub: [] for sub in sub_list}
         for art in articles:
             art["summary"] = ""
             art["importance"] = "★☆☆"
             art["author"] = ""
-        return articles
+        result[sub_list[0]] = articles
+        return result
 
 SECTION_COLORS = {
     "WISET": "#1a3c8f", "정부정책동향": "#1a3c8f",
@@ -248,6 +270,7 @@ def build_html(section_results):
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>주요 언론보도 {now.strftime('%Y-%m-%d')}</title>
 <style>body{{margin:0;padding:0;background:#f0f2f5;font-family:'Malgun Gothic',Arial,sans-serif;}}a:hover{{text-decoration:underline!important;}}</style>
 </head>
@@ -280,23 +303,27 @@ def main():
     print(f"언론 모니터링 시작 | {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     seen_global    = set()
     section_results = {}
+
     for section, subsections in SECTIONS.items():
         print(f"\n▶ {section}")
-        section_results[section] = {}
+        # 섹션 전체 기사 수집
+        all_articles = []
         for sub, keywords in subsections.items():
             print(f"  · {sub}")
-            sub_articles = []
             for keyword in keywords:
                 arts   = fetch_naver_news(keyword)
                 unique = deduplicate(arts, seen_global)
                 if unique:
                     print(f"    {keyword} → {len(unique)}건")
-                sub_articles.extend(unique)
-                time.sleep(0.3)
-            if sub_articles:
-                sub_articles = ai_analyze(sub_articles, section, sub)
-            section_results[section][sub] = sub_articles
-        sec_total = sum(len(v) for v in section_results[section].values())
+                all_articles.extend(unique)
+                time.sleep(0.2)
+
+        # 섹션 전체를 AI에 한 번만 보내서 소주제 분류까지 처리
+        print(f"  AI 분석 중... ({len(all_articles)}건)")
+        sub_results = ai_analyze_section(all_articles, section, subsections)
+        section_results[section] = sub_results
+
+        sec_total = sum(len(v) for v in sub_results.values())
         print(f"  소계: {sec_total}건")
 
     total = sum(len(arts) for subs in section_results.values() for arts in subs.values())
