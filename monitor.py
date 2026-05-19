@@ -129,9 +129,31 @@ def ai_analyze_section(articles, section_name, subsections):
         ensure_ascii=False
     )
 
-    author_guide = ""
     if is_column:
-        author_guide = '\n- "author": 제목·설명에서 작성자 이름·소속 추출. 없으면 ""'
+        json_example = (
+            '[\n'
+            '  {\n'
+            '    "id": 0,\n'
+            '    "include": true,\n'
+            f'    "subsection": "{sub_list[0]}",\n'
+            '    "summary": "30자 이내 한 줄 요약",\n'
+            '    "importance": "★★★",\n'
+            '    "author": "홍길동 KAIST 교수"\n'
+            '  }\n'
+            ']'
+        )
+    else:
+        json_example = (
+            '[\n'
+            '  {\n'
+            '    "id": 0,\n'
+            '    "include": true,\n'
+            f'    "subsection": "{sub_list[0]}",\n'
+            '    "summary": "30자 이내 한 줄 요약",\n'
+            '    "importance": "★★★"\n'
+            '  }\n'
+            ']'
+        )
 
     prompt = f"""당신은 한국여성과학기술인육성재단(WISET) PR팀 언론모니터링 담당자입니다.
 
@@ -155,15 +177,7 @@ def ai_analyze_section(articles, section_name, subsections):
 {articles_json}
 
 각 기사를 분석해서 반드시 아래 JSON 형식으로만 응답하세요:
-[
-  {{
-    "id": 0,
-    "include": true,
-    "subsection": "{sub_list[0]}",
-    "summary": "30자 이내 한 줄 요약",
-    "importance": "★★★"{',\n    "author": "홍길동 KAIST 교수"' if is_column else ''}
-  }}
-]
+{json_example}
 
 subsection은 반드시 소주제 목록 중 하나로만 지정하세요.
 중요도: ★★★ WISET 직접 관련 / ★★☆ 업무 참고 / ★☆☆ 동향 파악"""
