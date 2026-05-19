@@ -1,4 +1,4 @@
-yamlname: 언론모니터링
+name: monitor
 
 on:
   schedule:
@@ -10,30 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
-      - name: 저장소 체크아웃
-        uses: actions/checkout@v4
-
-      - name: Python 설치
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: 패키지 설치
-        run: pip install requests
-
-      - name: 모니터링 실행
+      - run: pip install requests
+      - name: run
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
         run: python monitor.py
-
-      - name: 결과 업로드
+      - name: push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add docs/index.html
-          git commit -m "언론보도 업데이트 $(date +'%Y-%m-%d')" || echo "변경사항 없음"
+          git commit -m "update" || echo "no changes"
           git push
