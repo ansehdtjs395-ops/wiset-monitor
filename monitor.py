@@ -3,7 +3,9 @@ import requests
 import re
 import json
 import urllib3
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+
+KST = timezone(timedelta(hours=9))
 from email.utils import parsedate_to_datetime
 import time
 import os
@@ -57,7 +59,7 @@ SECTIONS = {
 def is_recent(pub_date_str):
     try:
         pub_date  = parsedate_to_datetime(pub_date_str).date()
-        today     = datetime.now().date()
+        today     = datetime.now(KST).date()
         yesterday = today - timedelta(days=1)
         return pub_date in (today, yesterday)
     except Exception:
@@ -218,7 +220,7 @@ def importance_color(imp):
     return "#95a5a6"
 
 def build_html(section_results):
-    now      = datetime.now()
+    now      = datetime.now(KST)
     weekdays = ["월", "화", "수", "목", "금", "토", "일"]
     date_str = f"{now.year}년 {now.month}월 {now.day}일 {weekdays[now.weekday()]}요일"
     yesterday = now - timedelta(days=1)
