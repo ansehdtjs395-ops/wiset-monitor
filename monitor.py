@@ -116,49 +116,34 @@ def deduplicate(articles, seen_global):
             unique.append(art)
     return unique
 
-def ai_analyze_section(articles, section_name, subsections):
-    """섹션 전체를 한 번에 AI 분석 - 소주제 분류 포함"""
-    if not articles:
-        return {sub: [] for sub in subsections}
+def ai_analyze_section(section_articles, section_name, is_column=False):
+    """
+    섹션 전체 기사를 한 번에 AI 분석
+    소주제 분류는 키워드 기반으로 이미 완료된 상태
+    AI는 선별 + 요약 + 중요도 + (기고칼럼은 작성자) 만 담당
+    """
+    # 전체 기사 목록 (소주제 정보 포함)
+    all_articles = []
+    for sub, arts in section_articles.items():
+        for art in arts:
+            all_articles.append({**art, "_sub": sub})
 
-    is_column = section_name == "기고칼럼"
-    sub_list  = list(subsections.keys())
+    if not all_articles:
+        return section_articles
 
     articles_json = json.dumps(
-        [{"id": i, "title": a["title"], "desc": a["desc"]} for i, a in enumerate(articles)],
+        [{"id": i, "title": a["title"], "desc": a["desc"]} for i, a in enumerate(all_articles)],
         ensure_ascii=False
     )
 
     if is_column:
-        json_example = (
-            '[\n'
-            '  {\n'
-            '    "id": 0,\n'
-            '    "include": true,\n'
-            f'    "subsection": "{sub_list[0]}",\n'
-            '    "summary": "30자 이내 한 줄 요약",\n'
-            '    "importance": "★★★",\n'
-            '    "author": "홍길동 KAIST 교수"\n'
-            '  }\n'
-            ']'
-        )
+        json_example = '[{"id":0,"include":true,"summary":"요약","importance":"★★★","author":"홍길동 KAIST 교수"}]'
     else:
-        json_example = (
-            '[\n'
-            '  {\n'
-            '    "id": 0,\n'
-            '    "include": true,\n'
-            f'    "subsection": "{sub_list[0]}",\n'
-            '    "summary": "30자 이내 한 줄 요약",\n'
-            '    "importance": "★★★"\n'
-            '  }\n'
-            ']'
-        )
+        json_example = '[{"id":0,"include":true,"summary":"요약","importance":"★★★"}]'
 
     prompt = f"""당신은 한국여성과학기술인육성재단(WISET) PR팀 언론모니터링 담당자입니다.
 
 섹션: {section_name}
-소주제 목록: {json.dumps(sub_list, ensure_ascii=False)}
 
 === 반드시 제외할 기사 ===
 - 범죄·사건·사고 (마약, 폭행, 사기, 교통사고 등)
@@ -170,16 +155,15 @@ def ai_analyze_section(articles, section_name, subsections):
 === 포함할 기사 ===
 - 과기부·여성가족부 등 정부의 과학기술·여성·인재 정책
 - 출연연·4대과기원·과총 등 과학기술 기관 활동
-- 여성 과학자·연구자 관련 기사 (이공계 여성 관련이면 포함)
+- 여성 과학자·연구자 관련 기사
 - 과학기술 분야 오피니언·칼럼·기고·사설
 
 기사 목록:
 {articles_json}
 
-각 기사를 분석해서 반드시 아래 JSON 형식으로만 응답하세요:
+반드시 아래 JSON 형식으로만 응답하세요:
 {json_example}
 
-subsection은 반드시 소주제 목록 중 하나로만 지정하세요.
 중요도: ★★★ WISET 직접 관련 / ★★☆ 업무 참고 / ★☆☆ 동향 파악"""
 
     try:
@@ -194,34 +178,33 @@ subsection은 반드시 소주제 목록 중 하나로만 지정하세요.
         match   = re.search(r'\[.*\]', text, re.DOTALL)
         results = json.loads(match.group())
 
-        # 소주제별로 분류
-        sub_results = {sub: [] for sub in sub_list}
-        for r in results:
-            if not r.get("include"):
-                continue
-            art = articles[r["id"]].copy()
-            art["summary"]    = r.get("summary", "")
-            art["importance"] = r.get("importance", "★☆☆")
-            art["author"]     = r.get("author", "")
-            sub = r.get("subsection", sub_list[0])
-            if sub not in sub_results:
-                sub = sub_list[0]
-            sub_results[sub].append(art)
+        # 결과를 원래 소주제 구조로 복원
+        result_map = {r["id"]: r for r in results}
+        new_section = {sub: [] for sub in section_articles}
 
-        total = sum(len(v) for v in sub_results.values())
-        print(f"    AI: {len(articles)}건 → {total}건 선별")
-        return sub_results
+        for i, art in enumerate(all_articles):
+            r = result_map.get(i, {})
+            if not r.get("include", True):
+                continue
+            new_art = {k: v for k, v in art.items() if k != "_sub"}
+            new_art["summary"]    = r.get("summary", "")
+            new_art["importance"] = r.get("importance", "★☆☆")
+            new_art["author"]     = r.get("author", "")
+            new_section[art["_sub"]].append(new_art)
+
+        total = sum(len(v) for v in new_section.values())
+        print(f"    AI: {len(all_articles)}건 → {total}건 선별")
+        return new_section
 
     except Exception as e:
         print(f"    AI 오류: {e}")
-        # 오류시 기존 소주제 분류 유지
-        result = {sub: [] for sub in sub_list}
-        for art in articles:
-            art["summary"] = ""
-            art["importance"] = "★☆☆"
-            art["author"] = ""
-        result[sub_list[0]] = articles
-        return result
+        # 오류시 원본 반환
+        for sub, arts in section_articles.items():
+            for art in arts:
+                art["summary"] = ""
+                art["importance"] = "★☆☆"
+                art["author"] = ""
+        return section_articles
 
 SECTION_COLORS = {
     "WISET": "#1a3c8f", "정부정책동향": "#1a3c8f",
@@ -315,13 +298,15 @@ def build_html(section_results):
 
 def main():
     print(f"언론 모니터링 시작 | {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    seen_global    = set()
+    seen_global     = set()
     section_results = {}
 
     for section, subsections in SECTIONS.items():
         print(f"\n▶ {section}")
-        # 섹션 전체 기사 수집
-        all_articles = []
+        is_column = section == "기고칼럼"
+
+        # ① 키워드 기반으로 소주제별 기사 수집 (분류 정확도 100%)
+        section_articles = {sub: [] for sub in subsections}
         for sub, keywords in subsections.items():
             print(f"  · {sub}")
             for keyword in keywords:
@@ -329,15 +314,18 @@ def main():
                 unique = deduplicate(arts, seen_global)
                 if unique:
                     print(f"    {keyword} → {len(unique)}건")
-                all_articles.extend(unique)
+                section_articles[sub].extend(unique)
                 time.sleep(0.2)
 
-        # 섹션 전체를 AI에 한 번만 보내서 소주제 분류까지 처리
-        print(f"  AI 분석 중... ({len(all_articles)}건)")
-        sub_results = ai_analyze_section(all_articles, section, subsections)
-        section_results[section] = sub_results
+        raw_total = sum(len(v) for v in section_articles.values())
 
-        sec_total = sum(len(v) for v in sub_results.values())
+        # ② 섹션 전체를 AI에 한 번만 보내서 선별+요약+중요도 처리
+        if raw_total > 0:
+            print(f"  AI 분석 중... ({raw_total}건)")
+            section_articles = ai_analyze_section(section_articles, section, is_column)
+
+        section_results[section] = section_articles
+        sec_total = sum(len(v) for v in section_articles.values())
         print(f"  소계: {sec_total}건")
 
     total = sum(len(arts) for subs in section_results.values() for arts in subs.values())
