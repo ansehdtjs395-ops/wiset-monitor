@@ -19,13 +19,21 @@ CLAUDE_API_KEY      = os.environ["CLAUDE_API_KEY"]
 NAVER_FETCH_COUNT = 20
 NAVER_SHOW_COUNT  = 5
 
+# 하이라이트할 주요 키워드
+HIGHLIGHT_KEYWORDS = [
+    "WISET", "여성과학기술인육성재단", "여성과학기술인", "윤혜온",
+    "과학기술정보통신부", "과기부", "성평등가족부",
+    "경력단절", "이공계", "젠더혁신", "유리천장",
+    "배경훈", "구혁채", "KAIST", "KIST", "출연연",
+]
+
 SECTIONS = {
-    "WISET": {
-        "WISET": ["WISET", "여성과학기술인지원센터"],
+    "WISET 직접 언급": {
+        "WISET 관련": ["WISET", "여성과학기술인육성재단", "윤혜온"],
     },
     "정부정책동향": {
         "과학기술정보통신부": ["과학기술정보통신부", "과기부", "과기정통부", "배경훈 장관", "구혁채 차관", "과방위"],
-        "여성가족부": ["여성가족부"],
+        "성평등가족부·여성가족부": ["성평등가족부", "여성가족부"],
         "고용노동부": ["고용노동부"],
         "교육부": ["교육부 과학", "교육부 이공계"],
         "중소벤처기업부": ["중소벤처기업부 과학", "중소벤처기업부 여성"],
@@ -118,13 +126,13 @@ def deduplicate(articles, seen_global):
             unique.append(art)
     return unique
 
+def highlight_keywords(text):
+    """주요 키워드를 노란색으로 하이라이트"""
+    for kw in sorted(HIGHLIGHT_KEYWORDS, key=len, reverse=True):
+        text = text.replace(kw, f'<mark style="background:#fff176;padding:0 2px;border-radius:2px;">{kw}</mark>')
+    return text
+
 def ai_analyze_section(section_articles, section_name, is_column=False):
-    """
-    섹션 전체 기사를 한 번에 AI 분석
-    소주제 분류는 키워드 기반으로 이미 완료된 상태
-    AI는 선별 + 요약 + 중요도 + (기고칼럼은 작성자) 만 담당
-    """
-    # 전체 기사 목록 (소주제 정보 포함)
     all_articles = []
     for sub, arts in section_articles.items():
         for art in arts:
@@ -139,9 +147,9 @@ def ai_analyze_section(section_articles, section_name, is_column=False):
     )
 
     if is_column:
-        json_example = '[{"id":0,"include":true,"summary":"요약","importance":"★★★","author":"홍길동 KAIST 교수"}]'
+        json_example = '[{"id":0,"include":true,"summary":"핵심 내용 2~3문장 요약","importance":"★★★","author":"홍길동 KAIST 교수"}]'
     else:
-        json_example = '[{"id":0,"include":true,"summary":"요약","importance":"★★★"}]'
+        json_example = '[{"id":0,"include":true,"summary":"핵심 내용 2~3문장 요약","importance":"★★★"}]'
 
     prompt = f"""당신은 한국여성과학기술인육성재단(WISET) PR팀 언론모니터링 담당자입니다.
 
@@ -155,7 +163,7 @@ def ai_analyze_section(section_articles, section_name, is_column=False):
 - 원장·교수가 등장해도 과학기술기관 소속이 아니면 제외
 
 === 포함할 기사 ===
-- 과기부·여성가족부 등 정부의 과학기술·여성·인재 정책
+- 과기부·여성가족부·성평등가족부 등 정부의 과학기술·여성·인재 정책
 - 출연연·4대과기원·과총 등 과학기술 기관 활동
 - 여성 과학자·연구자 관련 기사
 - 과학기술 분야 오피니언·칼럼·기고·사설
@@ -166,13 +174,18 @@ def ai_analyze_section(section_articles, section_name, is_column=False):
 반드시 아래 JSON 형식으로만 응답하세요:
 {json_example}
 
+요약 작성 기준:
+- 2~3문장으로 핵심 내용을 구체적으로 요약
+- 숫자·정책명·기관명 등 구체적 정보 포함
+- "~했다", "~발표했다" 등 명확한 서술
+
 중요도: ★★★ WISET 직접 관련 / ★★☆ 업무 참고 / ★☆☆ 동향 파악"""
 
     try:
         resp = requests.post(
             "https://api.anthropic.com/v1/messages",
             headers={"x-api-key": CLAUDE_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"},
-            json={"model": "claude-haiku-4-5-20251001", "max_tokens": 2000, "messages": [{"role": "user", "content": prompt}]},
+            json={"model": "claude-haiku-4-5-20251001", "max_tokens": 3000, "messages": [{"role": "user", "content": prompt}]},
             timeout=60
         )
         resp.raise_for_status()
@@ -180,8 +193,7 @@ def ai_analyze_section(section_articles, section_name, is_column=False):
         match   = re.search(r'\[.*\]', text, re.DOTALL)
         results = json.loads(match.group())
 
-        # 결과를 원래 소주제 구조로 복원
-        result_map = {r["id"]: r for r in results}
+        result_map  = {r["id"]: r for r in results}
         new_section = {sub: [] for sub in section_articles}
 
         for i, art in enumerate(all_articles):
@@ -200,7 +212,6 @@ def ai_analyze_section(section_articles, section_name, is_column=False):
 
     except Exception as e:
         print(f"    AI 오류: {e}")
-        # 오류시 원본 반환
         for sub, arts in section_articles.items():
             for art in arts:
                 art["summary"] = ""
@@ -209,9 +220,12 @@ def ai_analyze_section(section_articles, section_name, is_column=False):
         return section_articles
 
 SECTION_COLORS = {
-    "WISET": "#1a3c8f", "정부정책동향": "#1a3c8f",
-    "유관기관동향": "#1e7e34", "여성과학기술인": "#7b1fa2",
-    "참고보도": "#e65100", "기고칼럼": "#283593",
+    "WISET 직접 언급": "#c0392b",
+    "정부정책동향":    "#1a3c8f",
+    "유관기관동향":    "#1e7e34",
+    "여성과학기술인":  "#7b1fa2",
+    "참고보도":        "#e65100",
+    "기고칼럼":        "#283593",
 }
 
 def importance_color(imp):
@@ -233,6 +247,11 @@ def build_html(section_results):
         if section_total == 0:
             continue
         color = SECTION_COLORS.get(section, "#333")
+
+        # WISET 직접 언급 섹션은 특별 스타일
+        is_wiset = section == "WISET 직접 언급"
+        header_extra = ' style="background:linear-gradient(135deg,#c0392b,#e74c3c);"' if is_wiset else ''
+
         subs_html = ""
         for sub, arts in subsections.items():
             if not arts:
@@ -246,21 +265,32 @@ def build_html(section_results):
                 ic         = importance_color(imp)
                 imp_span   = f'<span style="color:{ic};font-size:12px;margin-left:6px;font-weight:600;">{imp}</span>' if imp else ""
                 author_div = f'<div style="font-size:12px;color:#e67e22;padding:1px 0 1px 14px;">✍️ {author}</div>' if author else ""
-                sum_div    = f'<div style="font-size:12px;color:#888;padding:1px 0 4px 14px;">→ {summary}</div>' if summary else ""
-                items_html += f"""<tr><td style="padding:4px 0 1px;">
+
+                # 제목 키워드 하이라이트
+                title_hl   = highlight_keywords(art['title'])
+                # 요약 키워드 하이라이트
+                summary_hl = highlight_keywords(summary) if summary else ""
+                sum_div    = f'<div style="font-size:12px;color:#555;padding:3px 0 4px 14px;line-height:1.6;">→ {summary_hl}</div>' if summary_hl else ""
+
+                wiset_badge = '<span style="background:#c0392b;color:#fff;font-size:10px;padding:1px 6px;border-radius:10px;margin-left:6px;">WISET</span>' if is_wiset else ""
+
+                items_html += f"""<tr><td style="padding:6px 0 2px;">
                     <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ{src}
-                    <a href="{art['link']}" target="_blank" style="color:#1a3c8f;text-decoration:none;">{art['title']}</a>{imp_span}</div>
+                    <a href="{art['link']}" target="_blank" style="color:#1a3c8f;text-decoration:none;">{title_hl}</a>{imp_span}{wiset_badge}</div>
                     {author_div}{sum_div}</td></tr>"""
+
             subs_html += f"""<tr><td style="padding:12px 0 4px 0;">
                 <div style="display:inline-block;font-size:13px;font-weight:600;color:{color};background:{color}15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ {sub}</div>
                 <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;">{items_html}</table></td></tr>"""
+
+        border_style = "border:2px solid #c0392b;" if is_wiset else "border:1px solid #e8e8e8;border-top:none;"
         body += f"""<tr><td style="padding:24px 0 0;">
             <table width="100%" cellpadding="0" cellspacing="0">
-              <tr><td style="padding:10px 16px;background:{color};border-radius:4px 4px 0 0;">
-                <span style="font-size:16px;font-weight:800;color:#fff;">◆ {section}</span>
+              <tr><td style="padding:10px 16px;background:{color};border-radius:4px 4px 0 0;"{header_extra}>
+                <span style="font-size:16px;font-weight:800;color:#fff;">{"🔴 " if is_wiset else "◆ "}{section}</span>
                 <span style="font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;">{section_total}건</span>
               </td></tr>
-              <tr><td style="padding:8px 16px 16px;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;">
+              <tr><td style="padding:8px 16px 16px;{border_style}border-radius:0 0 4px 4px;">
                 <table width="100%" cellpadding="0" cellspacing="0">{subs_html}</table>
               </td></tr>
             </table></td></tr>"""
@@ -271,7 +301,11 @@ def build_html(section_results):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>주요 언론보도 {now.strftime('%Y-%m-%d')}</title>
-<style>body{{margin:0;padding:0;background:#f0f2f5;font-family:'Malgun Gothic',Arial,sans-serif;}}a:hover{{text-decoration:underline!important;}}</style>
+<style>
+body{{margin:0;padding:0;background:#f0f2f5;font-family:'Malgun Gothic',Arial,sans-serif;}}
+a:hover{{text-decoration:underline!important;}}
+mark{{background:#fff176;padding:0 2px;border-radius:2px;}}
+</style>
 </head>
 <body>
 <table width="100%" cellpadding="0" cellspacing="0" style="padding:30px 0;">
@@ -285,6 +319,7 @@ def build_html(section_results):
   <span style="font-size:12px;color:#c0392b;font-weight:600;">★★★ WISET 직접 관련</span>
   <span style="font-size:12px;color:#e67e22;font-weight:600;margin-left:20px;">★★☆ 업무 참고</span>
   <span style="font-size:12px;color:#95a5a6;font-weight:600;margin-left:20px;">★☆☆ 동향 파악</span>
+  <span style="font-size:12px;color:#333;font-weight:600;margin-left:20px;background:#fff176;padding:1px 6px;border-radius:2px;">키워드 하이라이트</span>
 </td></tr>
 <tr><td style="padding:0 40px 32px;">
   <table width="100%" cellpadding="0" cellspacing="0">{body}</table>
@@ -299,7 +334,7 @@ def build_html(section_results):
 </html>"""
 
 def main():
-    print(f"언론 모니터링 시작 | {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"언론 모니터링 시작 | {datetime.now(KST).strftime('%Y-%m-%d %H:%M:%S')}")
     seen_global     = set()
     section_results = {}
 
@@ -307,7 +342,6 @@ def main():
         print(f"\n▶ {section}")
         is_column = section == "기고칼럼"
 
-        # ① 키워드 기반으로 소주제별 기사 수집 (분류 정확도 100%)
         section_articles = {sub: [] for sub in subsections}
         for sub, keywords in subsections.items():
             print(f"  · {sub}")
@@ -321,7 +355,6 @@ def main():
 
         raw_total = sum(len(v) for v in section_articles.values())
 
-        # ② 섹션 전체를 AI에 한 번만 보내서 선별+요약+중요도 처리
         if raw_total > 0:
             print(f"  AI 분석 중... ({raw_total}건)")
             section_articles = ai_analyze_section(section_articles, section, is_column)
