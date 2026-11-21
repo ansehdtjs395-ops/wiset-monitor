@@ -1,871 +1,378 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>주요 언론보도 2026-11-20</title>
+<title>주요 언론보도 · 11/21(토)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2e3192">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WISET 언론">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+<link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <style>
-body{margin:0;padding:0;background:#f0f2f5;font-family:'Malgun Gothic',Arial,sans-serif;}
-a:hover{text-decoration:underline!important;}
-mark{background:#fff176;padding:0 2px;border-radius:2px;}
+:root {
+  --bg: #f6f7fb; --card: #ffffff; --text: #1d1f2a; --muted: #5f6475; --line: #e3e5ee;
+  --brand: #2e3192; --brand-soft: #eceefc; --link: #1f2a9c; --mark: #fff1a8;
+  --wiset: #6b2fa0; --wiset-soft: #f5eefc; --hi: #c2410c; --mid: #1d4ed8; --lo: #6b7280;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14151c; --card: #1d1f29; --text: #e9eaf1; --muted: #a3a8ba; --line: #2e3140;
+    --brand: #9fa6ff; --brand-soft: #262a46; --link: #b5bbff; --mark: #5c4b00;
+    --wiset: #d4a8ff; --wiset-soft: #2c2140; --hi: #fb923c; --mid: #93b4ff; --lo: #9ca3af;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  overflow-wrap: anywhere; word-break: keep-all; }
+a { color: var(--link); }
+mark { background: var(--mark); color: inherit; padding: 0 2px; border-radius: 3px; }
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+header.top { background: var(--brand); color: #fff; padding: 20px 0 16px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) header.top { background: #23266b; } }
+header.top h1 { margin: 0; font-size: 24px; letter-spacing: -0.02em; }
+header.top .date { font-size: 17px; font-weight: 600; margin-top: 2px; }
+header.top .meta { margin-top: 8px; font-size: 15px; opacity: .92; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+header.top a { color: #fff; }
+.print-only { display: none; }
+footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; }
+footer a { color: var(--muted); }
+@media print {
+  :root { --bg: #fff; --card: #fff; --text: #000; --muted: #444; --line: #ccc; --mark: #fff1a8; }
+  body { font-size: 11pt; }
+  .no-print { display: none !important; }
+  .print-only { display: block; }
+  header.top { background: none !important; color: #000; padding: 0 0 8px; border-bottom: 2px solid #000; }
+  header.top a { color: #000; text-decoration: none; }
+  a { color: #000; text-decoration: none; }
+  .wrap { max-width: none; padding: 0; }
+}
+</style><style>
+nav.tabs { position: sticky; top: 0; z-index: 10; background: var(--card); border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+nav.tabs .wrap { display: flex; gap: 6px; overflow-x: auto; padding-top: 8px; padding-bottom: 8px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+nav.tabs .wrap::-webkit-scrollbar { display: none; }
+nav.tabs a { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px;
+  border-radius: 999px; background: var(--brand-soft); color: var(--brand); text-decoration: none; font-size: 15px;
+  font-weight: 600; white-space: nowrap; }
+nav.tabs a .n { font-size: 13px; font-weight: 700; opacity: .8; }
+nav.tabs a.wiset { background: var(--wiset-soft); color: var(--wiset); }
+nav.tabs a.empty { opacity: .55; }
+nav.tabs .tools { margin-left: auto; padding-left: 6px; display: flex; gap: 6px; }
+nav.tabs button { min-height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--card); color: var(--muted); font: inherit; font-size: 14px; cursor: pointer; white-space: nowrap; }
+main { padding: 16px 0 8px; }
+section.sec { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 14px; overflow: hidden; }
+section.sec.wiset { border: 2px solid var(--wiset); }
+section.sec > details > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; min-height: 52px; }
+section.sec > details > summary::-webkit-details-marker { display: none; }
+section.sec > details > summary h2 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
+section.sec > details > summary .cnt { color: var(--muted); font-size: 15px; }
+section.sec > details > summary .chev { margin-left: auto; color: var(--muted); transition: transform .15s; font-size: 14px; }
+section.sec > details:not([open]) > summary .chev { transform: rotate(-90deg); }
+section.sec.wiset > details > summary { background: var(--wiset-soft); }
+section.sec.wiset h2 { color: var(--wiset); }
+.note { margin: 0 16px 12px; padding: 10px 12px; border-radius: 10px; background: #fff4e5; color: #8a4b00; font-size: 15px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .note { background: #3a2a12; color: #ffcf8a; } }
+.empty-msg { margin: 0; padding: 4px 16px 16px; color: var(--muted); font-size: 15px; }
+ol.items { list-style: none; margin: 0; padding: 0; }
+li.item { padding: 14px 16px 16px; border-top: 1px solid var(--line); }
+.item .title { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 0; }
+.item .title a { text-decoration: none; display: inline; }
+.item .title a:hover { text-decoration: underline; }
+.item .src { color: var(--muted); font-weight: 600; }
+.item .summary { margin: 6px 0 0; font-size: 16px; }
+.item .meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 14px; color: var(--muted); }
+.imp { font-weight: 700; letter-spacing: 1px; }
+.imp.h { color: var(--hi); } .imp.m { color: var(--mid); } .imp.l { color: var(--lo); }
+.imp small { font-weight: 600; letter-spacing: 0; margin-left: 2px; }
+.author { color: var(--text); font-weight: 600; }
+.sub { border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; }
+details.rel { margin-top: 8px; font-size: 15px; }
+details.rel summary { cursor: pointer; color: var(--link); min-height: 32px; display: inline-flex; align-items: center; }
+details.rel ul { margin: 4px 0 0; padding-left: 18px; }
+details.rel li { margin: 4px 0; }
+@media (min-width: 900px) {
+  header.top h1 { font-size: 28px; }
+  .item .title { font-size: 18px; }
+}
+@media print {
+  section.sec { border: none; border-radius: 0; margin: 0 0 10pt; break-inside: auto; }
+  section.sec.wiset { border: none; }
+  section.sec > details > summary { padding: 6pt 0; min-height: 0; border-bottom: 1px solid #000; background: none !important; }
+  section.sec > details > summary h2 { font-size: 13pt; color: #000 !important; }
+  section.sec > details > summary h2::before { content: "◆ "; }
+  .chev, details.rel { display: none; }
+  li.item { padding: 5pt 0; border-top: none; break-inside: avoid; }
+  .item .title { font-size: 11pt; }
+  .item .summary { font-size: 10pt; margin-top: 1pt; }
+  .item .meta { font-size: 9pt; margin-top: 2pt; }
+  .note { background: none; border: 1px solid #999; color: #000; }
+  .empty-msg { display: none; }
+}
 </style>
 </head>
 <body>
-<table width="100%" cellpadding="0" cellspacing="0" style="padding:30px 0;">
-<tr><td align="center">
-<table width="740" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:8px;box-shadow:0 2px 20px rgba(0,0,0,0.10);">
-<tr><td style="padding:32px 40px 20px;border-bottom:3px solid #1a3c8f;">
-  <p style="margin:0 0 6px;font-size:24px;font-weight:800;color:#1a3c8f;">주요 언론보도</p>
-  <p style="margin:0;font-size:14px;color:#666;">2026년 11월 20일 금요일</p>
-</td></tr>
-<tr><td style="padding:10px 40px;background:#fafafa;border-bottom:1px solid #eee;">
-  <span style="font-size:12px;color:#c0392b;font-weight:600;">★★★ WISET 직접 관련</span>
-  <span style="font-size:12px;color:#e67e22;font-weight:600;margin-left:20px;">★★☆ 업무 참고</span>
-  <span style="font-size:12px;color:#95a5a6;font-weight:600;margin-left:20px;">★☆☆ 동향 파악</span>
-  <span style="font-size:12px;color:#333;font-weight:600;margin-left:20px;background:#fff176;padding:1px 6px;border-radius:2px;">키워드 하이라이트</span>
-</td></tr>
-<tr><td style="padding:0 40px 32px;">
-  <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:24px 0 0;">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr><td style="padding:10px 16px;background:#1a3c8f;border-radius:4px 4px 0 0;">
-                <span style="font-size:16px;font-weight:800;color:#fff;">◆ 정부정책동향</span>
-                <span style="font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;">61건</span>
-              </td></tr>
-              <tr><td style="padding:8px 16px 16px;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;">
-                <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1a3c8f;background:#1a3c8f15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 과학기술정보통신부</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://www.dongascience.com/news/view/80935" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기초과학의 시간] ⑨&quot;함께하는 뇌과학 연구는 웅장한 교향곡&quot;(끝)</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026112009233644533" target="_blank" style="color:#1a3c8f;text-decoration:none;">기정원, '피지컬 AI 공급 컨소시엄 매칭데이' 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://www.donga.com/news/Economy/article/all/20261119/135055684/2" target="_blank" style="color:#1a3c8f;text-decoration:none;">김치는 손맛? ‘과학 양념’도 넣어 버무린다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.econovill.com/news/articleView.html?idxno=757826" target="_blank" style="color:#1a3c8f;text-decoration:none;">두산에너빌리티, <mark style="background:#fff176;padding:0 2px;border-radius:2px;">과학기술정보통신부</mark> '안전관리 우수연구실' 신규 인증</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119000770" target="_blank" style="color:#1a3c8f;text-decoration:none;"><mark style="background:#fff176;padding:0 2px;border-radius:2px;">과기부</mark>, 생활밀접 전파규제 3건 개선…19일부터 시행</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.knnews.co.kr/news/articleView.php?idxno=1555481" target="_blank" style="color:#1a3c8f;text-decoration:none;">두산에너빌리티, <mark style="background:#fff176;padding:0 2px;border-radius:2px;">과기부</mark> ‘안전관리 우수연구실’ 인증 획득</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mt.co.kr/policy/2026/11/19/2026111819595874616" target="_blank" style="color:#1a3c8f;text-decoration:none;">와이파이 끄고 'AI 흔적' 색출… <mark style="background:#fff176;padding:0 2px;border-radius:2px;">과기부</mark>·NIA·이통3사, 수능 부정행위 ...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.paxetv.com/news/articleView.html?idxno=287404" target="_blank" style="color:#1a3c8f;text-decoration:none;">두산에너빌리티 연구실 3곳, <mark style="background:#fff176;padding:0 2px;border-radius:2px;">과기부</mark> '안전관리 우수연구실' 인증</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.shinailbo.co.kr/news/articleView.html?idxno=5085429" target="_blank" style="color:#1a3c8f;text-decoration:none;">한양대 ERICA, 전국학생설계경진대회서 <mark style="background:#fff176;padding:0 2px;border-radius:2px;">과기부</mark>장관상 수상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261119047800017?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">얽히고설킨 전선 정비한다…중소도시 10곳에 200억원</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/it-science/cc-newmedia/6360543" target="_blank" style="color:#1a3c8f;text-decoration:none;">AIDC 인정 기준 나왔다…특별법 하위법령 입법예고</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://news.tf.co.kr/read/economy/2391262.htm" target="_blank" style="color:#1a3c8f;text-decoration:none;">ADT캡스 캡스홈, 과기정통부 주최 '모바일 기술 대상' 수상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003874400" target="_blank" style="color:#1a3c8f;text-decoration:none;">전봇대에 뒤엉킨 전선 정비, 중소도시로 확대…총 200억원 지원</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ddaily.co.kr/page/view/2026111911262535198" target="_blank" style="color:#1a3c8f;text-decoration:none;">과기정통부, 무선기기 규제 완화한다…&quot;산업·생활 맞춤형&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="https://news.tvchosun.com/site/data/html_dir/2026/11/19/2026111990158.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;AI커닝 못 잡겠다&quot;더니…수능 당일 브리핑도 빠진 교육장관</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="http://weekly.chosun.com/news/articleView.html?idxno=57260" target="_blank" style="color:#1a3c8f;text-decoration:none;">수능 부정행위 비상인데 교육부 장관은 어디에?…차관만 카메라 앞에</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="https://www.chosun.com/national/education/2026/11/19/WYUSUSFWF5CJ7C5W5V5RV7VY74/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" target="_blank" style="color:#1a3c8f;text-decoration:none;">부정행위 못 잡겠다던 교육장관... 수능 브리핑에 나오지도 않았다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.segye.com/newsView/20261120502878?OutUrl=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">SNS에서 “수능 무사히 마무리” 최교진 장관…“고생 많으셨다”</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.polinews.co.kr/news/articleView.html?idxno=748826" target="_blank" style="color:#1a3c8f;text-decoration:none;">[제27차 산업포럼] 정치인 서면 축사 모음</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/photos/8222698" target="_blank" style="color:#1a3c8f;text-decoration:none;">한준호 과방위 간사와 인사하는 김민석 대표</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.mediaus.co.kr/news/articleView.html?idxno=319087" target="_blank" style="color:#1a3c8f;text-decoration:none;">민주당 정보통신특위 출범…'AI 안전법' 추진</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.incheonilbo.com/news/articleView.html?idxno=1337325" target="_blank" style="color:#1a3c8f;text-decoration:none;">'인천바이오과기원법' 수정안 마련 고삐</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.mediatoday.co.kr/news/articleView.html?idxno=338561" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;AI 강국 뒷받침·사람 지키는 AI&quot; 민주당 AI 정보통신특위 출범</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="http://www.yonhapnewstv.co.kr/news/MYH20261120111045pYz" target="_blank" style="color:#1a3c8f;text-decoration:none;">AI가 세무사 시험 풀었더니 만점…올해 고득점자 급증</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1a3c8f;background:#1a3c8f15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 성평등가족부·여성가족부</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003875882" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;기후위기·디지털 격차 해결책은&quot;…국내외 청소년 머리 맞댔다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261119153600371?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;지원금 아닌 일할 기회를&quot;…다문화포럼, 이주민 지원 해법 모색</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/photos/8222692" target="_blank" style="color:#1a3c8f;text-decoration:none;">리나 갈베스 EU 여성인권·성평등위원장</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261118152500371?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">원민경 성평등장관 &quot;다문화가족 지원정책 평가해 개선책 마련&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/PYH20261119160500013?input=1196m" target="_blank" style="color:#1a3c8f;text-decoration:none;">축사하는 원민경 <mark style="background:#fff176;padding:0 2px;border-radius:2px;">성평등가족부</mark> 장관</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003875548" target="_blank" style="color:#1a3c8f;text-decoration:none;">밀양시, 여성친화도시 5개년 청사진 마련</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.nocutnews.co.kr/news/6609728?utm_source=naver&utm_medium=article&utm_campaign=20261119170003" target="_blank" style="color:#1a3c8f;text-decoration:none;">'여성의 일상이 정책으로'…밀양시 여성친화도시로 도약</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261119131000530?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">[재산공개] 박광수 한국여성인권진흥원장 14억8천만원 첫 신고</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026111911114607053" target="_blank" style="color:#1a3c8f;text-decoration:none;">밀양시, 2026년 여성친화도시 신규 지정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.eroun.net/news/articleView.html?idxno=96007" target="_blank" style="color:#1a3c8f;text-decoration:none;">[이로운분석] &quot;재취업 7년반 걸렸어요&quot;...<mark style="background:#fff176;padding:0 2px;border-radius:2px;">경력단절</mark>여성은 서럽다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1a3c8f;background:#1a3c8f15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 고용노동부</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="https://news.tvchosun.com/site/data/html_dir/2026/11/20/2026112090134.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">고용노동부, '노동시장 이중구조 개선반' 1차 회의 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(한국경제)
-                    <a href="https://www.hankyung.com/article/202611209359i" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;하이닉스 인사팀이 왜 거기서 나와&quot;…'이색 팝업' 정체</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261120_0003876336" target="_blank" style="color:#1a3c8f;text-decoration:none;">정부, 노동시장 양극화 개선 착수…불공정 거래 관행 살핀다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261120034400530?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">노동부, 청주·전주서 '고용정책 팝업스토어'…청년에 직접 소개</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/economy/employment-labor/6360611" target="_blank" style="color:#1a3c8f;text-decoration:none;">노동시장 이중구조 개선반 회의…노동부 &quot;양극화 원인 재점검&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1a3c8f;background:#1a3c8f15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 교육부</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261120052400530?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">교육부, 구글·MS·아마존과 손잡고 '교사 AI역량' 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://news.cpbc.co.kr/article/1177153?division=NAVER" target="_blank" style="color:#1a3c8f;text-decoration:none;">교육부 &quot;수능 부정행위 111건 적발&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(매일경제)
-                    <a href="http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5231764" target="_blank" style="color:#1a3c8f;text-decoration:none;">한 총리 &quot;지난해 수능 시험지 보관하라&quot; 긴급 지시…교육부, 공문 발송</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(KBS)
-                    <a href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=8717383&ref=A" target="_blank" style="color:#1a3c8f;text-decoration:none;">교육부, “작년 수능 문답지 보관” 공문…몰랐던 ‘AI 커닝’ 다 잡아...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611190079&t=NN" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;작년 수능시험지 폐기 말라&quot;…교육부, 전국에 긴급 공문</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10942501?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">[단독] 교육부, 수요조사도 없이 AI재교육에 2070억…野 “전액 삭감”...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1a3c8f;background:#1a3c8f15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 중소벤처기업부</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.ttlnews.com/news/articleView.html?idxno=3164153" target="_blank" style="color:#1a3c8f;text-decoration:none;">KB증권, 지역 관광 AI 벤처투자조합에 20억원 출자</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(매일경제)
-                    <a href="https://www.mk.co.kr/article/12213619" target="_blank" style="color:#1a3c8f;text-decoration:none;">웰파인, ‘2026 중소기업 혁신주간’서 지역혁신 유공 대통령 표창 수상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.viva100.com/article/20261120500306" target="_blank" style="color:#1a3c8f;text-decoration:none;">이노비즈협회, 중소기업 기술혁신 성과 공유… 2030년 매출 1000조 목표 ...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://news.unn.net/news/articleView.html?idxno=600980" target="_blank" style="color:#1a3c8f;text-decoration:none;">호원대 임경채 교수, 기술혁신 연구개발 공로 중소벤처기업부 장관상 수...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119001203" target="_blank" style="color:#1a3c8f;text-decoration:none;">장은에프앤씨 장은정 대표, 중기혁신대전 중소벤처기업부 장관 표창</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003875698" target="_blank" style="color:#1a3c8f;text-decoration:none;">혈세 3600억 써도 잘 모르는 정책…'헛돈' 쓴 중기부</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(한국경제)
-                    <a href="https://magazine.hankyung.com/business/article/202611196663b" target="_blank" style="color:#1a3c8f;text-decoration:none;">녹색바구니 문정하 대표, 제21회 전국장애경제인대회 중소벤처기업부 장...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611191446572500817" target="_blank" style="color:#1a3c8f;text-decoration:none;">녹색바구니 문정하 대표, 전국장애경제인대회 중소기업벤처부 장관상 수...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1a3c8f;background:#1a3c8f15;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 정책브리핑</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.businesspost.co.kr/BP?command=article_view&num=451465" target="_blank" style="color:#1a3c8f;text-decoration:none;">[Who Is ?] 하준경 청와대 정책실장</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.sisunnews.co.kr/news/articleView.html?idxno=250069" target="_blank" style="color:#1a3c8f;text-decoration:none;">[정책브리핑] 2026년 11월 20일 금요일 주요 정책</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611191723011530865" target="_blank" style="color:#1a3c8f;text-decoration:none;">[부산ㆍ경남 대학 브리핑 모음(11월20일)] 동서대, ‘2026 DSU ANCHOR FAIR’...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(SBS)
-                    <a href="https://biz.sbs.co.kr/article_hub/20000347456?division=NAVER" target="_blank" style="color:#1a3c8f;text-decoration:none;">[마켓 브리핑] 엔비디아, 강한 AI 수요 확인…경영 불확실성 여전</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.kihoilbo.co.kr/news/articleView.html?idxno=3041497" target="_blank" style="color:#1a3c8f;text-decoration:none;">극지연구소, 남극 정책 브리핑 세미나…남극 거버넌스 변화 속 한국의 ...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116706?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">급여 올려 직원 달랜 엔비디아…공동창업자 “젠슨 황, 원칙 어겨”[글...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611190729250020714" target="_blank" style="color:#1a3c8f;text-decoration:none;">[경북 브리핑 모음(11월 19일)] 예천 한천파크골프장 운영 개선…군민 무...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611182227066280710" target="_blank" style="color:#1a3c8f;text-decoration:none;">[경남 브리핑 모음(11월19일)] 진주 농업인단체, 혁신도시 완성 촉구 1인...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr></table>
-              </td></tr>
-            </table></td></tr><tr><td style="padding:24px 0 0;">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr><td style="padding:10px 16px;background:#1e7e34;border-radius:4px 4px 0 0;">
-                <span style="font-size:16px;font-weight:800;color:#fff;">◆ 유관기관동향</span>
-                <span style="font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;">120건</span>
-              </td></tr>
-              <tr><td style="padding:8px 16px 16px;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;">
-                <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1e7e34;background:#1e7e3415;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 정부출연연구기관</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mt.co.kr/tech/2026/11/20/2026112008491419090" target="_blank" style="color:#1a3c8f;text-decoration:none;"><mark style="background:#fff176;padding:0 2px;border-radius:2px;">KIST</mark> 오형석 책임연구원, 세계 상위 0.1% 영향력 있는 연구자 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026112009110021536" target="_blank" style="color:#1a3c8f;text-decoration:none;">오형석 <mark style="background:#fff176;padding:0 2px;border-radius:2px;">KIST</mark> 책임연구원, 세계 상위 0.1% 영향력 연구자 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.viva100.com/article/20261120500253" target="_blank" style="color:#1a3c8f;text-decoration:none;"><mark style="background:#fff176;padding:0 2px;border-radius:2px;">KIST</mark> 오형석 책임연구원, 세계 상위 0.1% 영향력 연구자 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.newsroad.co.kr/news/articleView.html?idxno=68129" target="_blank" style="color:#1a3c8f;text-decoration:none;">탭텐션 김유찬 대표, 2026 GRaND-K 창업경진대회 예비창업 트랙 '우수상...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://edu.donga.com/news/articleView.html?idxno=113972" target="_blank" style="color:#1a3c8f;text-decoration:none;">탭텐션 김유찬 대표, 2026 GRaND-K 창업경진대회 우수상 수상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/local/daejeon-chungnam/6360472" target="_blank" style="color:#1a3c8f;text-decoration:none;">ETRI, 창립 50주년 기념 ‘헤리티지 북’ 발간…대한민국 ICT 50년 기록</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116773?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">TDX부터 AI까지...ETRI, 한국 ICT 발전사 담은 책 발간</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.edaily.co.kr/News/Read?newsId=02115606645647688&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;전화 한 대도 귀하던 나라&quot;…ICT 강국 50년의 기록</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ggilbo.com/news/articleView.html?idxno=1194304" target="_blank" style="color:#1a3c8f;text-decoration:none;">ETRI, 메모리 품귀 뚫는 '공유' 기술 개발</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.epnc.co.kr/news/articleView.html?idxno=410075" target="_blank" style="color:#1a3c8f;text-decoration:none;">ETRI, 대한민국 ICT 50년 '헤리티지 북' 발간</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921790" target="_blank" style="color:#1a3c8f;text-decoration:none;">한밭대 SW융합연구소, STEPI·APCTT 공동 세미나 협력기관 참여</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.ccnnews.co.kr/news/articleView.html?idxno=418057" target="_blank" style="color:#1a3c8f;text-decoration:none;">한밭대, 아·태 기술이전 네트워크 출범 지원</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ggilbo.com/news/articleView.html?idxno=1194277" target="_blank" style="color:#1a3c8f;text-decoration:none;">국립한밭대 SW융합연구소, 아시아·태평양 기술이전 네트워크 출범 지원</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.goodmorningcc.com/news/articleView.html?idxno=456154" target="_blank" style="color:#1a3c8f;text-decoration:none;">국립한밭대, 아시아·태평양 기술이전 네트워크 출범 지원</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(ZDNet)
-                    <a href="https://zdnet.co.kr/view/?no=20261119112943" target="_blank" style="color:#1a3c8f;text-decoration:none;">IBS, 다이아몬드 합성 연구하다 흑연성장 새길 열어</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mt.co.kr/tech/2026/11/20/2026112010014444827" target="_blank" style="color:#1a3c8f;text-decoration:none;">IBS, 양자과학과 예술의 만남…'결맞음 미술공모전' 수상작 7점 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119000918" target="_blank" style="color:#1a3c8f;text-decoration:none;">IBS, 전류로 흑연 성장 위치 제어…탄소 동위원소 분리도 성공</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026111908462716809" target="_blank" style="color:#1a3c8f;text-decoration:none;">IBS 과학자 5명, 세계 상위 1% 영향력 연구자 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10942587?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">현택환 IBS 단장, 13년 연속 세계 최상위 과학자에 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10942545?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">“시작부터 막막, 국제공동연구”…KIRD, 연구현장 고민 해결</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000043" target="_blank" style="color:#1a3c8f;text-decoration:none;">KIRD, 국제공동연구 성공 전략 공유…산·학·연 전문가 한자리</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119000917" target="_blank" style="color:#1a3c8f;text-decoration:none;">KIRD, 국제공동연구 포럼 24일 개최…초기 단계 애로 해소 집중</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(디지털타임스)
-                    <a href="https://www.dt.co.kr/article/12096101?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">국제공동연구 기획부터 착수까지 ‘A∼Z’ 논의</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.lecturernews.com/news/articleView.html?idxno=214083" target="_blank" style="color:#1a3c8f;text-decoration:none;">전북대학교 박동준 교수팀, '2026 R&amp;D 커리어랩' 우수상 수상…AI·나노바...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mt.co.kr/industry/2026/11/19/2026111909172090147" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI, 한국기계연구원과 저피탐·AI 기술 고도화 개발 협력</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261119051000003?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI·기계연구원, 항공우주 기술 공동개발 협력 업무협약</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.g-enews.com/view.php?ud=202611191108455464ea14faf6f5_1" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI·한국기계연구원, 항공우주 기술개발 협력…공동연구 확대</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/industry/general-industry/6359118" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI, 기계연구원 손잡고 스텔스·AI 기술 고도화…항공우주 경쟁력 강화</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://news.tf.co.kr/read/economy/2390967.htm" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI, 한국기계연구원과 항공우주 핵심기술 공동개발 추진</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(문화)
-                    <a href="https://www.munhwa.com/article/11632659?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">“전기차 충전, 한국서 배운다”... KTC, 인니 대표단에 인프라 전수</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(중앙)
-                    <a href="https://www.joongang.co.kr/article/25480176" target="_blank" style="color:#1a3c8f;text-decoration:none;">재료연구원, ‘1900㎚ 적외선 검출 센서’ 개발</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(파이낸셜뉴스)
-                    <a href="https://www.fnnews.com/news/202611191650468050" target="_blank" style="color:#1a3c8f;text-decoration:none;">KTC, 인도네시아에 전기차 충전기 시험인증 기술 전수…국내 기업 진출...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dailian.co.kr/news/view/1717428/?sc=Naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">KTC, 인도네시아 전기차 충전기 시험인증 지원…국내 기업 아세안 진출...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003874790" target="_blank" style="color:#1a3c8f;text-decoration:none;">환각물질, 뇌 별세포에 작용…신경활동 조절 원리 규명</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.kyosu.net/news/articleView.html?idxno=212685" target="_blank" style="color:#1a3c8f;text-decoration:none;">대구한의대·한국뇌연구원, 실로시빈 뇌 작용 기전 규명</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://www.donga.com/news/It/article/all/20261119/135056811/2" target="_blank" style="color:#1a3c8f;text-decoration:none;">“웅장한 교향곡처럼… 뇌 과학도 함께 연구할 때 시너지 나온다”</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://tk.newdaily.co.kr/site/data/html/2026/11/20/2026112050143.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">대구한의대, 실로시빈 뇌 작용 밝힌 ‘별세포’ 연구 국제학술지 게재</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(매일경제)
-                    <a href="https://www.mk.co.kr/article/12213817" target="_blank" style="color:#1a3c8f;text-decoration:none;">[인사] (주)LG / LG경영개발원 / LG전자 등</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.thereport.co.kr/news/articleView.html?idxno=93527" target="_blank" style="color:#1a3c8f;text-decoration:none;">에버그린엔터프라이즈, 발효 원료 브랜드 자연생명 첫 제품 '레스피셀'</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261120000081" target="_blank" style="color:#1a3c8f;text-decoration:none;">정주연 생명연 바이오나노연구센터장, OECD 작업반 부의장 선출</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(ZDNet)
-                    <a href="https://zdnet.co.kr/view/?no=20261120103417" target="_blank" style="color:#1a3c8f;text-decoration:none;">정주연 생명연 센터장, OECD 바이오나노작업반 부의장에</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000128" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI, 한국기계연구원과 항공우주 첨단 기술 경쟁력 강화 '맞손'</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/it-science/general-science/6360483" target="_blank" style="color:#1a3c8f;text-decoration:none;">韓·폴란드, 우주산업 협력 확대…양국 기업 기술 교류</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026111909462320829" target="_blank" style="color:#1a3c8f;text-decoration:none;">KAI·한국기계연구원, 스텔스·AI 등 미래 항공우주 기술 공동개발</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="https://www.chosun.com/economy/science/2026/11/19/KUMOUFMSXJGOVFLB2OU4ZR66DU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" target="_blank" style="color:#1a3c8f;text-decoration:none;">국가 난제 프로젝트 장기 지원… <mark style="background:#fff176;padding:0 2px;border-radius:2px;">출연연</mark> 안정적 연구 기반 마련</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://www.dongascience.com/news/view/80969" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;과기인 처우개선 약속, 1187억 예산 증액으로 증명하라&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921657" target="_blank" style="color:#1a3c8f;text-decoration:none;">대전 정부<mark style="background:#fff176;padding:0 2px;border-radius:2px;">출연연</mark> 17곳, 하청노조 공동교섭 난항... 대전노동청 중재 나...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1e7e34;background:#1e7e3415;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 4대 과학기술원</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/local/daejeon-chungnam/6360550" target="_blank" style="color:#1a3c8f;text-decoration:none;"><mark style="background:#fff176;padding:0 2px;border-radius:2px;">KAIST</mark>에 모인 고교생들, 사회문제 해결할 작품 직접 개발·시연</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.ccnnews.co.kr/news/articleView.html?idxno=418097" target="_blank" style="color:#1a3c8f;text-decoration:none;"><mark style="background:#fff176;padding:0 2px;border-radius:2px;">KAIST</mark>, 제11회 전국 고등학교 동아리 AI·SW 경진대회</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(ZDNet)
-                    <a href="https://zdnet.co.kr/view/?no=20261120085339" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;자체 GPU 서버서 교육 AI 안정 구동”…애니브릿지, <mark style="background:#fff176;padding:0 2px;border-radius:2px;">KAIST</mark> 교육원 AX 인...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119000581" target="_blank" style="color:#1a3c8f;text-decoration:none;"><mark style="background:#fff176;padding:0 2px;border-radius:2px;">KAIST</mark>, 루테늄 입자 쪼개 촉매 효율 향상…암모니아 생산 57배 증가</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921952" target="_blank" style="color:#1a3c8f;text-decoration:none;">뉴스 분석부터 재난 탐사까지… <mark style="background:#fff176;padding:0 2px;border-radius:2px;">KAIST</mark>, 전국 고등학교 동아리 AI·SW 경진...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261120_0003876406" target="_blank" style="color:#1a3c8f;text-decoration:none;">창업경험·아이디어도 공유…GIST, '스타트업나이트' 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/local/gwangju-jeonnam/6360757" target="_blank" style="color:#1a3c8f;text-decoration:none;">GIST '2026 스타트업나이트' 개최…학생 창업문화 확산</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261120000002" target="_blank" style="color:#1a3c8f;text-decoration:none;">GIST, 창업 도전·경험 나누는 '2026 스타트업나이트' 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116758?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">기술·아이디어가 만난 밤…GIST, 창업 가능성 여는 ‘스타트업나이트’</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.newsworker.co.kr/news/articleView.html?idxno=515179" target="_blank" style="color:#1a3c8f;text-decoration:none;">GIST, '총 12개 창업팀 집결'... 호남권 기술창업 교류의 장 열려</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://tk.newdaily.co.kr/site/data/html/2026/11/19/2026111950373.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">DGIST, 빛 감지 성능 최대 8.5배 높인 고감도 광센서 개발</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119000582" target="_blank" style="color:#1a3c8f;text-decoration:none;">DGIST, 상분리 기술로 암전류 저감…검출능 최대 8.5배 향상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dkilbo.com/news/articleView.html?idxno=561400" target="_blank" style="color:#1a3c8f;text-decoration:none;">DGIST, 암전류 240분의 1로 줄인 고감도 광검출기 개발</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000025" target="_blank" style="color:#1a3c8f;text-decoration:none;">미세 근적외선 8.5배 더 잘 잡는다…DGIST-고려대, 차세대 유연 광센서 ...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.idaegu.co.kr/news/articleView.html?idxno=565973" target="_blank" style="color:#1a3c8f;text-decoration:none;">DGIST 이태훈 교수, 엔비디아 GPU 지원 받아 연구</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISI20261119_0021539138" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST AI융합대학 AX 비전선포식</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mt.co.kr/future/2026/11/19/2026111909222176813" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST &quot;2030년까지 산업 AX 인재 2000명 키운다&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/local/ulsan/6359551" target="_blank" style="color:#1a3c8f;text-decoration:none;">기업이 문제 내고 학생이 해결…UNIST, AX 인재 2000명 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000155" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST, 미래산업 설계 AX 인재 2000명 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261119141000057?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST, 산업현장 문제 풀 AI 융합인재 2천명 양성한다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003286577&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;2030년까지 2000명 양성&quot; 울산과기원 'AI융합대학' 선포</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.enewstoday.co.kr/news/articleView.html?idxno=2494997" target="_blank" style="color:#1a3c8f;text-decoration:none;">경기과기대, '지스타 2026'서 졸업작품 창작 역량 선보여</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://dhnews.co.kr/news/view/1065574217439132" target="_blank" style="color:#1a3c8f;text-decoration:none;">경기과기대 게임콘텐츠학과, ‘지스타 2026’서 졸업작품 전시회</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.gndomin.com/news/articleView.html?idxno=497494" target="_blank" style="color:#1a3c8f;text-decoration:none;">동원과기대 결혼이주여성 대상 AI 활용 교육 성료</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.nocutnews.co.kr/news/6609647?utm_source=naver&utm_medium=article&utm_campaign=20261119160303" target="_blank" style="color:#1a3c8f;text-decoration:none;">양구사과 전국대학클럽축구대회, 서울과기대 FC CTRL 극적인 역전 우승</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://kr.people.com.cn/n3/2026/1119/c203093-20520866.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">정해용 대구경북경제자유구역청장 “중국 기업의 든든한 성장 파트너 되...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(한국경제)
-                    <a href="https://www.hankyung.com/article/2026111981481" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST, 산업별 AI 전공 신설…실무형 인재 2000명 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.metroseoul.co.kr/article/20261118500523" target="_blank" style="color:#1a3c8f;text-decoration:none;">울산과학기술원, 양자 AI 회로 경량화 알고리즘 개발</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://it.donga.com/109958/" target="_blank" style="color:#1a3c8f;text-decoration:none;">[2026 강소특구] 울산 울주 강소연구개발특구 “미래형 전지 강국으로의...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.iusm.co.kr/news/articleView.html?idxno=1070775" target="_blank" style="color:#1a3c8f;text-decoration:none;">[울산문화가 산책] 창작뮤지컬 'Hey, Stop!' 등</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1e7e34;background:#1e7e3415;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 한국과학창의재단</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000297" target="_blank" style="color:#1a3c8f;text-decoration:none;">창의재단, 글로벌 협력 학술교류회 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261120000395" target="_blank" style="color:#1a3c8f;text-decoration:none;">대전관광공사, 과학문화 지원사업 성과 공유…지역 협력 강화</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10942794?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">韓·美 과학영재 77명 한자리에…글로벌 연구협력 머리 맞댔다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.goodkyung.com/news/articleView.html?idxno=293675" target="_blank" style="color:#1a3c8f;text-decoration:none;">게임문화재단, 부산서 6개국 게임정책 해법 모색</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://news.unn.net/news/articleView.html?idxno=600838" target="_blank" style="color:#1a3c8f;text-decoration:none;">전문대교협·과학창의재단, 고교학점제 학교 밖 교육 협력</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.koit.co.kr/news/articleView.html?idxno=210011" target="_blank" style="color:#1a3c8f;text-decoration:none;">한국과학창의재단, 한·미 과학영재 연구교류…국제 공동연구 역량 키운...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.gukjenews.com/news/articleView.html?idxno=3756630" target="_blank" style="color:#1a3c8f;text-decoration:none;">구로문화재단, 구로창의아트홀서 송년국악콘서트</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.betanews.net/article/view/beta202611200048" target="_blank" style="color:#1a3c8f;text-decoration:none;">게임문화재단, 2026 국제 게임문화 심포지엄 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.newstown.co.kr/news/articleView.html?idxno=722648" target="_blank" style="color:#1a3c8f;text-decoration:none;">공주문화관광재단, 제20회 피나클 어워즈 한국대회 3개 부문 수상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1e7e34;background:#1e7e3415;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 과학기술한림원</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.ftoday.co.kr/news/articleView.html?idxno=370200" target="_blank" style="color:#1a3c8f;text-decoration:none;">[ESG브리핑-11월3주] 에쓰오일, '우수학위논문, 차세대과학자' 시상 외</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://www.dongascience.com/news/view/80971" target="_blank" style="color:#1a3c8f;text-decoration:none;">中 과학기술 굴기에 우리는?…공학한림원, 23일 'NAEK 포럼'서 논의</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.rapportian.com/news/articleView.html?idxno=242663" target="_blank" style="color:#1a3c8f;text-decoration:none;">의학한림원, 24일 '2026 보건의료R&amp;D혁신 오픈포럼' 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.medipana.com/news/articleView.html?idxno=422244" target="_blank" style="color:#1a3c8f;text-decoration:none;">난임시술 지원은 늘었지만…난자 동결은 '제도 사각지대'</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1e7e34;background:#1e7e3415;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 과총·단체</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.nocutnews.co.kr/news/6609704?utm_source=naver&utm_medium=article&utm_campaign=20261119165703" target="_blank" style="color:#1a3c8f;text-decoration:none;">'원전 유치 영덕군 발전방안' 세미나 열려…군민과 상생 논의</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000371" target="_blank" style="color:#1a3c8f;text-decoration:none;">전북대, '피지컬 AI가 여는 농축산 혁신' 정책포럼 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921630" target="_blank" style="color:#1a3c8f;text-decoration:none;">북한도 AI 기술 개발 확대... 대전서 남북 과학기술 협력 논의</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.inews24.com/view/2028030" target="_blank" style="color:#1a3c8f;text-decoration:none;">R&amp;D 예산 삭감 '후폭풍'…방지대책 어디까지 [정종오의 질문과답]</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.agrinet.co.kr/news/articleView.html?idxno=408976" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;동물복지기본법, 관계 부처 공동 소관 명시해야&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#1e7e34;background:#1e7e3415;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 기타 유관기관</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ajunews.com/view/20261119165504977" target="_blank" style="color:#1a3c8f;text-decoration:none;">OCI파워·OCI테라서스·미션솔라에너지, 美 RE+ 공동 참가</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116158?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">국내 독자 개발 가스 측정 장비, 美 측정표준기관에 수출</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.mhns.co.kr/news/articleView.html?idxno=769947" target="_blank" style="color:#1a3c8f;text-decoration:none;">국립창원대, G-LAMP 페스티벌서 교육부장관 표창·연구재단 이사장상 수...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026111913270028297" target="_blank" style="color:#1a3c8f;text-decoration:none;">특구재단, 지역 아동에 '재생 PC 100세트' 지원</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.daejonilbo.com/news/articleView.html?idxno=2314923" target="_blank" style="color:#1a3c8f;text-decoration:none;">특구재단 재생PC 100세트 기부</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(파이낸셜뉴스)
-                    <a href="https://www.fnnews.com/news/202611200946379260" target="_blank" style="color:#1a3c8f;text-decoration:none;">국립한국해양대 국제해양문제硏, 러시아와 북극 연구·학술교류 협력</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10942708?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">특구진흥재단, 재생PC 100대 기부…지역 아동 정보격차 해소</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003874725" target="_blank" style="color:#1a3c8f;text-decoration:none;">성남시·아주대, AI 첨단산업 육성·전문인력 양성 '맞손'</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/local/daejeon-chungnam/6359099" target="_blank" style="color:#1a3c8f;text-decoration:none;">ETRI, AI 데이터센터 메모리 한계 극복하는 ‘EMP’ 기술 미국서 실증</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.daejonilbo.com/news/articleView.html?idxno=2314931" target="_blank" style="color:#1a3c8f;text-decoration:none;">유휴 메모리 모아 대규모 연산 수행</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10943579?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">“뉴스 분석부터 재난 탐사 로봇까지”…<mark style="background:#fff176;padding:0 2px;border-radius:2px;">KAIST</mark>서 고교생 AI·SW 아이디어...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003875304" target="_blank" style="color:#1a3c8f;text-decoration:none;">[부산소식]국립부산과학관, 수험생 무료관람 이벤트 등</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(문화)
-                    <a href="https://www.munhwa.com/article/11632848?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">“올 최대 ‘슈퍼문’…과천과학관과 함께”</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(ZDNet)
-                    <a href="https://zdnet.co.kr/view/?no=20261120120049" target="_blank" style="color:#1a3c8f;text-decoration:none;">과천과학관, 슈퍼문과 440광년 좀생이별 '미팅 이벤트'</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(연합뉴스)
-                    <a href="https://www.yna.co.kr/view/AKR20261119045700017?input=1195m" target="_blank" style="color:#1a3c8f;text-decoration:none;">수능 끝난 수험생들, 과천과학관이 쏜다…무료입장에 선물까지</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(파이낸셜뉴스)
-                    <a href="https://www.fnnews.com/news/202611191102532497" target="_blank" style="color:#1a3c8f;text-decoration:none;">국립부산과학관 '수능 수험생' 무료관람 이벤트</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026111912015841273" target="_blank" style="color:#1a3c8f;text-decoration:none;">달 착륙부터 우주망원경까지…AI·슈퍼컴퓨터로 우주탐사 준비</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000161" target="_blank" style="color:#1a3c8f;text-decoration:none;">우주청, 천체물리 수치모형의 AI 활용 위한 워크숍 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dailian.co.kr/news/view/1717060/?sc=Naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">우주항공청, 천체물리 수치모형·AI 활용 워크숍 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ddaily.co.kr/page/view/2026112002301345469" target="_blank" style="color:#1a3c8f;text-decoration:none;">통신망도 '자율주행' 시대…정부, 6G NW AI 에이전트 개발 추진</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.koit.co.kr/news/articleView.html?idxno=209984" target="_blank" style="color:#1a3c8f;text-decoration:none;">AI·ICT 성장 흐름 바뀐다…내년 실전적 R&amp;D 추진</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mtnews.net/news/articleView.html?idxno=26599" target="_blank" style="color:#1a3c8f;text-decoration:none;">두산에너빌리티, 기술혁신연구원 산하 3개 연구실 '안전관리 우수연구실...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(머니투데이)
-                    <a href="https://www.mt.co.kr/industry/2026/11/19/2026111913431021695" target="_blank" style="color:#1a3c8f;text-decoration:none;">두산에너빌, 연구실 3곳 '안전관리 우수연구실' 인증 획득</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.gnmaeil.com/news/articleView.html?idxno=599101" target="_blank" style="color:#1a3c8f;text-decoration:none;">두산에너 연구실 '안전관리 우수' 인증</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261120000118" target="_blank" style="color:#1a3c8f;text-decoration:none;">김유찬 탭텐션 대표, 2026 GRaND-K 창업경진대회 예비창업 트랙 '우수상...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr></table>
-              </td></tr>
-            </table></td></tr><tr><td style="padding:24px 0 0;">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr><td style="padding:10px 16px;background:#7b1fa2;border-radius:4px 4px 0 0;">
-                <span style="font-size:16px;font-weight:800;color:#fff;">◆ 여성과학기술인</span>
-                <span style="font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;">19건</span>
-              </td></tr>
-              <tr><td style="padding:8px 16px 16px;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;">
-                <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#7b1fa2;background:#7b1fa215;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 여성 과학자·연구자</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.womennews.co.kr/news/articleView.html?idxno=284690" target="_blank" style="color:#1a3c8f;text-decoration:none;">약사가 카메라를 들었을 때 [대륙을 건너온 여성들]</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/world/europe/6359203" target="_blank" style="color:#1a3c8f;text-decoration:none;">佛시민단체 &quot;시위서 최루탄 노출 여성 90% 부인과 이상…유산도 증가&quot;</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.abcn.kr/news/articleView.html?idxno=94771" target="_blank" style="color:#1a3c8f;text-decoration:none;">[임향숙 여성교육] 아이에게 작은 모험을 허락하는 노르웨이 엄마</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.seoul.co.kr/news/society/health-medical/2026/11/19/20261119500123?wlog_tag3=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">11월 19일 세계 화장실의 날…“인류 건강과 존엄 지켜준 보루”</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/society/general-society/6359778" target="_blank" style="color:#1a3c8f;text-decoration:none;">배우자 정치자금 예금 1억…박광수 여성인권진흥원장 재산 14억[재산공...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.newstomato.com/ReadNews.aspx?no=1321165&inflow=N" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG, 경영 안정 택했다…기술·여성 인재 발탁</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000347" target="_blank" style="color:#1a3c8f;text-decoration:none;">동신대, '제3기 DS-TOGETHER 여성 리더십 최고위과정' 수료식</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.hankookilbo.com/news/article/A2026111917440004173?did=NA" target="_blank" style="color:#1a3c8f;text-decoration:none;">동신대, 제3기 여성 리더십 최고위과정 수료… AI·인문철학·예술 등 '...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#7b1fa2;background:#7b1fa215;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 이공계 여성 현황·정책</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://daily.hankooki.com/news/articleView.html?idxno=1427289" target="_blank" style="color:#1a3c8f;text-decoration:none;">한국자동차공학회, 신임 회장으로 한양대 민승재 교수 선출</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.etoday.co.kr/news/view/2650800" target="_blank" style="color:#1a3c8f;text-decoration:none;">민승재 한양대 교수, 한국자동차공학회 신임 회장 선출</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(헤럴드)
-                    <a href="https://biz.heraldcorp.com/article/10943627?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">車공학회 새 회장에 민승재 한양대 교수…대상은 배충식 카이스트 총장</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.shinailbo.co.kr/news/articleView.html?idxno=5085765" target="_blank" style="color:#1a3c8f;text-decoration:none;">한국자동차공학회 차기 회장에 민승재 한양대 교수…자동차공학대상 배...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(한국경제)
-                    <a href="https://magazine.hankyung.com/business/article/202611198044b" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG그룹 임원 인사, 안정 속 쇄신…상무 승진 30%가 R&amp;D</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(아시아경제)
-                    <a href="https://view.asiae.co.kr/article/2026111917115390578" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG, 2027년도 정기 임원인사…사장 승진 2명 등 총 132명 승진(종합)</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="https://www.chosun.com/economy/industry-company/2026/11/19/UPFYN7S6RRFNREBAPODNAH3QWY/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG, CEO 대부분 유임 속 임원 승진 35% 늘려…미래 기술 인재 발탁</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.news1.kr/industry/general-industry/6359939" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG, 승진 132명·신규 임원 89명…정기 임원인사 단행</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.busan.com/view/busan/view.php?code=2026111917155938218" target="_blank" style="color:#1a3c8f;text-decoration:none;">고요 속 따사로운 햇살 받으며 홀로 책을 읽는다 [전북 고창 황윤석도서...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#7b1fa2;background:#7b1fa215;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 경력단절·젠더</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(ZDNet)
-                    <a href="https://zdnet.co.kr/view/?no=20261119104001" target="_blank" style="color:#1a3c8f;text-decoration:none;">취업·이직·경력관리 고민에 대한 현실 조언</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.discoverynews.kr/news/articleView.html?idxno=1107338" target="_blank" style="color:#1a3c8f;text-decoration:none;">경기일자리재단, <mark style="background:#fff176;padding:0 2px;border-radius:2px;">경력단절</mark> 예방·근무환경 개선 사례 20건 선정</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr></table>
-              </td></tr>
-            </table></td></tr><tr><td style="padding:24px 0 0;">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr><td style="padding:10px 16px;background:#e65100;border-radius:4px 4px 0 0;">
-                <span style="font-size:16px;font-weight:800;color:#fff;">◆ 참고보도</span>
-                <span style="font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;">32건</span>
-              </td></tr>
-              <tr><td style="padding:8px 16px 16px;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;">
-                <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#e65100;background:#e6510015;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 인재·채용</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.kmib.co.kr/article/20261119501118" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST, 산업난제 해결할 AI융합인재 2000명 양성</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(매일경제)
-                    <a href="https://www.mk.co.kr/article/12213581" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST 제조 AX 인재 2000명 양성…AI 융합대학 비전 선포식</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.veritas-a.com/news/articleView.html?idxno=637791" target="_blank" style="color:#1a3c8f;text-decoration:none;">[2027명문고교] '사천 공교육의 구심점' 삼천포고.. '첨단기숙사 국제교...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116305?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST, 산업 난제 풀 AI융합인재 2000명 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116319?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">동남권 기업 문제 푸는 AI 인재 2000명 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.hankookilbo.com/news/article/A2026111914060004239?did=NA" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;산업 난제 AI로 해결&quot;… UNIST, AX 융합인재 2000명 키운다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(문화)
-                    <a href="https://www.munhwa.com/article/11632605?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">UNIST “AI 융합인재 2000명 양성”…AI융합대학 AX 비전선포식 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(서울경제)
-                    <a href="https://www.sedaily.com/article/20116721?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">‘안정 속 쇄신’ 택한 LG…132명 대거 승진시키고 AI·로봇 인재 기용 ...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.bloter.net/news/articleView.html?idxno=679168" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG엔솔, 캐즘 돌파 인재 전면에…ESS·HEV로 사업구조 전환 가속</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.edaily.co.kr/News/Read?newsId=04191846645647360&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG그룹, 사장단 인사 '안정 속 변화'…AI 기술 인재 전진 배치</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(파이낸셜뉴스)
-                    <a href="https://www.fnnews.com/news/202611200943485235" target="_blank" style="color:#1a3c8f;text-decoration:none;">AI 시대 선도 인프라·보안 인재 양성 박차 영진전문대</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://daily.hankooki.com/news/articleView.html?idxno=1427114" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG CNS, 2027년 임원 인사…AX 인재 전진 배치</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.newsway.co.kr/news/view?ud=2026112009383902723" target="_blank" style="color:#1a3c8f;text-decoration:none;">삼성전자, 투톱 유지·사업부장 분리…반도체 기술 인재 전진 배치</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.consumernews.co.kr/news/articleView.html?idxno=768701" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG그룹 임원 승진자 5년 만에 확대…R&amp;D·AI 인재 전진 배치 승부수</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.epnc.co.kr/news/articleView.html?idxno=410037" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG전자 임원 승진 44명…로봇·AI 데이터센터 인재 발탁</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.pressian.com/pages/articles/2026111913160635914?utm_source=naver&utm_medium=search" target="_blank" style="color:#1a3c8f;text-decoration:none;">포항TP, 영덕 창수초서 찾아가는 AI·SW 교육캠프 운영</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(전자신문)
-                    <a href="https://www.etnews.com/20261119000357" target="_blank" style="color:#1a3c8f;text-decoration:none;">포항TP, 영덕 창수초에서 '찾아가는 정보소외지역 SW교육캠프' 개최</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.sidae.com/article/2026111917555144519" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG, CEO 대부분 유임…미래 사업엔 R&amp;D 인재 전진 배치</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.nocutnews.co.kr/news/6609804?utm_source=naver&utm_medium=article&utm_campaign=20261119175304" target="_blank" style="color:#1a3c8f;text-decoration:none;">LG 주요 계열사 CEO 대부분 유임…AI 기술 인재 대거 발탁</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#e65100;background:#e6510015;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 일·가정양립</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003286010&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;또 터졌다&quot;... 국회부의장이 의원들에게 뉴스 보내는 이유</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://slownews.kr/169867" target="_blank" style="color:#1a3c8f;text-decoration:none;">1.5조 달러, 앤트로픽 상장 첫날 17% 급등: 슬로우레터 11월20일.</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴시스)
-                    <a href="https://www.newsis.com/view/NISX20261119_0003875255" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;부처 정원 확대&quot; 과기정통부, 노조 요구 10여건 수용키로</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.hankookilbo.com/news/article/A2026111809460003378?did=NA" target="_blank" style="color:#1a3c8f;text-decoration:none;">돌봄의 현재와 미래를 생각한다 [세상을 움직일 미래 코드]</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#e65100;background:#e6510015;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 다양성·포용</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.etoday.co.kr/news/view/2650625" target="_blank" style="color:#1a3c8f;text-decoration:none;">[논현논단] 선제적 ‘생물다양성 전략’ 수립해야</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(뉴스핌)
-                    <a href="https://www.newspim.com/news/view/20261119001454" target="_blank" style="color:#1a3c8f;text-decoration:none;">[2027 수능] 한국사 평이하게 출제…사회·과학탐구는 분석·응용 능력에...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(조선)
-                    <a href="https://edu.chosun.com/site/data/html_dir/2026/11/19/2026111980241.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">[2027 수능] 사회탐구·과학탐구·한국사 영역별 출제 방향 분석</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.hidomin.com/news/articleView.html?idxno=730194" target="_blank" style="color:#1a3c8f;text-decoration:none;">한국해양과학기술원(KIOST), 바다 아열대화로 위해 해양생물 확산</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://dhnews.co.kr/news/view/1065576081930420" target="_blank" style="color:#1a3c8f;text-decoration:none;">매일 10분 챌린지, 2028 수능 대비 통합사회·통합과학 신규 출시</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#e65100;background:#e6510015;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 주요 과학매체</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(대덕넷)
-                    <a href="http://www.hellodd.com/news/articleView.html?idxno=113938" target="_blank" style="color:#1a3c8f;text-decoration:none;">&quot;인간이 닿지 못한 곳, 과학이 답하다&quot;···극한 환경 뚫은 네 연구자의...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(대덕넷)
-                    <a href="http://www.hellodd.com/news/articleView.html?idxno=113931" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기자수첩] 과학자와 쓰레기더미</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.e-science.co.kr/news/articleView.html?idxno=140203" target="_blank" style="color:#1a3c8f;text-decoration:none;">동아오츠카, 상주 지역사회 나눔 활동 인정…이웃돕기 유공 포상</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=506253" target="_blank" style="color:#1a3c8f;text-decoration:none;">기술수출에 임상 호재까지 겹쳤다…한미약품·한미사이언스 '신약 랠리...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr></table>
-              </td></tr>
-            </table></td></tr><tr><td style="padding:24px 0 0;">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr><td style="padding:10px 16px;background:#283593;border-radius:4px 4px 0 0;">
-                <span style="font-size:16px;font-weight:800;color:#fff;">◆ 기고칼럼</span>
-                <span style="font-size:12px;color:rgba(255,255,255,0.7);margin-left:10px;">17건</span>
-              </td></tr>
-              <tr><td style="padding:8px 16px 16px;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;">
-                <table width="100%" cellpadding="0" cellspacing="0"><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#283593;background:#28359315;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 과학기술 칼럼·기고</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.joongdo.co.kr/web/view.php?key=20261119010006700" target="_blank" style="color:#1a3c8f;text-decoration:none;">[사이언스칼럼]정답을 뱉어내는 AI와 논문 홍수, '탐구의 과정'을 묻다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(문화)
-                    <a href="https://www.munhwa.com/article/11632388?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기고]국군사관학교 창설 수정안은 포장만 바꾼 통폐합!…“1+2+1 통합교...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.kmib.co.kr/article/20261118502106" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기고] 울산엔 산업연계 공공기관을</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(디지털타임스)
-                    <a href="https://www.dt.co.kr/article/12096251?ref=naver" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기고] 도전적 R&amp;D 산업화로 기후위기 극복을</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://news.inochong.org/detail.php?number=6697&thread=22r18" target="_blank" style="color:#1a3c8f;text-decoration:none;">프랑스 고등학생들이 시위에 나선 진짜 이유</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611180705134510533" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기고] 서울의 디지털트윈, 이제 BIM 의무화부터 시작하자</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.kmib.co.kr/article/20261118502205" target="_blank" style="color:#1a3c8f;text-decoration:none;">[해외 기고] 교회성장의 과거와 현재, 그리고 미래</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ksilbo.co.kr/news/articleView.html?idxno=1073093" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기고]디지털 윤리를 배우는 아이들, 우리는 무엇을 보여주고 있는가?</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ(동아)
-                    <a href="https://www.donga.com/news/Society/article/all/20261119/135049873/2" target="_blank" style="color:#1a3c8f;text-decoration:none;">문해력-수리력 진단, 아이들 학습 성장 재는 새로운 잣대[기고/정근식]</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.joongboo.com/news/articleView.html?idxno=363742973" target="_blank" style="color:#1a3c8f;text-decoration:none;">[기고] 모빌리티 혁명, 기술보다 안전체계가 먼저다</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr><tr><td style="padding:12px 0 4px 0;">
-                <div style="display:inline-block;font-size:13px;font-weight:600;color:#283593;background:#28359315;padding:3px 12px;border-radius:20px;margin-bottom:6px;">▸ 사설·시평</div>
-                <table width="100%" cellpadding="0" cellspacing="0" style="padding-left:4px;"><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ddaily.co.kr/page/view/2026111916374601891" target="_blank" style="color:#1a3c8f;text-decoration:none;">[사설] '쪽지 예산'에만 관심 갖는 대한민국 국회의원의 수준</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.asiatoday.co.kr/kn/view.php?key=20261118010007132" target="_blank" style="color:#1a3c8f;text-decoration:none;">[사설] 누더기 된 사관학교 통합… 원점 재검토해야</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.gnmaeil.com/news/articleView.html?idxno=599162" target="_blank" style="color:#1a3c8f;text-decoration:none;">[사설] 사라지는 소나무, 애국가 구절마저 위태</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ekn.kr/web/view.php?key=20261119025421757" target="_blank" style="color:#1a3c8f;text-decoration:none;">최혁진 국회의원, 원주 사설 구급차 사고 후속 입법…‘구급차 질주 방...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="http://www.chungnamilbo.co.kr/news/articleView.html?idxno=921771" target="_blank" style="color:#1a3c8f;text-decoration:none;">[사설] 국군사관학교 창설 대전 자운대 위상과 역할</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.newdaily.co.kr/site/data/html/2026/11/20/2026112050117.html" target="_blank" style="color:#1a3c8f;text-decoration:none;">사관학교는 야전성 갖춘 초급 장교 기르는 곳 … 다영역작전? 차상급 교...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr><tr><td style="padding:6px 0 2px;">
-                    <div style="font-size:14px;line-height:1.8;color:#222;">ㆍ
-                    <a href="https://www.ibabynews.com/news/articleView.html?idxno=157068" target="_blank" style="color:#1a3c8f;text-decoration:none;">[뷰티트렌드] K-뷰티 브랜드 몽클로스, 뉴욕타임스 단독 소개…글로벌 ...</a><span style="color:#95a5a6;font-size:12px;margin-left:6px;font-weight:600;">★☆☆</span></div>
-                    </td></tr></table></td></tr></table>
-              </td></tr>
-            </table></td></tr></table>
-</td></tr>
-<tr><td style="padding:14px 40px;background:#f8f9fb;border-top:1px solid #e8e8e8;border-radius:0 0 8px 8px;">
-  <p style="margin:0;font-size:12px;color:#bbb;">총 249건 · 11월 19일 ~ 11월 20일 기준 · 12:39 자동 수집 · WISET 언론모니터링</p>
-</td></tr>
-</table>
-</td></tr>
-</table>
+<header class="top">
+  <div class="wrap">
+    <h1>주요 언론보도</h1>
+    <div class="date">2026년 11월 21일 토요일</div>
+    <div class="meta">
+      <span>수집 기간 11/20(금) 07:30 ~ 11/21(토) 14:34</span>
+      <span>총 17건</span>
+      <a class="no-print" href="./archive/">지난 리포트 ›</a>
+    </div>
+    <div class="print-only" style="font-size:9pt;margin-top:4pt">한국여성과학기술인육성재단 대외협력홍보팀 · AI 자동 선별·요약</div>
+  </div>
+</header>
+
+<nav class="tabs no-print" aria-label="섹션 바로가기">
+  <div class="wrap">
+    <a href="#s1" class="wiset ">WISET<span class="n">2</span></a>
+    <a href="#s2" class=" ">정부정책<span class="n">3</span></a>
+    <a href="#s3" class=" ">유관기관<span class="n">5</span></a>
+    <a href="#s4" class=" ">여성과기인<span class="n">1</span></a>
+    <a href="#s5" class=" ">참고보도<span class="n">5</span></a>
+    <a href="#s6" class=" ">기고칼럼<span class="n">1</span></a>
+    <span class="tools">
+      <button type="button" id="toggleAll">모두 접기</button>
+      <button type="button" onclick="window.print()">인쇄</button>
+    </span>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="sec wiset" id="s1">
+    <details open>
+      <summary><h2>WISET 직접 언급</h2><span class="cnt">2건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(이데일리)</span> <a href="https://www.edaily.co.kr/News/Read?newsId=04273846645647688&amp;mediaCodeNo=257&amp;utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=news_syndication&amp;utm_content=original_article" target="_blank" rel="noopener">연구문화혁신재단, 엘스비어와 포용적 연구개발 확산 방향 논의</a></p>
+<p class="summary">연구문화혁신재단과 엘스비어가 포용적 연구개발 확산 방향을 논의했다. <mark>윤혜온</mark> <mark>WISET</mark> 이사장은 국내 <mark>여성과학기술인</mark> 육성·지원 정책을 소개했다.</p>          <div class="meta">
+            <span class="imp h" title="중요도">★★★<small>즉시 대응</small></span>
+            <span class="sub">WISET 관련</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(브릿지경제)</span> <a href="https://www.viva100.com/article/20261120500741" target="_blank" rel="noopener">국립목포대,여성 과학기술인 역량 강화 교육 실시</a></p>
+<p class="summary">국립목포대 R-WeSET사업단이 지난 19일 전주대에서 여성 과학기술인 역량 강화 교육을 실시했다. 교육은 R&amp;D경력복귀지원사업 협약자를 대상으로 했다.</p>          <div class="meta">
+            <span class="imp h" title="중요도">★★★<small>즉시 대응</small></span>
+            <span class="sub">WISET 관련</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s2">
+    <details open>
+      <summary><h2>정부정책동향</h2><span class="cnt">3건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(MBN)</span> <a href="http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963842" target="_blank" rel="noopener">이 대통령, 울산 AI데이터센터 현장에서 &#34;세계경쟁서 속도가 생명&#34;</a></p>
+<p class="summary">이날 행사에는 정재헌 SK텔레콤 대표이사, 정석근 SK하이퍼 대표이사를 비롯한 SK 그룹 관계자들과 정부·청와대에서 <mark>배경훈</mark> 부총리 겸 <mark>과학기술정보통신부</mark> 장관, 임…</p>          <div class="meta">
+            <span class="imp m" title="중요도">★★☆<small>업무 참고</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(데일리안)</span> <a href="https://www.dailian.co.kr/news/view/1717617/?sc=Naver" target="_blank" rel="noopener">정부, 노동시장 이중구조 개선 착수…노동조건 격차 등 4대 분야 점검</a></p>
+<p class="summary">권창준 고용노동부 차관이 노동시장 이중구조 개선반 1차 회의를 주재해 노동조건 격차 등 4대 분야를 점검하기로 했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">고용노동부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 5건</summary>
+            <ul>
+<li>(TV조선) <a href="https://news.tvchosun.com/site/data/html_dir/2026/11/20/2026112090134.html" target="_blank" rel="noopener">고용노동부, &#39;노동시장 이중구조 개선반&#39; 1차 회의 개최</a></li><li>(뉴스1) <a href="https://www.news1.kr/economy/employment-labor/6360611" target="_blank" rel="noopener">노동시장 이중구조 개선반 회의…노동부 &#34;양극화 원인 재점검&#34;</a></li><li>(아주경제) <a href="https://www.ajunews.com/view/20261120095950244" target="_blank" rel="noopener">성장 양극화 해소 나선다…노동시장 이중구조 개선반 본격 시동</a></li><li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10943614?ref=naver" target="_blank" rel="noopener">노동시장 이중구조 개선반 첫 회의…일자리 격차 줄일 4대 의제 논의</a></li><li>(뉴스핌) <a href="https://www.newspim.com/news/view/20261120000293" target="_blank" rel="noopener">노동시장 이중구조 개선 본격 논의…&#39;K자형 양극화&#39; 대응</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(아시아경제)</span> <a href="https://view.asiae.co.kr/article/2026112007460791562" target="_blank" rel="noopener">국가자격시험 부정행위 땐 ‘최대 10년’ 응시 제한…수·차석 점수 의무...</a></p>
+<p class="summary">고용노동부가 국가자격제도 종합점검 및 대책수립 태스크포스 1차 회의를 열고, 부정행위자에 대한 최대 10년 응시 제한 등 개선방안을 논의했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">고용노동부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 5건</summary>
+            <ul>
+<li>(내일신문) <a href="https://www.naeil.com/news/read/609532?ref=naver" target="_blank" rel="noopener">인공지능 부정행위, 과거 시험까지 조사</a></li><li>(아시아경제) <a href="https://view.asiae.co.kr/article/2026112008131996533" target="_blank" rel="noopener">&#34;누가 노력의 가치 믿겠나&#34;…5년 공부해 세무사 붙은 이지혜 남편 &#39;분노...</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261118_0003873484" target="_blank" rel="noopener">[수능이후②]창과 방패 된 &#39;AI 부정행위&#39;…인력 투입만으론 역부족</a></li><li>(뉴스토마토) <a href="http://www.newstomato.com/ReadNews.aspx?no=1321242&amp;inflow=N" target="_blank" rel="noopener">수능 뒤흔든 ‘AI 안경’…눈에 끼고 뇌에 심는다</a></li><li>(내일신문) <a href="https://www.naeil.com/news/read/609494?ref=naver" target="_blank" rel="noopener">선택형 수능 막 내렸지만…공정성 과제 여전</a></li>            </ul>
+          </details>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s3">
+    <details open>
+      <summary><h2>유관기관동향</h2><span class="cnt">5건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(뉴스1)</span> <a href="https://www.news1.kr/local/daejeon-chungnam/6361131" target="_blank" rel="noopener">생명연 정주연 박사 OECD 바이오나노융합기술작업반 부의장 선출</a></p>
+<p class="summary">한국생명공학연구원 정주연 바이오나노연구센터장이 OECD 바이오나노융합기술작업반 부의장으로 선출됐다. 제24차 총회는 19~20일 파리에서 열렸다.</p>          <div class="meta">
+            <span class="imp m" title="중요도">★★☆<small>업무 참고</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 4건</summary>
+            <ul>
+<li>(디지털타임스) <a href="https://www.dt.co.kr/article/12096343?ref=naver" target="_blank" rel="noopener">정주연 생명연 센터장, OECD 바이오나노작업반 부의장 선출</a></li><li>(BBS) <a href="https://news.bbsi.co.kr/news/articleView.html?idxno=4119821" target="_blank" rel="noopener">생명연 정주연 센터장, OECD 바이오나노융합기술작업반 부의장 선출</a></li><li>(지디넷코리아) <a href="https://zdnet.co.kr/view/?no=20261120103417" target="_blank" rel="noopener">정주연 생명연 센터장, OECD 바이오나노작업반 부의장에</a></li><li>(전자신문) <a href="https://www.etnews.com/20261120000081" target="_blank" rel="noopener">정주연 생명연 바이오나노연구센터장, OECD 작업반 부의장 선출</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴스1)</span> <a href="https://www.news1.kr/it-science/general-science/6360483" target="_blank" rel="noopener">韓·폴란드, 우주산업 협력 확대…양국 기업 기술 교류</a></p>
+<p class="summary">우주항공청과 폴란드우주청이 각국 우주 정책을 발표하고, 한국항공우주연구원 등 양국 연구기관과 기업이 기술 교류를 진행했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 2건</summary>
+            <ul>
+<li>(e사이언스) <a href="https://www.e-science.co.kr/news/articleView.html?idxno=140382" target="_blank" rel="noopener">우주항공청·폴란드우주청, 위성기술·우주데이터 협력 확대…양국 연구...</a></li><li>(데일리안) <a href="https://www.dailian.co.kr/news/view/1717590/?sc=Naver" target="_blank" rel="noopener">한-폴란드 우주 기업 화상 회동…정책 공유·기술 교류</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴스1)</span> <a href="https://www.news1.kr/local/daejeon-chungnam/6360472" target="_blank" rel="noopener">ETRI, 창립 50주년 기념 ‘헤리티지 북’ 발간…대한민국 ICT 50년 기록</a></p>
+<p class="summary">ETRI가 창립 50주년을 맞아 대한민국 ICT 50년 역사를 담은 기념 매거진 &#39;ETRI 헤리티지 북&#39;을 발간했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 4건</summary>
+            <ul>
+<li>(프레시안) <a href="https://www.pressian.com/pages/articles/2026112012291150203?utm_source=naver&amp;utm_medium=search" target="_blank" rel="noopener">ETRI, 창립 50주년 기념 ‘헤리티지 북’ 발간</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261120_0003876653" target="_blank" rel="noopener">ETRI, 대한민국 ICT 50년 역사 담은 &#39;헤리티지 북&#39; 펴내</a></li><li>(서울경제) <a href="https://www.sedaily.com/article/20116773?ref=naver" target="_blank" rel="noopener">TDX부터 AI까지...ETRI, 한국 ICT 발전사 담은 책 발간</a></li><li>(이데일리) <a href="https://www.edaily.co.kr/News/Read?newsId=02115606645647688&amp;mediaCodeNo=257&amp;utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=news_syndication&amp;utm_content=original_article" target="_blank" rel="noopener">&#34;전화 한 대도 귀하던 나라&#34;…ICT 강국 50년의 기록</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(아시아경제)</span> <a href="https://view.asiae.co.kr/article/2026112009110021536" target="_blank" rel="noopener">오형석 <mark>KIST</mark> 책임연구원, 세계 상위 0.1% 영향력 연구자 선정</a></p>
+<p class="summary"><mark>KIST</mark> 오형석 청정에너지연구센터 책임연구원이 &#39;2026 세계에서 가장 영향력 있는 연구자(HCR)&#39;에 선정됐다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 3건</summary>
+            <ul>
+<li>(동아사이언스) <a href="https://www.dongascience.com/news/view/80995" target="_blank" rel="noopener">[사이언스게시판] 오형석 KIST 책임연구원 &#39;세계에서 가장 영향력 있는...</a></li><li>(머니투데이) <a href="https://www.mt.co.kr/tech/2026/11/20/2026112008491419090" target="_blank" rel="noopener">KIST 오형석 책임연구원, 세계 상위 0.1% 영향력 있는 연구자 선정</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISI20261120_0021539712" target="_blank" rel="noopener">청정에너지연구센터 오형석, 세계에서 가장 영향력있는 연구자 선정</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(한국강사신문)</span> <a href="https://www.lecturernews.com/news/articleView.html?idxno=214180" target="_blank" rel="noopener">카이스트, 전국 고교생 AI·SW 경진대회 개최…뉴스 분석부터 재난 탐사...</a></p>
+<p class="summary"><mark>KAIST</mark>가 우송대 등 4개 대학과 공동으로 제11회 전국 고교 동아리 AI·SW 경진대회를 개최했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">4대 과학기술원</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 1건</summary>
+            <ul>
+<li>(데일리안) <a href="https://www.dailian.co.kr/news/view/1717520/?sc=Naver" target="_blank" rel="noopener">일상 불편부터 재난 탐사까지…고교생이 만든 AI·SW 아이디어</a></li>            </ul>
+          </details>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s4">
+    <details open>
+      <summary><h2>여성과학기술인</h2><span class="cnt">1건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(헤럴드경제)</span> <a href="https://biz.heraldcorp.com/article/10943909?ref=naver" target="_blank" rel="noopener">CEO 대거 유임 속 기술인재 전진배치…R&amp;D 승진자 30%</a></p>
+<p class="summary">CEO 대거 유임 속 R&amp;D 핵심인재 발탁과 기술인재 전진배치가 이뤄졌으며 R&amp;D 승진자 비율이 30%라고 보도됐다. 기업 인사 기조로 <mark>이공계</mark> 인재 활용 동향 파악용이다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">이공계 여성 현황·정책</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s5">
+    <details open>
+      <summary><h2>참고보도</h2><span class="cnt">5건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(헤럴드경제)</span> <a href="https://biz.heraldcorp.com/article/10944558?ref=naver" target="_blank" rel="noopener">입시 경쟁은 이제부터…수능 가채점이 첫 단추</a></p>
+<p class="summary">의대 정원 증원으로 일부 <mark>이공계</mark> 대학의 정시 합격선이 내려갈 가능성이 거론된다고 전했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 2건</summary>
+            <ul>
+<li>(한국강사신문) <a href="https://www.lecturernews.com/news/articleView.html?idxno=214193" target="_blank" rel="noopener">해커스편입, 12/20 대학편입 설명회서 2028 합격전략 공개</a></li><li>(연합뉴스) <a href="https://www.yna.co.kr/view/AKR20261120135400530?input=1195m" target="_blank" rel="noopener">&#39;입시 레이스&#39; 시작…정확한 가채점으로 &#39;내 위치&#39; 파악부터</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(YTN)</span> <a href="https://www.ytn.co.kr/_ln/0105_202611210401495961" target="_blank" rel="noopener">중국, 슈퍼컴퓨터 세계 1위...미국 중심 변화오나?</a></p>
+<p class="summary">중국 슈퍼컴퓨터가 TOP500 세계 1위에 올랐다는 과학기술 동향을 전했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">주요 과학매체</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴스토마토)</span> <a href="http://www.newstomato.com/ReadNews.aspx?no=1321254&amp;inflow=N" target="_blank" rel="noopener">(미래학회 10주년 학술대회)&#39;인구소멸&#39; 극복 위해 사회 대전환 절실…&#34;...</a></p>
+<p class="summary">한국의 <mark>이공계</mark> 인재들이 더 나은 처우와 연구 환경을 찾아 해외로 떠나는 현실과 인구소멸 대응 필요성이 학술대회에서 제기됐다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(매일경제)</span> <a href="https://www.mk.co.kr/article/12214415" target="_blank" rel="noopener">안정 속 변화 택한 삼성전자... 겸직 떼고 미래 리더 키운다</a></p>
+<p class="summary">삼성전자가 겸직을 해소하고 미래 리더를 키우는 방향으로 인사 변화를 택했다는 내용으로, <mark>이공계</mark> 엘리트 인사 동향을 담고 있다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(헤럴드경제)</span> <a href="https://biz.heraldcorp.com/article/10943399?ref=naver" target="_blank" rel="noopener">내년 청년예산 43.3조원…절반 넘게 미래대응기금에</a></p>
+<p class="summary">내년 청년예산 43.3조원 중 교육·인재계정에 지방 국립대 지원과 과학기술 인재양성 사업이 담겼다고 보도했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s6">
+    <details open>
+      <summary><h2>기고칼럼</h2><span class="cnt">1건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(더팩트)</span> <a href="https://news.tf.co.kr/read/national/2391535.htm" target="_blank" rel="noopener">[기고] 시험의 공정성이 무너지면 청년의 미래도 무너진다</a></p>
+<p class="summary">감독관 수기 확인 방식에서 벗어나 응시 여부를 디지털로 확인·교차 검증하는 시스템 구축과 감독관 교육 강화가 필요하다고 주장했다. 시험 공정성과 청년 미래를 다룬 기고다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술 칼럼·기고</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div>생성 2026-11-21 14:34 (KST) · 네이버 뉴스 검색 + AI(claude-haiku-5-5) 자동 선별·요약. 요약은 제목·첫 문단 기준이니 원문을 확인하세요.</div>
+  <div class="no-print" style="margin-top:6px"><a href="./archive/">지난 리포트 보기</a></div>
+</footer>
+
+<script>
+(function () {
+  var all = document.querySelectorAll('section.sec > details');
+  var btn = document.getElementById('toggleAll');
+  function sync() { var anyOpen = [].some.call(all, function (d) { return d.open; }); btn.textContent = anyOpen ? '모두 접기' : '모두 펼치기'; }
+  btn.addEventListener('click', function () {
+    var open = ![].some.call(all, function (d) { return d.open; });
+    all.forEach(function (d) { d.open = open; }); sync();
+  });
+  all.forEach(function (d) { d.addEventListener('toggle', sync); });
+  document.querySelectorAll('nav.tabs a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function () { var d = document.querySelector(a.getAttribute('href') + ' > details'); if (d) d.open = true; });
+  });
+  window.addEventListener('beforeprint', function () { all.forEach(function (d) { d.open = true; }); });
+})();
+</script>
 </body>
 </html>

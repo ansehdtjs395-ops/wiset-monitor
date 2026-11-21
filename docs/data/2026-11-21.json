@@ -1,0 +1,446 @@
+{
+ "generated": "2026-11-21T14:34:29.834206+09:00",
+ "start": "2026-11-20T07:30:00+09:00",
+ "end": "2026-11-21T14:34:29.834206+09:00",
+ "window_label": "11/20(금) 07:30 ~ 11/21(토) 14:34",
+ "model": "claude-haiku-5-5",
+ "usage": {
+  "input": 132392,
+  "output": 8045,
+  "cache_read": 36056,
+  "cache_write": 0,
+  "calls": 8,
+  "cost_usd": 0.01762
+ },
+ "sections": {
+  "WISET 직접 언급": {
+   "items": [
+    {
+     "title": "연구문화혁신재단, 엘스비어와 포용적 연구개발 확산 방향 논의",
+     "desc": "또 윤혜온 한국여성과학기술인육성재단 이사장은 국내 여성과학기술인 육성·지원 정책도 소개했다. 자유토론에서는 국제 비교 데이터의 정책적 활용, 연구성과 평가 지표의 다양화, 특허·논문 연계 분석, 여성...",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=04273846645647688&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "naver_link": "https://n.news.naver.com/mnews/article/018/0006413355?sid=105",
+     "source": "이데일리",
+     "pub": "2026-11-20T20:15+09:00",
+     "keyword": "여성과학기술인육성재단",
+     "section": "WISET 직접 언급",
+     "sub": "WISET 관련",
+     "summary": "연구문화혁신재단과 엘스비어가 포용적 연구개발 확산 방향을 논의했다. 윤혜온 WISET 이사장은 국내 여성과학기술인 육성·지원 정책을 소개했다.",
+     "importance": "★★★",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "국립목포대,여성 과학기술인 역량 강화 교육 실시",
+     "desc": "국립목포대학교 호남제주권역전남지역R-WeSET사업단은 지난 19일 전주대학교 천잠관에서 여성 과학기술인을 위한 역량 강화 교육을 실시했다. 이번 교육은 R&D경력복귀지원사업 협약자 12명을 대상으로 대면 및 온라인...",
+     "link": "https://www.viva100.com/article/20261120500741",
+     "naver_link": "https://www.viva100.com/article/20261120500741",
+     "source": "브릿지경제",
+     "pub": "2026-11-20T15:42+09:00",
+     "keyword": "WeSET",
+     "section": "WISET 직접 언급",
+     "sub": "WISET 관련",
+     "summary": "국립목포대 R-WeSET사업단이 지난 19일 전주대에서 여성 과학기술인 역량 강화 교육을 실시했다. 교육은 R&D경력복귀지원사업 협약자를 대상으로 했다.",
+     "importance": "★★★",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 2
+  },
+  "정부정책동향": {
+   "items": [
+    {
+     "title": "이 대통령, 울산 AI데이터센터 현장에서 \"세계경쟁서 속도가 생명\"",
+     "desc": "이날 행사에는 정재헌 SK텔레콤 대표이사, 정석근 SK하이퍼 대표이사를 비롯한 SK 그룹 관계자들과 정부·청와대에서 배경훈 부총리 겸 과학기술정보통신부 장관, 임광현 대통령 비서실장, 이원주 국가전략투자보좌관...",
+     "link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963842",
+     "naver_link": "http://mbnmoney.mbn.co.kr/news/view?news_no=MM1005963842",
+     "source": "MBN",
+     "pub": "2026-11-21T14:14+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "summary": "이날 행사에는 정재헌 SK텔레콤 대표이사, 정석근 SK하이퍼 대표이사를 비롯한 SK 그룹 관계자들과 정부·청와대에서 배경훈 부총리 겸 과학기술정보통신부 장관, 임…",
+     "importance": "★★☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "정부, 노동시장 이중구조 개선 착수…노동조건 격차 등 4대 분야 점검",
+     "desc": "권창준 고용노동부 차관은 20일 서울고용노동청에서 관계부처와 전문가가 참석한 가운데 ‘노동시장 이중구조 개선반’ 제1차 회의를 주재했다. 노동시장 이중구조 개선반은 지난 11일 출범한 범정부 양극화 대응...",
+     "link": "https://www.dailian.co.kr/news/view/1717617/?sc=Naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/119/0003157549?sid=102",
+     "source": "데일리안",
+     "pub": "2026-11-20T09:49+09:00",
+     "keyword": "고용노동부",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "summary": "권창준 고용노동부 차관이 노동시장 이중구조 개선반 1차 회의를 주재해 노동조건 격차 등 4대 분야를 점검하기로 했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "고용노동부, '노동시장 이중구조 개선반' 1차 회의 개최",
+       "source": "TV조선",
+       "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/20/2026112090134.html"
+      },
+      {
+       "title": "노동시장 이중구조 개선반 회의…노동부 \"양극화 원인 재점검\"",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/economy/employment-labor/6360611"
+      },
+      {
+       "title": "성장 양극화 해소 나선다…노동시장 이중구조 개선반 본격 시동",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261120095950244"
+      },
+      {
+       "title": "노동시장 이중구조 개선반 첫 회의…일자리 격차 줄일 4대 의제 논의",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10943614?ref=naver"
+      },
+      {
+       "title": "노동시장 이중구조 개선 본격 논의…'K자형 양극화' 대응",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261120000293"
+      }
+     ]
+    },
+    {
+     "title": "국가자격시험 부정행위 땐 ‘최대 10년’ 응시 제한…수·차석 점수 의무...",
+     "desc": "고용노동부는 19일 서울 영등포구 서울지방고용노동청 서울남부지청에서 김영훈 장관 주재로 '국가자격제도 종합점검 및 대책수립 태스크포스(TF)' 1차 회의를 열고 이러한 내용의 개선 방안을 논의했다. 최근...",
+     "link": "https://view.asiae.co.kr/article/2026112007460791562",
+     "naver_link": "https://n.news.naver.com/mnews/article/277/0005845381?sid=102",
+     "source": "아시아경제",
+     "pub": "2026-11-20T07:46+09:00",
+     "keyword": "고용노동부",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "summary": "고용노동부가 국가자격제도 종합점검 및 대책수립 태스크포스 1차 회의를 열고, 부정행위자에 대한 최대 10년 응시 제한 등 개선방안을 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "인공지능 부정행위, 과거 시험까지 조사",
+       "source": "내일신문",
+       "link": "https://www.naeil.com/news/read/609532?ref=naver"
+      },
+      {
+       "title": "\"누가 노력의 가치 믿겠나\"…5년 공부해 세무사 붙은 이지혜 남편 '분노...",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112008131996533"
+      },
+      {
+       "title": "[수능이후②]창과 방패 된 'AI 부정행위'…인력 투입만으론 역부족",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261118_0003873484"
+      },
+      {
+       "title": "수능 뒤흔든 ‘AI 안경’…눈에 끼고 뇌에 심는다",
+       "source": "뉴스토마토",
+       "link": "http://www.newstomato.com/ReadNews.aspx?no=1321242&inflow=N"
+      },
+      {
+       "title": "선택형 수능 막 내렸지만…공정성 과제 여전",
+       "source": "내일신문",
+       "link": "https://www.naeil.com/news/read/609494?ref=naver"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 504
+  },
+  "유관기관동향": {
+   "items": [
+    {
+     "title": "생명연 정주연 박사 OECD 바이오나노융합기술작업반 부의장 선출",
+     "desc": "한국생명공학연구원은 바이오나노연구센터장 정주연 박사가 19~20일 프랑스 파리에서 개최된 경제협력개발기구(OECD) 바이오나노융합기술작업반(BNCT) 제24차 총회에서 부의장으로 선출됐다고 밝혔다. 의장(포르투갈)...",
+     "link": "https://www.news1.kr/local/daejeon-chungnam/6361131",
+     "naver_link": "https://n.news.naver.com/mnews/article/421/0009301767?sid=102",
+     "source": "뉴스1",
+     "pub": "2026-11-20T15:49+09:00",
+     "keyword": "한국생명공학연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "한국생명공학연구원 정주연 바이오나노연구센터장이 OECD 바이오나노융합기술작업반 부의장으로 선출됐다. 제24차 총회는 19~20일 파리에서 열렸다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "정주연 생명연 센터장, OECD 바이오나노작업반 부의장 선출",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12096343?ref=naver"
+      },
+      {
+       "title": "생명연 정주연 센터장, OECD 바이오나노융합기술작업반 부의장 선출",
+       "source": "BBS",
+       "link": "https://news.bbsi.co.kr/news/articleView.html?idxno=4119821"
+      },
+      {
+       "title": "정주연 생명연 센터장, OECD 바이오나노작업반 부의장에",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261120103417"
+      },
+      {
+       "title": "정주연 생명연 바이오나노연구센터장, OECD 작업반 부의장 선출",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261120000081"
+      }
+     ]
+    },
+    {
+     "title": "韓·폴란드, 우주산업 협력 확대…양국 기업 기술 교류",
+     "desc": "우주항공청과 폴란드우주청이 각각 자국의 우주 정책과 전략을 발표하고 한국항공우주연구원, 한국천문연구원, 한국과학기술원(KAIST) 우주연구원 등 양국 연구기관이 주요 연구 분야와 기술개발 현황을 공유한다....",
+     "link": "https://www.news1.kr/it-science/general-science/6360483",
+     "naver_link": "https://n.news.naver.com/mnews/article/421/0009301164?sid=105",
+     "source": "뉴스1",
+     "pub": "2026-11-20T12:00+09:00",
+     "keyword": "한국항공우주연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "우주항공청과 폴란드우주청이 각국 우주 정책을 발표하고, 한국항공우주연구원 등 양국 연구기관과 기업이 기술 교류를 진행했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "우주항공청·폴란드우주청, 위성기술·우주데이터 협력 확대…양국 연구...",
+       "source": "e사이언스",
+       "link": "https://www.e-science.co.kr/news/articleView.html?idxno=140382"
+      },
+      {
+       "title": "한-폴란드 우주 기업 화상 회동…정책 공유·기술 교류",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1717590/?sc=Naver"
+      }
+     ]
+    },
+    {
+     "title": "ETRI, 창립 50주년 기념 ‘헤리티지 북’ 발간…대한민국 ICT 50년 기록",
+     "desc": "한국전자통신연구원(ETRI)은 창립 50주년을 맞아 대한민국 정보통신기술(ICT) 반세기 역사를 조명한 기념 매거진 'ETRI 헤리티지 북'을 발간했다고 20일 밝혔다. 'ETRI 헤리티지 북'은 '50년의 혁신을 넘어 100년의...",
+     "link": "https://www.news1.kr/local/daejeon-chungnam/6360472",
+     "naver_link": "https://n.news.naver.com/mnews/article/421/0009300588?sid=102",
+     "source": "뉴스1",
+     "pub": "2026-11-20T09:12+09:00",
+     "keyword": "ETRI",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "ETRI가 창립 50주년을 맞아 대한민국 ICT 50년 역사를 담은 기념 매거진 'ETRI 헤리티지 북'을 발간했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "ETRI, 창립 50주년 기념 ‘헤리티지 북’ 발간",
+       "source": "프레시안",
+       "link": "https://www.pressian.com/pages/articles/2026112012291150203?utm_source=naver&utm_medium=search"
+      },
+      {
+       "title": "ETRI, 대한민국 ICT 50년 역사 담은 '헤리티지 북' 펴내",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261120_0003876653"
+      },
+      {
+       "title": "TDX부터 AI까지...ETRI, 한국 ICT 발전사 담은 책 발간",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20116773?ref=naver"
+      },
+      {
+       "title": "\"전화 한 대도 귀하던 나라\"…ICT 강국 50년의 기록",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=02115606645647688&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      }
+     ]
+    },
+    {
+     "title": "오형석 KIST 책임연구원, 세계 상위 0.1% 영향력 연구자 선정",
+     "desc": "오형석 한국과학기술연구원(KIST) 청정에너지연구센터 책임연구원(사진)이 세계 상위 0.1% 수준의 연구 영향력을 인정받는 '2026 세계에서 가장 영향력 있는 연구자(HCR)'에 선정됐다. KIST는 글로벌 학술정보...",
+     "link": "https://view.asiae.co.kr/article/2026112009110021536",
+     "naver_link": "https://n.news.naver.com/mnews/article/277/0005845455?sid=105",
+     "source": "아시아경제",
+     "pub": "2026-11-20T09:11+09:00",
+     "keyword": "KIST",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "KIST 오형석 청정에너지연구센터 책임연구원이 '2026 세계에서 가장 영향력 있는 연구자(HCR)'에 선정됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "[사이언스게시판] 오형석 KIST 책임연구원 '세계에서 가장 영향력 있는...",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/80995"
+      },
+      {
+       "title": "KIST 오형석 책임연구원, 세계 상위 0.1% 영향력 있는 연구자 선정",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/tech/2026/11/20/2026112008491419090"
+      },
+      {
+       "title": "청정에너지연구센터 오형석, 세계에서 가장 영향력있는 연구자 선정",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISI20261120_0021539712"
+      }
+     ]
+    },
+    {
+     "title": "카이스트, 전국 고교생 AI·SW 경진대회 개최…뉴스 분석부터 재난 탐사...",
+     "desc": "KAIST(총장 배충식)는 우송대학교, 건양대학교, 대전대학교, 충남대학교와 공동으로 지난 14일 KAIST 김병호·김삼열 IT융합빌딩 다목적홀에서 '제11회 전국 고등학교 동아리 AI·SW 경진대회' 본선을 개최했다고 20일 밝혔다....",
+     "link": "https://www.lecturernews.com/news/articleView.html?idxno=214180",
+     "naver_link": "https://www.lecturernews.com/news/articleView.html?idxno=214180",
+     "source": "한국강사신문",
+     "pub": "2026-11-20T08:06+09:00",
+     "keyword": "KAIST",
+     "section": "유관기관동향",
+     "sub": "4대 과학기술원",
+     "summary": "KAIST가 우송대 등 4개 대학과 공동으로 제11회 전국 고교 동아리 AI·SW 경진대회를 개최했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "일상 불편부터 재난 탐사까지…고교생이 만든 AI·SW 아이디어",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1717520/?sc=Naver"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 139
+  },
+  "여성과학기술인": {
+   "items": [
+    {
+     "title": "CEO 대거 유임 속 기술인재 전진배치…R&D 승진자 30%",
+     "desc": "기술 경쟁력을 강화하기 위해 R&D 핵심인재를 적극 발탁하고, 주력사업과 AI 전환(AX) 등에서 성과 창출에 기여한 인재를 전면에 배치했다”고 인사 기조를 설명했다. 아울러 이번 인사에서 7명의 신규 여성 임원도...",
+     "link": "https://biz.heraldcorp.com/article/10943909?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002726237?sid=101",
+     "source": "헤럴드경제",
+     "pub": "2026-11-20T11:28+09:00",
+     "keyword": "여성 임원+기술",
+     "section": "여성과학기술인",
+     "sub": "이공계 여성 현황·정책",
+     "summary": "CEO 대거 유임 속 R&D 핵심인재 발탁과 기술인재 전진배치가 이뤄졌으며 R&D 승진자 비율이 30%라고 보도됐다. 기업 인사 기조로 이공계 인재 활용 동향 파악용이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 8
+  },
+  "참고보도": {
+   "items": [
+    {
+     "title": "입시 경쟁은 이제부터…수능 가채점이 첫 단추",
+     "desc": "올해는 의대 정원 증원으로 일부 이공계 대학의 정시 합격선이 내려갈 가능성이 거론된다. 다만 의대 정시 선발인원은 오히려 소폭 감소한 만큼 실제 합격선에 미칠 영향은 지켜봐야 한다. 현행 수능체제 종료를 앞두고...",
+     "link": "https://biz.heraldcorp.com/article/10944558?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002726480?sid=102",
+     "source": "헤럴드경제",
+     "pub": "2026-11-21T08:54+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "summary": "의대 정원 증원으로 일부 이공계 대학의 정시 합격선이 내려갈 가능성이 거론된다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "해커스편입, 12/20 대학편입 설명회서 2028 합격전략 공개",
+       "source": "한국강사신문",
+       "link": "https://www.lecturernews.com/news/articleView.html?idxno=214193"
+      },
+      {
+       "title": "'입시 레이스' 시작…정확한 가채점으로 '내 위치' 파악부터",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261120135400530?input=1195m"
+      }
+     ]
+    },
+    {
+     "title": "중국, 슈퍼컴퓨터 세계 1위...미국 중심 변화오나?",
+     "desc": "인공지능 모델 학습과 데이터 분석 등에도 활용될 예정입니다. 슈퍼컴퓨터 TOP500 순위는 1993년 시작돼 매년 6월과 11월 두 차례 발표되고 있습니다. YTN 사이언스 이성규입니다. 영상편집 : 황유민 그래픽 : 정소휘",
+     "link": "https://www.ytn.co.kr/_ln/0105_202611210401495961",
+     "naver_link": "https://n.news.naver.com/mnews/article/052/0002435957?sid=105",
+     "source": "YTN",
+     "pub": "2026-11-21T04:01+09:00",
+     "keyword": "YTN사이언스",
+     "section": "참고보도",
+     "sub": "주요 과학매체",
+     "summary": "중국 슈퍼컴퓨터가 TOP500 세계 1위에 올랐다는 과학기술 동향을 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "(미래학회 10주년 학술대회)'인구소멸' 극복 위해 사회 대전환 절실…\"...",
+     "desc": "주요국이 과학기술 인재 확보에 사활을 거는 동안, 한국의 이공계 인재들은 더 나운 처우와 연구 환경을 찾아 해외로 떠나는 현실입니다. 그는 \"저출산과 인구 감소, 기술 패권 시대에 이민정책은 단순한 노동력 확보가...",
+     "link": "http://www.newstomato.com/ReadNews.aspx?no=1321254&inflow=N",
+     "naver_link": "http://www.newstomato.com/ReadNews.aspx?no=1321254&inflow=N",
+     "source": "뉴스토마토",
+     "pub": "2026-11-20T15:52+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "summary": "한국의 이공계 인재들이 더 나은 처우와 연구 환경을 찾아 해외로 떠나는 현실과 인구소멸 대응 필요성이 학술대회에서 제기됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "안정 속 변화 택한 삼성전자... 겸직 떼고 미래 리더 키운다",
+     "desc": "그는 서울대 전기공학과를 차석으로 입학하고 스탠퍼드대에서 전기공학 박사 학위를 받은 이공계 엘리트다. 졸업 후에는 실리콘밸리에서 직접 창업에 도전했고 이어 퀄컴에서 무선 칩셋 개발을 담당했다. 2016년...",
+     "link": "https://www.mk.co.kr/article/12214415",
+     "naver_link": "https://n.news.naver.com/mnews/article/009/0005766602?sid=101",
+     "source": "매일경제",
+     "pub": "2026-11-20T11:20+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "summary": "삼성전자가 겸직을 해소하고 미래 리더를 키우는 방향으로 인사 변화를 택했다는 내용으로, 이공계 엘리트 인사 동향을 담고 있다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "내년 청년예산 43.3조원…절반 넘게 미래대응기금에",
+     "desc": "청년계정에는 아동기본수당과 청년미래적금, 청년주택 등이, 교육·인재계정에는 지방 국립대 지원과 과학기술 인재양성 사업 등이 담겼다. 미래대응기금의 주된 재원은 최근 10년간 내국세 추세치를 웃도는...",
+     "link": "https://biz.heraldcorp.com/article/10943399?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002726011?sid=101",
+     "source": "헤럴드경제",
+     "pub": "2026-11-20T07:51+09:00",
+     "keyword": "과학기술인재",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "summary": "내년 청년예산 43.3조원 중 교육·인재계정에 지방 국립대 지원과 과학기술 인재양성 사업이 담겼다고 보도했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 143
+  },
+  "기고칼럼": {
+   "items": [
+    {
+     "title": "[기고] 시험의 공정성이 무너지면 청년의 미래도 무너진다",
+     "desc": "감독관의 수기 확인에 의존하는 낡은 방식에서 벗어나 응시 여부를 디지털로 확인하고 교차 검증할 수 있는 시스템을 구축해야 한다. 감독관 교육과 관리·감독체계 역시 현실에 맞게 강화해 단순한 실수 하나가 수험생의...",
+     "link": "https://news.tf.co.kr/read/national/2391535.htm",
+     "naver_link": "https://n.news.naver.com/mnews/article/629/0000554078?sid=102",
+     "source": "더팩트",
+     "pub": "2026-11-20T14:11+09:00",
+     "keyword": "기고+디지털",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "summary": "감독관 수기 확인 방식에서 벗어나 응시 여부를 디지털로 확인·교차 검증하는 시스템 구축과 감독관 교육 강화가 필요하다고 주장했다. 시험 공정성과 청년 미래를 다룬 기고다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 3
+  }
+ }
+}

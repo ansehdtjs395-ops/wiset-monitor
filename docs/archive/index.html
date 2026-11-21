@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>지난 리포트 · 주요 언론보도</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2e3192">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WISET 언론">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<style>
+:root {
+  --bg: #f6f7fb; --card: #ffffff; --text: #1d1f2a; --muted: #5f6475; --line: #e3e5ee;
+  --brand: #2e3192; --brand-soft: #eceefc; --link: #1f2a9c; --mark: #fff1a8;
+  --wiset: #6b2fa0; --wiset-soft: #f5eefc; --hi: #c2410c; --mid: #1d4ed8; --lo: #6b7280;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14151c; --card: #1d1f29; --text: #e9eaf1; --muted: #a3a8ba; --line: #2e3140;
+    --brand: #9fa6ff; --brand-soft: #262a46; --link: #b5bbff; --mark: #5c4b00;
+    --wiset: #d4a8ff; --wiset-soft: #2c2140; --hi: #fb923c; --mid: #93b4ff; --lo: #9ca3af;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  overflow-wrap: anywhere; word-break: keep-all; }
+a { color: var(--link); }
+mark { background: var(--mark); color: inherit; padding: 0 2px; border-radius: 3px; }
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+header.top { background: var(--brand); color: #fff; padding: 20px 0 16px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) header.top { background: #23266b; } }
+header.top h1 { margin: 0; font-size: 24px; letter-spacing: -0.02em; }
+header.top .date { font-size: 17px; font-weight: 600; margin-top: 2px; }
+header.top .meta { margin-top: 8px; font-size: 15px; opacity: .92; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+header.top a { color: #fff; }
+.print-only { display: none; }
+footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; }
+footer a { color: var(--muted); }
+@media print {
+  :root { --bg: #fff; --card: #fff; --text: #000; --muted: #444; --line: #ccc; --mark: #fff1a8; }
+  body { font-size: 11pt; }
+  .no-print { display: none !important; }
+  .print-only { display: block; }
+  header.top { background: none !important; color: #000; padding: 0 0 8px; border-bottom: 2px solid #000; }
+  header.top a { color: #000; text-decoration: none; }
+  a { color: #000; text-decoration: none; }
+  .wrap { max-width: none; padding: 0; }
+}
+</style><style>
+main { padding: 16px 0; }
+ul.days { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+ul.days li + li { border-top: 1px solid var(--line); }
+ul.days a { display: block; padding: 14px 16px; text-decoration: none; color: var(--text); min-height: 56px; }
+ul.days a:hover { background: var(--brand-soft); }
+.d { font-weight: 700; font-size: 17px; }
+.w { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.badge { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; font-size: 13px; font-weight: 700;
+  background: var(--wiset-soft); color: var(--wiset); vertical-align: 2px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>지난 리포트</h1>
+    <div class="meta"><a href="../">‹ 최신 리포트</a><span>총 1회</span></div>
+  </div>
+</header>
+<main class="wrap">
+  <ul class="days">
+    <li><a href="2026-11-21.html">
+      <div class="d">2026년 11월 21일 토요일<span class="badge">WISET 2</span></div>
+      <div class="w">수집 11/20(금) 07:30 ~ 11/21(토) 14:34 · 17건</div>
+    </a></li>
+  </ul>
+</main>
+</body>
+</html>
