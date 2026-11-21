@@ -28,7 +28,8 @@ CHECK_JS = """() => {
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
-    html, out = Path(sys.argv[1]).resolve(), Path(sys.argv[2])
+    src, out = sys.argv[1], Path(sys.argv[2])
+    url = src if src.startswith("http") else Path(src).resolve().as_uri()
     out.mkdir(parents=True, exist_ok=True)
     with sync_playwright() as p:
         try:
@@ -39,7 +40,7 @@ def main():
         for name, w, h, mobile in (("mobile-375", 375, 812, True), ("pc-1280", 1280, 900, False)):
             page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=2 if mobile else 1,
                                     is_mobile=mobile, has_touch=mobile)
-            page.goto(html.as_uri())
+            page.goto(url, wait_until="networkidle")
             page.wait_for_timeout(300)
             r = page.evaluate(CHECK_JS)
             page.screenshot(path=str(out / f"{name}-top.png"))
