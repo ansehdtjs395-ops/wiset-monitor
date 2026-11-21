@@ -1,31 +1,62 @@
+# WISET 언론모니터링 — 평일 아침 자동 실행
+#
+# GitHub 예약(cron)은 UTC 기준이라 한국시간(KST = UTC+9)에서 9시간을 뺀다.
+#   KST 월~금 07:30 = UTC 일~목 22:30  → '30 22 * * 0-4'
+#   KST 월~금 08:30 = UTC 일~목 23:30  → '30 23 * * 0-4'   (예비)
+#   KST 월~금 09:30 = UTC 월~금 00:30  → '30 0 * * 1-5'    (예비)
+# GitHub 예약 실행은 늦어지거나 빠질 수 있어 예비 시각을 둔다.
+# 같은 날 두 번째 실행부터는 프로그램이 "오늘 이미 실행됨"으로 바로 끝낸다.
+# 공휴일은 프로그램이 판단해 건너뛰고, 다음 영업일에 기간을 합쳐 수집한다.
 name: monitor
 
 on:
   schedule:
     - cron: '30 22 * * 0-4'
+    - cron: '30 23 * * 0-4'
+    - cron: '30 0 * * 1-5'
   workflow_dispatch:
+    inputs:
+      force:
+        description: '휴일·중복 검사를 무시하고 지금 실행'
+        type: boolean
+        default: false
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
 
 jobs:
-  monitor:
+  run:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
-          python-version: '3.11'
-      - run: pip install requests
-      - name: run
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: 수집·AI 선별·리포트 생성
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
           CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
-        run: python monitor.py
-      - name: push
+          FORCE: ${{ inputs.force && '--force' || '' }}
+        run: python -m monitor.main $FORCE
+
+      - name: 결과 저장(push)
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add docs/index.html
-          git commit -m "update" || echo "no changes"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add docs state
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "리포트 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            echo "push 재시도 $i"; sleep 5
+          done
+          exit 1

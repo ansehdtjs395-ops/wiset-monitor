@@ -106,8 +106,12 @@ def main(argv=None):
         print(f"\n미리보기 저장: {preview / 'index.html'} ({key})")
     else:
         key = write_report(report)
-        window.save_last_success(end)
         print(f"\n리포트 저장: docs/index.html, docs/archive/{key}.html")
+        if window.is_business_day(end.date()):
+            window.save_last_success(end)
+        else:
+            # 주말·공휴일 수동 실행은 미리보기 성격: 기록을 남기지 않아 다음 영업일 리포트가 기간을 빠짐없이 덮음
+            print("휴일 수동 실행이라 마지막 성공 시각은 갱신하지 않음")
     return 0
 
 
