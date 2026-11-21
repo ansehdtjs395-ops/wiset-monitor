@@ -1,4 +1,4 @@
-# 2단계 시험용: v2 브랜치에 push하면 수집만 실행 (기록·리포트 변경 없음). 완성 후 삭제 예정.
+# 시험용: v2 브랜치에 push하면 수집 + AI 선별 실행 (기록·리포트 변경 없음). 완성 후 삭제 예정.
 name: test-collect
 
 on:
@@ -6,8 +6,12 @@ on:
     branches: [v2]
 
 jobs:
-  collect:
+  run:
     runs-on: ubuntu-latest
+    env:
+      NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+      NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
@@ -15,23 +19,18 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt pytest
       - run: python -m pytest -q
-      - name: 주말 포함 긴 기간(목 07:30 ~ 지금) — 월요일 분량 확인
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+      - name: 금요일(11/20) 하루치
         run: |
-          python -m monitor.main --force --start 2026-11-19T07:30+09:00 --dry-run --collect-only | tee out-monday.log
-          mv out/candidates.json out/candidates-monday.json
-      - name: 금요일(11/20) 실행 가정 — 하루치
-        env:
-          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
-          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+          python -m monitor.main --now 2026-11-20T07:30+09:00 --dry-run | tee out-friday.log
+          mkdir -p res && mv out/report.json res/report-friday.json && mv out/candidates.json res/candidates-friday.json
+      - name: 주말 포함 긴 기간(목 07:30 ~ 지금)
         run: |
-          python -m monitor.main --now 2026-11-20T07:30+09:00 --dry-run --collect-only | tee out-friday.log
-          mv out/candidates.json out/candidates-friday.json
+          python -m monitor.main --force --start 2026-11-19T07:30+09:00 --dry-run | tee out-long.log
+          mv out/report.json res/report-long.json && mv out/candidates.json res/candidates-long.json
       - uses: actions/upload-artifact@v7
+        if: always()
         with:
-          name: candidates
+          name: result
           path: |
-            out/
+            res/
             out-*.log
