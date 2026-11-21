@@ -87,3 +87,9 @@ def test_resolve_id_tolerant():
     from monitor.select_ai import resolve_id
     titles = ["기타 기사", "국립목포대,여성 과학기술인 역량 강화 교육 실시"]
     assert resolve_id({"id": 1, "title_start": "[필수] 국립목대,여성"}, titles) == 1
+
+
+def test_resolve_id_bracket_prefix():
+    from monitor.select_ai import resolve_id
+    titles = ["기타", '[이로운분석] "재취업 7년반 걸렸어요"...경력단절여성은 서럽다']
+    assert resolve_id({"id": 0, "title_start": "재취업 7년반 걸렸어요 경력단절"}, titles) == 1

@@ -114,7 +114,11 @@ def resolve_id(it, titles, offset=0):
     idx = it["id"] - offset
 
     def close(t):
-        return SequenceMatcher(None, head, _sq(t)[:len(head)]).ratio() >= 0.75
+        body = _sq(re.sub(r"^(\s*[\[(【<][^\])】>]*[\])】>])+", "", t))  # 앞쪽 [말머리] 제거
+        full = _sq(t)
+        return (head in full[:40] or head in body[:40]
+                or SequenceMatcher(None, head, body[:len(head)]).ratio() >= 0.75
+                or SequenceMatcher(None, head, full[:len(head)]).ratio() >= 0.75)
 
     if not head:
         return idx if 0 <= idx < len(titles) else None
@@ -149,7 +153,7 @@ class Selector:
             user = f"이 섹션 기준: {crit}\n" + user
         resp = self.client.messages.create(
             model=MODEL,
-            max_tokens=8000,
+            max_tokens=16000,
             system=[{"type": "text", "text": SYSTEM, "cache_control": {"type": "ephemeral"}}],
             messages=[{"role": "user", "content": user}],
             output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
