@@ -102,6 +102,7 @@ class Selector:
         self.client = anthropic.Anthropic(api_key=api_key, max_retries=3, timeout=180)
         self.log = log
         self.usage = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0, "calls": 0}
+        self.fatal = None  # 크레딧 부족·키 오류처럼 재시도해도 소용없는 오류
 
     def cost(self):
         return sum(self.usage[k] * PRICE[k] for k in PRICE) / 1_000_000
@@ -141,9 +142,24 @@ class Selector:
             lines = [_fmt(c0 + i, a) for i, a in enumerate(chunk)]
             items = None
             for attempt in range(2):
+                if self.fatal:
+                    error = self.fatal
+                    break
                 try:
                     items = self._call(section, lines)
                     break
+                except anthropic.AuthenticationError:
+                    self.fatal = error = "Claude API 키 오류 — GitHub Secrets의 CLAUDE_API_KEY 확인 필요"
+                except anthropic.PermissionDeniedError:
+                    self.fatal = error = "Claude API 권한 오류 — 키의 사용 권한 확인 필요"
+                except anthropic.BadRequestError as e:
+                    if "credit balance" in str(e):
+                        self.fatal = error = "Claude API 크레딧 부족 — console.anthropic.com에서 충전 필요"
+                    else:
+                        error = f"요청 오류: {getattr(e, 'message', e)}"
+                    self.log(f"  ! {section} AI 호출 실패: {error}")
+                    if self.fatal:
+                        break
                 except (anthropic.APIError, RuntimeError, json.JSONDecodeError, StopIteration, KeyError) as e:
                     error = f"{type(e).__name__}: {e}"
                     self.log(f"  ! {section} AI 호출 실패({attempt + 1}회): {error}")
@@ -163,7 +179,7 @@ class Selector:
             # AI 실패: 키워드 결과 상위 기사로 대체 (요약 대신 설명문)
             fallback = sorted(arts, key=lambda a: a["pub"], reverse=True)[:5]
             return [{**a, "summary": a["desc"][:90], "importance": "★☆☆", "author": "", "related": []}
-                    for a in fallback], f"AI 선별 실패 — 키워드 검색 결과 상위 기사 ({error})"
+                    for a in fallback], f"AI 선별 실패: 키워드 검색 결과 최신 기사 5건을 대신 표시 ({error[:80]})"
 
         # 필수 기사 누락 방지
         have = {a["link"] for a in picked} | {r["link"] for a in picked for r in a["related"]}

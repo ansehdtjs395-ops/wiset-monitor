@@ -11,6 +11,7 @@ def make(monkeypatch, responses):
     s = Selector.__new__(Selector)
     s.log = lambda *_: None
     s.usage = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0, "calls": 0}
+    s.fatal = None
     calls = []
 
     def fake(section, lines):
