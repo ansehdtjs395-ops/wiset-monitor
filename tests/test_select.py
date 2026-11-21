@@ -72,3 +72,12 @@ def test_merge_across_chunks(monkeypatch):
     assert calls[-1] == ["MERGE"] and len(items) == 1
     assert items[0]["title"] == "T2" and items[0]["summary"] == "s2"
     assert {r["title"] for r in items[0]["related"]} == {"T3", "T0"}
+
+
+def test_resolve_id():
+    from monitor.select_ai import resolve_id
+    titles = ["사학연금-화순군 협약", "한국전력KDN 청렴 특강", "과기부 AI 예산"]
+    assert resolve_id({"id": 1, "title_start": "한국전력KDN 청"}, titles) == 1
+    assert resolve_id({"id": 0, "title_start": "한국전력KDN 청"}, titles) == 1   # 잘못된 id → 제목으로 교정
+    assert resolve_id({"id": 0, "title_start": "없는 제목입니다"}, titles) is None
+    assert resolve_id({"id": 12, "title_start": "과기부 AI"}, titles, offset=10) == 2

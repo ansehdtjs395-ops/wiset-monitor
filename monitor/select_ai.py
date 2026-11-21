@@ -6,6 +6,7 @@
 - 공통 지시문·예시는 system에 고정 → 프롬프트 캐싱.
 """
 import json
+import re
 from pathlib import Path
 
 import anthropic
@@ -29,12 +30,13 @@ SCHEMA = {
                 "type": "object",
                 "properties": {
                     "id": {"type": "integer"},
+                    "title_start": {"type": "string"},
                     "summary": {"type": "string"},
                     "importance": {"type": "string", "enum": ["★★★", "★★☆", "★☆☆"]},
                     "author": {"type": "string"},
                     "related_ids": {"type": "array", "items": {"type": "integer"}},
                 },
-                "required": ["id", "summary", "importance", "author", "related_ids"],
+                "required": ["id", "title_start", "summary", "importance", "author", "related_ids"],
                 "additionalProperties": False,
             },
         }
@@ -72,6 +74,8 @@ def build_system():
 - 중요도: ★★★ WISET 직접 관련·즉시 대응 필요 / ★★☆ 업무 참고(재단 업무·여성과학기술인·과기 인재 정책에 직접 영향) / ★☆☆ 동향 파악(그 밖의 참고 기사, 대부분은 여기). 중요도 높은 순으로 나열합니다.
 - author: 기고·칼럼·사설이면 작성자 "이름 소속 직함"(예: "오상록 KIST 원장"), 사설은 "사설", 알 수 없거나 일반 기사면 "".
 
+- title_start: 고른 기사(id) 제목의 앞 10글자를 그대로 적습니다. id와 제목이 맞는지 확인하는 용도입니다.
+
 ## 요약 작성 원칙
 - 1~2문장, 80자 내외. 기사에 나온 사실만, 추측·평가 금지.
 - 누가, 무엇을, 왜 중요한지 중심. 숫자·정책명·기관명이 있으면 포함.
@@ -92,6 +96,22 @@ SYSTEM = build_system()
 def is_forced(a):
     text = a["title"] + " " + a["desc"]
     return any(k.lower() in text.lower() for k in FORCE_INCLUDE)
+
+
+def _sq(t):
+    return re.sub(r"[\W_]+", "", t or "").lower()
+
+
+def resolve_id(it, titles, offset=0):
+    """AI가 준 id가 title_start와 맞는지 확인. 틀리면 제목으로 찾아 고치고, 못 찾으면 None."""
+    head = _sq(it.get("title_start", ""))[:8]
+    idx = it["id"] - offset
+    if not head:
+        return idx if 0 <= idx < len(titles) else None
+    if 0 <= idx < len(titles) and _sq(titles[idx]).startswith(head):
+        return idx
+    matches = [i for i, t in enumerate(titles) if _sq(t).startswith(head)]
+    return matches[0] if len(matches) == 1 else None
 
 
 def _fmt(i, a):
@@ -146,9 +166,10 @@ class Selector:
                 + "\n".join(lines))
         items = self._call(section, None, user=user)
         out = []
+        titles = [a["title"] for a in picked]
         for it in items:
-            i = it["id"]
-            if not (0 <= i < len(picked)):
+            i = resolve_id(it, titles)
+            if i is None:
                 continue
             a = picked[i]
             rel = list(a["related"])
@@ -194,10 +215,13 @@ class Selector:
                     self.log(f"  ! {section} AI 호출 실패({attempt + 1}회): {error}")
             if items is None:
                 continue
+            titles = [a["title"] for a in chunk]
             for it in items:
-                idx = it["id"]
-                if not (c0 <= idx < c0 + len(chunk)):
+                local = resolve_id(it, titles, offset=c0)
+                if local is None:
+                    self.log(f"  ! {section}: id {it['id']}와 제목 '{it.get('title_start', '')}'이 맞지 않아 제외")
                     continue
+                idx = c0 + local
                 rel = sorted({r for r in it["related_ids"] if c0 <= r < c0 + len(chunk) and r != idx})
                 summary = it["summary"].strip() or arts[idx]["desc"][:90]
                 picked.append({**arts[idx], "summary": summary, "importance": it["importance"],
