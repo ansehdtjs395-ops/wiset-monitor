@@ -14,8 +14,8 @@ def make(monkeypatch, responses):
     s.fatal = None
     calls = []
 
-    def fake(section, lines):
-        calls.append(lines)
+    def fake(section, lines, user=None):
+        calls.append(lines if lines is not None else ["MERGE"])
         r = responses.pop(0)
         if isinstance(r, Exception):
             raise r
@@ -58,3 +58,17 @@ def test_chunking(monkeypatch):
 
 def test_system_prompt_has_examples():
     assert "AI 동료과학자" in select_ai.SYSTEM and "포르쉐" in select_ai.SYSTEM
+
+
+def test_merge_across_chunks(monkeypatch):
+    monkeypatch.setattr(select_ai, "CHUNK", 2)
+    arts = [art(i, f"T{i}") for i in range(4)]
+    s, calls = make(monkeypatch, [
+        [{"id": 0, "summary": "s0", "importance": "★★☆", "author": "", "related_ids": []}],
+        [{"id": 2, "summary": "s2", "importance": "★☆☆", "author": "", "related_ids": [3]}],
+        [{"id": 1, "summary": "", "importance": "★★☆", "author": "", "related_ids": [0]}],  # 합치기: T2가 대표, T0 묶음
+    ])
+    items, _ = s.select_section("정부정책동향", {"과학기술정보통신부": arts})
+    assert calls[-1] == ["MERGE"] and len(items) == 1
+    assert items[0]["title"] == "T2" and items[0]["summary"] == "s2"
+    assert {r["title"] for r in items[0]["related"]} == {"T3", "T0"}

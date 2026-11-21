@@ -14,8 +14,8 @@ from .config import COLUMN_SECTION, FORCE_INCLUDE, MAX_PER_SECTION, SECTIONS
 
 MODEL = "claude-haiku-5-5"
 PRICE = {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}  # USD / 1M tokens
-CHUNK = 250
-DESC_CHARS = 120
+CHUNK = 400
+DESC_CHARS = 100
 ROOT = Path(__file__).resolve().parent.parent
 EXAMPLES = json.loads((ROOT / "criteria" / "examples.json").read_text(encoding="utf-8"))
 IMPORTANCE_ORDER = {"★★★": 0, "★★☆": 1, "★☆☆": 2}
@@ -65,8 +65,11 @@ def build_system():
 
 ## 선별 원칙
 - 실제 배포본처럼 엄격하게: 섹션당 보통 1~4건, 많아도 {MAX_PER_SECTION}건. 해당 기사가 없으면 빈 목록도 정상입니다.
-- 같은 사안을 다룬 기사가 여러 건이면 대표 1건만 고르고(주요 일간지·통신사 우선, 내용이 가장 충실한 것), 나머지 id는 related_ids에 넣습니다.
-- 중요도: ★★★ WISET 직접 관련·즉시 대응 필요 / ★★☆ 업무 참고 / ★☆☆ 동향 파악. 중요도 높은 순으로 나열합니다.
+- 기관명이 기사에 '언급만' 된 것으로는 부족합니다. 그 기관의 정책·발표·인사·예산·행사가 기사의 중심이어야 합니다.
+  예) 정부정책동향: 과기정통부의 과학기술·AI·인재 정책, R&D 예산, 장·차관 발언·동정, 여성·성평등·일가정양립 정책과 통계가 중심.
+      사회 사건 보도(수능 부정행위 사건 경과 등)는 과학기술 정책 대응이 핵심인 대표 기사 1건만, 지역 인프라 공모·홍보성 행사는 제외.
+- 같은 사안(같은 사건·발표·행사)은 반드시 1건으로 묶습니다. 대표 1건만 고르고(주요 일간지·통신사 우선, 내용이 가장 충실한 것), 나머지 id는 related_ids에 넣습니다.
+- 중요도: ★★★ WISET 직접 관련·즉시 대응 필요 / ★★☆ 업무 참고(재단 업무·여성과학기술인·과기 인재 정책에 직접 영향) / ★☆☆ 동향 파악(그 밖의 참고 기사, 대부분은 여기). 중요도 높은 순으로 나열합니다.
 - author: 기고·칼럼·사설이면 작성자 "이름 소속 직함"(예: "오상록 KIST 원장"), 사설은 "사설", 알 수 없거나 일반 기사면 "".
 
 ## 요약 작성 원칙
@@ -107,10 +110,13 @@ class Selector:
     def cost(self):
         return sum(self.usage[k] * PRICE[k] for k in PRICE) / 1_000_000
 
-    def _call(self, section, lines):
+    def _call(self, section, lines, user=None):
         crit = EXAMPLES["sections"].get(section, {}).get("criteria", "")
         extra = "칼럼·기고·사설은 author를 꼭 채우세요." if section == COLUMN_SECTION else ""
-        user = f"섹션: {section}\n이 섹션 기준: {crit}\n{extra}\n\n후보 기사 {len(lines)}건:\n" + "\n".join(lines)
+        if user is None:
+            user = f"섹션: {section}\n이 섹션 기준: {crit}\n{extra}\n\n후보 기사 {len(lines)}건:\n" + "\n".join(lines)
+        else:
+            user = f"이 섹션 기준: {crit}\n" + user
         resp = self.client.messages.create(
             model=MODEL,
             max_tokens=8000,
@@ -130,6 +136,29 @@ class Selector:
             raise RuntimeError("출력 길이 초과")
         text = next(b.text for b in resp.content if b.type == "text")
         return json.loads(text)["items"]
+
+    def _merge(self, section, picked):
+        """여러 묶음으로 나눠 고른 결과를 한 번 더 모아 같은 사안 합치기 + 상위 선별 (후보가 많은 날만)."""
+        lines = [f"{i} | {a['source']} | {a['importance']} | {a['title']} | {a['summary']}" for i, a in enumerate(picked)]
+        user = (f"섹션: {section}\n아래는 이 섹션 후보를 여러 묶음으로 나눠 이미 고른 기사입니다. 같은 사안끼리 묶어 대표 1건만 남기고"
+                f"(나머지는 related_ids), 섹션 기준에 맞는 기사만 중요도순으로 최대 {MAX_PER_SECTION}건 고르세요. "
+                f"summary·author는 주어진 것을 그대로 쓰세요. 입력 형식: id | 언론사 | 중요도 | 제목 | 요약\n\n"
+                + "\n".join(lines))
+        items = self._call(section, None, user=user)
+        out = []
+        for it in items:
+            i = it["id"]
+            if not (0 <= i < len(picked)):
+                continue
+            a = picked[i]
+            rel = list(a["related"])
+            for r in it["related_ids"]:
+                if 0 <= r < len(picked) and r != i:
+                    b = picked[r]
+                    rel.append({"title": b["title"], "source": b["source"], "link": b["link"]})
+                    rel.extend(b["related"])
+            out.append({**a, "importance": it["importance"], "related": rel})
+        return out
 
     def select_section(self, section, subs):
         arts = [a for sub in SECTIONS[section] for a in subs.get(sub, [])]
@@ -170,7 +199,8 @@ class Selector:
                 if not (c0 <= idx < c0 + len(chunk)):
                     continue
                 rel = sorted({r for r in it["related_ids"] if c0 <= r < c0 + len(chunk) and r != idx})
-                picked.append({**arts[idx], "summary": it["summary"].strip(), "importance": it["importance"],
+                summary = it["summary"].strip() or arts[idx]["desc"][:90]
+                picked.append({**arts[idx], "summary": summary, "importance": it["importance"],
                                "author": it["author"].strip(),
                                "related": [{"title": arts[r]["title"], "source": arts[r]["source"],
                                             "link": arts[r]["link"]} for r in rel]})
@@ -180,6 +210,12 @@ class Selector:
             fallback = sorted(arts, key=lambda a: a["pub"], reverse=True)[:5]
             return [{**a, "summary": a["desc"][:90], "importance": "★☆☆", "author": "", "related": []}
                     for a in fallback], f"AI 선별 실패: 키워드 검색 결과 최신 기사 5건을 대신 표시 ({error[:80]})"
+
+        if len(arts) > CHUNK and len(picked) > 1:
+            try:
+                picked = self._merge(section, picked)
+            except (anthropic.APIError, RuntimeError, json.JSONDecodeError, StopIteration, KeyError) as e:
+                self.log(f"  ! {section} 묶음 합치기 실패, 묶음별 결과 사용: {e}")
 
         # 필수 기사 누락 방지
         have = {a["link"] for a in picked} | {r["link"] for a in picked for r in a["related"]}
