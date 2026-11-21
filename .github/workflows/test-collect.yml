@@ -1,0 +1,37 @@
+# 2단계 시험용: v2 브랜치에 push하면 수집만 실행 (기록·리포트 변경 없음). 완성 후 삭제 예정.
+name: test-collect
+
+on:
+  push:
+    branches: [v2]
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt pytest
+      - run: python -m pytest -q
+      - name: 지난 월요일(11/16) 실행 가정 — 주말 포함 확인
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: |
+          python -m monitor.main --now 2026-11-16T07:30+09:00 --dry-run --collect-only | tee out-monday.log
+          mv out/candidates.json out/candidates-monday.json
+      - name: 금요일(11/20) 실행 가정 — 하루치
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: |
+          python -m monitor.main --now 2026-11-20T07:30+09:00 --dry-run --collect-only | tee out-friday.log
+          mv out/candidates.json out/candidates-friday.json
+      - uses: actions/upload-artifact@v7
+        with:
+          name: candidates
+          path: |
+            out/
+            out-*.log
