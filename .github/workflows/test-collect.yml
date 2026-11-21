@@ -21,10 +21,12 @@ jobs:
       - run: python -m pytest -q
       - name: 금요일(11/20) 하루치
         run: |
+          set -o pipefail
           python -m monitor.main --now 2026-11-20T07:30+09:00 --dry-run | tee out-friday.log
           mkdir -p res && mv out/report.json res/report-friday.json && mv out/candidates.json res/candidates-friday.json
       - name: 주말 포함 긴 기간(목 07:30 ~ 지금)
         run: |
+          set -o pipefail
           python -m monitor.main --force --start 2026-11-19T07:30+09:00 --dry-run | tee out-long.log
           mv out/report.json res/report-long.json && mv out/candidates.json res/candidates-long.json
       - uses: actions/upload-artifact@v7

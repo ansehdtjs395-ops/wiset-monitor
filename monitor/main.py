@@ -93,13 +93,11 @@ def main(argv=None):
     OUT.mkdir(exist_ok=True)
     (OUT / "report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
     for sec, v in selected.items():
-        print(f"
-◆ {sec} ({len(v['items'])}건 / 후보 {v['candidates']}건)" + (f" ※ {v['note']}" if v["note"] else ""))
+        print(f"\n◆ {sec} ({len(v['items'])}건 / 후보 {v['candidates']}건)" + (f" ※ {v['note']}" if v["note"] else ""))
         for it in v["items"]:
             rel = f" [관련 기사 {len(it['related'])}건]" if it["related"] else ""
             au = f" — {it['author']}" if it["author"] else ""
-            print(f"  {it['importance']} ({it['source']}) {it['title']}{au}{rel}
-      {it['summary']}")
+            print(f"  {it['importance']} ({it['source']}) {it['title']}{au}{rel}\n      {it['summary']}")
 
     if not args.dry_run:
         window.save_last_success(end)
