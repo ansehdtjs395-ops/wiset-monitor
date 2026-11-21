@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 
 import requests
 
-from .config import PREFILTER_EXCLUDE, SECTIONS, WISET_SECTION
+from .config import PREFILTER_EXCLUDE, SECTIONS, SOURCE_KEYWORDS, WISET_SECTION
 from .window import KST
 
 API = "https://openapi.naver.com/v1/search/news.json"
@@ -132,10 +132,21 @@ class NaverClient:
         return out
 
 
+def _squash(t):
+    return re.sub(r"[\s·ㆍ・\-]+", "", t).lower()
+
+
+def query_of(keyword):
+    return keyword.replace("+", " ")
+
+
 def keyword_in_text(a):
-    """검색어의 모든 단어가 제목이나 설명문에 실제로 있는지 (네이버는 본문만 맞아도 검색됨)."""
-    text = (a["title"] + " " + a["desc"]).lower()
-    return all(t.lower() in text for t in a["keyword"].split())
+    """키워드 규칙대로 제목·설명에 실제로 들어 있는지 (네이버는 본문 어디에만 있어도 검색됨)."""
+    kw = a["keyword"]
+    if SOURCE_KEYWORDS.get(kw) == a["source"]:
+        return True
+    text = _squash(a["title"] + " " + a["desc"])
+    return all(_squash(part) in text for part in kw.split("+"))
 
 
 def collect(client, start, end, log=print):
@@ -148,7 +159,9 @@ def collect(client, start, end, log=print):
         for sub, keywords in subs.items():
             arts = []
             for kw in keywords:
-                found = client.search_window(kw, start, end)
+                found = client.search_window(query_of(kw), start, end)
+                for a in found:
+                    a["keyword"] = kw
                 stats["raw"] += len(found)
                 log(f"  [{section} > {sub}] '{kw}': {len(found)}건")
                 for a in found:

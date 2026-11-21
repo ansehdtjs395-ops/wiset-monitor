@@ -64,3 +64,15 @@ def test_helpers():
     assert source_of("https://www.etnews.com/1") == "전자신문"
     assert source_of("https://unknown.example.kr/a") == "unknown.example.kr"
     assert norm_title("[단독] 과기부, AI 인재(종합)") == norm_title("과기부 AI 인재")
+
+
+def test_keyword_rules():
+    from monitor.naver import keyword_in_text
+    a = lambda kw, title, desc="", src="조선일보": {"keyword": kw, "title": title, "desc": desc, "source": src}
+    assert keyword_in_text(a("여성 최초", "서강대 교수, 물리학 여성 최초 한림원 정회원"))
+    assert keyword_in_text(a("여성 최초", "물리학 여성최초 정회원"))
+    assert not keyword_in_text(a("여성 최초", "20대 여성 실형", "최초 보도"))
+    assert keyword_in_text(a("교육부+과학", "교육부 발표", "과학 인재 양성"))
+    assert keyword_in_text(a("일가정양립+연구", "일·가정 양립 정책", "연구 결과"))
+    assert keyword_in_text(a("대덕넷", "출연연 소식", "", "대덕넷"))
+    assert not keyword_in_text(a("대덕넷", "출연연 소식", "", "조선일보"))
