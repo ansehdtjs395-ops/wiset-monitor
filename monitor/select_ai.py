@@ -7,6 +7,7 @@
 """
 import json
 import re
+from difflib import SequenceMatcher
 from pathlib import Path
 
 import anthropic
@@ -104,13 +105,17 @@ def _sq(t):
 
 def resolve_id(it, titles, offset=0):
     """AI가 준 id가 title_start와 맞는지 확인. 틀리면 제목으로 찾아 고치고, 못 찾으면 None."""
-    head = _sq(it.get("title_start", ""))[:8]
+    head = _sq(re.sub(r"^\s*\[필수\]\s*", "", it.get("title_start", "")))[:8]
     idx = it["id"] - offset
+
+    def close(t):
+        return SequenceMatcher(None, head, _sq(t)[:len(head)]).ratio() >= 0.75
+
     if not head:
         return idx if 0 <= idx < len(titles) else None
-    if 0 <= idx < len(titles) and _sq(titles[idx]).startswith(head):
+    if 0 <= idx < len(titles) and close(titles[idx]):
         return idx
-    matches = [i for i, t in enumerate(titles) if _sq(t).startswith(head)]
+    matches = [i for i, t in enumerate(titles) if close(t)]
     return matches[0] if len(matches) == 1 else None
 
 

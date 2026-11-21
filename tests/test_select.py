@@ -81,3 +81,9 @@ def test_resolve_id():
     assert resolve_id({"id": 0, "title_start": "한국전력KDN 청"}, titles) == 1   # 잘못된 id → 제목으로 교정
     assert resolve_id({"id": 0, "title_start": "없는 제목입니다"}, titles) is None
     assert resolve_id({"id": 12, "title_start": "과기부 AI"}, titles, offset=10) == 2
+
+
+def test_resolve_id_tolerant():
+    from monitor.select_ai import resolve_id
+    titles = ["기타 기사", "국립목포대,여성 과학기술인 역량 강화 교육 실시"]
+    assert resolve_id({"id": 1, "title_start": "[필수] 국립목대,여성"}, titles) == 1
