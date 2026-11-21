@@ -18,6 +18,7 @@ from pathlib import Path
 
 from . import window
 from .naver import NaverClient, collect
+from .render import write_report
 from .select_ai import MODEL, Selector
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -99,8 +100,14 @@ def main(argv=None):
             au = f" — {it['author']}" if it["author"] else ""
             print(f"  {it['importance']} ({it['source']}) {it['title']}{au}{rel}\n      {it['summary']}")
 
-    if not args.dry_run:
+    if args.dry_run:
+        preview = OUT / "preview"
+        key = write_report(report, docs=preview)
+        print(f"\n미리보기 저장: {preview / 'index.html'} ({key})")
+    else:
+        key = write_report(report)
         window.save_last_success(end)
+        print(f"\n리포트 저장: docs/index.html, docs/archive/{key}.html")
     return 0
 
 

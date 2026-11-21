@@ -35,4 +35,5 @@ jobs:
           name: result
           path: |
             res/
+            out/preview/
             out-*.log

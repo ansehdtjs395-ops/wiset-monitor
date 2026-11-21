@@ -49,16 +49,25 @@ SOURCES = {
 # 이 표에 있는 언론사만 후보로 둔다 (WISET 섹션 제외). 빠진 주요 매체는 여기에 추가.
 KNOWN_SOURCES = set(SOURCES.values())
 
+# 이름 표시만 하고 후보 범위(KNOWN_SOURCES)에는 넣지 않는 매체 (WISET 섹션에서 주로 등장)
+SOURCES_DISPLAY_ONLY = {
+    "viva100.com": "브릿지경제", "wikitree.co.kr": "위키트리", "gukjenews.com": "국제뉴스",
+    "enewstoday.co.kr": "이뉴스투데이", "shinailbo.co.kr": "신아일보", "news2day.co.kr": "뉴스투데이",
+    "g-enews.com": "글로벌이코노믹", "hansbiz.co.kr": "한스경제", "newsclaim.co.kr": "뉴스클레임",
+    "popcornnews.net": "팝콘뉴스", "m-i.kr": "매일일보", "biz.newdaily.co.kr": "뉴데일리경제",
+}
+
 
 def source_of(url):
     host = (urlsplit(url).hostname or "").lower()
     if host.startswith("www."):
         host = host[4:]
+    table = {**SOURCES_DISPLAY_ONLY, **SOURCES}
     best = ""
-    for dom, name in SOURCES.items():  # 가장 긴 도메인 우선 (biz.chosun.com > chosun.com)
+    for dom in table:  # 가장 긴 도메인 우선 (biz.chosun.com > chosun.com)
         if (host == dom or host.endswith("." + dom)) and len(dom) > len(best):
             best = dom
-    return SOURCES[best] if best else host
+    return table[best] if best else host
 
 
 def clean(s):

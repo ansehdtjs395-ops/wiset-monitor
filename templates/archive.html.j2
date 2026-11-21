@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>지난 리포트 · 주요 언론보도</title>
+{% include "_head.html.j2" %}
+<style>
+main { padding: 16px 0; }
+ul.days { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+ul.days li + li { border-top: 1px solid var(--line); }
+ul.days a { display: block; padding: 14px 16px; text-decoration: none; color: var(--text); min-height: 56px; }
+ul.days a:hover { background: var(--brand-soft); }
+.d { font-weight: 700; font-size: 17px; }
+.w { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.badge { display: inline-block; margin-left: 6px; padding: 0 8px; border-radius: 999px; font-size: 13px; font-weight: 700;
+  background: var(--wiset-soft); color: var(--wiset); vertical-align: 2px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>지난 리포트</h1>
+    <div class="meta"><a href="{{ root }}">‹ 최신 리포트</a><span>총 {{ rows|length }}회</span></div>
+  </div>
+</header>
+<main class="wrap">
+  {% if rows %}
+  <ul class="days">
+    {% for r in rows %}
+    <li><a href="{{ r.key }}.html">
+      <div class="d">{{ r.label }}{% if r.wiset %}<span class="badge">WISET {{ r.wiset }}</span>{% endif %}</div>
+      <div class="w">수집 {{ r.window }} · {{ r.total }}건</div>
+    </a></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>아직 보관된 리포트가 없습니다.</p>
+  {% endif %}
+</main>
+</body>
+</html>

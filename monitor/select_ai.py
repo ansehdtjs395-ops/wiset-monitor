@@ -99,6 +99,11 @@ def is_forced(a):
     return any(k.lower() in text.lower() for k in FORCE_INCLUDE)
 
 
+def clip(t, n=90):
+    t = (t or "").strip()
+    return t if len(t) <= n else t[:n].rstrip() + "…"
+
+
 def _sq(t):
     return re.sub(r"[\W_]+", "", t or "").lower()
 
@@ -228,7 +233,7 @@ class Selector:
                     continue
                 idx = c0 + local
                 rel = sorted({r for r in it["related_ids"] if c0 <= r < c0 + len(chunk) and r != idx})
-                summary = it["summary"].strip() or arts[idx]["desc"][:90]
+                summary = it["summary"].strip() or clip(arts[idx]["desc"])
                 picked.append({**arts[idx], "summary": summary, "importance": it["importance"],
                                "author": it["author"].strip(),
                                "related": [{"title": arts[r]["title"], "source": arts[r]["source"],
@@ -237,7 +242,7 @@ class Selector:
         if not picked and error:
             # AI 실패: 키워드 결과 상위 기사로 대체 (요약 대신 설명문)
             fallback = sorted(arts, key=lambda a: a["pub"], reverse=True)[:5]
-            return [{**a, "summary": a["desc"][:90], "importance": "★☆☆", "author": "", "related": []}
+            return [{**a, "summary": clip(a["desc"]), "importance": "★☆☆", "author": "", "related": []}
                     for a in fallback], f"AI 선별 실패: 키워드 검색 결과 최신 기사 5건을 대신 표시 ({error[:80]})"
 
         if len(arts) > CHUNK and len(picked) > 1:
@@ -250,7 +255,7 @@ class Selector:
         have = {a["link"] for a in picked} | {r["link"] for a in picked for r in a["related"]}
         for a in arts:
             if is_forced(a) and a["link"] not in have:
-                picked.append({**a, "summary": a["desc"][:90], "importance": "★★★", "author": "", "related": []})
+                picked.append({**a, "summary": clip(a["desc"]), "importance": "★★★", "author": "", "related": []})
                 have.add(a["link"])
 
         # 청크 간 중복 사안: 같은 링크 제거 후 중요도순 정렬, 상한 적용 (필수 기사는 상한과 무관)

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>주요 언론보도 · {{ short_date }}</title>
+{% include "_head.html.j2" %}
+<style>
+nav.tabs { position: sticky; top: 0; z-index: 10; background: var(--card); border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+nav.tabs .wrap { display: flex; gap: 6px; overflow-x: auto; padding-top: 8px; padding-bottom: 8px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+nav.tabs .wrap::-webkit-scrollbar { display: none; }
+nav.tabs a { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px;
+  border-radius: 999px; background: var(--brand-soft); color: var(--brand); text-decoration: none; font-size: 15px;
+  font-weight: 600; white-space: nowrap; }
+nav.tabs a .n { font-size: 13px; font-weight: 700; opacity: .8; }
+nav.tabs a.wiset { background: var(--wiset-soft); color: var(--wiset); }
+nav.tabs a.empty { opacity: .55; }
+nav.tabs .tools { margin-left: auto; padding-left: 6px; display: flex; gap: 6px; }
+nav.tabs button { min-height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--card); color: var(--muted); font: inherit; font-size: 14px; cursor: pointer; white-space: nowrap; }
+main { padding: 16px 0 8px; }
+section.sec { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 14px; overflow: hidden; }
+section.sec.wiset { border: 2px solid var(--wiset); }
+section.sec > details > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; min-height: 52px; }
+section.sec > details > summary::-webkit-details-marker { display: none; }
+section.sec > details > summary h2 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
+section.sec > details > summary .cnt { color: var(--muted); font-size: 15px; }
+section.sec > details > summary .chev { margin-left: auto; color: var(--muted); transition: transform .15s; font-size: 14px; }
+section.sec > details:not([open]) > summary .chev { transform: rotate(-90deg); }
+section.sec.wiset > details > summary { background: var(--wiset-soft); }
+section.sec.wiset h2 { color: var(--wiset); }
+.note { margin: 0 16px 12px; padding: 10px 12px; border-radius: 10px; background: #fff4e5; color: #8a4b00; font-size: 15px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .note { background: #3a2a12; color: #ffcf8a; } }
+.empty-msg { margin: 0; padding: 4px 16px 16px; color: var(--muted); font-size: 15px; }
+ol.items { list-style: none; margin: 0; padding: 0; }
+li.item { padding: 14px 16px 16px; border-top: 1px solid var(--line); }
+.item .title { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 0; }
+.item .title a { text-decoration: none; display: inline; }
+.item .title a:hover { text-decoration: underline; }
+.item .src { color: var(--muted); font-weight: 600; }
+.item .summary { margin: 6px 0 0; font-size: 16px; }
+.item .meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 14px; color: var(--muted); }
+.imp { font-weight: 700; letter-spacing: 1px; }
+.imp.h { color: var(--hi); } .imp.m { color: var(--mid); } .imp.l { color: var(--lo); }
+.imp small { font-weight: 600; letter-spacing: 0; margin-left: 2px; }
+.author { color: var(--text); font-weight: 600; }
+.sub { border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; }
+details.rel { margin-top: 8px; font-size: 15px; }
+details.rel summary { cursor: pointer; color: var(--link); min-height: 32px; display: inline-flex; align-items: center; }
+details.rel ul { margin: 4px 0 0; padding-left: 18px; }
+details.rel li { margin: 4px 0; }
+@media (min-width: 900px) {
+  header.top h1 { font-size: 28px; }
+  .item .title { font-size: 18px; }
+}
+@media print {
+  section.sec { border: none; border-radius: 0; margin: 0 0 10pt; break-inside: auto; }
+  section.sec.wiset { border: none; }
+  section.sec > details > summary { padding: 6pt 0; min-height: 0; border-bottom: 1px solid #000; background: none !important; }
+  section.sec > details > summary h2 { font-size: 13pt; color: #000 !important; }
+  section.sec > details > summary h2::before { content: "◆ "; }
+  .chev, details.rel { display: none; }
+  li.item { padding: 5pt 0; border-top: none; break-inside: avoid; }
+  .item .title { font-size: 11pt; }
+  .item .summary { font-size: 10pt; margin-top: 1pt; }
+  .item .meta { font-size: 9pt; margin-top: 2pt; }
+  .note { background: none; border: 1px solid #999; color: #000; }
+  .empty-msg { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>주요 언론보도</h1>
+    <div class="date">{{ date_label }}</div>
+    <div class="meta">
+      <span>수집 기간 {{ window_label }}</span>
+      <span>총 {{ total }}건</span>
+      <a class="no-print" href="{{ root }}archive/">지난 리포트 ›</a>
+    </div>
+    <div class="print-only" style="font-size:9pt;margin-top:4pt">한국여성과학기술인육성재단 대외협력홍보팀 · AI 자동 선별·요약</div>
+  </div>
+</header>
+
+<nav class="tabs no-print" aria-label="섹션 바로가기">
+  <div class="wrap">
+    {% for s in sections %}
+    <a href="#{{ s.id }}" class="{{ 'wiset' if s.wiset }} {{ 'empty' if not s['items'] }}">{{ s.tab }}<span class="n">{{ s['items']|length }}</span></a>
+    {% endfor %}
+    <span class="tools">
+      <button type="button" id="toggleAll">모두 접기</button>
+      <button type="button" onclick="window.print()">인쇄</button>
+    </span>
+  </div>
+</nav>
+
+<main class="wrap">
+  {% for s in sections %}
+  <section class="sec {{ 'wiset' if s.wiset }}" id="{{ s.id }}">
+    <details open>
+      <summary><h2>{{ s.name }}</h2><span class="cnt">{{ s['items']|length }}건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      {% if s.note %}<p class="note">{{ s.note }}</p>{% endif %}
+      {% if s['items'] %}
+      <ol class="items">
+        {% for it in s['items'] %}
+        <li class="item">
+          <p class="title"><span class="src">({{ it.source }})</span> <a href="{{ it.link }}" target="_blank" rel="noopener">{{ it.title|hl }}</a></p>
+          {% if it.summary %}<p class="summary">{{ it.summary|hl }}</p>{% endif %}
+          <div class="meta">
+            {% set cls = {'★★★': 'h', '★★☆': 'm'}.get(it.importance, 'l') %}
+            <span class="imp {{ cls }}" title="중요도">{{ it.importance }}<small>{{ imp_label.get(it.importance, '') }}</small></span>
+            {% if it.author %}<span class="author">✎ {{ it.author }}</span>{% endif %}
+            <span class="sub">{{ it.sub }}</span>
+          </div>
+          {% if it.related %}
+          <details class="rel">
+            <summary>관련 기사 {{ it.related|length }}건</summary>
+            <ul>
+              {% for r in it.related[:15] %}<li>({{ r.source }}) <a href="{{ r.link }}" target="_blank" rel="noopener">{{ r.title }}</a></li>{% endfor %}
+              {% if it.related|length > 15 %}<li>외 {{ it.related|length - 15 }}건</li>{% endif %}
+            </ul>
+          </details>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ol>
+      {% else %}
+      <p class="empty-msg">이번 수집 기간에 해당 기사가 없습니다.</p>
+      {% endif %}
+    </details>
+  </section>
+  {% endfor %}
+</main>
+
+<footer class="wrap">
+  <div>생성 {{ generated }} (KST) · 네이버 뉴스 검색 + AI({{ model }}) 자동 선별·요약. 요약은 제목·첫 문단 기준이니 원문을 확인하세요.</div>
+  <div class="no-print" style="margin-top:6px"><a href="{{ root }}archive/">지난 리포트 보기</a>{% if not is_latest %} · <a href="{{ root }}">최신 리포트</a>{% endif %}</div>
+</footer>
+
+<script>
+(function () {
+  var all = document.querySelectorAll('section.sec > details');
+  var btn = document.getElementById('toggleAll');
+  function sync() { var anyOpen = [].some.call(all, function (d) { return d.open; }); btn.textContent = anyOpen ? '모두 접기' : '모두 펼치기'; }
+  btn.addEventListener('click', function () {
+    var open = ![].some.call(all, function (d) { return d.open; });
+    all.forEach(function (d) { d.open = open; }); sync();
+  });
+  all.forEach(function (d) { d.addEventListener('toggle', sync); });
+  document.querySelectorAll('nav.tabs a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function () { var d = document.querySelector(a.getAttribute('href') + ' > details'); if (d) d.open = true; });
+  });
+  window.addEventListener('beforeprint', function () { all.forEach(function (d) { d.open = true; }); });
+})();
+</script>
+</body>
+</html>
