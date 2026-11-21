@@ -30,6 +30,7 @@ def main(argv=None):
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--collect-only", action="store_true")
+    ap.add_argument("--start", help="수집 시작 시각 강제 지정 (테스트용)")
     args = ap.parse_args(argv)
 
     now = datetime.fromisoformat(args.now).astimezone(window.KST) if args.now else datetime.now(window.KST)
@@ -39,6 +40,8 @@ def main(argv=None):
     start, end, skip = window.compute_window(now, last, force=args.force)
     print(f"실행 시각(KST): {now:%Y-%m-%d %H:%M} / 마지막 성공: {last:%Y-%m-%d %H:%M}" if last else
           f"실행 시각(KST): {now:%Y-%m-%d %H:%M} / 마지막 성공: 기록 없음")
+    if args.start and not skip:
+        start = datetime.fromisoformat(args.start).astimezone(window.KST)
     if skip:
         print(f"건너뜀: {skip}")
         return 0
@@ -50,8 +53,11 @@ def main(argv=None):
         return 1
     client = NaverClient(os.environ["NAVER_CLIENT_ID"], os.environ["NAVER_CLIENT_SECRET"])
     candidates, stats = collect(client, start, end)
-    print(f"수집 결과: 원본 {stats['raw']}건 → 중복 {stats['dup']}건, 사전필터 {stats['prefiltered']}건 제외 → "
+    print(f"수집 결과: 원본 {stats['raw']}건 → 제외: 검색어가 제목·설명에 없음 {stats['offtopic']}건, "
+          f"주요 언론사 아님 {stats['minor']}건, 중복 {stats['dup']}건, 사전필터 {stats['prefiltered']}건 → "
           f"후보 {stats['kept']}건 (API 호출 {stats['calls']}회)")
+    for sec, subs in candidates.items():
+        print(f"  - {sec}: {sum(len(v) for v in subs.values())}건")
     for w in client.warnings:
         print("경고:", w)
 

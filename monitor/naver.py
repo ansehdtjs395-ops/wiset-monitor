@@ -36,7 +36,18 @@ SOURCES = {
     "digitaltoday.co.kr": "디지털투데이", "the-pr.co.kr": "더피알", "fntimes.com": "한국금융신문",
     "newstomato.com": "뉴스토마토", "kpinews.kr": "KPI뉴스", "ekn.kr": "에너지경제", "sciencetimes.co.kr": "사이언스타임즈",
     "kizmom.co.kr": "키즈맘", "mbn.co.kr": "MBN", "ichannela.com": "채널A", "tvchosun.com": "TV조선",
+    "sisaweek.com": "시사위크", "yakup.com": "약업신문", "kpanews.co.kr": "약사공론", "asiatoday.co.kr": "아시아투데이",
+    "businesspost.co.kr": "비즈니스포스트", "newsworks.co.kr": "뉴스웍스", "metroseoul.co.kr": "메트로신문",
+    "lecturernews.com": "한국강사신문", "newsworker.co.kr": "뉴스워커", "pinpointnews.co.kr": "핀포인트뉴스",
+    "womaneconomy.co.kr": "여성경제신문", "e-science.co.kr": "e사이언스", "biz.newdaily.co.kr": "뉴데일리경제",
+    "newdaily.co.kr": "뉴데일리", "news.tf.co.kr": "더팩트", "breaknews.com": "브레이크뉴스", "dkilbo.com": "대경일보",
+    "eroun.net": "이로운넷", "kyeonggi.com": "경기일보", "ksilbo.co.kr": "경상일보", "yeongnam.com": "영남일보",
+    "imaeil.com": "매일신문", "kwnews.co.kr": "강원일보", "joongdo.co.kr": "중도일보", "ggilbo.com": "금강일보",
+    "hankooki.com": "한국일보", "nongmin.com": "농민신문", "medigatenews.com": "메디게이트뉴스",
+    "dailymedi.com": "데일리메디", "e-patentnews.com": "특허뉴스", "kyosu.net": "교수신문", "dnews.co.kr": "대한경제",
 }
+# 이 표에 있는 언론사만 후보로 둔다 (WISET 섹션 제외). 빠진 주요 매체는 여기에 추가.
+KNOWN_SOURCES = set(SOURCES.values())
 
 
 def source_of(url):
@@ -121,11 +132,17 @@ class NaverClient:
         return out
 
 
+def keyword_in_text(a):
+    """검색어의 모든 단어가 제목이나 설명문에 실제로 있는지 (네이버는 본문만 맞아도 검색됨)."""
+    text = (a["title"] + " " + a["desc"]).lower()
+    return all(t.lower() in text for t in a["keyword"].split())
+
+
 def collect(client, start, end, log=print):
     """섹션 > 소주제 > 기사 목록. 중복은 앞선 섹션/소주제에 배정."""
     seen_links, seen_titles = set(), set()
     result = {}
-    stats = {"raw": 0, "dup": 0, "prefiltered": 0}
+    stats = {"raw": 0, "dup": 0, "offtopic": 0, "minor": 0, "prefiltered": 0}
     for section, subs in SECTIONS.items():
         result[section] = {}
         for sub, keywords in subs.items():
@@ -135,6 +152,13 @@ def collect(client, start, end, log=print):
                 stats["raw"] += len(found)
                 log(f"  [{section} > {sub}] '{kw}': {len(found)}건")
                 for a in found:
+                    if section != WISET_SECTION:
+                        if not keyword_in_text(a):
+                            stats["offtopic"] += 1
+                            continue
+                        if a["source"] not in KNOWN_SOURCES:
+                            stats["minor"] += 1
+                            continue
                     lk, tk = norm_link(a["link"]), norm_title(a["title"])
                     if lk in seen_links or (tk and tk in seen_titles):
                         stats["dup"] += 1

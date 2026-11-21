@@ -15,12 +15,12 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements.txt pytest
       - run: python -m pytest -q
-      - name: 지난 월요일(11/16) 실행 가정 — 주말 포함 확인
+      - name: 주말 포함 긴 기간(목 07:30 ~ 지금) — 월요일 분량 확인
         env:
           NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: |
-          python -m monitor.main --now 2026-11-16T07:30+09:00 --dry-run --collect-only | tee out-monday.log
+          python -m monitor.main --force --start 2026-11-19T07:30+09:00 --dry-run --collect-only | tee out-monday.log
           mv out/candidates.json out/candidates-monday.json
       - name: 금요일(11/20) 실행 가정 — 하루치
         env:
