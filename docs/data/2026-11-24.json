@@ -1,0 +1,865 @@
+{
+ "generated": "2026-11-24T07:30:48.650748+09:00",
+ "start": "2026-11-23T08:22:29+09:00",
+ "end": "2026-11-24T07:30:48.650748+09:00",
+ "window_label": "11/23(월) 08:22 ~ 11/24(화) 07:30",
+ "model": "claude-haiku-5-5",
+ "usage": {
+  "input": 220260,
+  "output": 21029,
+  "cache_read": 31549,
+  "cache_write": 4507,
+  "calls": 8,
+  "cost_usd": 0.03342
+ },
+ "sections": {
+  "WISET 직접 언급": {
+   "items": [
+    {
+     "title": "여성 연구자 성과, 국제협력·융합연구·정책 기여까지 평가해야",
+     "desc": "윤혜온 한국여성과학기술인육성재단(WISET) 이사장은 이공계 진입을 위한 교육과 멘토링부터 돌봄·대체인력 지원, 경력 복귀, 리더십 육성까지 여성과학기술인의 생애주기에 따른 지원 정책을 소개했다. 참석자들은...",
+     "link": "https://www.kyosu.net/news/articleView.html?idxno=212770",
+     "naver_link": "https://www.kyosu.net/news/articleView.html?idxno=212770",
+     "source": "교수신문",
+     "pub": "2026-11-23T14:40+09:00",
+     "keyword": "WISET",
+     "section": "WISET 직접 언급",
+     "sub": "WISET 관련",
+     "summary": "윤혜온 WISET 이사장이 이공계 진입 교육·멘토링부터 돌봄·대체인력 지원, 경력 복귀, 리더십 육성까지 여성과학기술인 생애주기 지원을 언급했다.",
+     "importance": "★★★",
+     "author": "윤혜온 한국여성과학기술인육성재단 이사장",
+     "related": []
+    },
+    {
+     "title": "출산ㆍ육아 법령은 빠르게 바뀌지만, 따라가지 못하는 대학 규정",
+     "desc": "지난 20일 과학기술정보통신부(부총리 겸 장관 배경훈)와 한국여성과학기술인육성재단(이사장 윤혜온, 위셋)은 카이스트 정근모콘퍼런스홀에서 '지금 우리 대학은? 제도 밖 출산·육아기 대학 연구자 지원 방안 마련을...",
+     "link": "https://www.kyosu.net/news/articleView.html?idxno=212738",
+     "naver_link": "https://www.kyosu.net/news/articleView.html?idxno=212738",
+     "source": "교수신문",
+     "pub": "2026-11-23T12:58+09:00",
+     "keyword": "여성과학기술인육성재단",
+     "section": "WISET 직접 언급",
+     "sub": "WISET 관련",
+     "summary": "과기정통부와 WISET이 카이스트에서 '제도 밖 출산·육아기' 대학 현실을 논의하는 행사를 열었다고 전했다. 대학 규정이 출산·육아 법령 변화를 따라가지 못하는 문제가 다뤄졌다.",
+     "importance": "★★★",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 2
+  },
+  "정부정책동향": {
+   "items": [
+    {
+     "title": "배경훈 부총리 \"국가과학AI센터, 과학AI 허브 자리잡도록 지원\"",
+     "desc": "과학 AI 분야 산학연 간담회 개최…K문샷 AI과학자 로드맵 발표 배경훈 부총리 겸 과학기술정보통신부 장관은 23일 \"국가과학인공지능연구센터(NAIS)가 AI 전문가와 도메인 과학자를 잇는 거점으로서 대한민국 과학 AI의...",
+     "link": "https://www.yna.co.kr/view/AKR20261123087300017?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016459093?sid=105",
+     "source": "연합뉴스",
+     "pub": "2026-11-23T16:16+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "summary": "배경훈 부총리가 국가과학인공지능연구센터(NAIS)를 과학AI 허브로 키우겠다고 밝혔으며, K-문샷 AI과학자 로드맵이 발표됐다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "과학적 발견 가속화할 ‘과학AI 통합플랫폼’… 올해 중 시범서비스",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12096772?ref=naver"
+      },
+      {
+       "title": "배경훈 “국가과학AI연구센터, 과학 AI 거점으로 육성”",
+       "source": "KBS",
+       "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8720124&ref=A"
+      },
+      {
+       "title": "과학 AI 분야 산학연 전문가 간담회",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/PYH20261123167300013?input=1196m"
+      },
+      {
+       "title": "배경훈 \"AI 과학자 시대 온다…국가 과학AI 역량 총결집\"",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=02876566645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "배경훈 부총리 \"AI 과학자 시대…국가 과학 AI 역량 결집해야\"",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/it-science/general-science/6363055"
+      },
+      {
+       "title": "과기정통부 ‘AI 과학자’ 육성 속도…국가 과학 AI 자원 결집 논의",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1718509/?sc=Naver"
+      },
+      {
+       "title": "연내 과학 AI 통합플랫폼 시범 운영...공통 연구기반 발전",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611231438495077"
+      },
+      {
+       "title": "AI 과학자가 연구 전 과정 참여…정부, 국가 과학 AI 역량 한데 모은다",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112314315658103"
+      },
+      {
+       "title": "과기정통부, 'AI 과학자' 개발 추진…국가 연구 역량 결집",
+       "source": "더팩트",
+       "link": "https://news.tf.co.kr/read/economy/2392172.htm"
+      },
+      {
+       "title": "배경훈 \"AI 과학자 시대 온다\"... 국가 과학 AI 역량 결집 강조",
+       "source": "오마이뉴스",
+       "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003287379&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news"
+      },
+      {
+       "title": "과기정통부, 과학 AI 역량 결집…'AI 과학자' 구현 속도",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717339"
+      },
+      {
+       "title": "국가과학AI연구센터, ‘AI 과학자’ 개발…연내 통합플랫폼 시범 운영",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112309233868790"
+      },
+      {
+       "title": "과기정통부, AI 과학자 개발 방향 논의…연내 플랫폼 시범 운영",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/tech/2026/11/23/2026112309442760491"
+      },
+      {
+       "title": "'AI 과학자'가 연구 전 과정 수행…정부, 국가 과학 AI 역량 모은다",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261123_0003878789"
+      }
+     ]
+    },
+    {
+     "title": "\"AI 확산에 여성 일자리 더 취약\"…성평등부, 직무전환 지원 확대",
+     "desc": "성평등가족부와 한국여성정책연구원은 24일 오후 3시 서울 은평구 여성정책연구원 국제회의장에서 'AI 대전환 시대, 성평등정책의 방향'을 주제로 제147차 양성평등정책포럼을 개최한다고 23일 밝혔다. 이번 포럼은 AI...",
+     "link": "https://www.newsis.com/view/NISX20261123_0003879176",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014340085?sid=102",
+     "source": "뉴시스",
+     "pub": "2026-11-23T15:00+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "summary": "성평등가족부와 한국여성정책연구원이 AI 대전환 시대 성평등정책 포럼을 열고 여성 일자리 취약성 대응과 직무전환 지원 확대를 논의했다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "성평등부, 생성형 인공지능 노출 성별 격차 점검…여성 고용 변화 대응...",
+       "source": "아시아투데이",
+       "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261123010008955"
+      },
+      {
+       "title": "AI시대 성평등정책 방향은…내일 성평등부 정책포럼",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261123069600530?input=1195m"
+      },
+      {
+       "title": "AI 자동화에 여성 일자리 어떻게 지키나…성평등부, 정책포럼 개최",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/society/women-family/6362356"
+      },
+      {
+       "title": "AI가 여성 일자리 대체할까…정부, 고용 충격 분석·직무전환 지원 논의",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261123000086"
+      }
+     ]
+    },
+    {
+     "title": "[이로운분석] 아이 둔 여성 고용률 상승에도 '육아 퇴직' 늘어난 이유",
+     "desc": "성평등가족부가 지난 7월 9일 발표한 '2025년 여성의 경제활동 및 경력단절 실태조사'에 따르면 결혼·임신·출산 등으로 경력단절을 경험한 여성은 재취업까지 평균 7.5년이 걸렸다. 경력단절 전과 비교해 재취업 후...",
+     "link": "https://www.eroun.net/news/articleView.html?idxno=96224",
+     "naver_link": "https://www.eroun.net/news/articleView.html?idxno=96224",
+     "source": "이로운넷",
+     "pub": "2026-11-23T14:40+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "summary": "성평등가족부 '2025년 여성의 경제활동 및 경력단절 실태조사'에 따르면 경력단절 여성은 재취업까지 평균 7.5년이 걸렸다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "[씨줄날줄] 분절노동",
+       "source": "서울신문",
+       "link": "https://www.seoul.co.kr/news/editOpinion/weft-column/2026/11/24/20261124027007?wlog_tag3=naver"
+      }
+     ]
+    },
+    {
+     "title": "육아휴직 업무 공백 지원·여성관리자 확대…공공기관 172곳 조직문화 개...",
+     "desc": "성평등가족부는 한국양성평등교육진흥원과 함께 오는 24일 오후 2시 서울 중구 프레지던트호텔에서 '2026년 성평등 조직문화 조성사업' 성과공유회를 개최한다고 23일 밝혔다. 이번 행사에서는 공공부문의 일·생활 균형...",
+     "link": "https://www.newspim.com/news/view/20261123000111",
+     "naver_link": "https://www.newspim.com/news/view/20261123000111",
+     "source": "뉴스핌",
+     "pub": "2026-11-23T12:00+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "summary": "성평등가족부가 공공기관 172곳의 조직문화 개선 성과를 공유하며 육아휴직 업무 공백 지원과 여성관리자 확대 사례를 소개했다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "여성 선원 고작 1.8%…탈의실도 없던 선박에 ‘여성선원실’ 생긴다",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=02236966645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "여성 선원실부터 육아시간 대체인력까지…공공부문 성평등 개선 성과",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/society/women-family/6362671"
+      },
+      {
+       "title": "\"선박 설계에 '여성선원실' 반영\"…공공기관 성평등 우수사례 선정",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261123_0003878970"
+      },
+      {
+       "title": "성평등부, 성평등 조직문화 조성사업 성과공유회 개최",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261123049400530?input=1195m"
+      }
+     ]
+    },
+    {
+     "title": "정부, AI 반도체 기업·글로벌 빅테크 협력 지원…공급망 대응 논의",
+     "desc": "과학기술정보통신부는 오늘(23일) 국내 인공지능 반도체 관련 기업 24곳이 참석한 가운데 '국내 AI반도체 업계 현안 간담회'를 열었다고 밝혔습니다. 간담회에서는 AMD와 엔비디아, 인텔 등 글로벌 기업과 국내 기업의 협력...",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8719874&ref=A",
+     "naver_link": "https://n.news.naver.com/mnews/article/056/0012299127?sid=105",
+     "source": "KBS",
+     "pub": "2026-11-23T11:08+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "summary": "과기정통부가 국내 AI반도체 기업 24곳과 간담회를 열고 글로벌 빅테크 협력 지원과 공급망 대응을 논의했다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "정부, AI반도체 글로벌 협력 확대·공급망 안정화 논의",
+       "source": "세계일보",
+       "link": "https://www.segye.com/newsView/20261123509338?OutUrl=naver"
+      },
+      {
+       "title": "정부, K-AI반도체 글로벌 협력 지원…부품 수급 불안 대응",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112309341939802"
+      },
+      {
+       "title": "AI반도체 업계 “메모리·기판 수급 불안 우려…공급망 기반 마련해야”",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20117553?ref=naver"
+      },
+      {
+       "title": "젠슨 황 스캔들·美 DC 규제…政 “부품·소재 수급 불안 선제 대응”",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10945503?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "에듀윌, KT와 손잡고 AI 인재 키운다…정부 'AI 캠퍼스' 선정",
+     "desc": "에듀윌은 자사가 참여한 KT 컨소시엄이 고용노동부의 'K-디지털 트레이닝(KDT) AI 캠퍼스' 운영기관으로 선정됐다고 23일 밝혔다. KDT AI 캠퍼스는 고용노동부가 올해 처음 도입한 AI 특화 직업훈련 사업이다. 정부는 AI...",
+     "link": "https://www.news1.kr/society/education/6362551",
+     "naver_link": "https://n.news.naver.com/mnews/article/421/0009304431?sid=102",
+     "source": "뉴스1",
+     "pub": "2026-11-23T11:01+09:00",
+     "keyword": "고용노동부",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "summary": "고용노동부가 올해 처음 도입한 KDT AI캠퍼스 운영기관으로 KT 컨소시엄이 선정됐으며, 에듀윌은 2027년부터 대전·대구·부산에서 교육을 진행한다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "에듀윌, KT 컨소시엄으로 고용노동부 'KDT AI 캠퍼스' 선정",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261123135008060"
+      },
+      {
+       "title": "에듀윌, KT와 손잡고 AI 인재 양성…대전·대구·부산서 연 300명 교육",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10945573?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "\"더는 못 기다린다\"…정부, 65세 정년 연장 추진 초읽기",
+     "desc": "김영훈 고용노동부 장관이 정년 연장 논의와 관련해 오는 27일 여당 특별위원회 회의에서 합의가 이뤄지지 않으면 정부가 직접 입장을 발표하는 방안을 검토하겠다고 밝혔다. 김 장관은 22일 KBS '일요진단'에 출연해 \"다음...",
+     "link": "https://magazine.hankyung.com/job-joy/article/202611233067d",
+     "naver_link": "https://magazine.hankyung.com/job-joy/article/202611233067d",
+     "source": "한국경제",
+     "pub": "2026-11-23T08:40+09:00",
+     "keyword": "고용노동부",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "summary": "김영훈 고용노동부 장관이 27일 여당 정년연장 특위에서 합의가 이뤄지지 않으면 정부가 직접 입장을 발표하는 방안을 검토한다고 밝혔다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "정년연장 '결단만 남았다'는데…27일이 갈림길",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261123000999"
+      },
+      {
+       "title": "김영훈 장관 “정년 연장 연내 처리 필요, 27일 특위 전후 정부 입장 발...",
+       "source": "이투데이",
+       "link": "https://bravo.etoday.co.kr/view/atc_view/20547"
+      },
+      {
+       "title": "정년연장, 27일 담판?…정부안 먼저 낸다",
+       "source": "SBS",
+       "link": "https://biz.sbs.co.kr/article_hub/20000348176?division=NAVER"
+      },
+      {
+       "title": "‘정년연장 개입’ 시사 정부, 임금개편 살핀다",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10945980?ref=naver"
+      },
+      {
+       "title": "[사설]정년연장 정부 주도, 임금개혁까지 결단해야",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112309410002053"
+      },
+      {
+       "title": "노동계 \"정부·여당, 올해 내 정년연장 입법 완수해야\"",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261123_0003878939"
+      },
+      {
+       "title": "정년연장 ‘임금 해법’ 찾는 정부…부총리, 임금체계 개편 현장 방문",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10945555?ref=naver"
+      },
+      {
+       "title": "국힘 반발 “정년연장 신중해야”…정부, 27일께 최후통첩",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=03693286645648672&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "\"정년연장, 출생연도별 상향으론 한계…기업 규모별 차등 필요\"",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261123_0003879216"
+      },
+      {
+       "title": "“경력직만 찾더니 이제 정년까지”…대졸 취준생 62%가 분통 터뜨린 이...",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12216696"
+      },
+      {
+       "title": "[사설] 정년 연장, 서두르기보다 안정적 정착에 초점 맞춰야",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=01210326645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "[사설] 정년연장 서두르는 정부·여당…경직된 임금체계부터 해결하길",
+       "source": "한국경제",
+       "link": "https://www.hankyung.com/article/2026112350191"
+      },
+      {
+       "title": "‘정년 65세’ 정부 결단 전망…노동계 “올해 안에 정년연장 입법 완수...",
+       "source": "세계일보",
+       "link": "https://www.segye.com/newsView/20261123510717?OutUrl=naver"
+      },
+      {
+       "title": "2029년부터 정년연장 검토…몇 년생부터 적용?",
+       "source": "채널A",
+       "link": "https://www.ichannela.com/news/main/news_detailPage.do?publishId=000000561306"
+      }
+     ]
+    },
+    {
+     "title": "내년부터 아파트서 과학 강연 듣는다… 과학문화 활동 포인트도",
+     "desc": "과학기술정보통신부와 한국과학창의재단은 23일 서울 중구 한국프레스센터에서 '제4차 과학기술문화 기본계획(2027~2031년)' 공청회를 열고 이 같은 내용을 공개했다. 이 계획은 과학기술에 대한 이해와 관심을 높이고...",
+     "link": "https://www.hankookilbo.com/news/article/A2026112317560001689?did=NA",
+     "naver_link": "https://n.news.naver.com/mnews/article/469/0000967291?sid=105",
+     "source": "한국일보",
+     "pub": "2026-11-23T18:38+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "summary": "과기정통부와 한국과학창의재단이 제4차 과학기술문화 기본계획(2027~2031년) 공청회를 열고 주요 내용을 공개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "내년 연구실 안전 예산 337억원 투입…올해 대비 3배 확대",
+     "desc": "과학기술정보통신부는 23일부터 5일간 '안심하고 연구하는 안전한 연구실, 함께 만드는 안전한 내일'을 주제로 연구실 안전주간을 진행한다고 밝혔다. 이번 연구실 안전주간은 올해 발표된 연구실 안전 강화 대책...",
+     "link": "https://www.yna.co.kr/view/AKR20261123074200017?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016459089?sid=105",
+     "source": "연합뉴스",
+     "pub": "2026-11-23T14:00+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "summary": "과기정통부가 내년 연구실 안전 예산을 올해 대비 3배 확대하는 337억원을 투입하며, 2026 연구실 안전주간을 운영한다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "과기정통부 ‘2026 연구실 안전주간’ 운영…내년 338억원 투입",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1718395/?sc=Naver"
+      },
+      {
+       "title": "정부, 연구실 안전예산 3배 확대…내년 338억원 투입",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112311122206517"
+      },
+      {
+       "title": "과기정통부, 연구실 안전문화 확산 나선다…27일까지 안전주간",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717327"
+      },
+      {
+       "title": "\"안전한 연구실 만든다\"…정부, 내년 관련 예산 3배 늘린다",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261123_0003878762"
+      }
+     ]
+    },
+    {
+     "title": "AI대학원 성과, 취업률로 재단?…핵심 연구 역량 놓친다",
+     "desc": "앞서 지난 9월 이정헌 더불어민주당 의원이 과학기술정보통신부에서 확보한 자료에 따르면 지난해 AI대학원 졸업생 660명 가운데 220명이 미취업 상태로 집계됐다. 이 의원은 정부 지원으로 양성한 인재가 산업 현장에...",
+     "link": "https://zdnet.co.kr/view/?no=20261123105638",
+     "naver_link": "https://n.news.naver.com/mnews/article/092/0002446450?sid=105",
+     "source": "지디넷코리아",
+     "pub": "2026-11-23T11:06+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "summary": "이정헌 의원이 과기정통부 자료를 인용해 AI대학원 졸업생 660명 중 220명이 미취업 상태라고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 585
+  },
+  "유관기관동향": {
+   "items": [
+    {
+     "title": "이공계 교수 76% “신입생 학력 저하”…수학 교수 95% “미적분Ⅱ 필요...",
+     "desc": "23일 국회와 한국과학기술한림원(KAST·한림원)이 공동 주최한 포럼에서 송진웅 서울대 물리교육과 특임교수는 이같은 내용이 담긴 ‘AI 시대, 이공계 인재의 기초학력 위기 진단 및 역량 강화 방안 마련’ 연구 결과를...",
+     "link": "https://www.joongang.co.kr/article/25481147",
+     "naver_link": "https://n.news.naver.com/mnews/article/025/0003567271?sid=102",
+     "source": "중앙일보",
+     "pub": "2026-11-23T17:16+09:00",
+     "keyword": "과학기술한림원",
+     "section": "유관기관동향",
+     "sub": "과학기술한림원",
+     "summary": "국회와 한국과학기술한림원이 공동 주최한 포럼에서 이공계 교수 다수가 신입생 기초학력 저하를 체감한다는 진단이 발표됐다. 고교·대학 교육 연계 방안이 논의됐다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "입시는 치열한데…'한숨' 이공계 교수 75%, 신입생 기초학력 떨어져",
+       "source": "SBS",
+       "link": "https://biz.sbs.co.kr/article_hub/20000348284?division=NAVER"
+      },
+      {
+       "title": "이공계 교수 75% \"신입생 기초학력 저하\"…수업 난도 낮춰 대응",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261123127100017?input=1195m"
+      }
+     ]
+    },
+    {
+     "title": "한국연구재단, 김영조 자연과학단장 선임",
+     "desc": "한국연구재단은 기초연구본부 자연과학단장에 충북대학교 화학과 김영조(사진) 교수를 선임했다고 23일 밝혔다. 임기는 2년이다. 김영조신임 자연과학단장은 정부에서 위탁받은 자연과학단 소관분야 지원사업의...",
+     "link": "https://biz.heraldcorp.com/article/10946428?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002727255?sid=105",
+     "source": "헤럴드경제",
+     "pub": "2026-11-23T16:26+09:00",
+     "keyword": "한국연구재단",
+     "section": "유관기관동향",
+     "sub": "기타 유관기관",
+     "summary": "한국연구재단이 기초연구본부 자연과학단장에 김영조 충북대 교수를 선임했으며 임기는 2년이다. 김 단장은 KAIST 출신 화학자다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "김영조 충북대 교수, 한국연구재단 자연과학단장에",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261123180837"
+      },
+      {
+       "title": "김영조 충북대 교수, 한국연구재단 자연과학단장 선임",
+       "source": "교수신문",
+       "link": "https://www.kyosu.net/news/articleView.html?idxno=212774"
+      },
+      {
+       "title": "한국연구재단 자연과학단장에 김영조 충북대 교수 선임",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261123000484"
+      },
+      {
+       "title": "[인사] 한국연구재단·한전원자력연료",
+       "source": "대덕넷",
+       "link": "http://www.hellodd.com/news/articleView.html?idxno=113973"
+      },
+      {
+       "title": "[인사] 한국연구재단",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81026"
+      },
+      {
+       "title": "[인사] 한국연구재단 외",
+       "source": "한국일보",
+       "link": "https://www.hankookilbo.com/news/article/A2026112315580001664?did=NA"
+      }
+     ]
+    },
+    {
+     "title": "UST, 2027학년도 전기 2차 석·박사 신입생 모집…430명 선발",
+     "desc": "모집분야는 한국전자통신연구원(ETRI), 한국과학기술연구원(KIST), 한국화학연구원(KRICT) 등 27개 국가연구소 스쿨의 45개 전공이다. 모집전형은 일반전형과 특별전형으로 나눠 일반전형에서는 일반 석·박사과정과...",
+     "link": "https://www.newsis.com/view/NISX20261123_0003878987",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014339215?sid=102",
+     "source": "뉴시스",
+     "pub": "2026-11-23T10:59+09:00",
+     "keyword": "KIST",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "과학기술연합대학원대학교(UST)가 2027학년도 전기 2차 석·박사과정 신입생을 모집하며, 27개 국가연구소 스쿨의 45개 전공에서 430명을 선발한다.",
+     "importance": "★★☆",
+     "author": "",
+     "related": [
+      {
+       "title": "UST 정원 430명 확대…AI 모빌리티 전공 신설",
+       "source": "금강일보",
+       "link": "https://www.ggilbo.com/news/articleView.html?idxno=1194921"
+      },
+      {
+       "title": "UST, 2027학년도 전기 2차 석·박사과정 신입생 모집",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/daejeon-chungnam/6362668"
+      },
+      {
+       "title": "UST, 30일부터 2차 석·박사과정 신입생 모집",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261123103044"
+      },
+      {
+       "title": "UST, 2027학년도 전기 2차 석‧박사과정 신입생 뽑아요",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20117636?ref=naver"
+      },
+      {
+       "title": "UST 2027 전기 2차 신입생 모집...정원 늘리고 AI 모빌리티 전공 신설",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261123000149"
+      }
+     ]
+    },
+    {
+     "title": "\"벤처투자 비수도권 1위 대전, 실제 창업의향은 가장 낮아\"…왜?",
+     "desc": "(이하 출연연)이 모여있는 대전 대덕연구개발특구의 안정적인 인프라가 오히려 창업 실행력을 떨어뜨린다는 분석이 나왔다. 24일 대전연구원 김은영 책임연구위원이 펴낸 '출연연 연구자 창업 특성을 통한 대전 창업...",
+     "link": "https://www.yna.co.kr/view/AKR20261123148000063?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016459411?sid=101",
+     "source": "연합뉴스",
+     "pub": "2026-11-24T07:00+09:00",
+     "keyword": "출연연",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "대전연구원이 출연연 연구자를 대상으로 한 조사에서 대덕특구의 안정적 인프라가 창업 실행력을 떨어뜨린다는 분석을 발표했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "정학근 원장 \"연구는 함께, 기술은 현장으로···에너지연 혁신\"",
+     "desc": "출연연 간 협력도 확대한다. 정 원장은 에너지연이 오랫동안 축적한 기술과 다른 연구기관이 보유한 아이디어를 결합하면 연구개발 속도를 높일 수 있다고 봤다. 다만 외부 기관과의 협력에 앞서 내부 연구자들이 함께...",
+     "link": "http://www.hellodd.com/news/articleView.html?idxno=113970",
+     "naver_link": "http://www.hellodd.com/news/articleView.html?idxno=113970",
+     "source": "대덕넷",
+     "pub": "2026-11-23T18:40+09:00",
+     "keyword": "출연연",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "정학근 에너지기술연구원장이 출연연 간 협력 확대와 기술의 현장 이전을 통한 에너지연 혁신 방향을 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "AI가 지어낸 책, 검증 없이 논문에 인용…학계 신뢰 흔들린다",
+     "desc": "한국연구재단의 ‘2025 대학 교원 연구 윤리 인식 수준 조사’에 따르면 2024년 연구에 AI를 활용한 교원 943명 중 95.76%가 문법과 단어 검토 등에 사용했다고 답했다. 선행 연구 검토는 68.93%, 연구 설계는 29.26%였다. 논문...",
+     "link": "https://www.hankyung.com/article/2026112350411",
+     "naver_link": "https://n.news.naver.com/mnews/article/015/0005357227?sid=102",
+     "source": "한국경제",
+     "pub": "2026-11-23T17:50+09:00",
+     "keyword": "한국연구재단",
+     "section": "유관기관동향",
+     "sub": "기타 유관기관",
+     "summary": "한국연구재단의 2025 대학 교원 연구 윤리 인식 조사에 따르면 2024년 연구에 AI를 활용한 교원 대부분이 문법·단어 검토 등에 사용했다고 답했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "전북대학교, 피지컬 AI 기반 농축산 혁신 정책포럼 개최… 장수군 중심...",
+     "desc": "전북대학교는 지난 11월 18일 전주 라한호텔에서 한국과학기술단체총연합회 전북지역연합회가 주최·주관한 '피지컬 AI가 여는 농축산 혁신과 지역상생방안 정책포럼'이 개최됐다고 밝혔다. 이번 포럼에는 대학과 연구기관...",
+     "link": "https://www.lecturernews.com/news/articleView.html?idxno=214409",
+     "naver_link": "https://www.lecturernews.com/news/articleView.html?idxno=214409",
+     "source": "한국강사신문",
+     "pub": "2026-11-23T17:18+09:00",
+     "keyword": "한국과학기술단체총연합회",
+     "section": "유관기관동향",
+     "sub": "과총·단체",
+     "summary": "한국과학기술단체총연합회 전북지역연합회가 주최·주관한 농축산 혁신 정책포럼이 전주에서 열려 지역상생 방안을 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "강원대학교 방재전문대학원, '2026 재난안전포럼' 개최…기후변화 시대...",
+       "source": "한국강사신문",
+       "link": "https://www.lecturernews.com/news/articleView.html?idxno=214357"
+      }
+     ]
+    },
+    {
+     "title": "\"글로벌 존재감 커진 K-우주기업…국내선 성장사다리 부재로 고전\"",
+     "desc": "이날 좌담회에는 지난달 5일~9일 튀르키예 안탈리아에서 열린 국제우주대회(IAC 2026)에 참석한 안형준 과학기술정책연구원 우주공공팀장, 박정호 한국항공우주연구원 기술사업화실장, 이강환 스펙스 최고전략책임자(CSO)...",
+     "link": "https://www.mt.co.kr/future/2026/11/24/2026112311354547163",
+     "naver_link": "https://n.news.naver.com/mnews/article/008/0005445126?sid=101",
+     "source": "머니투데이",
+     "pub": "2026-11-23T16:30+09:00",
+     "keyword": "한국항공우주연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "summary": "과학기술정책연구원 등 전문가들이 참여한 좌담회에서 K-우주기업의 성장 과정과 국내 성장사다리 부재 문제가 논의됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "부산 여평원-대한여성과학기술인회 부울경지부, 간담회 개최",
+     "desc": "부산여성가족과 평생교육진흥원(원장 조준영, 이하 부산여평원)은 지난 20일 대한여성과학기술인회(KWSE) 부산울산경남지부(지부장 장은숙, 이하 KWSE 부울경지부)와 여성과학기술인 관련 정책연구 및 사업 협력 방안을...",
+     "link": "https://www.busan.com/view/busan/view.php?code=2026112314401519721",
+     "naver_link": "https://n.news.naver.com/mnews/article/082/0001408512?sid=102",
+     "source": "부산일보",
+     "pub": "2026-11-23T14:41+09:00",
+     "keyword": "대한여성과학기술인회",
+     "section": "유관기관동향",
+     "sub": "과총·단체",
+     "summary": "부산여성가족과 평생교육진흥원이 대한여성과학기술인회 부울경지부와 간담회를 열어 여성과학기술인 지원 협력을 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "개도국 교육원조 'AI·자립형'으로 전환한다",
+     "desc": "교육부는 이 같은 미래 전략을 구체화하기 위해 한국연구재단과 함께 24일 서울 용산구 서울 드래곤시티에서 '제13회 교육 공적개발원조(ODA) 학술대회'를 개최한다고 23일 밝혔다. '성과를 넘어 지속가능한 변화로: 한국...",
+     "link": "https://www.fnnews.com/news/202611231426566529",
+     "naver_link": "https://n.news.naver.com/mnews/article/014/0005608296?sid=102",
+     "source": "파이낸셜뉴스",
+     "pub": "2026-11-23T14:31+09:00",
+     "keyword": "한국연구재단",
+     "section": "유관기관동향",
+     "sub": "기타 유관기관",
+     "summary": "교육부가 한국연구재단과 함께 제13회 교육 ODA 학술대회를 열어 개발도상국 교육 원조의 AI·자립형 전환 방향을 논의한다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "교육부, 개발도상국 지원 성과 점검…\"새로운 협력 기회 적극 발굴\"",
+       "source": "TV조선",
+       "link": "https://news.tvchosun.com/site/data/html_dir/2026/11/23/2026112390155.html"
+      },
+      {
+       "title": "교육부·한국연구재단, 교육 공적개발원조(ODA) 학술대회",
+       "source": "노컷뉴스",
+       "link": "https://www.nocutnews.co.kr/news/6611008?utm_source=naver&utm_medium=article&utm_campaign=20261123132650"
+      },
+      {
+       "title": "교육부, 개발도상국 교육 지원 성과 점검…학술대회 개최",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/society/education/6362362"
+      },
+      {
+       "title": "한국교육 ODA 미래전략은?…교육부·연구재단 학술대회 개최",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261123040000530?input=1195m"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 345
+  },
+  "여성과학기술인": {
+   "items": [
+    {
+     "title": "한국 남녀 임금격차 여전히 OECD 최대…여성 임금, 남성의 72% 수준",
+     "desc": "전문가들은 남녀 간 임금 격차가 큰 배경으로 출산·육아에 따른 경력 단절과 재취업 과정에서의 일자리... 김광석 한국경제산업연구원 경제연구실장은 반도체 대기업의 높은 성과급 등이 반영되는 올해...",
+     "link": "https://www.joongang.co.kr/article/25481037",
+     "naver_link": "https://n.news.naver.com/mnews/article/025/0003567180?sid=102",
+     "source": "중앙일보",
+     "pub": "2026-11-23T13:19+09:00",
+     "keyword": "경력단절+연구",
+     "section": "여성과학기술인",
+     "sub": "경력단절·젠더",
+     "summary": "한국의 남녀 임금격차가 OECD 최대 수준이며 여성 임금은 남성의 72% 수준이라고 보도됐다. 전문가들은 출산·육아에 따른 경력 단절과 재취업 과정의 일자리 질 저하를 주요 배경으로 꼽았다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "남성 100만 원 벌 때 여성은 72만 원… OECD 국가 중 남녀 격차 1위",
+       "source": "한국일보",
+       "link": "https://www.hankookilbo.com/news/article/A2026112311150005397?did=NA"
+      },
+      {
+       "title": "男 100만원-女 72만원 임금 수준 살펴보니…'韓 남녀 격차' OECD 최대",
+       "source": "이코노미스트",
+       "link": "https://economist.co.kr/article/view/ecn202611230006"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 204
+  },
+  "참고보도": {
+   "items": [
+    {
+     "title": "[사설]개인정보 뚫린 한전, 구멍난 사이버안보",
+     "desc": "대상이 된 만큼 국가 차원의 통합 사이버 방어체계 구축이 시급하다. 중대 재해사고 발생시 최고경영자에게 책임을 묻는 것처럼 정부와 공공기관도 정보보호 역량과 사태 해결, 사후 복구 능력을 철저히 평가할 필요가 있다.",
+     "link": "https://www.mt.co.kr/opinion/2026/11/24/2026112315484451393",
+     "naver_link": "https://n.news.naver.com/mnews/article/008/0005445297?sid=110",
+     "source": "머니투데이",
+     "pub": "2026-11-24T04:46+09:00",
+     "keyword": "공공기관+경영",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "summary": "대상이 된 만큼 국가 차원의 통합 사이버 방어체계 구축이 시급하다. 중대 재해사고 발생시 최고경영자에게 책임을 묻는 것처럼 정부와 공공기관도 정보보호 역량과 사태…",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "[사설] 한전·삼성증권도 해킹… 개인정보 유출 왜 아무도 책임 안지나",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12096782?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "[사설] 반도체 인력, 안 나갈 매력 줘야",
+     "desc": "채용 대상 역시 이공계 신입에서부터 5년 이상 중견 엔지니어, 수석 설계 인력까지 전방위로 확대한 점도 예사롭지 않은 변화다. 마이크론이 대만, 싱가포르, 일본에서 근무할 각 국가 기술 전략에 특화된 한국 인재를 직접...",
+     "link": "https://www.etnews.com/20261123000398",
+     "naver_link": "https://n.news.naver.com/mnews/article/030/0003488761?sid=105",
+     "source": "전자신문",
+     "pub": "2026-11-23T17:03+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "summary": "채용 대상 역시 이공계 신입에서부터 5년 이상 중견 엔지니어, 수석 설계 인력까지 전방위로 확대한 점도 예사롭지 않은 변화다. 마이크론이 대만, 싱가포르, 일본에…",
+     "importance": "★☆☆",
+     "author": "",
+     "related": [
+      {
+       "title": "美마이크론, '삼전·닉스 안방' 韓서 채용 행사 돌입…메모리 3사 '인재...",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261123_0003879805"
+      },
+      {
+       "title": "HBM 양산부터 설계까지…마이크론, 'K-반도체 인재 확보' 전방위 공세",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261123000358"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 182
+  },
+  "기고칼럼": {
+   "items": [
+    {
+     "title": "[기고] 코딩 배우라더니 이제는 AI…컴퓨터 교육의 역설",
+     "desc": "공공기관 대상 법령입안강의를 하며, 대학에서 특허법, 저작권법, 산업보안법, 과학기술법, 정보보안법, 디지털증거법, ICT트러스트공학, 일반 산업안전, 중대재해법 등을 강의한다. 한국인터넷진흥원, 한국콘텐츠진흥원...",
+     "link": "https://www.newspim.com/news/view/20261120000155",
+     "naver_link": "https://www.newspim.com/news/view/20261120000155",
+     "source": "뉴스핌",
+     "pub": "2026-11-24T07:00+09:00",
+     "keyword": "기고+과학기술",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "summary": "컴퓨터 교육이 코딩에서 AI 중심으로 바뀌는 상황을 다룬 기고로, 필자는 법령입안과 과학기술법 등을 강의한다고 소개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    },
+    {
+     "title": "[사설] 일파만파 AI커닝...신뢰사회 무너뜨릴라",
+     "desc": "AI는 인류가 갈 길이지만 그 예측 불가능성을 과학자들은 경고한다. 생성형 AI의 세계적 기업인 앤트로픽은... 그렇다면 그 대응도 보다 과학적이어야 한다. 카메라를 차단한다고 수험생에게 앞치마를 착용토록 하는...",
+     "link": "https://www.yeongnam.com/web/view.php?key=20261123023412448",
+     "naver_link": "https://www.yeongnam.com/web/view.php?key=20261123023412448",
+     "source": "영남일보",
+     "pub": "2026-11-24T06:00+09:00",
+     "keyword": "사설+과학",
+     "section": "기고칼럼",
+     "sub": "사설·시평",
+     "summary": "AI 커닝 확산이 신뢰사회를 무너뜨릴 수 있다며, 과학적이고 체계적인 대응이 필요하다고 주장한 사설이다.",
+     "importance": "★☆☆",
+     "author": "사설",
+     "related": []
+    },
+    {
+     "title": "이은미 토스뱅크 대표 \"AI 금융결제 확산, 기술보다 신뢰 확보가 우선\"",
+     "desc": "토스뱅크의 디지털 금융 운영 경험도 소개했다. 이 대표는 토스뱅크가 기존 금융회사를 인수하지 않고... 이 대표는 SFF를 주관하는 글로벌 핀테크 네트워크(GFTN)의 글로벌 리더 기고집 'THE FIRST WORD'에도 필진으로...",
+     "link": "https://daily.hankooki.com/news/articleView.html?idxno=1428084",
+     "naver_link": "https://daily.hankooki.com/news/articleView.html?idxno=1428084",
+     "source": "한국일보",
+     "pub": "2026-11-23T17:44+09:00",
+     "keyword": "기고+디지털",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "summary": "이은미 토스뱅크 대표가 AI 금융결제 확산에서 기술보다 신뢰 확보가 우선이라고 강조하며 토스뱅크의 디지털 금융 운영 경험을 소개했다.",
+     "importance": "★☆☆",
+     "author": "이은미 토스뱅크 대표",
+     "related": [
+      {
+       "title": "이은미 토스뱅크 대표, 싱가포르 핀테크 행사서 AI 결제 3대 조건 제시",
+       "source": "더피알",
+       "link": "https://www.the-pr.co.kr/news/articleView.html?idxno=63449"
+      },
+      {
+       "title": "이은미 토스뱅크 대표 \"AI 결제, 신원·권한·책임부터 명확해야\"",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611231605556545"
+      }
+     ]
+    },
+    {
+     "title": "[기고] 세계에서 찾은 혁신의 길, 안산의 미래로 잇다",
+     "desc": "인공지능(AI)과 로봇, 디지털 기술이 산업의 판도를 바꾸고 세계 도시들이 새로운 성장 동력을 찾아 경쟁하는 지금, 안산도 익숙한 방식에 머물러서는 안 된다. 스페인과 독일을 방문한 것은 안산이 나아갈 방향을...",
+     "link": "https://www.naeil.com/news/read/609656?ref=naver",
+     "naver_link": "https://www.naeil.com/news/read/609656?ref=naver",
+     "source": "내일신문",
+     "pub": "2026-11-23T13:02+09:00",
+     "keyword": "기고+디지털",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "summary": "AI와 로봇, 디지털 기술이 산업 판도를 바꾸는 상황에서 안산의 혁신 방향을 제시하는 기고다.",
+     "importance": "★☆☆",
+     "author": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 13
+  }
+ }
+}
