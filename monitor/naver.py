@@ -8,8 +8,8 @@ from urllib.parse import urlsplit
 
 import requests
 
-from .config import (PREFILTER_EXCLUDE, PREFILTER_EXCLUDE_BY_SECTION, SECTIONS, SERIES_RULES, SOURCE_KEYWORDS,
-                     WISET_SECTION)
+from .config import (COLUMN_MARKERS, COLUMN_SECTION, COLUMN_SERIES, PREFILTER_EXCLUDE, PREFILTER_EXCLUDE_BY_SECTION,
+                     SECTIONS, SERIES_RULES, SOURCE_KEYWORDS, WISET_SECTION)
 from .window import KST
 
 API = "https://openapi.naver.com/v1/search/news.json"
@@ -188,9 +188,24 @@ def title_has(title, rule):
     return all(_squash(part) in t for part in rule.split("+"))
 
 
+_BRACKETS = re.compile(r"[\[【<「〈]([^\]】>」〉]{1,30})[\]】>」〉]")
+
+
+def is_column_title(title):
+    """제목에 칼럼 표시가 있는지: [기고] [김호균 칼럼] [사설] [김우재의 플라스크] 등 (앞·뒤 어디든)."""
+    if any(x in title for x in COLUMN_SERIES):
+        return True
+    for seg in _BRACKETS.findall(title):
+        if any(m in seg for m in COLUMN_MARKERS) or re.match(r"^[가-힣]{2,4}의\s", seg):
+            return True
+    return False
+
+
 def prefiltered(section, title):
     if section == WISET_SECTION:
         return False
+    if section == COLUMN_SECTION and not is_column_title(title):
+        return True
     return (any(x in title for x in PREFILTER_EXCLUDE)
             or any(title_has(title, r) for r in PREFILTER_EXCLUDE_BY_SECTION.get(section, [])))
 

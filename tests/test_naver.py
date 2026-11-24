@@ -128,3 +128,20 @@ def test_collect_alt_sections_and_series(monkeypatch):
     assert org[0]["alt_sections"] == {"여성과학기술인": "여성 과학자·연구자"}
     moved = res["여성과학기술인"]["여성 과학자·연구자"]
     assert [a["title"] for a in moved] == ["x 기사 1"] and moved[0]["moved_from"] == "유관기관동향"
+
+
+def test_column_title_rule():
+    from monitor.naver import is_column_title, prefiltered
+    for t in ["[기고] 수산정책", "공공기관 유치 [기고]", "[김호균 칼럼] 젠슨 황", "[기고-안병철] 물기술", "노동시장 [사설]",
+              "[ET톡] 해킹", "[朝鮮칼럼] K팝", "마지막 편지[김우재의 플라스크]", "과기계는 지금 출연연"]:
+        assert is_column_title(t), t
+    for t in ["[단독] 필리핀 넘어 제3국으로", "\"中 정보기관, 2년전부터 비밀 작전\"", "[속보]과기부", "[이로운분석] 재취업"]:
+        assert not is_column_title(t), t
+    assert prefiltered("기고칼럼", "[단독] 필리핀 넘어 제3국으로")
+    assert not prefiltered("참고보도", "[단독] 필리핀 넘어 제3국으로")
+
+
+def test_narrowed_keywords():
+    from monitor.config import SECTIONS
+    assert "고용노동부" not in SECTIONS["정부정책동향"]["고용노동부"]
+    assert "공공기관+경영" not in SECTIONS["참고보도"]["공공기관"] and "공공기관+5부제" in SECTIONS["참고보도"]["공공기관"]
