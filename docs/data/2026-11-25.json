@@ -1,0 +1,1088 @@
+{
+ "generated": "2026-11-25T07:30:44.467976+09:00",
+ "start": "2026-11-24T07:30:48+09:00",
+ "end": "2026-11-25T07:30:44.467976+09:00",
+ "window_label": "11/24(화) 07:30 ~ 11/25(수) 07:30",
+ "model": "claude-haiku-5-5",
+ "usage": {
+  "input": 196613,
+  "output": 30319,
+  "cache_read": 43827,
+  "cache_write": 6261,
+  "calls": 8,
+  "max_prompt": 74037,
+  "cost": 0.036041695000000006,
+  "cost_usd": 0.03604
+ },
+ "sections": {
+  "WISET 직접 언급": {
+   "items": [
+    {
+     "title": "“논문 수만 세선 안 돼” 여성 연구자 평가 새 기준 논의",
+     "desc": "윤혜온 한국여성과학기술인육성재단(WISET) 이사장은 이공계 진입을 돕는 교육·멘토링부터 돌봄 및 대체인력 지원, 경력 복귀, 리더십 육성까지 이어지는 국내 생애주기별 지원체계를 소개하며 정책 지원의 중요성을...",
+     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284894",
+     "naver_link": "https://n.news.naver.com/mnews/article/310/0000142021?sid=102",
+     "source": "여성신문",
+     "pub": "2026-11-24T20:02+09:00",
+     "keyword": "WISET",
+     "section": "WISET 직접 언급",
+     "sub": "WISET 관련",
+     "alt_sections": {
+      "여성과학기술인": "여성 과학자·연구자",
+      "참고보도": "인재·채용"
+     },
+     "summary": "윤혜온 WISET 이사장이 여성 연구자 평가 기준을 새롭게 논의해야 한다고 밝혔다. 이공계 진입부터 경력 복귀, 리더십 육성까지 생애주기별 지원체계를 언급했다.",
+     "importance": "★★★",
+     "author": "",
+     "move_to": "여성과학기술인",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 1
+  },
+  "정부정책동향": {
+   "items": [
+    {
+     "title": "정부 ‘성평등정책담당관’ 확대 보류…일부 국무위원 “이름도 재검토...",
+     "desc": "해당 개정안은 과학기술정보통신부 등 6개 기관에 성평등정책담당관을 신설하고 총 13개 기관에 인력을 늘리는 내용이다. 성평등정책담당관은 2019년 ‘미투 운동’을 계기로 분야별 특성을 고려해 각 부처가 성차별...",
+     "link": "https://www.hani.co.kr/arti/politics/bluehouse/1288938.html",
+     "naver_link": "https://n.news.naver.com/mnews/article/028/0002833802?sid=100",
+     "source": "한겨레",
+     "pub": "2026-11-24T20:48+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "정부가 과기정통부 등 6개 기관에 성평등정책담당관을 신설하는 개정안을 추진했으나 확대가 보류됐다. 일부 국무위원은 명칭 재검토도 요구했다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "청와대 \"'가정폭력 범죄에 반의사불벌죄 적용 배제' 의견 모아져\"",
+       "source": "SBS",
+       "link": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008861523&plink=ORI&cooper=NAVER"
+      },
+      {
+       "title": "靑 \"'가정폭력 범죄에 반의사불벌죄 적용 배제' 의견 모아져\"",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261124144400001?input=1195m"
+      },
+      {
+       "title": "성평등정책 전담부서 확대안, 국무회의서 보류된 까닭은?",
+       "source": "한국일보",
+       "link": "https://www.hankookilbo.com/news/article/A2026112416510003801?did=NA"
+      }
+     ]
+    },
+    {
+     "title": "매년 200명 퇴직하는 출연연 과학자···전문기관 지정해 '국가전략자산...",
+     "desc": "과학기술정보통신부와 국가과학기술연구회(NST), 국가과학기술인력개발원(KIRD), 대전테크노파크 등이 참여해 고경력 과학기술인 활용 정책과 기관별 역할을 논의했다. ◇ 법적 근거 마련···정부, 고경력 과학기술인 활용...",
+     "link": "http://www.hellodd.com/news/articleView.html?idxno=113981",
+     "naver_link": "http://www.hellodd.com/news/articleView.html?idxno=113981",
+     "source": "대덕넷",
+     "pub": "2026-11-24T18:26+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {
+      "유관기관동향": "정부출연연구기관",
+      "참고보도": "인재·채용"
+     },
+     "summary": "과기정통부와 NST, KIRD 등이 퇴직 출연연 과학자 등 고경력 과학기술인 활용 정책과 기관별 역할을 논의했다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "27일부터 유급휴가 두 배…직장인이라면 알아둘 변화",
+     "desc": "고용노동부에 따르면 오는 27일 개정 남녀고용평등과 일·가정 양립 지원에 관한 법률이 시행된다. 이에... 여성뿐 아니라 남성 근로자도 사용할 수 있으며, 연차휴가와는 별도로 부여된다. 사용 범위도 확대된 상태다....",
+     "link": "https://www.ajunews.com/view/20261124164511024",
+     "naver_link": "https://www.ajunews.com/view/20261124164511024",
+     "source": "아주경제",
+     "pub": "2026-11-24T16:52+09:00",
+     "keyword": "고용노동부+여성",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "alt_sections": {},
+     "summary": "고용노동부에 따르면 27일 개정 남녀고용평등과 일·가정 양립 지원에 관한 법률이 시행되며, 남성 근로자도 사용할 수 있는 유급휴가가 연차휴가와 별도로 부여된다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "여성새로일하기센터, 내달부터 '여성경력온센터'로 명칭 변경",
+     "desc": "성평등가족부는 오는 12월 1일부터 새일센터의 명칭을 여성경력온센터로 변경한다고 24일 밝혔다. 경력단절 이후 재취업 지원을 넘어 첫 일자리 진입부터 경력 유지, 이직·전직과 직무전환까지 여성의 생애 전반에...",
+     "link": "https://www.yna.co.kr/view/AKR20261124050200530?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016460324?sid=102",
+     "source": "연합뉴스",
+     "pub": "2026-11-24T12:00+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "alt_sections": {},
+     "summary": "성평등가족부는 12월 1일부터 새일센터의 명칭을 여성경력온센터로 바꾸고, 청년부터 중장년까지 여성의 전 생애 경력개발을 지원하는 기관으로 역할을 강화한다고 밝혔다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "여성새로일하기센터, 다음 달부터 ‘여성경력온센터’로 새 출발",
+       "source": "여성신문",
+       "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284862"
+      },
+      {
+       "title": "여성새로일하기센터, 12월부터 ‘여성경력온센터’로 새 출발",
+       "source": "SBS",
+       "link": "https://biz.sbs.co.kr/article_hub/20000348506?division=NAVER"
+      },
+      {
+       "title": "여성새로일하기센터 ‘여성경력온센터’로 거듭난다1",
+       "source": "부산일보",
+       "link": "https://www.busan.com/view/busan/view.php?code=2026112413272411966"
+      },
+      {
+       "title": "여성의 내일을 켜다..새일센터, 12월부터 '여성경력온센터'로 새 출발",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611240951308548"
+      },
+      {
+       "title": "여성 취업지원 '새일센터', 내달부터 '여성경력온센터'로 바뀐다",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/society/general-society/6363623"
+      },
+      {
+       "title": "여성새일센터→여성경력온센터로…경력개발 지원 강화",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261124_0003880723"
+      },
+      {
+       "title": "재취업 넘어 첫 취업·이직까지…새일센터, '여성경력온센터'로 바뀐다",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261124000131"
+      }
+     ]
+    },
+    {
+     "title": "中 기술패권 질주하는데, 韓 여전히 쪼개기 지원 \"반도체 호황·최대 R&...",
+     "desc": "김성수 과학기술정보통신부 연구개발정책실장은 양적으로 중국과 미국에 비해 R&D 총액이 적은 만큼 독일, 일본, 영국 등 독자적인 강점을 지닌 국가와 다자간 글로벌 협력 체계를 구축할 것을 제안했다. 또한 수학·바이오...",
+     "link": "http://www.hellodd.com/news/articleView.html?idxno=113983",
+     "naver_link": "http://www.hellodd.com/news/articleView.html?idxno=113983",
+     "source": "대덕넷",
+     "pub": "2026-11-24T18:26+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {
+      "유관기관동향": "4대 과학기술원",
+      "참고보도": "주요 과학매체"
+     },
+     "summary": "김성수 과기정통부 연구개발정책실장은 R&D 총액 격차를 언급하며 독일, 일본, 영국 등과 다자간 글로벌 협력 체계 구축을 강조했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "과기부 “내년 AI 정부 예산 16조 원…풀스택 수출 본격화 목표”",
+     "desc": "이진수 과학기술정보통신부 인공지능정책기획관은 오늘(24일) 서울 삼정호텔에서 한국인공지능·소프트웨어산업협회(KOSA)가 개최한 AI 공급·수요 기업 매칭 행사 ‘2026 K-AX 데이’ 축사를 통해 이같이 밝혔습니다. 이...",
+     "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8721166&ref=A",
+     "naver_link": "https://n.news.naver.com/mnews/article/056/0012300131?sid=105",
+     "source": "KBS",
+     "pub": "2026-11-24T17:54+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부가 내년 AI 정부 예산을 16조 원 규모로 편성하고 풀스택 AI 수출을 본격화하겠다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "AI 젠더폭력 위험 커지는데 규제 사각지대…\"플랫폼 의무 강화해야\"",
+     "desc": "성평등가족부와 한국여성정책연구원은 24일 오후 서울 은평구 한국여성정책연구원 국제회의장에서 'AI 대전환 시대, 성평등정책의 방향'을 주제로 제147차 양성평등정책포럼을 개최했다. 이번 포럼은 AI 기술이...",
+     "link": "https://www.newsis.com/view/NISX20261124_0003881084",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014342403?sid=102",
+     "source": "뉴시스",
+     "pub": "2026-11-24T15:00+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "alt_sections": {},
+     "summary": "성평등가족부와 한국여성정책연구원이 'AI 대전환 시대, 성평등정책의 방향' 포럼을 열어 AI 젠더폭력의 규제 사각지대와 플랫폼 의무 강화 필요성을 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "내년 정부 R&D에 기업 발굴 수요 3천600억원 반영",
+     "desc": "과기정통부, 민관R&D 혁신포럼 개최 과학기술정보통신부는 내년도 정부 연구개발(R&D) 예산안에 산업별 민간R&D협의체가 제안한 기술 수요를 바탕으로 3천600억원 규모 예산이 새로 반영됐다고 24일 밝혔다. 과기정통부는...",
+     "link": "https://www.yna.co.kr/view/AKR20261124114300017?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016460657?sid=105",
+     "source": "연합뉴스",
+     "pub": "2026-11-24T14:21+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부는 산업별 민간R&D협의체의 기술 수요를 반영해 내년 정부 R&D 예산안에 3600억 원을 신규 편성했다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "200개 기업 기술 수요, 정부R&D에 3600억원 반영",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261124182507"
+      },
+      {
+       "title": "기업이 원하는 기술에 R&D예산 3600억 지원",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12217295"
+      },
+      {
+       "title": "정부 R&D 투자에 산업계 목소리 키운다…민관 협력 확대",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112415063736944"
+      },
+      {
+       "title": "내년 정부 R&D에 기업 발굴 수요 3,600억 원 반영",
+       "source": "KBS",
+       "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8721057&ref=A"
+      },
+      {
+       "title": "기업이 제안한 기술 수요, 정부 R&D로…내년 예산안에 3600억 반영",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/it-science/general-science/6363964"
+      },
+      {
+       "title": "과기정통부, 민관 R&D 혁신포럼 개최…산업계 기술수요 청취",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/tech/2026/11/24/2026112409411838655"
+      },
+      {
+       "title": "과기정통부, 민간 기술수요 반영한 R&D 예산 3600억원 신규 편성",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717638"
+      },
+      {
+       "title": "기업이 제안한 기술에 3600억원…정부 R&D 예산 반영",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112410112813883"
+      },
+      {
+       "title": "기업이 제안한 R&D 수요, 내년 정부예산에 3600억 반영한다",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261124_0003880437"
+      }
+     ]
+    },
+    {
+     "title": "정부, 국가 대표 휴머노이드 뽑는다…10개팀 선발해 성장 지원",
+     "desc": "과학기술정보통신부는 국가과학기술연구회, 한국연구재단, 한국로봇학회와 함께 24일 서울 스페이스쉐어 서울역3센터에서 넥스트-X 휴머노이드 챌린지 사전 설명회를 개최했다. 대회 추진 배경과 주요 사업 내용...",
+     "link": "https://www.etnews.com/20261124000347",
+     "naver_link": "https://n.news.naver.com/mnews/article/030/0003489123?sid=100",
+     "source": "전자신문",
+     "pub": "2026-11-24T14:09+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {
+      "유관기관동향": "기타 유관기관"
+     },
+     "summary": "과기정통부가 국가대표급 휴머노이드 육성을 위한 Next-X 휴머노이드 챌린지 사전 설명회를 열고 대회 추진 계획을 공개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "[과학스냅] 과기정통부, 넥스트-X 휴머노이드 챌린지 사전설명회",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261124113200017?input=1195m"
+      },
+      {
+       "title": "'국가대표 휴머노이드' 선발에 535억…국산화 기준 쟁점",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=03273446645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "과기정통부 ‘Next-X 휴머노이드 챌린지’ 사전 설명회 개최",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719021/?sc=Naver"
+      },
+      {
+       "title": "“국대 로봇 성장시스템 마련”…과기부, 휴머노이드 판 ‘독파모’ 띄...",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112411374776820"
+      },
+      {
+       "title": "과기정통부, 국가대표급 휴머노이드 육성…2027년 챌린지 추진",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717499"
+      },
+      {
+       "title": "‘국대 휴머노이드’ 뽑는다 “선정사에 후속지원 집중”",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112317040321200"
+      },
+      {
+       "title": "과기부, 국가대표 로봇 플랫폼 발굴 박차",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10946931?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "'서울대 10개' 2027년 추가 선정 겨냥… 제주대, 학과·정원 재편안 마련",
+     "desc": "교육부는 지난 9월 1일 '서울대 10개 만들기' 정책의 첫 패키지 지원대학으로 부산대학교와 전남대학교... 제안요청서는 기존 AI·컴퓨터과학·소프트웨어 관련 학과의 소속 조정과 조직 통합을 검토하고, AI 거점대학...",
+     "link": "https://www.fnnews.com/news/202611241022201211",
+     "naver_link": "https://n.news.naver.com/mnews/article/014/0005608805?sid=102",
+     "source": "파이낸셜뉴스",
+     "pub": "2026-11-24T10:43+09:00",
+     "keyword": "교육부+과학",
+     "section": "정부정책동향",
+     "sub": "교육부",
+     "alt_sections": {},
+     "summary": "교육부가 '서울대 10개 만들기' 첫 패키지 지원대학을 선정한 뒤, 2027년 추가 선정을 겨냥해 제주대가 학과·정원 재편안을 마련한다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 642
+  },
+  "유관기관동향": {
+   "items": [
+    {
+     "title": "인천 송도서 아시아 첫 ‘국제양자산업전시회’ 개최",
+     "desc": "26일 열리는 ‘국제 퀀텀 컨퍼런스’에는 한국과학기술연구원(KIST)과 아이비엠(IBM), 아이큐엠 퀀텀 컴퓨터스(IQM Quantum Computers) 등 국내외 연구기관과 기업이 양자 기술의 발전 방향과 산업 현장 적용 방안을...",
+     "link": "https://www.donga.com/news/Society/article/all/20261125/135083971/2",
+     "naver_link": "https://n.news.naver.com/mnews/article/020/0003764949?sid=102",
+     "source": "동아일보",
+     "pub": "2026-11-25T04:34+09:00",
+     "keyword": "KIST",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "인천 송도에서 국제양자산업전시회와 국제 퀀텀 컨퍼런스가 열린다는 소식이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "亞 최초 인천 송도에서 국제양자산업전시회 열린다",
+       "source": "동아일보",
+       "link": "https://www.donga.com/news/Society/article/all/20261124/135080293/1"
+      }
+     ]
+    },
+    {
+     "title": "[오늘의 주요일정]제주(11월25일 수요일)",
+     "desc": "▲오전 9시30분, 한국과학기술단체총연합회 제주지역연합회 제2차 제주 치유농업 포럼, 메종글래드제주 ▲오전 10시, 행복한 나눔 제주김장축제, 교래리종합복지회관 ▲오전 10시, 제456회 제주도의회(정례회) 행정자치...",
+     "link": "https://www.newsis.com/view/NISX20261124_0003881660",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014343176?sid=102",
+     "source": "뉴시스",
+     "pub": "2026-11-25T04:30+09:00",
+     "keyword": "한국과학기술단체총연합회",
+     "section": "유관기관동향",
+     "sub": "과총·단체",
+     "alt_sections": {},
+     "summary": "한국과학기술단체총연합회 제주지역연합회가 제2차 제주 치유농업 포럼을 연다는 일정이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "단순체험 넘어 '건강·휴양' 산업으로…제주 치유농업 해법 모색",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261124_0003881297"
+      }
+     ]
+    },
+    {
+     "title": "한국기계연구원 펀드 1호, 근육옷감 로봇에 24억원 투자",
+     "desc": "한국기계연구원(KIMM)과 한국과학기술지주(KST)가 근력보조 웨어러블 로봇을 개발한 사르텍소에 24억원을 투자했다. KIMM 펀드 1호다. 기계연이 20억원, KST가 4억원을 각각 출자했다. 한국기계연구원은 24일 서울 강서구...",
+     "link": "https://zdnet.co.kr/view/?no=20261124190223",
+     "naver_link": "https://n.news.naver.com/mnews/article/092/0002446758?sid=105",
+     "source": "지디넷코리아",
+     "pub": "2026-11-24T19:03+09:00",
+     "keyword": "한국기계연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "한국기계연구원과 한국과학기술지주가 웨어러블 로봇 개발사 사르텍소에 24억원을 투자했다. 기계연 펀드 1호 투자 사례다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "기계연, 'KIMM TECH SPACE 2026' 개최…'KIMM 펀드 1호' 첫 투자 성과도 선...",
+       "source": "금강일보",
+       "link": "https://www.ggilbo.com/news/articleView.html?idxno=1195303"
+      },
+      {
+       "title": "기계연 기술사업화 성과 ‘한자리’",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20118386?ref=naver"
+      },
+      {
+       "title": "[사이언스게시판] 우주항공청, '제11회 우주개발진흥실무위원회' 개최 ...",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81048"
+      },
+      {
+       "title": "AI 로봇부터 데이터센터 냉각까지…기계硏, 첨단기술 40종 공개",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10947889?ref=naver"
+      },
+      {
+       "title": "기계연, 피지컬 AI 융합기술 40종 전시…KIMM 펀드 첫 투자 성과 공개",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261124000304"
+      }
+     ]
+    },
+    {
+     "title": "기계연 기술사업화 성과 ‘한자리’",
+     "desc": "한국기계연구원의 기술사업화 성과물을 한자리서 만나볼 수 있는 장이 열렸다. 한국기계연구원은 24일 서울 강서구 코엑스 마곡 르웨스트 A홀에서 ‘피지컬 AI와 기계기술의 만남’을 주제로 ‘KIMM TECH SPACE 2026’을...",
+     "link": "https://www.sedaily.com/article/20118386?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/011/0004685665?sid=102",
+     "source": "서울경제",
+     "pub": "2026-11-24T17:03+09:00",
+     "keyword": "한국기계연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "한국기계연구원이 코엑스 마곡에서 기술사업화 성과 행사 KIMM TECH SPACE 2026을 열어 첨단기술을 공개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "기계연, 'KIMM TECH SPACE 2026' 개최…'KIMM 펀드 1호' 첫 투자 성과도 선...",
+       "source": "금강일보",
+       "link": "https://www.ggilbo.com/news/articleView.html?idxno=1195303"
+      },
+      {
+       "title": "[사이언스게시판] 우주항공청, '제11회 우주개발진흥실무위원회' 개최 ...",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81048"
+      },
+      {
+       "title": "AI 로봇부터 데이터센터 냉각까지…기계硏, 첨단기술 40종 공개",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10947889?ref=naver"
+      },
+      {
+       "title": "기계연, 피지컬 AI 융합기술 40종 전시…KIMM 펀드 첫 투자 성과 공개",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261124000304"
+      }
+     ]
+    },
+    {
+     "title": "첫 '대한민국 의사과학자상'에 이정호…우수의사과학자상에 이용호·임...",
+     "desc": "대한민국의학한림원은 이정호 KAIST 의과학대학원 교수 등 5명의 의사과학자를 ‘2026 우수 의사과학자’로... 주영석 KAIST 의과학대학원 교수, 최형진 서울대 의대 교수 등 4명이 선정됐다. 이용호 교수는...",
+     "link": "https://www.dongascience.com/news/view/81045",
+     "naver_link": "https://n.news.naver.com/mnews/article/584/0000040298?sid=103",
+     "source": "동아사이언스",
+     "pub": "2026-11-24T14:43+09:00",
+     "keyword": "KAIST",
+     "section": "유관기관동향",
+     "sub": "4대 과학기술원",
+     "alt_sections": {},
+     "summary": "대한민국의학한림원이 이정호 KAIST 교수 등 의사과학자 5명을 2026 우수의사과학자로 선정했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "의사과학자상에 이정호 교수 선정",
+       "source": "동아일보",
+       "link": "https://www.donga.com/news/People/article/all/20261125/135084470/2"
+      },
+      {
+       "title": "한림원 ‘대한민국의사과학자상’에 이정호 카이스트 교수",
+       "source": "경향신문",
+       "link": "https://www.khan.co.kr/article/202611242029005"
+      },
+      {
+       "title": "11월25일 알림",
+       "source": "한겨레",
+       "link": "https://www.hani.co.kr/arti/society/ngo/1288901.html"
+      },
+      {
+       "title": "의학한림원 '대한민국의사과학자상' 1호 수상자에 이정호 KAIST 교수",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261124000488"
+      },
+      {
+       "title": "초대 '대한민국醫과학자상'에 이정호 교수",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12217306"
+      },
+      {
+       "title": "뇌·대사 질환·암 연구 이끈 의사과학자 5명…총상금 6억원",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/science-chosun/medicine-health/2026/11/24/4SR3MVI4QNDFRNRXALZOWQSBOY/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+       "title": "대한민국의학한림원, 2026 우수 의사과학자 5인 선정",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/thebio/2026/11/24/2026112412284845732"
+      },
+      {
+       "title": "뇌질환·비만·암 원인 밝힌 의사과학자 5인 선정",
+       "source": "조선일보",
+       "link": "https://health.chosun.com/site/data/html_dir/2026/11/24/2026112401240.html"
+      },
+      {
+       "title": "의학한림원 '대한민국의사과학자상'에 카이스트 이정호 교수",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261124067900530?input=1195m"
+      },
+      {
+       "title": "대한민국의사과학자상 KAIST 이정호 교수",
+       "source": "데일리메디",
+       "link": "https://dailymedi.com/news/news_view.php?wr_id=942908"
+      }
+     ]
+    },
+    {
+     "title": "한국연구재단, 자연과학단장에 충북대 김영조 교수 선임",
+     "desc": "연구수요·기술예측·연구동향 조사분석, 대외협력 등 다양한 업무를 맡게 된다. 김 단장은 한국과학기술원에서 학사, 석사, 박사 학위를 모두 취득했으며, 충북대에서 교수로 재직하고 있다. 이 외에도 충북대...",
+     "link": "https://news.unn.net/news/articleView.html?idxno=601236",
+     "naver_link": "https://news.unn.net/news/articleView.html?idxno=601236",
+     "source": "한국대학신문",
+     "pub": "2026-11-24T09:20+09:00",
+     "keyword": "한국과학기술원",
+     "section": "유관기관동향",
+     "sub": "4대 과학기술원",
+     "alt_sections": {},
+     "summary": "한국연구재단이 자연과학단장에 충북대 김영조 교수를 선임했다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "고려대 교원 4명 클래리베이트 '2026 세계에서 가장 영향력 있는 연구자...",
+     "desc": "2019년 한국과학기술한림원 '젊은과학자상(대통령상)'을 받았고 2023년 한국과학기술한림원 차세대회원에 선정됐으며 2026년 국제태양광학술대회(PVSEC) 젊은과학자상을 수상했다. 노 교수 연구실은 2022년...",
+     "link": "https://www.veritas-a.com/news/articleView.html?idxno=638857",
+     "naver_link": "https://www.veritas-a.com/news/articleView.html?idxno=638857",
+     "source": "베리타스알파",
+     "pub": "2026-11-24T09:18+09:00",
+     "keyword": "과학기술한림원",
+     "section": "유관기관동향",
+     "sub": "과학기술한림원",
+     "alt_sections": {},
+     "summary": "고려대 교원 4명이 클래리베이트의 2026 세계에서 가장 영향력 있는 연구자 명단에 선정됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 239
+  },
+  "여성과학기술인": {
+   "items": [],
+   "note": null,
+   "candidates": 156
+  },
+  "참고보도": {
+   "items": [
+    {
+     "title": "서울지하철 노사 교섭 타결…오늘 첫차부터 정상 운행",
+     "desc": "주요 합의 내용은 500명 신규 채용 확인, 2025년 총 인건비 대비 3.5% 이내 임금 인상, 경영혁신계획 보류 및 조직진단 연구용역 결과에 따른 노사 협의, 육아휴직 등 일·가정 양립을 위한 근무 제도 개선입니다. 임단협...",
+     "link": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00009&news_seq_no=5232739",
+     "naver_link": "https://n.news.naver.com/mnews/article/057/0001979716?sid=102",
+     "source": "매일경제",
+     "pub": "2026-11-25T03:55+09:00",
+     "keyword": "일가정양립+연구",
+     "section": "참고보도",
+     "sub": "일·가정양립",
+     "alt_sections": {},
+     "summary": "서울교통공사 노사가 임단협을 타결해 총파업을 철회했으며, 3.5% 임금인상, 500명 신규채용 확인, 육아휴직 등 일·가정 양립 근무제도 개선에 합의했다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "서울 지하철 협상 타결로 파업 철회…출근대란 없어",
+       "source": "연합뉴스TV",
+       "link": "http://www.yonhapnewstv.co.kr/news/MYH20261125072251pKa"
+      },
+      {
+       "title": "출근길 지하철 정상 운행한다… 서울 지하철 노조, 파업 철회",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12217688"
+      },
+      {
+       "title": "서울교통공사 임단협 타결…서울 지하철 1~8호선 정상 운행",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10948126?ref=naver"
+      },
+      {
+       "title": "서울지하철 노사 임단협 타결...지하철 정상운행",
+       "source": "여성신문",
+       "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284899"
+      },
+      {
+       "title": "서울지하철 임단협 타결로 파업 철회…출근길 정상 운행",
+       "source": "동아일보",
+       "link": "https://www.donga.com/news/Society/article/all/20261125/135084963/1"
+      },
+      {
+       "title": "서울 지하철 노사 협상 타결…출근길 대란 피해",
+       "source": "연합뉴스TV",
+       "link": "http://www.yonhapnewstv.co.kr/news/MYH20261125055525CXP"
+      },
+      {
+       "title": "서울지하철 임단협 파업 직전 극적 타결⋯'출근길 대란' 우려 해소",
+       "source": "이투데이",
+       "link": "https://www.etoday.co.kr/news/view/2652481"
+      },
+      {
+       "title": "오늘 출근길 지하철 정상 운행…새벽 4시 극적 타결(종합)",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=01243126645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "서울지하철 노사 임단협 타결…총파업 철회",
+       "source": "연합뉴스TV",
+       "link": "http://www.yonhapnewstv.co.kr/news/MYH20261125045928BLb"
+      },
+      {
+       "title": "서울지하철 총파업 극적 철회…18시간 마라톤 협상 끝 임단협 잠정 합의",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112504570452870"
+      },
+      {
+       "title": "서울지하철 노조, 총파업 철회…노사 임단협 극적 타결(종합)",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719245/?sc=Naver"
+      },
+      {
+       "title": "서울 지하철 파업 위기 넘겼다...서울교통공사 노사 임단협 극적 타결",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261125000028"
+      },
+      {
+       "title": "서울 지하철 노사 임단협 극적 타결…출근길 정상운행",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003881855"
+      },
+      {
+       "title": "서울 지하철 1·2노조 협상 극적 타결…파업 철회 임박(종합)",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003881852"
+      },
+      {
+       "title": "서울 지하철 노사 극적 타결..1~8호선 첫차부터 정상 운행",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611250324537093"
+      },
+      {
+       "title": "서울교통공사 1노조, 사측과 임단협 타결…총파업 철회",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719243/?sc=Naver"
+      },
+      {
+       "title": "'출근길 대란' 피했다…서울지하철 노조 총파업 철회 [종합]",
+       "source": "한국경제",
+       "link": "https://www.hankyung.com/article/202611258089i"
+      },
+      {
+       "title": "서울교통공사 1노조, 파업 예고 철회...임단협 타결",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261125000020"
+      },
+      {
+       "title": "서울지하철 출근길 정상 운행…노사 막판 합의로 파업 철회 (종합)",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/seoul/6364902"
+      },
+      {
+       "title": "서울 지하철 총파업 피했다…서울교통공사 노사, 임단협 막판 타결",
+       "source": "쿠키뉴스",
+       "link": "https://www.kukinews.com/article/view/kuk202611250004"
+      },
+      {
+       "title": "서울지하철 노사 밤샘 교섭 끝 극적 타결…출근길 정상 운행",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/moi/6364895"
+      },
+      {
+       "title": "서울지하철 노사 교섭 타결…오늘 첫차 정상운행",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20118547?ref=naver"
+      },
+      {
+       "title": "서울 지하철 노사협상 타결… 총파업 철회",
+       "source": "조선일보",
+       "link": "https://www.chosun.com/national/national_general/2026/11/25/GMCPVXV3HRAB5OIWCAX5P7SKYI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+      },
+      {
+       "title": "[속보] 서울 지하철 노사 협상 타결… 첫차부터 정상 운행",
+       "source": "한국일보",
+       "link": "https://www.hankookilbo.com/news/article/A2026112421300003059?did=NA"
+      },
+      {
+       "title": "서울지하철 노사 협상 타결…오늘 총파업 철회",
+       "source": "KBS",
+       "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8721693&ref=A"
+      },
+      {
+       "title": "[속보]‘출근길 대란’ 없다···서울 지하철 노사 협상 극적 타결",
+       "source": "경향신문",
+       "link": "https://www.khan.co.kr/article/202611250248001"
+      },
+      {
+       "title": "서울교통공사, 1노조와 밤샘 교섭 끝 타결…출근길 정상운행 기대",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/moi/6364898"
+      },
+      {
+       "title": "[속보]서울교통공사·제1노조, 첫차 운행 앞두고 극적 합의…총파업 철...",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=01141446645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "서울 지하철 노사 협상 극적 타결…출근길 교통대란 피했다",
+       "source": "MBN",
+       "link": "http://www.mbn.co.kr/pages/news/newsView.php?news_seq_no=5232743"
+      },
+      {
+       "title": "서울 지하철 파업 피했다… 3개 노조와 협상 타결(종합)",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/topics/topics_social/2026/11/25/PGZEWEPK7ZHQPO74NSSX2M4QZM/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+       "title": "서울 지하철 1·2노조 임단협 타결…파업 철회 수순(종합)",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261125004251004?input=1195m"
+      },
+      {
+       "title": "서울 지하철 1·2·3노조 협상 타결… 출근길 정상 운행",
+       "source": "JTBC",
+       "link": "https://news.jtbc.co.kr/article/NB12329671?influxDiv=NAVER"
+      },
+      {
+       "title": "서울지하철 노사 막판 협상 돌입…인력 충원 놓고 진통",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611241540336789"
+      },
+      {
+       "title": "서울지하철 총파업 초읽기… 막판 교섭에 쏠린 눈",
+       "source": "세계일보",
+       "link": "https://www.segye.com/newsView/20261124509387?OutUrl=naver"
+      },
+      {
+       "title": "서울지하철 노사 최종교섭 시작…결렬 땐 내일 첫차부터 파업(종합)",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261123167451004?input=1195m"
+      },
+      {
+       "title": "서울지하철 노조, 최종 교섭 앞두고 집회…\"결렬 땐 25일 무기한 총파업...",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261124100644323"
+      }
+     ]
+    },
+    {
+     "title": "[르포] “지금이 입사 적기입니다” 삼성·SK 안방서 ‘두뇌 쟁탈전’ ...",
+     "desc": "삼성전자·SK하이닉스가 억대 성과급으로 그간 의대로 쏠렸던 이공계 인력을 붙잡는 데 성공한 가운데 마이크론까지 국내 인재 쟁탈전에 가세하면서 고급인력의 해외 유출 우려는 높아지고 있다. 2024년부터 한국에서...",
+     "link": "https://biz.heraldcorp.com/article/10947768?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002727878?sid=101",
+     "source": "헤럴드경제",
+     "pub": "2026-11-24T17:01+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "alt_sections": {},
+     "summary": "삼성전자·SK하이닉스가 성과급으로 이공계 인력을 붙잡은 가운데 마이크론이 국내 인재 채용에 나서면서 고급인력 해외 유출 우려가 커졌다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "美마이크론, 韓서 채용행사… HBM 인력 등 대규모 모집",
+       "source": "동아일보",
+       "link": "https://www.donga.com/news/Economy/article/all/20261124/135083676/2"
+      },
+      {
+       "title": "[현장] 마이크론 대만, 서울 강남 한복판서 취업설명회…'국경없는' 반...",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261124_0003881229"
+      },
+      {
+       "title": "美마이크론, 한국 인재 채용 행사…AI 반도체 연구개발 인력 집중 공략",
+       "source": "동아일보",
+       "link": "https://www.donga.com/news/Economy/article/all/20261124/135081135/1"
+      }
+     ]
+    },
+    {
+     "title": "강원랜드, 상장유형 신설에 7개 공기업 협력 모색",
+     "desc": "정부의 공공기관 경영평가에서 상장공기업에 대한 별도 평가체계가 도입되면서 공공성과 기업가치를 함께 고려한 경영전략 수립이 주요 과제로 떠오르고 있다. 강원랜드는 지난 23일부터 24일까지 이틀간 강원 정선군...",
+     "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=507582",
+     "naver_link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=507582",
+     "source": "핀포인트뉴스",
+     "pub": "2026-11-24T16:22+09:00",
+     "keyword": "공공기관 경영평가",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "내년 공공기관 경영평가에 신설되는 상장공기업 유형에 대비해 강원랜드 등 7개 상장공기업이 공동 대응 방안을 논의했다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "강원랜드, 2026년 상장유형 평가군 특별세미나",
+       "source": "프레시안",
+       "link": "https://www.pressian.com/pages/articles/2026112418113605345?utm_source=naver&utm_medium=search"
+      },
+      {
+       "title": "상장공기업 경영평가 따로 받는다…강원랜드, 7개사와 대응 세미나",
+       "source": "에너지경제",
+       "link": "https://www.ekn.kr/web/view.php?key=20261124021334134"
+      },
+      {
+       "title": "강원랜드, 상장공기업 경영평가 공동 대응 나선다",
+       "source": "강원일보",
+       "link": "https://www.kwnews.co.kr/article/20261124500640"
+      }
+     ]
+    },
+    {
+     "title": "“남성 100만원 벌 때 여성은 72만원”…한국, OECD ‘불명예 1위’",
+     "desc": "한국의 남녀 임금 격차가 줄어들고 있지만 여전히 경제협력개발기구(OECD)에서 가장 큰 것으로 나타났다. 여성 임금은 남성의 72% 수준에 그쳤으며, 고소득자와 저소득자 간 임금 격차도 OECD 상위권에 머물렀다....",
+     "link": "https://www.seoul.co.kr/news/economy/2026/11/24/20261124500207?wlog_tag3=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/081/0003702657?sid=101",
+     "source": "서울신문",
+     "pub": "2026-11-24T15:04+09:00",
+     "keyword": "남녀 임금격차",
+     "section": "참고보도",
+     "sub": "다양성·포용",
+     "alt_sections": {},
+     "summary": "한국의 남녀 임금격차가 줄고 있지만 여전히 OECD에서 가장 크며, 여성 임금은 남성의 72% 수준이라고 보도했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "[사설] 한국 남녀 임금격차 OECD 꼴찌…승진·보상 불균형 바로잡아야",
+       "source": "대한경제",
+       "link": "https://www.dnews.co.kr/uhtml/view.jsp?idxno=202611240813035410277"
+      },
+      {
+       "title": "[전국 주요 신문 사설](24일 조간)",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261124018800011?input=1195m"
+      }
+     ]
+    },
+    {
+     "title": "박홍배 의원, 공공기관 지역인재 의무채용 회피 방지법 발의",
+     "desc": "결과의 공공기관 경영평가 등 반영 요구 근거 마련 등을 담았다. 박 의원은 \"지역 청년들에게 일자리를 제공하기 위해 마련된 제도가 예외 규정으로 무력화돼서는 안 된다\"며 \"공공기관이 법정 채용률이라는 숫자만...",
+     "link": "https://www.yna.co.kr/view/AKR20261124129000051?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016460880?sid=101",
+     "source": "연합뉴스",
+     "pub": "2026-11-24T15:01+09:00",
+     "keyword": "공공기관 경영평가",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "박홍배 의원이 공공기관 지역인재 의무채용 예외 규정을 막는 혁신도시법 개정안을 발의했으며, 채용실적 미달 기관에 경영평가 반영을 요구하는 내용을 담았다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "‘지역인재 의무채용’ 예외 규정 손본다…박홍배, 혁신도시법 개정안...",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12097058?ref=naver"
+      },
+      {
+       "title": "숫자만 맞춘 지역인재 채용…부산 금융기관 5곳 중 4곳 '30% 미달'",
+       "source": "노컷뉴스",
+       "link": "https://www.nocutnews.co.kr/news/6611828?utm_source=naver&utm_medium=article&utm_campaign=20261124151504"
+      }
+     ]
+    },
+    {
+     "title": "한전 152만 명 개인정보 유출에 경영평가 비상, 차기 사장 어깨 더 무거...",
+     "desc": "사장 교체에 따른 리더십 공백기에 놓인 한전에 대형 보안 사고가 잇따르면서 내년에 실시되는 2026년도 대상 공공기관 경영평가와 관련해 차기 사장의 부담도 커질 것으로 보인다. 한국전력공사가 10월 발생한 개인정보...",
+     "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452774",
+     "naver_link": "https://www.businesspost.co.kr/BP?command=article_view&num=452774",
+     "source": "비즈니스포스트",
+     "pub": "2026-11-24T12:28+09:00",
+     "keyword": "공공기관 경영평가",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "한국전력이 152만 명 규모의 개인정보 유출 사고를 겪으면서 내년 공공기관 경영평가 부담이 차기 사장에게 커질 것으로 보도했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "AI가 안내하고 국민이 선택한다…행안부, 공공 AI 서비스 기준 마련",
+     "desc": "중앙행정기관·지방정부·공공기관에 배포한다고 24일 밝혔다. 행안부는 그동안 공공 웹사이트와 모바일 앱... AI 서비스 개발 단계부터 가이드라인을 적용할 수 있도록 별도 작업지침과 준수사항도 마련한다. 이를...",
+     "link": "https://zdnet.co.kr/view/?no=20261124122246",
+     "naver_link": "https://n.news.naver.com/mnews/article/092/0002446640?sid=105",
+     "source": "지디넷코리아",
+     "pub": "2026-11-24T12:23+09:00",
+     "keyword": "공공기관+지침",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "행정안전부가 중앙행정기관과 지방정부, 공공기관에 배포할 공공 AI 서비스 기준과 작업지침을 마련했다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "\"공공 AI, 쉬운 말로 안내해야\" 정부, AI 서비스 기준 제시",
+       "source": "노컷뉴스",
+       "link": "https://www.nocutnews.co.kr/news/6611585?utm_source=naver&utm_medium=article&utm_campaign=20261124120102"
+      },
+      {
+       "title": "\"어려운 행정용어 쉽게 풀고 출처 제시\"…공공 AI 서비스 설계기준 나왔...",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1718838/?sc=Naver"
+      }
+     ]
+    },
+    {
+     "title": "고용평등공시제 놓고 여야 이견…與 \"과태료\" 野 \"인센티브\"",
+     "desc": "기업의 성별 임금격차 등을 공개하는 고용평등공시제 도입을 앞두고 여야가 제도의 실효성을 높일 방안을 놓고 이견을 보이고 있다. 여당은 자료를 제출하지 않은 기업에 과태료를 부과하고 기업별 성평등 수준을...",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02017206645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "naver_link": "https://n.news.naver.com/mnews/article/018/0006414506?sid=102",
+     "source": "이데일리",
+     "pub": "2026-11-24T09:06+09:00",
+     "keyword": "성별 임금격차",
+     "section": "참고보도",
+     "sub": "다양성·포용",
+     "alt_sections": {},
+     "summary": "기업의 성별 임금격차 등을 공개하는 고용평등공시제 도입을 앞두고 여당은 과태료를, 야당은 인센티브를 주장하며 이견을 보인다고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "공론화위 파행에 원전 구축 차질 우려…\"3대 메가 프로젝트 위한 전력 ...",
+     "desc": "25일 업계에 따르면 정범진 경희대 교수, 정용훈 한국과학기술원 교수, 최성열 서울대 교수 등 원전 확대 측 위원 3인은 지난 23일부터 잠정적으로 공론화위 활동에 참여하지 않고 있다. 이들은 원전 감축 측 위원들이...",
+     "link": "https://www.newsis.com/view/NISX20261124_0003881613",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014343185?sid=101",
+     "source": "뉴시스",
+     "pub": "2026-11-25T05:00+09:00",
+     "keyword": "한국과학기술원",
+     "section": "참고보도",
+     "sub": "기타 동향",
+     "alt_sections": {},
+     "summary": "25일 업계에 따르면 정범진 경희대 교수, 정용훈 한국과학기술원 교수, 최성열 서울대 교수 등 원전 확대 측 위원 3인은 지난 23일부터 잠정적으로 공론화위 활동…",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "참고보도",
+     "related": [],
+     "moved_from": "유관기관동향"
+    },
+    {
+     "title": "삼성전자 여성 임원 역대 최다…현장 엔지니어 ‘파워우먼’ 돌풍",
+     "desc": "2D 물질 특화 공정과 소자를 개발해 실리콘(Si) 반도체 미세화에 따른 한계를 극복할 기술 방향을 제시했다. 삼성전자 반기보고서에 따르면 전체 직원 12만9200명 가운데 여성은 36.7%다. 부사장급 이하 임원은 총...",
+     "link": "https://www.mk.co.kr/article/12217192",
+     "naver_link": "https://n.news.naver.com/mnews/article/009/0005768262?sid=101",
+     "source": "매일경제",
+     "pub": "2026-11-24T16:09+09:00",
+     "keyword": "여성 임원+기술",
+     "section": "참고보도",
+     "sub": "기타 동향",
+     "alt_sections": {},
+     "summary": "삼성전자 2027년 정기 임원인사에서 역대 최다 규모의 여성 임원이 나왔으며, 현장 엔지니어 출신 여성 임원들이 주목받았다. 삼성전자 반기보고서 기준 여성 직원 비중도 함께 다뤘다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "참고보도",
+     "related": [
+      {
+       "title": "역대급 실적에도 승진 잔치 없었다…삼성 ‘임원 가는 문’ 좁힌 이유는...",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12217650"
+      },
+      {
+       "title": "삼성전자 '별 달기' 10년 만에 최소…여성 임원 승진 역대 최다",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/industry/general-industry/6364772"
+      },
+      {
+       "title": "삼성전자, ‘9년 만에 최소’ 임원 131명 승진… 성과주의 기조에 HBM·로...",
+       "source": "국민일보",
+       "link": "https://www.kmib.co.kr/article/20261124502249"
+      },
+      {
+       "title": "삼성전자, 여성 임원 11명 승진…역대 최다 기록",
+       "source": "EBN",
+       "link": "https://www.ebn.co.kr/news/articleView.html?idxno=1732755"
+      }
+     ],
+     "moved_from": "여성과학기술인"
+    }
+   ],
+   "note": null,
+   "candidates": 111
+  },
+  "기고칼럼": {
+   "items": [
+    {
+     "title": "세계가 ‘호기심 기반 연구’에 주목하는 이유 [기고/홍원화]",
+     "desc": "“한국이 언제 노벨 과학상을 받을 수 있을지 묻는 질문에, 2025년 노벨 화학상 수상자인 일본의 기타가와 스스무 교수는 ‘20년 전 한국이 어땠는지 스스로 물어보라’고 답했다.” 10월 20일 국회 과학기술정보방송...",
+     "link": "https://www.donga.com/news/Inter/article/all/20261124/135082409/2",
+     "naver_link": "https://n.news.naver.com/mnews/article/020/0003764895?sid=104",
+     "source": "동아일보",
+     "pub": "2026-11-25T00:32+09:00",
+     "keyword": "기고+과학기술",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "alt_sections": {},
+     "summary": "2025년 노벨 화학상 수상자 기타가와 스스무 교수의 답변을 인용해 호기심 기반 연구가 세계적으로 주목받는 이유를 논했다.",
+     "importance": "★☆☆",
+     "author": "홍원화",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "[기고] 미국으로 간 '한국어 책' 166톤…우리는 무엇을 팔았나",
+     "desc": "민간에서도 출판사와 AI 기업 사이의 라이선스 거래가 시작됐다.정부는 권리 정보를 제공·유통할 기반을 마련할 계획이고 AI 학습용 데이터 구매비도 올해부터 연구개발 세액공제 대상에 포함됐다. 이런 정책과 실제...",
+     "link": "https://www.edaily.co.kr/News/Read?newsId=02446886645649000&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article",
+     "naver_link": "https://n.news.naver.com/mnews/article/018/0006414607?sid=105",
+     "source": "이데일리",
+     "pub": "2026-11-24T10:22+09:00",
+     "keyword": "기고+연구개발",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "alt_sections": {},
+     "summary": "미국으로 수출된 한국어 책 166톤과 출판사·AI 기업 간 라이선스 거래 확산을 짚으며, 정부의 권리정보 유통 기반 마련과 AI 학습용 데이터 구매비 연구개발 세액공제 대상 포함 계획을 소개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 10
+  }
+ }
+}
