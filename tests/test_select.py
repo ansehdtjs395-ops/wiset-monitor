@@ -93,3 +93,43 @@ def test_resolve_id_bracket_prefix():
     from monitor.select_ai import resolve_id
     titles = ["기타", '[이로운분석] "재취업 7년반 걸렸어요"...경력단절여성은 서럽다']
     assert resolve_id({"id": 0, "title_start": "재취업 7년반 걸렸어요 경력단절"}, titles) == 1
+
+
+def test_apply_moves():
+    from monitor.select_ai import apply_moves
+
+    def it(title, sec, move="", alts=None, imp="★☆☆"):
+        return {"title": title, "desc": "", "link": f"https://x/{title}", "source": "여성신문", "sub": "s",
+                "pub": "2026-11-20T00:00+09:00", "importance": imp, "move_to": move, "alt_sections": alts or {},
+                "section": sec, "summary": "", "author": "", "related": []}
+    res = {
+        "유관기관동향": {"items": [it("연재", "유관기관동향", "여성과학기술인", {"여성과학기술인": "여성 과학자·연구자"}),
+                               it("엉뚱", "유관기관동향", "기고칼럼")], "note": None, "candidates": 2},
+        "여성과학기술인": {"items": [it("임금격차", "여성과학기술인", "참고보도")], "note": None, "candidates": 1},
+        "WISET 직접 언급": {"items": [it("WISET 포럼", "WISET 직접 언급", "참고보도")], "note": None, "candidates": 1},
+        "참고보도": {"items": [], "note": None, "candidates": 0},
+    }
+    apply_moves(res, log=lambda *_: None)
+    titles = {k: [a["title"] for a in v["items"]] for k, v in res.items()}
+    assert titles["유관기관동향"] == ["엉뚱"]          # 걸리지 않은 섹션(기고칼럼)으로는 못 옮김
+    assert titles["여성과학기술인"] == ["연재"]
+    assert res["여성과학기술인"]["items"][0]["sub"] == "여성 과학자·연구자"
+    assert titles["참고보도"] == ["임금격차"]           # 참고보도는 키워드 없이도 옮길 수 있음
+    assert titles["WISET 직접 언급"] == ["WISET 포럼"]  # WISET 섹션은 옮기지 않음
+
+
+def test_call_cost_tiers():
+    from monitor.select_ai import call_cost
+    # 11/23 실제 사용량(9회 합계, 호출마다 10만 토큰 이하)을 기본 단가로 계산하면 기록된 $0.0344와 같다
+    total = {"input": 234_723, "output": 20_041, "cache_read": 36_056, "cache_write": 4_507}
+    assert round(sum(total[k] * p for k, p in select_ai.PRICE.items()) / 1e6, 4) == 0.0344
+    small = {"input": 60_000, "output": 2_000, "cache_read": 4_500, "cache_write": 0}
+    big = {**small, "input": 120_000}
+    assert abs(call_cost(small) - (60_000 * 0.10 + 2_000 * 0.50 + 4_500 * 0.01) / 1e6) < 1e-12
+    assert abs(call_cost(big) - (120_000 * 0.50 + 2_000 * 2.50 + 4_500 * 0.05) / 1e6) < 1e-12
+
+
+def test_system_prompt_rules():
+    sp = select_ai.SYSTEM
+    assert "수산정책" in sp and "산업보안한림원" in sp and "남녀 임금 격차" in sp
+    assert "사진 설명" in sp and "move_to" in sp

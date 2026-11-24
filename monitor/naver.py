@@ -8,7 +8,8 @@ from urllib.parse import urlsplit
 
 import requests
 
-from .config import PREFILTER_EXCLUDE, SECTIONS, SOURCE_KEYWORDS, WISET_SECTION
+from .config import (PREFILTER_EXCLUDE, PREFILTER_EXCLUDE_BY_SECTION, SECTIONS, SERIES_RULES, SOURCE_KEYWORDS,
+                     WISET_SECTION)
 from .window import KST
 
 API = "https://openapi.naver.com/v1/search/news.json"
@@ -74,6 +75,29 @@ def clean(s):
     return html.unescape(re.sub(r"<[^>]+>", "", s or "")).strip()
 
 
+_PHOTO = r"(?:사진|사진제공|자료사진|그래픽|이미지)\s*[=:]"
+_CAPTION = re.compile(
+    rf"[(\[]\s*{_PHOTO}[^)\]]{{0,40}}[)\]]"   # (사진=뉴스1) [사진=WISET]
+    rf"|/\s*{_PHOTO}\s*\S+(?:\s*제공)?"       # /사진=과기정통부 제공
+    r"|ⓒ\s*\S+")
+
+
+def strip_caption(desc):
+    """설명문 앞쪽의 사진 설명을 떼어낸다.
+
+    네이버 설명문은 본문 첫머리라서, 기사 맨 앞에 자료 사진이 있으면 사진 설명이 들어온다.
+    예) 지디넷 '가트너가 내다본 2027년' 기사의 설명문이 석 달 전 '류제명 차관 브리핑' 사진 설명이었음.
+    사진 표시가 앞쪽 160자 안에 있을 때만 그 지점까지 잘라낸다.
+    """
+    desc = desc or ""
+    end = 0
+    for m in _CAPTION.finditer(desc):
+        if m.start() > 160:
+            break
+        end = m.end()
+    return desc[end:].lstrip(" .,·-/") if end else desc
+
+
 def norm_title(t):
     t = re.sub(r"\[[^\]]*\]|\([^)]*\)", "", t)  # [단독] (종합) 등 제거
     return re.sub(r"[\W_]+", "", t).lower()[:40]
@@ -126,7 +150,7 @@ class NaverClient:
                 link = it.get("originallink") or it.get("link", "")
                 out.append({
                     "title": clean(it.get("title")),
-                    "desc": clean(it.get("description")),
+                    "desc": strip_caption(clean(it.get("description"))),
                     "link": link,
                     "naver_link": it.get("link", ""),
                     "source": source_of(link),
@@ -158,9 +182,43 @@ def keyword_in_text(a):
     return all(_squash(part) in text for part in kw.split("+"))
 
 
+def title_has(title, rule):
+    """제목에 rule이 있는지. "A+B"는 둘 다 있을 때 (띄어쓰기·가운뎃점 무시)."""
+    t = _squash(title)
+    return all(_squash(part) in t for part in rule.split("+"))
+
+
+def prefiltered(section, title):
+    if section == WISET_SECTION:
+        return False
+    return (any(x in title for x in PREFILTER_EXCLUDE)
+            or any(title_has(title, r) for r in PREFILTER_EXCLUDE_BY_SECTION.get(section, [])))
+
+
+def apply_series_rules(result):
+    """연재 말머리로 섹션이 정해진 기사를 해당 섹션으로 옮긴다 (WISET 섹션 기사는 그대로)."""
+    for section, subs in result.items():
+        if section == WISET_SECTION:
+            continue
+        for sub, arts in subs.items():
+            keep = []
+            for a in arts:
+                rule = next((r for r in SERIES_RULES if r[0] in a["title"] and r[1] != section), None)
+                if rule:
+                    _, to_sec, to_sub = rule
+                    result.setdefault(to_sec, {}).setdefault(to_sub, []).append(
+                        {**a, "section": to_sec, "sub": to_sub, "moved_from": section})
+                else:
+                    keep.append(a)
+            subs[sub] = keep
+    for subs in result.values():
+        for arts in subs.values():
+            arts.sort(key=lambda a: a["pub"], reverse=True)
+
+
 def collect(client, start, end, log=print):
-    """섹션 > 소주제 > 기사 목록. 중복은 앞선 섹션/소주제에 배정."""
-    seen_links, seen_titles = set(), set()
+    """섹션 > 소주제 > 기사 목록. 중복은 앞선 섹션/소주제에 배정하고, 함께 걸린 다른 섹션은 alt_sections{섹션: 소주제}에 적는다."""
+    seen_links, seen_titles = {}, {}
     result = {}
     stats = {"raw": 0, "dup": 0, "offtopic": 0, "minor": 0, "prefiltered": 0}
     for section, subs in SECTIONS.items():
@@ -182,18 +240,27 @@ def collect(client, start, end, log=print):
                             stats["minor"] += 1
                             continue
                     lk, tk = norm_link(a["link"]), norm_title(a["title"])
-                    if lk in seen_links or (tk and tk in seen_titles):
+                    prev = seen_links.get(lk) or (seen_titles.get(tk) if tk else None)
+                    if prev is not None:
                         stats["dup"] += 1
+                        if prev["section"] != section:
+                            prev["alt_sections"].setdefault(section, sub)
                         continue
-                    seen_links.add(lk)
-                    if tk:
-                        seen_titles.add(tk)
-                    if section != WISET_SECTION and any(x in a["title"] for x in PREFILTER_EXCLUDE):
+                    if prefiltered(section, a["title"]):
+                        stub = {"section": section, "alt_sections": {}}  # 다른 섹션에서 다시 받지 않음
+                        seen_links[lk] = stub
+                        if tk:
+                            seen_titles[tk] = stub
                         stats["prefiltered"] += 1
                         continue
-                    arts.append({**a, "section": section, "sub": sub})
+                    art = {**a, "section": section, "sub": sub, "alt_sections": {}}
+                    seen_links[lk] = art
+                    if tk:
+                        seen_titles[tk] = art
+                    arts.append(art)
             arts.sort(key=lambda a: a["pub"], reverse=True)
             result[section][sub] = arts
+    apply_series_rules(result)
     stats["kept"] = sum(len(v) for subs in result.values() for v in subs.values())
     stats["calls"] = client.calls
     return result, stats

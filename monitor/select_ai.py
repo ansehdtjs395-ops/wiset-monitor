@@ -12,10 +12,20 @@ from pathlib import Path
 
 import anthropic
 
-from .config import COLUMN_SECTION, FORCE_INCLUDE, MAX_PER_SECTION, SECTIONS
+from .config import CATCHALL_SECTION, COLUMN_SECTION, FORCE_INCLUDE, MAX_PER_SECTION, SECTIONS, WISET_SECTION
 
 MODEL = "claude-haiku-5-5"
-PRICE = {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}  # USD / 1M tokens
+# USD / 1M tokens. 프롬프트(입력+캐시 읽기·쓰기)가 10만 토큰을 넘는 호출은 그 호출 전체가 5배 단가.
+PRICE = {"input": 0.10, "output": 0.50, "cache_read": 0.01, "cache_write": 0.125}
+PRICE_LONG = {k: v * 5 for k, v in PRICE.items()}
+LONG_PROMPT = 100_000
+
+
+def call_cost(tokens):
+    """호출 1회 비용. tokens: input/output/cache_read/cache_write."""
+    prompt = tokens["input"] + tokens["cache_read"] + tokens["cache_write"]
+    price = PRICE_LONG if prompt > LONG_PROMPT else PRICE
+    return sum(tokens[k] * price[k] for k in price) / 1_000_000
 CHUNK = 400
 DESC_CHARS = 100
 ROOT = Path(__file__).resolve().parent.parent
@@ -36,8 +46,9 @@ SCHEMA = {
                     "importance": {"type": "string", "enum": ["★★★", "★★☆", "★☆☆"]},
                     "author": {"type": "string"},
                     "related_ids": {"type": "array", "items": {"type": "integer"}},
+                    "move_to": {"type": "string", "enum": [""] + [s for s in SECTIONS if s != WISET_SECTION]},
                 },
-                "required": ["id", "title_start", "summary", "importance", "author", "related_ids"],
+                "required": ["id", "title_start", "summary", "importance", "author", "related_ids", "move_to"],
                 "additionalProperties": False,
             },
         }
@@ -53,6 +64,7 @@ def build_system():
     for name, v in ex["sections"].items():
         sec_lines.append(f"### {name}\n기준: {v['criteria']}\n실제로 고른 기사 예시:\n" +
                          "\n".join(f"- {t}" for t in v["examples"]))
+    moves = "\n".join(f"  · {t}" for t in ex.get("move_examples", []))
     return f"""당신은 한국여성과학기술인육성재단(WISET, 과학기술정보통신부 산하 공공기관) 대외협력홍보팀의 언론모니터링 담당자입니다.
 재단 미션: 여성 과학기술인 육성·지원, 이공계 여성 인재 양성, 경력단절 여성 과학기술인 복귀 지원.
 이사장: 윤혜온 (전 이사장 문애리). 주요 사업: {", ".join(ex["wiset_programs"])}.
@@ -70,18 +82,30 @@ def build_system():
 - 실제 배포본처럼 엄격하게: 섹션당 보통 1~4건, 많아도 {MAX_PER_SECTION}건. 해당 기사가 없으면 빈 목록도 정상입니다.
 - 기관명이 기사에 '언급만' 된 것으로는 부족합니다. 그 기관의 정책·발표·인사·예산·행사가 기사의 중심이어야 합니다.
   예) 정부정책동향: 과기정통부의 과학기술·AI·인재 정책, R&D 예산, 장·차관 발언·동정, 여성·성평등·일가정양립 정책과 통계가 중심.
-      사회 사건 보도(수능 부정행위 사건 경과 등)는 과학기술 정책 대응이 핵심인 대표 기사 1건만, 지역 인프라 공모·홍보성 행사는 제외.
+      수능·국가시험 부정행위와 시험제도 개편, 사건사고처럼 WISET 업무와 무관한 사회 현안은 과기정통부가 관계부처로 참여해도 제외.
+      지역 인프라 공모·홍보성 행사도 제외.
+      유관기관동향: 다른 기관(기상청·지자체·기업)이 주인공이고 출연연·과기원은 공동연구에 이름만 나오면 제외.
 - 같은 사안(같은 사건·발표·행사)은 반드시 1건으로 묶습니다. 대표 1건만 고르고(주요 일간지·통신사 우선, 내용이 가장 충실한 것), 나머지 id는 related_ids에 넣습니다.
-- 중요도: ★★★ WISET 직접 관련·즉시 대응 필요 / ★★☆ 업무 참고(재단 업무·여성과학기술인·과기 인재 정책에 직접 영향) / ★☆☆ 동향 파악(그 밖의 참고 기사, 대부분은 여기). 중요도 높은 순으로 나열합니다.
+- 중요도: ★★★ WISET 직접 관련·즉시 대응 필요 / ★★☆ 업무 참고 / ★☆☆ 동향 파악(그 밖의 참고 기사, 대부분은 여기). 중요도 높은 순으로 나열합니다.
+  ★★☆는 WISET 업무 영역(여성과학기술인, 과학기술 인재 양성, 일·가정 양립, 공공기관 제도·지침)에 직접 영향을 주는 기사에만 씁니다.
+  이 영역과 무관하면 화제성이 커도 ★☆☆입니다.
 - author: 기고·칼럼·사설이면 작성자 "이름 소속 직함"(예: "오상록 KIST 원장"), 사설은 "사설", 알 수 없거나 일반 기사면 "".
 
 - title_start: 고른 기사(id) 제목의 앞 10글자를 그대로 적습니다. id와 제목이 맞는지 확인하는 용도입니다.
+- move_to: 섹션은 키워드로 먼저 정해지지만, 최종 섹션은 '기사의 주인공이 누구인가'로 정합니다.
+  주인공 기준으로 지금 섹션보다 다른 섹션이 맞으면 그 기사를 고르고 move_to에 그 섹션 이름을 적습니다. 아니면 "".
+  옮길 수 있는 곳: 그 기사 줄에 [다른 섹션: …]으로 표시된 섹션, 또는 "{CATCHALL_SECTION}"(경영진이 알아 둘 일반 동향).
+  기준: 여성 과학기술인 개인이 주인공 → 여성과학기술인 / 기관이 주인공 → 유관기관동향 / 정부 부처가 주인공 → 정부정책동향 / 여성 노동·임금 통계·일반 제도 → 참고보도.
+  예시:
+{moves}
 
 ## 요약 작성 원칙
 - 1~2문장, 80자 내외. 기사에 나온 사실만, 추측·평가 금지.
 - 누가, 무엇을, 왜 중요한지 중심. 숫자·정책명·기관명이 있으면 포함.
 - 제목을 그대로 반복하지 않기. "~했다", "~밝혔다" 같은 보도체.
-- 주어진 제목과 설명문만 근거로 씁니다.
+- 주어진 제목과 설명문만 근거로 씁니다. 기사의 주제는 '제목'입니다.
+- 설명문은 본문 첫머리를 자른 것이라 사진 설명이나 다른 사안이 섞일 수 있습니다. 설명문이 제목과 다른 사안이면 설명문은 버리고 제목 내용만으로 짧게 씁니다.
+  제목에 없는 인물·사건을 요약의 주인공으로 쓰지 않습니다.
 
 ## 섹션별 기준과 실제 선별 예시 (담당자가 과거에 직접 고른 기사)
 {chr(10).join(sec_lines)}
@@ -131,18 +155,33 @@ def resolve_id(it, titles, offset=0):
 def _fmt(i, a):
     desc = a["desc"][:DESC_CHARS].replace("\n", " ")
     flag = "[필수] " if is_forced(a) else ""
-    return f"{i} | {a['source']} | {a['sub']} | {flag}{a['title']} | {desc}"
+    alt = [s for s in a.get("alt_sections", {}) if s != WISET_SECTION]
+    alt = f" [다른 섹션: {', '.join(alt)}]" if alt else ""
+    return f"{i} | {a['source']} | {a['sub']} | {flag}{a['title']}{alt} | {desc}"
+
+
+def move_target(section, a):
+    """AI가 적은 move_to가 허용 범위면 (섹션, 소주제), 아니면 None."""
+    to = (a.get("move_to") or "").strip()
+    if not to or to == section or section == WISET_SECTION or to not in SECTIONS or is_forced(a):
+        return None
+    alts = a.get("alt_sections", {})
+    if to in alts:
+        return to, alts[to]
+    if to == CATCHALL_SECTION:
+        return to, "기타 동향"
+    return None
 
 
 class Selector:
     def __init__(self, api_key, log=print):
         self.client = anthropic.Anthropic(api_key=api_key, max_retries=3, timeout=180)
         self.log = log
-        self.usage = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0, "calls": 0}
+        self.usage = {"input": 0, "output": 0, "cache_read": 0, "cache_write": 0, "calls": 0, "max_prompt": 0, "cost": 0.0}
         self.fatal = None  # 크레딧 부족·키 오류처럼 재시도해도 소용없는 오류
 
     def cost(self):
-        return sum(self.usage[k] * PRICE[k] for k in PRICE) / 1_000_000
+        return self.usage.get("cost", 0.0)
 
     def _call(self, section, lines, user=None):
         crit = EXAMPLES["sections"].get(section, {}).get("criteria", "")
@@ -159,11 +198,15 @@ class Selector:
             output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
         )
         u = resp.usage
+        t = {"input": u.input_tokens, "output": u.output_tokens,
+             "cache_read": u.cache_read_input_tokens or 0, "cache_write": u.cache_creation_input_tokens or 0}
         self.usage["calls"] += 1
-        self.usage["input"] += u.input_tokens
-        self.usage["output"] += u.output_tokens
-        self.usage["cache_read"] += u.cache_read_input_tokens or 0
-        self.usage["cache_write"] += u.cache_creation_input_tokens or 0
+        for k, v in t.items():
+            self.usage[k] += v
+        self.usage["max_prompt"] = max(self.usage.get("max_prompt", 0), t["input"] + t["cache_read"] + t["cache_write"])
+        self.usage["cost"] = self.usage.get("cost", 0.0) + call_cost(t)
+        if t["input"] + t["cache_read"] + t["cache_write"] > LONG_PROMPT:
+            self.log(f"  ! {section}: 프롬프트가 10만 토큰을 넘어 이 호출은 5배 단가로 계산됨")
         if resp.stop_reason == "refusal":
             raise RuntimeError("모델이 응답을 거절함")
         if resp.stop_reason == "max_tokens":
@@ -192,7 +235,8 @@ class Selector:
                     b = picked[r]
                     rel.append({"title": b["title"], "source": b["source"], "link": b["link"]})
                     rel.extend(b["related"])
-            out.append({**a, "importance": it["importance"], "related": rel})
+            out.append({**a, "importance": it["importance"], "related": rel,
+                        "move_to": it.get("move_to") or a.get("move_to", "")})
         return out
 
     def select_section(self, section, subs):
@@ -239,7 +283,7 @@ class Selector:
                 rel = sorted({r for r in it["related_ids"] if c0 <= r < c0 + len(chunk) and r != idx})
                 summary = it["summary"].strip() or clip(arts[idx]["desc"])
                 picked.append({**arts[idx], "summary": summary, "importance": it["importance"],
-                               "author": it["author"].strip(),
+                               "author": it["author"].strip(), "move_to": it.get("move_to", ""),
                                "related": [{"title": arts[r]["title"], "source": arts[r]["source"],
                                             "link": arts[r]["link"]} for r in rel]})
 
@@ -283,4 +327,29 @@ class Selector:
             items, note = self.select_section(section, subs)
             self.log(f"  {section}: 후보 {n}건 → 선별 {len(items)}건" + (f" ({note})" if note else ""))
             result[section] = {"items": items, "note": note, "candidates": n}
+        apply_moves(result, self.log)
         return result
+
+
+def apply_moves(result, log=print):
+    """AI가 주인공 기준으로 다른 섹션이 맞다고 한 기사를 옮긴다 (허용 범위는 move_target)."""
+    moved = []
+    for section, v in result.items():
+        keep = []
+        for a in v["items"]:
+            tgt = move_target(section, a)
+            if tgt:
+                moved.append({**a, "section": tgt[0], "sub": tgt[1], "moved_from": section})
+                log(f"  섹션 이동: {section} → {tgt[0]}: {a['title']}")
+            else:
+                keep.append(a)
+        v["items"] = keep
+    for a in moved:
+        dst = result.setdefault(a["section"], {"items": [], "note": None, "candidates": 0})
+        if a["link"] not in {x["link"] for x in dst["items"]}:
+            dst["items"].append(a)
+    for v in result.values():
+        v["items"].sort(key=lambda a: IMPORTANCE_ORDER.get(a["importance"], 3))
+        forced = [a for a in v["items"] if is_forced(a)]
+        rest = [a for a in v["items"] if not is_forced(a)][:max(0, MAX_PER_SECTION - len(forced))]
+        v["items"] = sorted(forced + rest, key=lambda a: IMPORTANCE_ORDER.get(a["importance"], 3))

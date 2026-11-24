@@ -87,7 +87,7 @@ def main(argv=None):
     selected = sel.select_all(candidates)
     u = sel.usage
     print(f"AI 사용량: 호출 {u['calls']}회, 입력 {u['input']:,} / 출력 {u['output']:,} / 캐시읽기 {u['cache_read']:,} / "
-          f"캐시쓰기 {u['cache_write']:,} 토큰 → 예상 비용 ${sel.cost():.4f}")
+          f"캐시쓰기 {u['cache_write']:,} 토큰 (호출 1회 최대 {u['max_prompt']:,}) → 예상 비용 ${sel.cost():.4f}")
     report = {"generated": now.isoformat(), "start": start.isoformat(), "end": end.isoformat(),
               "window_label": window.fmt_window(start, end), "model": MODEL,
               "usage": {**u, "cost_usd": round(sel.cost(), 5)}, "sections": selected}
