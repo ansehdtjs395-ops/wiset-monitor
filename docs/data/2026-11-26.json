@@ -1,0 +1,969 @@
+{
+ "generated": "2026-11-26T07:30:42.343092+09:00",
+ "start": "2026-11-25T07:30:44+09:00",
+ "end": "2026-11-26T07:30:42.343092+09:00",
+ "window_label": "11/25(수) 07:30 ~ 11/26(목) 07:30",
+ "model": "claude-haiku-5-5",
+ "usage": {
+  "input": 156202,
+  "output": 26579,
+  "cache_read": 43827,
+  "cache_write": 6261,
+  "calls": 8,
+  "max_prompt": 73570,
+  "cost": 0.030130595000000003,
+  "cost_usd": 0.03013
+ },
+ "sections": {
+  "WISET 직접 언급": {
+   "items": [
+    {
+     "title": "[올해의 여성과학자, 그 후] ①개척자 스승과 이단아 제자가 함께 쓴 '금...",
+     "desc": "여성이 과학 연구 현장에 있다는 사실이 더 이상 특별하거나 새삼스럽게 여겨지지 않기를 바라며 동아사이언스는 한국여성과학기술인육성재단(WISET)과 함께 역대 수상자들이 걸어온 연구의 길을 돌아보고 이들의...",
+     "link": "https://www.dongascience.com/news/view/81056",
+     "naver_link": "https://n.news.naver.com/mnews/article/584/0000040321?sid=105",
+     "source": "동아사이언스",
+     "pub": "2026-11-26T06:00+09:00",
+     "keyword": "WISET",
+     "section": "WISET 직접 언급",
+     "sub": "WISET 관련",
+     "alt_sections": {
+      "여성과학기술인": "여성 과학자·연구자",
+      "참고보도": "주요 과학매체"
+     },
+     "summary": "동아사이언스가 WISET과 함께 올해의 여성과학자 역대 수상자들이 걸어온 연구 여정을 연재 형식으로 다룬다는 기사다.",
+     "importance": "★★★",
+     "author": "",
+     "move_to": "여성과학기술인",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 1
+  },
+  "정부정책동향": {
+   "items": [
+    {
+     "title": "노동교육원·노사발전재단 통합…노조 반대 속 본격 논의",
+     "desc": "공공기관 기능개혁 대상인 한국고용노동교육원과 노사발전재단의 통합에 노동조합들이 반대 입장을... 오늘(25일) 고용노동부에 따르면 노동부는 다음 달 중으로 추진단을 꾸려 두 기관의 통합을 본격 논의할 계획입니다....",
+     "link": "https://biz.sbs.co.kr/article_hub/20000348832?division=NAVER",
+     "naver_link": "https://n.news.naver.com/mnews/article/374/0000545891?sid=101",
+     "source": "SBS",
+     "pub": "2026-11-25T17:30+09:00",
+     "keyword": "고용노동부+공공기관",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "alt_sections": {},
+     "summary": "고용노동부는 공공기관 기능개혁 대상인 한국고용노동교육원과 노사발전재단의 통합을 다음 달 추진단 구성으로 본격화할 계획이다. 노동조합들은 통합에 반대 입장을 밝혔다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "육아휴직해도 승진심사·금요 조기퇴근…일생활 균형 124곳 시상",
+     "desc": "선정기업 정기 근로감독 면제·세무조사 유예 고용노동부는 25일 '2026년 대한민국 일·생활 균형 우수기업... 김영훈 노동부 장관은 \"여성이 출산과 육아로 경력을 포기하지 않고 남성도 당당하게 돌봄에 참여할 수 있어야...",
+     "link": "https://www.yna.co.kr/view/AKR20261125077000530?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016462675?sid=103",
+     "source": "연합뉴스",
+     "pub": "2026-11-25T14:00+09:00",
+     "keyword": "고용노동부+여성",
+     "section": "정부정책동향",
+     "sub": "고용노동부",
+     "alt_sections": {},
+     "summary": "고용노동부는 2026년 일·생활 균형 우수기업 124곳을 선정했다. 육아휴직 중 승진심사 기회 보장 등 기업 사례가 포함됐고, 선정기업에는 정기 근로감독 면제 등 혜택이 주어진다고 밝혔다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "육아휴직 동료에게 50만원 지원…일·생활 균형 우수기업 124곳 선정",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719563/?sc=Naver"
+      },
+      {
+       "title": "육아휴직 중에도 승진하고 주 35시간 근무…‘워라밸’ 우수기업 124곳 ...",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10948712?ref=naver"
+      },
+      {
+       "title": "육아휴직 중 승진·주 35시간 근무…일·생활 균형 우수기업 124곳 선정",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/economy/2026/11/25/2026112510231892306"
+      },
+      {
+       "title": "육아휴직 중 승진하고 퇴근하면 연락 제한…노동부, 일·생활 우수기업...",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261124001347"
+      },
+      {
+       "title": "육아휴직 중에도 승진 기회…정부, 경력 지키는 일터 124곳 선정",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/economy/employment-labor/6365424"
+      },
+      {
+       "title": "육아휴직 중 승진 기회…일·생활 균형 우수기업 124곳 선정",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003882021"
+      }
+     ]
+    },
+    {
+     "title": "여성새로일하기센터, 여성경력온센터로 새 출발",
+     "desc": "원민경 성평등가족부 장관(왼쪽에서 다섯번째)이 25일 서울 종로구 종로여성경력온센터에서 열리는 현판식에 참석해 현판을 제막하고 기념촬영을 하고 있다. 성평등가족부는 12월 1일부터 기존...",
+     "link": "https://www.newspim.com/news/view/20261125000806",
+     "naver_link": "https://www.newspim.com/news/view/20261125000806",
+     "source": "뉴스핌",
+     "pub": "2026-11-25T13:45+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "alt_sections": {},
+     "summary": "성평등가족부가 12월 1일부터 여성새로일하기센터의 명칭을 여성경력온센터로 바꾸고 경력단절 여성의 경력 복귀를 지원한다고 밝혔다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "원민경 장관, 여성경력온센터 현판식",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/photos/8232665"
+      },
+      {
+       "title": "종로여성경력온센터 현판식 발언하는 원민경 장관",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/photos/8232666"
+      },
+      {
+       "title": "여성경력온센터 현판 제막하는 원민경 장관",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/photos/8232663"
+      },
+      {
+       "title": "인사말하는 원민경 성평등가족부 장관",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261125000805"
+      },
+      {
+       "title": "여성경력온센터로 새 출발하는 여성새로일하기센터",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261125000801"
+      }
+     ]
+    },
+    {
+     "title": "“과학자가 꿈이 되는 사회”…‘국가과학기술자’ 시대 열린다",
+     "desc": "이준배 과기정통부 미래인재정책국장은 “국가과학기술자 제도의 성공은 몇 명의 세계적 석학을 배출하느냐에만 달려 있지 않다”면서 “국민이 과학기술인의 성취를 자기 삶과 연결해 이해하고, 미래세대가 과학자의...",
+     "link": "https://biz.heraldcorp.com/article/10948821?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002728279?sid=105",
+     "source": "헤럴드경제",
+     "pub": "2026-11-25T11:30+09:00",
+     "keyword": "과기정통부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {
+      "유관기관동향": "한국과학창의재단",
+      "참고보도": "인재·채용"
+     },
+     "summary": "과기정통부가 국가과학기술자 제도를 추진하며 과학기술인의 성취를 국민 삶과 연결하는 사회적 인식 확산을 강조했다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "내년 AI 예산 9.4조 꽂는다… 패권 전장은 ‘AIDC’ [정공법]",
+     "desc": "이재명 대통령이 직접 대규모 AI 데이터센터 건설 현장을 방문한 데 이어 배경훈 부총리 겸 과학기술정보통신부 장관도 연구기관과 데이터센터, 산업 현장을 잇달아 방문하며 정책 실행에 의지를 높이고 있습니다....",
+     "link": "https://www.seoul.co.kr/news/economy/2026/11/25/20261125500326?wlog_tag3=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/081/0003703202?sid=101",
+     "source": "서울신문",
+     "pub": "2026-11-25T18:53+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "정부가 내년 AI 예산 9.4조원을 편성하고 AI 데이터센터 확충에 투입한다고 보도됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "구혁채 차관, 주요기관 연구안보 협의회",
+     "desc": "구혁채 과학기술정보통신부 1차관이 25일 대전 유성구 한국전자통신연구원에서 열린 제3차 주요기관 연구안보 협의회에서 참석자들과 기념 촬영하고 있다. 2026.11.25 [과학기술정보통신부 제공. 재판매 및 DB 금지]",
+     "link": "https://www.yna.co.kr/view/PYH20261125198300013?input=1196m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016463681?sid=105",
+     "source": "연합뉴스",
+     "pub": "2026-11-25T18:48+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "구혁채 과기정통부 1차관이 한국전자통신연구원에서 제3차 주요기관 연구안보 협의회를 주재하며 현장 연구안보 체계 강화를 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "발언하는 구혁채 과기부 1차관",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/photos/8233144"
+      },
+      {
+       "title": "제3차 주요기관 연구안보 협의회",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/photos/8233142"
+      },
+      {
+       "title": "[과학스냅] 과학의전당 청소년 과학오디션 대상에 김도윤",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261125123400017?input=1195m"
+      },
+      {
+       "title": "구혁채 과기차관, 연구안보 체계 강화 방안 논의",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=717789"
+      }
+     ]
+    },
+    {
+     "title": "과기정통부, AI 자율화 시대 대비…제조업 경쟁력·법제 정비 논의",
+     "desc": "과학기술정보통신부가 AI(인공지능)가 스스로 판단하고 행동하는 자율화 시대에 대비해 제조업 경쟁력 변화와 법·제도 대응 방안을 논의했다. 과기정통부는 25일 서울 중구 로얄호텔서울에서 'AI 자율화 시대: 미래...",
+     "link": "https://www.mt.co.kr/tech/2026/11/25/2026112422304792715",
+     "naver_link": "https://n.news.naver.com/mnews/article/008/0005446044?sid=105",
+     "source": "머니투데이",
+     "pub": "2026-11-25T10:00+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부가 AI가 스스로 판단하고 행동하는 자율화 시대에 대비해 제3차 과학기술·인공지능 미래전략회의에서 제조업 경쟁력과 법·제도 정비 방안을 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "AI 커닝 막고 ‘피클’ 규율한다…AI 개발자 면허제·책임보험도 논의",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=01252966645649656&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "\"AI에도 자동차처럼 '번호판' 달고 책임보험 가입해야\" (종합)",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/tech/2026/11/25/2026112515223650263"
+      },
+      {
+       "title": "스스로 판단하는 AI…개발자 면허·책임보험론 부상",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=03043846645649328&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "배경훈 부총리 \"AI 자율화 시대, 경제 가치 창출이 국가 경쟁력\"",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261125142527"
+      },
+      {
+       "title": "'피클'이 촉발한 AI 비서 규율 논의…정부, 법 개정 만지작",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261125140053"
+      },
+      {
+       "title": "\"AI에도 번호판·책임보험 필요…'행동하는 AI' 규제 틀 다시 짜야\"",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=718002"
+      },
+      {
+       "title": "AI 혼자 사고 내면?...\"사업자 책임보험 의무화\"",
+       "source": "블로터",
+       "link": "https://www.bloter.net/news/articleView.html?idxno=679641"
+      },
+      {
+       "title": "AI 로봇 사고 나면 누구 책임?…\"車처럼 '식별번호' 달고 책임보험 의무...",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003882590"
+      },
+      {
+       "title": "“연구개발자엔 면허증, AI엔 번호판…'행동하는 AI' 시대 제도 혁신 필...",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261125000331"
+      },
+      {
+       "title": "“AI 제공자 책임보험 가입시켜 피해 보상을”",
+       "source": "문화일보",
+       "link": "https://www.munhwa.com/article/11633993?ref=naver"
+      },
+      {
+       "title": "AI에도 자동차처럼 번호판을…에이전트 시대 책임보험제 제안(종합)",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261124148751017?input=1195m"
+      },
+      {
+       "title": "배경훈 부총리 \"AI 자율화 시대가 국가 경쟁력 좌우\"",
+       "source": "오마이뉴스",
+       "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003287961&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news"
+      },
+      {
+       "title": "\"출시 전 심사로는 한계\"…AI 책임보험·개발자 면허제 제안",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261125084037016"
+      },
+      {
+       "title": "국가 R&D 특허 출원·성과 등록 간소화…과제번호만으로 정보 자동 입력",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003882256"
+      },
+      {
+       "title": "자율 판단·실행하는 AI…정부, 제도·법령 정비 모색",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719211/?sc=Naver"
+      },
+      {
+       "title": "AI 자율화 시대 대비한다…과기부, 3차 AI 미래전략회의 개최",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112508390165133"
+      },
+      {
+       "title": "AI도 사고내면 보험 처리될까…정부, 에이전트 시대 제도 모색",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261124148700017?input=1195m"
+      },
+      {
+       "title": "AI가 사고 내면 누가 책임지나…\"'개발자 면허제·AI 책임보험' 만들어야...",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003882063"
+      },
+      {
+       "title": "정부, AI 자율화 시대 새로운 산업·사회 질서 논의",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/it-science/internet-platform/6364648"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 530
+  },
+  "유관기관동향": {
+   "items": [
+    {
+     "title": "[국민의 기업] 개원 60주년, 과학기술외교·인재 양성 선도",
+     "desc": "한국과학기술연구원 한국과학기술연구원(KIST)이 개원 60주년을 맞았다. 1965년 한·미 정상의 합의를 바탕으로 이듬해 서울 동대문구 홍릉에서 문을 연 KIST는 과학기술외교와 과학인재 양성을 통해 대한민국...",
+     "link": "https://www.joongang.co.kr/article/25482092",
+     "naver_link": "https://n.news.naver.com/mnews/article/025/0003568063?sid=101",
+     "source": "중앙일보",
+     "pub": "2026-11-26T05:30+09:00",
+     "keyword": "KIST",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "KIST가 개원 60주년을 맞았다. 1965년 한·미 정상 합의를 바탕으로 1966년 홍릉에서 문을 연 KIST의 과학기술외교와 인재 양성 역할을 조명했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "[단독] 오전 로봇 설계→다음날 양산…충격의 대륙 혁신시계",
+     "desc": "25일 중앙일보가 단독 입수한 한국공학한림원(한림원)의 ‘중국의 과학기술 굴기 분석에 기반한 기술패권 대응전략 수립 연구’ 최종보고서는 중국의 혁신 방식을 ‘국가주도형 시장혁신체제’로 설명했다. 연구를 이끈...",
+     "link": "https://www.joongang.co.kr/article/25482074",
+     "naver_link": "https://n.news.naver.com/mnews/article/025/0003568044?sid=101",
+     "source": "중앙일보",
+     "pub": "2026-11-26T05:02+09:00",
+     "keyword": "공학한림원",
+     "section": "유관기관동향",
+     "sub": "과학기술한림원",
+     "alt_sections": {},
+     "summary": "한국공학한림원이 중국의 과학기술 굴기 분석을 토대로 한 기술패권 대응전략 수립 연구 최종보고서를 작성했다고 중앙일보가 보도했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "韓, 2033년 발사체 회수 도전…메탄 엔진으로 재사용 효율 높인다",
+     "desc": "한국항공우주연구원과 한화에어로스페이스는 지난 9월 전남 순천 한화에어로스페이스 사업장에서 재사용 발사체 기술 시연체의 총조립을 시작했다. 항우연은 높이 12.2m, 무게 6.4톤의 시험용 발사체로 2028년 고도 500m까지...",
+     "link": "https://www.sedaily.com/article/20118981?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/011/0004686158?sid=105",
+     "source": "서울경제",
+     "pub": "2026-11-25T18:08+09:00",
+     "keyword": "한국항공우주연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "항우연과 한화에어로스페이스가 재사용 발사체 기술 시연체의 총조립을 시작했다. 항우연은 2033년 발사체 회수 도전 계획을 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "KAI, 달 착륙선 '뼈대' 맡는다…달 탐사 2단계 참여",
+     "desc": "KAI는 지난 23일 한국항공우주연구원(항우연)과 약 150억원 규모의 달 착륙선 본체 구조계 개발 계약을 맺었다고 25일 밝혔다. 이에 따라 KAI는 2030년 12월까지 시험용 2대와 비행검증용 2대 등 총 4대의 본체 구조계를...",
+     "link": "https://www.yna.co.kr/view/AKR20261125154000003?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016463556?sid=101",
+     "source": "연합뉴스",
+     "pub": "2026-11-25T17:41+09:00",
+     "keyword": "한국항공우주연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "KAI가 항우연과 약 150억 원 규모의 달 착륙선 본체 구조계 개발 계약을 체결했다. 2030년 12월까지 시험용 2대와 비행검증용 2대를 납품할 계획이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "[기업] KAI, 달 착륙선 '뼈대' 맡는다...150억 원 규모",
+       "source": "YTN",
+       "link": "https://www.ytn.co.kr/_ln/0102_202611251844415623"
+      },
+      {
+       "title": "KAI, 달 착륙선 본체 맡는다…달 탐사 2단계 참여",
+       "source": "연합뉴스TV",
+       "link": "http://www.yonhapnewstv.co.kr/news/AKR202611251815098Ll"
+      },
+      {
+       "title": "KAI, 달 착륙선 ‘뼈대’ 만든다",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20118987?ref=naver"
+      },
+      {
+       "title": "KAI, 한국형 달 착륙선 '뼈대' 만든다…항우연과 150억 계약",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261125174943304"
+      },
+      {
+       "title": "KAI, 150억원 규모 달 착륙선 본체 구조계 개발…우주탐사 사업 확대",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112517350462895"
+      },
+      {
+       "title": "KAI, 150억 규모 달 착륙선 개발 사업 수주…우주탐사 영역 확대",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/industry/general-industry/6366019"
+      },
+      {
+       "title": "KAI, 달 착륙선의 '뼈대' 만든다…2032년 독자 달 탐사 핵심 기술 개발",
+       "source": "e사이언스",
+       "link": "https://www.e-science.co.kr/news/articleView.html?idxno=140760"
+      },
+      {
+       "title": "KAI, 달 착륙선 뼈대 만든다. 본체 구조계 개발 사업 수주",
+       "source": "국제신문",
+       "link": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0300&key=20261125.99099008196"
+      },
+      {
+       "title": "KAI, 달 착륙선 ‘본체 구조계’ 개발… 150억원 규모",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/industry/company/2026/11/25/CEB6PNRHOFGZLANGKXUUC6TKPA/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+       "title": "KAI, 달 착륙선 '뼈대' 확보…우주탐사 2단계 핵심 축 부상",
+       "source": "뉴스웍스",
+       "link": "https://www.newsworks.co.kr/news/articleView.html?idxno=904445"
+      },
+      {
+       "title": "KAI, 150억 규모 달 착륙선 본체 구조계 개발 사업 수주",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/industry/2026/11/25/2026112517213066494"
+      },
+      {
+       "title": "KAI, 한국 달 착륙선 '뼈대' 개발한다…150억원 규모 계약 체결",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81070"
+      },
+      {
+       "title": "KAI, 무인 달 착륙선 ‘뼈대’ 만든다…150억원 규모 수주",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719712/?sc=Naver"
+      },
+      {
+       "title": "KAI, 150억원 규모 달 착륙선 본체 구조계 개발 수주",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611251649231907"
+      },
+      {
+       "title": "KAI, 150억 규모 달 착륙선 본체 구조계 개발 수주",
+       "source": "더팩트",
+       "link": "https://news.tf.co.kr/read/economy/2393412.htm"
+      },
+      {
+       "title": "KAI, 달 착륙선 본체 구조계 개발 사업 수주…150억 규모",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261125000520"
+      },
+      {
+       "title": "KAI, 달 착륙선 본체 구조계 4대 개발 사업 수주",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112517072184784"
+      },
+      {
+       "title": "KAI, 다누리 이어 달 착륙선 '뼈대' 만든다…150억원 규모 수주",
+       "source": "이투데이",
+       "link": "https://www.etoday.co.kr/news/view/2652955"
+      },
+      {
+       "title": "KAI·항우연, 2032년 발사 무인 달 착륙선 뼈대 만든다",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12218324"
+      },
+      {
+       "title": "KAI-항우연, 달 착륙선 본체 구조계 개발 사업 수주",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611251647590537"
+      },
+      {
+       "title": "KAI, 달 착륙선 '뼈대' 만든다…150억원 규모 수주",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261125165244"
+      },
+      {
+       "title": "KAI, 150억원 규모 달 착륙선 본체 구조계 개발 수주…우주탐사 사업 확...",
+       "source": "핀포인트뉴스",
+       "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=508055"
+      }
+     ]
+    },
+    {
+     "title": "미·중 공급망 재편 속 K바이오의 '대중(對中) 분업' 본격화",
+     "desc": "한국과학기술기획평가원(KISTEP) 바이오혁신전략팀은 최근 발표한 '한·중 바이오 협력의 전략적 확장... KISTEP은 \"유전체 정보, 인체유래 검체, 환자 원자료, 이중용도 기술 등 생물안보 및 데이터 민감도가 높은 영역은...",
+     "link": "http://www.metroseoul.co.kr/article/20261125500543",
+     "naver_link": "http://www.metroseoul.co.kr/article/20261125500543",
+     "source": "메트로신문",
+     "pub": "2026-11-25T16:28+09:00",
+     "keyword": "KISTEP",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "KISTEP 바이오혁신전략팀이 한·중 바이오 협력의 전략적 확장 방향을 담은 보고서를 발표했다. 미·중 공급망 재편 속 K바이오의 대중 분업 흐름을 다뤘다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "연구재단-교육부, '제13회 교육 ODA 컨퍼런스' 개최",
+     "desc": "한국연구재단은 24일 서울드래곤시티 르씨엘 31에서 교육부와 공동으로 '제13회 교육 ODA(공적개발원조) 컨퍼런스'를 개최했다고 25일 밝혔다. 2026.11.25 [한국연구재단 제공. 재판매 및 DB 금지]",
+     "link": "https://www.yna.co.kr/view/PYH20261125071700063?input=1196m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016462334?sid=104",
+     "source": "연합뉴스",
+     "pub": "2026-11-25T11:13+09:00",
+     "keyword": "한국연구재단",
+     "section": "유관기관동향",
+     "sub": "기타 유관기관",
+     "alt_sections": {},
+     "summary": "한국연구재단이 교육부와 공동으로 24일 '제13회 교육 ODA 컨퍼런스'를 서울드래곤시티에서 개최했다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "연구재단, 교육부와 제13회 교육 ODA 컨퍼런스 개최",
+       "source": "금강일보",
+       "link": "https://www.ggilbo.com/news/articleView.html?idxno=1195520"
+      },
+      {
+       "title": "한국연구재단, 지속가능 글로벌 교육협력 모델 만든다",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10948865?ref=naver"
+      },
+      {
+       "title": "한국연구재단, 교육 ODA 지속가능성 높인다…협력국 중심 전략 모색",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261125000125"
+      }
+     ]
+    },
+    {
+     "title": "기계연, 세계 최초 6인치 이황화텅스텐 원자층 제어 기술 개발",
+     "desc": "한국기계연구원(원장 류석현)은 김형우 반도체장비연구센터 선임연구원(UST 조교수, 성균관대 학연교수 겸임)팀이 유호천 한양대 교수팀과 함께 6인치 웨이퍼 크기의 이황화텅스텐을 원자 한 층 단위로 제어하는 기술...",
+     "link": "https://www.etnews.com/20261125000172",
+     "naver_link": "https://n.news.naver.com/mnews/article/030/0003489508?sid=105",
+     "source": "전자신문",
+     "pub": "2026-11-25T10:19+09:00",
+     "keyword": "한국기계연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "한국기계연구원이 한양대 연구팀과 6인치 웨이퍼 크기의 이황화텅스텐을 원자층 단위로 제어하는 기술을 개발했다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "기계연, 차세대 AI 반도체 해법 제시",
+       "source": "금강일보",
+       "link": "https://www.ggilbo.com/news/articleView.html?idxno=1195586"
+      },
+      {
+       "title": "기계硏, 반도체 소재 원자층 깎아 제어한다…AI소자 신호 인식률 95.8%",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003882705"
+      },
+      {
+       "title": "차세대 반도체 소재 '이황화텅스텐' 원자층 단위로 깎는다",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81061"
+      },
+      {
+       "title": "반도체 소재 두께 ‘자유롭게’ 제어…보고 기억하는 ‘차세대 AI반도체...",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12097127?ref=naver"
+      },
+      {
+       "title": "플라즈마로 반도체 막 층층이 제어…차세대 AI 반도체 해법 제시",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/daejeon-chungnam/6365360"
+      },
+      {
+       "title": "반도체 소재 두께 원자 단위로 제어…AI 반도체 해법 제시",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112510533769697"
+      },
+      {
+       "title": "6인치 웨이퍼 전체서 원자 한 층씩 깎아 원하는 두께로 맞춘다",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261125072400063?input=1195m"
+      },
+      {
+       "title": "반도체 원자 한 겹씩 깎았다…‘보고 기억하는’ AI 반도체 구현",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10948522?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "[대한민국 7대 SEED 프로젝트] 10년 뒤 대한민국을 먹여 살릴 '기술의 씨...",
+     "desc": "아주경제는 국가연구재단(NST)과 함께 7대 SEED 프로젝트를 위해 다양한 전략연구사업을 진행 중인 대전, 군산, 울산 등 전국 정부출연연구기관의 연구 현장을 찾아 내일을 바꿀 거대한 도약의 현장을 생생하게 전한다....",
+     "link": "https://www.ajunews.com/view/20261124152047594",
+     "naver_link": "https://www.ajunews.com/view/20261124152047594",
+     "source": "아주경제",
+     "pub": "2026-11-25T08:00+09:00",
+     "keyword": "NST",
+     "section": "유관기관동향",
+     "sub": "기타 유관기관",
+     "alt_sections": {},
+     "summary": "아주경제가 국가연구재단과 함께 7대 SEED 프로젝트를 위해 대전, 군산, 울산 등 정부출연연구기관의 연구 현장을 취재했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 287
+  },
+  "여성과학기술인": {
+   "items": [
+    {
+     "title": "이미연 유진테크놀로지 대표 “기계·금형분야 30년 몸담아⋯편견엔 실...",
+     "desc": "30년 가까이 금형과 정밀가공 등 거친 제조업 현장을 누빈 여성 엔지니어, 이미연 유진테크놀로지 대표는 이렇게 직접 응대해야 직성이 풀리는 사람이다. ‘여자가 뭘 얼마나 잘하겠어’라는 편견에 맞서 매일 밤샘을...",
+     "link": "https://www.etoday.co.kr/news/view/2651609",
+     "naver_link": "https://www.etoday.co.kr/news/view/2651609",
+     "source": "이투데이",
+     "pub": "2026-11-26T05:00+09:00",
+     "keyword": "여성 엔지니어",
+     "section": "여성과학기술인",
+     "sub": "여성 과학자·연구자",
+     "alt_sections": {},
+     "summary": "30년 가까이 금형과 정밀가공 등 제조업 현장에서 일해 온 여성 엔지니어이자 유진테크놀로지 대표 이미연 씨의 경력과 현장 경험을 소개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "차가운 땅에 뜨거운 열정을, 극지연구소 이유경 책임연구원 [플랫][여자...",
+     "desc": "그런 그도 한때는 여성 과학자로서 ‘멸종 위기종’이 될 뻔한 위기를 겪었다. 경향신문 여성 서사 아카이브 플랫은 지난 10일 인천 연수구 극지연구소에서 이유경 연구원을 만나 기초과학 연구자로 자리잡기 위해...",
+     "link": "https://www.khan.co.kr/article/202611250900001",
+     "naver_link": "https://n.news.naver.com/mnews/article/032/0003484885?sid=102",
+     "source": "경향신문",
+     "pub": "2026-11-25T09:00+09:00",
+     "keyword": "여성 과학자",
+     "section": "여성과학기술인",
+     "sub": "여성 과학자·연구자",
+     "alt_sections": {
+      "참고보도": "인재·채용"
+     },
+     "summary": "극지연구소 이유경 책임연구원이 극지 연구 현장에서의 활동과 여성 과학자로서 겪은 위기를 인터뷰에서 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 23
+  },
+  "참고보도": {
+   "items": [
+    {
+     "title": "“청년 원하는 사회로” 서울대 교수, ‘출산율 추락’ G7에 권고",
+     "desc": "서울대 연구실에서 만난 황지수 자유전공학부 교수는 이렇게 말했다. 황 교수는 지난 3월 G7 정상들에게... 황 교수는 “유연근무제나 육아휴직이 비교적 잘 정착된 선진국조차 일·가정 양립 한계에 부딪히고 있다”고...",
+     "link": "https://www.chosun.com/national/national_general/2026/11/25/Z6SQKYP7GVHHBDO3LLL3XE7DHQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "naver_link": "https://n.news.naver.com/mnews/article/023/0004011717?sid=102",
+     "source": "조선일보",
+     "pub": "2026-11-25T21:01+09:00",
+     "keyword": "일가정양립+연구",
+     "section": "참고보도",
+     "sub": "일·가정양립",
+     "alt_sections": {},
+     "summary": "서울대 황지수 교수가 G7 정상들에게 출산율 추락 대응을 권고했다고 밝혔다. 유연근무제와 육아휴직 정착의 필요성을 강조했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "서울교통공사, 임단협 타결…노조 총파업 철회, 정상운행",
+     "desc": "주요 합의 내용으로는 ▶총인건비 3.5% 이내 임금인상 ▶경영혁신계획 보류 및 조직진단 연구용역 결과 도출 후 노사 협의 등이다. 노사는 일·가정 양립을 위한 근무여건 마련을 위해 근무제도를 개선하고 공익서비스...",
+     "link": "https://www.joongang.co.kr/article/25481900",
+     "naver_link": "https://n.news.naver.com/mnews/article/025/0003567898?sid=103",
+     "source": "중앙일보",
+     "pub": "2026-11-25T16:30+09:00",
+     "keyword": "일가정양립+연구",
+     "section": "참고보도",
+     "sub": "일·가정양립",
+     "alt_sections": {},
+     "summary": "서울교통공사 노사가 임단협에 타결하고 노조 총파업을 철회했다. 총인건비 3.5% 이내 임금인상, 경영혁신계획 보류, 일·가정 양립 근무여건 마련에 합의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "500명 신규채용 합의… 서울 지하철 노사 임단협 극적 타결",
+       "source": "세계일보",
+       "link": "https://www.segye.com/newsView/20261125519588?OutUrl=naver"
+      },
+      {
+       "title": "한신 시의원 \"지하철 총파업 철회, 대승적 결단에 감사\"",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261125001191"
+      },
+      {
+       "title": "서울시의회 교통위원회 “서울교통공사 노사 임금·단체협약(임단협) 교...",
+       "source": "서울신문",
+       "link": "https://www.seoul.co.kr/news/publicnews/local_govern/smc_movement/2026/11/25/20261125500219?wlog_tag3=naver"
+      },
+      {
+       "title": "출근길 대란 피한 서울 지하철…감축계획 보류 후 인력조정 숙제로",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/policy/2026/11/25/2026112514263781713"
+      },
+      {
+       "title": "서울 지하철 밤샘 협상 끝 타결…출근대란 피해",
+       "source": "연합뉴스TV",
+       "link": "http://www.yonhapnewstv.co.kr/news/MYH20261125094320g0d"
+      },
+      {
+       "title": "서울교통공사 1노조, 임단협 타결로 총파업 철회…신규채용 500명",
+       "source": "에너지경제",
+       "link": "https://www.ekn.kr/web/view.php?key=20261125024374268"
+      },
+      {
+       "title": "서울지하철 1~8호선 정상 운행…3개 노조 파업 철회·500명 추가 채용",
+       "source": "에너지경제",
+       "link": "https://www.ekn.kr/web/view.php?key=20261125025144309"
+      },
+      {
+       "title": "서울 지하철 노사 교섭 타결로 파업 철회…출근대란 없어",
+       "source": "연합뉴스TV",
+       "link": "http://www.yonhapnewstv.co.kr/news/MYH20261125082254a2l"
+      }
+     ]
+    },
+    {
+     "title": "공공기관운영위원회, 민주적 지배구조로 거듭나야 한다",
+     "desc": "그동안 재정당국은 공공기관의 지정과 유형 구분, 임원 선임 관련 제도, 예산운용지침, 경영평가, 경영공시, 재무관리, 고객만족도 조사 등 다양한 제도적 수단을 통해 공공기관을 관리해 왔다. 이러한 제도는 공공기관의...",
+     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003288218&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+     "naver_link": "https://n.news.naver.com/mnews/article/047/0002537202?sid=100",
+     "source": "오마이뉴스",
+     "pub": "2026-11-25T14:51+09:00",
+     "keyword": "공공기관+지침",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "공공기관의 민주적 지배구조 필요성을 다룬 글로, 재정당국의 지정·임원 선임·경영평가 등 관리 수단을 짚었다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "여성 과장, 남성보다 경력 3.6년 긴데…연봉은 521만원 적다",
+     "desc": "성별임금격차는 14.3%에 달했다. 2020년에는 성별임금격차가 12.1%로 격차가 더 커졌다. 여성의 학력, 경력, 업종, 기업규모를 모두 통제한 뒤 과장급 여성과 과장급 남성의 임금을 비교해 보니, 과장급 여성은 근무...",
+     "link": "https://www.hani.co.kr/arti/society/women/1289035.html",
+     "naver_link": "https://n.news.naver.com/mnews/article/028/0002833901?sid=102",
+     "source": "한겨레",
+     "pub": "2026-11-25T14:48+09:00",
+     "keyword": "성별 임금격차",
+     "section": "참고보도",
+     "sub": "다양성·포용",
+     "alt_sections": {},
+     "summary": "여성 과장급은 남성보다 경력이 3.6년 길지만 연봉은 521만원 적은 것으로 나타났다. 성별임금격차는 14.3%였다고 보도됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "\"여성 과장급, 남성보다 경력 3.6년 길고 임금 7.7% 적어\"",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261125_0003882176"
+      }
+     ]
+    },
+    {
+     "title": "칩도 팹도 만들 사람이 없다",
+     "desc": "최근 반도체 업계가 맞이한 전례 없는 초호황으로 이공계 학생들의 관심이 높아졌지만 A사는 채용이 더 어려워졌다고 호소했다. ▶관련기사 3면 A사 관계자는 “삼성전자와 SK하이닉스가 수억원의 보너스를 내걸고...",
+     "link": "https://biz.heraldcorp.com/article/10948857?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002728306?sid=101",
+     "source": "헤럴드경제",
+     "pub": "2026-11-25T11:37+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "alt_sections": {},
+     "summary": "반도체 업계의 초호황 속에 이공계 학생들의 관심이 높아졌지만, A사는 채용이 더 어려워졌다고 호소했다. 삼성전자·SK하이닉스의 억대 성과급이 배경으로 언급됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "\"성과급 수억씩 줘도 불안한데\"…한국까지 찾아온 마이크론",
+       "source": "한국경제TV",
+       "link": "http://www.wowtv.co.kr/NewsCenter/News/Read?articleId=A202611250054&t=NN"
+      },
+      {
+       "title": "마이크론, 단 한번 면접서 즉시 채용",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10948811?ref=naver"
+      },
+      {
+       "title": "“삼성·SK 억대 성과급 어떻게 당해내나” 반도체 호황에도 한숨 쉬는...",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10948342?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "\"쌍둥이 출산자 60%, 조산 등으로 발달지연 고민 경험\"",
+     "desc": "기업의 일·가정 양립제도가 가장 도움이 됐다는 응답은 36.0%, 온라인 커뮤니티를 꼽은 응답은 13.3%였다.... 한국보건사회연구원 배혜원 전문연구원의 분석에 따르면, 국내 고차 다태아 출산율은 분만 1천건당 0....",
+     "link": "https://www.yna.co.kr/view/AKR20261124168400530?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016462090?sid=103",
+     "source": "연합뉴스",
+     "pub": "2026-11-25T10:30+09:00",
+     "keyword": "일가정양립+연구",
+     "section": "참고보도",
+     "sub": "일·가정양립",
+     "alt_sections": {},
+     "summary": "쌍둥이 출산자 60%가 조산 등으로 발달지연 고민을 경험했다고 한국보건사회연구원 분석이 밝혔다. 일·가정 양립제도가 도움이 됐다는 응답은 36.0%였다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "‘2시간 수면도 사치’… 쌍둥이 부모들 잠 못 든다",
+       "source": "조선일보",
+       "link": "https://www.chosun.com/national/welfare-medical/2026/11/25/R3JCUZ4AFFCOPAH2Y3BNYEF6FU/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news"
+      },
+      {
+       "title": "하루 2시간 자는 ‘쌍둥이맘’…발달지연 고민에 돌봄지원 호소까지 ‘...",
+       "source": "매일경제",
+       "link": "https://www.mk.co.kr/article/12217950"
+      }
+     ]
+    },
+    {
+     "title": "“어쩐지 안 뽑더라”…공공기관 청년인턴 37% ‘뚝’ 이유보니",
+     "desc": "공공기관의 채용형 인턴 채용 규모가 1년 새 37% 넘게 줄었다. 임금피크제나 채용형 인턴 관련 소송에서... 공기업·준정부기관 예산운용지침과 원자력진흥법 등을 개정해 정책적 필요에 따른 인건비 예외 규정도 확대해야...",
+     "link": "https://biz.heraldcorp.com/article/10948423?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002728104?sid=101",
+     "source": "헤럴드경제",
+     "pub": "2026-11-25T09:53+09:00",
+     "keyword": "공공기관+지침",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "공공기관의 채용형 인턴 채용 규모가 1년 새 37% 넘게 줄었다. 공기업·준정부기관 예산운용지침 등 제도 개정 배경이 함께 다뤄졌다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "같은 과장인데 근속 1.7년 더 길어도…여성 관리자 월급이 더 적다",
+     "desc": "성평등가족부에 따르면 2024년 기준 한국의 성별임금격차는 29.0%로 경제협력개발기구(OECD) 회원국 평균(10.1%)의 약 3배이자 회원국 가운데 가장 크다. 남성 대비 여성의 임금 수준은 20대 88.7%에서 50대 56.4%까지 낮아진다....",
+     "link": "https://www.segye.com/newsView/20261125511191?OutUrl=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/022/0004178005?sid=101",
+     "source": "세계일보",
+     "pub": "2026-11-25T14:36+09:00",
+     "keyword": "성평등가족부",
+     "section": "참고보도",
+     "sub": "다양성·포용",
+     "alt_sections": {
+      "참고보도": "다양성·포용"
+     },
+     "summary": "성평등가족부에 따르면 2024년 기준 한국의 성별임금격차는 29.0%로 OECD 평균의 약 3배이며 회원국 중 가장 크다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "참고보도",
+     "related": [],
+     "moved_from": "정부정책동향"
+    }
+   ],
+   "note": null,
+   "candidates": 67
+  },
+  "기고칼럼": {
+   "items": [
+    {
+     "title": "AI 시대, 기존의 근로시간 적용할 수 있을까[기고/김동욱]",
+     "desc": "그러나 오늘날 연구개발자, 소프트웨어 엔지니어, 금융 전문가의 성과는 자리에 앉아 있던 시간이 아니라 문제를 풀어낸 결과로 평가된다. 일의 성격은 바뀌었는데 법은 여전히 모든 노동을 같은 시계로 잰다. 미국...",
+     "link": "https://www.donga.com/news/Economy/article/all/20261125/135090421/2",
+     "naver_link": "https://n.news.naver.com/mnews/article/020/0003765208?sid=101",
+     "source": "동아일보",
+     "pub": "2026-11-26T00:31+09:00",
+     "keyword": "기고+연구개발",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "alt_sections": {},
+     "summary": "연구개발자와 소프트웨어 엔지니어 등은 성과로 평가받는데 법은 여전히 모든 노동을 시간 기준으로 규제하고 있다며, 근로시간 제도의 재검토 필요성을 제기했다.",
+     "importance": "★☆☆",
+     "author": "김동욱",
+     "move_to": "",
+     "related": [
+      {
+       "title": "[기고] ‘한국형 화이트칼라 이그젬션’ 제언",
+       "source": "서울신문",
+       "link": "https://www.seoul.co.kr/news/editOpinion/opinion/contribution/2026/11/26/20261126026001?wlog_tag3=naver"
+      },
+      {
+       "title": "[기고] 초광역특구 노동 특례는 필수다",
+       "source": "국민일보",
+       "link": "https://www.kmib.co.kr/article/20261125502049"
+      }
+     ]
+    },
+    {
+     "title": "[기고] 미래 첨단산업 굴리는 건 실무 인력 … 전문대 중장기 투자 로드...",
+     "desc": "그러나 ‘미래 인재’를 연구개발이나 첨단 연구인력으로만 좁혀 봐서는 안 된다. AI와 첨단기술을 실제 생산공정에 적용하는 인력, 지역 병원과 복지현장을 지키는 인력, 제조·서비스 현장에서 디지털 기술을 활용하는...",
+     "link": "https://www.hankyung.com/article/2026112586411",
+     "naver_link": "https://n.news.naver.com/mnews/article/015/0005358033?sid=110",
+     "source": "한국경제",
+     "pub": "2026-11-25T15:59+09:00",
+     "keyword": "기고+연구개발",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "alt_sections": {},
+     "summary": "미래 첨단산업을 이끄는 인력은 연구개발 인력에 그치지 않고 생산공정과 지역 현장의 실무 인력이라며, 전문대에 대한 중장기 투자를 제언했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 10
+  }
+ }
+}
