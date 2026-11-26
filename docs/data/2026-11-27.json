@@ -1,0 +1,1115 @@
+{
+ "generated": "2026-11-27T07:30:40.914624+09:00",
+ "start": "2026-11-26T07:30:42+09:00",
+ "end": "2026-11-27T07:30:40.914624+09:00",
+ "window_label": "11/26(목) 07:30 ~ 11/27(금) 07:30",
+ "model": "claude-haiku-5-5",
+ "usage": {
+  "input": 170994,
+  "output": 32401,
+  "cache_read": 37566,
+  "cache_write": 6261,
+  "calls": 7,
+  "max_prompt": 73604,
+  "cost": 0.034458185,
+  "cost_usd": 0.03446
+ },
+ "sections": {
+  "WISET 직접 언급": {
+   "items": [],
+   "note": null,
+   "candidates": 0
+  },
+  "정부정책동향": {
+   "items": [
+    {
+     "title": "원민경 장관, 2026 한국 IT여성의 날",
+     "desc": "원민경 성평등가족부 장관이 26일 서울 서초구 엘타워에서 열린 '2026 한국 IT 여성의 날' 행사에서 발언하고 있다. 2026.11.26 [성평등가족부 제공. 재판매 및 DB 금지]",
+     "link": "https://www.yna.co.kr/view/PYH20261126229100013?input=1196m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016466589?sid=102",
+     "source": "연합뉴스",
+     "pub": "2026-11-26T18:11+09:00",
+     "keyword": "성평등가족부",
+     "section": "정부정책동향",
+     "sub": "성평등가족부·여성가족부",
+     "alt_sections": {},
+     "summary": "원민경 성평등가족부 장관이 26일 '2026 한국 IT 여성의 날' 행사에서 발언했다. 행사는 'AI 혁신을 이끄는 여성'을 주제로 열렸다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "[포토] 2026 한국IT여성의 날",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261126000538"
+      }
+     ]
+    },
+    {
+     "title": "구글, 외부 AI에이전트에 ‘서비스 이용료’ 매긴다",
+     "desc": "산업 흐름이 된 관련 산업을 저해할 수 있다는 우려도 나온다. 과학기술정보통신부는 전날 제3차 과학기술·인공지능 미래전략회의에서 AI 에이전트의 법적 지위와 개념을 우선 정립할 필요가 있다는 입장을 밝혔다.",
+     "link": "https://www.seoul.co.kr/news/economy/industry/2026/11/27/20261127029001?wlog_tag3=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/081/0003703721?sid=101",
+     "source": "서울신문",
+     "pub": "2026-11-27T05:05+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부는 제3차 과학기술·인공지능 미래전략회의에서 AI 에이전트의 법적 지위와 개념을 우선 정립할 필요가 있다고 밝혔다. 외부 AI 에이전트 접근의 유료화 논의도 나온다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "구글, AI 에이전트 접근에 ‘통행료’ 유료화…국내 기업도 고심",
+       "source": "서울신문",
+       "link": "https://www.seoul.co.kr/news/economy/industry/2026/11/26/20261126500331?wlog_tag3=naver"
+      },
+      {
+       "title": "해외서도 AI 에이전트에 '빗장'…AI 비서 시대 '새 질서' 모색",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/tech/2026/11/26/2026112613472882051"
+      },
+      {
+       "title": "'모두의 AI'도 에이전트 부작용 대비…NIPA \"안전조치 강화\"",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261126143706"
+      },
+      {
+       "title": "\"고객님, AI세요?\"⋯통신사, AI에이전트 전화에 어떻게 대응하나 [QnA]",
+       "source": "아이뉴스24",
+       "link": "http://www.inews24.com/view/2030669"
+      }
+     ]
+    },
+    {
+     "title": "여야, 예결소위서 미래대응기금 사업 이견…예산 심사 잇따라 보류(종합...",
+     "desc": "과학기술정보통신부 소관 AI 중심대학 지원 사업 등의 심사도 이견이 반복되며 보류됐다. 국민의힘은 기존 일반회계에서 추진하던 사업들을 미래대응기금으로 이전할 필요가 있는지 의문을 제기하며 지속가능성 등을...",
+     "link": "https://www.newsis.com/view/NISX20261127_0003885388",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014348381?sid=100",
+     "source": "뉴시스",
+     "pub": "2026-11-27T00:41+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부 소관 AI 중심대학 지원 등 사업이 미래대응기금 예산 심사에서 여야 이견으로 보류됐다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "예결소위 미래대응기금 심사 줄 보류…與 \"성장동력\" 野 \"폐기\"(종합)",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/politics/assembly/6367749"
+      },
+      {
+       "title": "여야, 예결소위서 미래대응기금 놓고 공방…세부 사업 심사서 잇따라 보...",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261126_0003885350"
+      },
+      {
+       "title": "미래대응기금 심사 또 보류…여야, 기금 신설부터 세부 사업까지 충돌 ...",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10950947?ref=naver"
+      },
+      {
+       "title": "예산 시한 코앞인데…여야, 미래기금 심사 '평행선'",
+       "source": "SBS",
+       "link": "https://biz.sbs.co.kr/article_hub/20000349195?division=NAVER"
+      },
+      {
+       "title": "여야, 미래대응기금 심사서 공방…세부 사업 줄줄이 보류",
+       "source": "KBS",
+       "link": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723532&ref=A"
+      },
+      {
+       "title": "예산 시한 일주일도 안남았는데…미래기금 심사 보류 또 보류(종합)",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261126131851001?input=1195m"
+      }
+     ]
+    },
+    {
+     "title": "“위험성 크지 않은 규제 과감히 풀고 7대 시드 프로젝트 좀 더 속도 내...",
+     "desc": "과학기술정보통신부는 100일이 경과한 지난 20일 7개 분야별로 관계부처 이행전략을 제출받아 분야별 검토를 진행 중이다. 비공개회의에서 이 대통령은 7대 시드 프로젝트 사업 민·관 협력 전략을 따로 보고받았다. 이...",
+     "link": "https://www.kmib.co.kr/article/20261126501703",
+     "naver_link": "https://n.news.naver.com/mnews/article/005/0001887724?sid=100",
+     "source": "국민일보",
+     "pub": "2026-11-26T20:01+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부는 7대 시드 프로젝트 관계부처 이행전략을 제출받아 분야별 검토를 진행 중이라고 전했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "산업 융합에 방점, '한국산업정보학회' 30주년 추계학술대회 첫날...“산...",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261126000546"
+      }
+     ]
+    },
+    {
+     "title": "[단독]'모두의 AI' 내달 15일 출격",
+     "desc": "26일 파이낸셜뉴스 취재를 종합하면 과학기술정보통신부와 관련 업계는 다음 달 15일 모두의 AI 정식 출시를 목표로 막바지 작업을 진행하고 있다. 지난 8월 말 사업자로 선정된 3개 컨소시엄은 지난달부터 비공개...",
+     "link": "https://www.fnnews.com/news/202611261807053330",
+     "naver_link": "https://n.news.naver.com/mnews/article/014/0005610460?sid=105",
+     "source": "파이낸셜뉴스",
+     "pub": "2026-11-26T18:07+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부와 관련 업계는 '모두의 AI' 정식 출시를 다음 달 15일 목표로 막바지 작업을 진행 중이라고 보도했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "NIPA, AI컴퓨팅센터 완공 전 GPU 공급 추진…'모두의 AI'에 KTX 예매 검토",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261126000509"
+      },
+      {
+       "title": "NIPA “‘모두의 AI’ 12월 공개… 내년 KTX 예매 연계 추진\"",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/it-science/ict/2026/11/26/JAZ6PLB4KBHOHFGALCH345RZGM/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+       "title": "정부 지원 AI 서비스, 네이버에도 개방 추진…‘모두의 AI’ 생태계 넓힌...",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=02968406645649656&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "SKT 고객 84.6% \"'모두의 AI' 이용 의향 있다\"",
+       "source": "아이뉴스24",
+       "link": "http://www.inews24.com/view/2030635"
+      }
+     ]
+    },
+    {
+     "title": "정부, 5G SA 맞춤형 서비스 활성화…망 중립성 기준·품질평가 손본다",
+     "desc": "남석 과학기술정보통신부 통신정책관은 26일 오후 서울 대한상공회의소 국제회의장에서 열린 '5G SA 전국망 상용화 및 통신서비스 혁신을 위한 민·관 공동행사'에서 이 같은 내용의 차세대 통신서비스 발전 방안을...",
+     "link": "https://www.news1.kr/it-science/cc-newmedia/6367404",
+     "naver_link": "https://n.news.naver.com/mnews/article/421/0009312737?sid=105",
+     "source": "뉴스1",
+     "pub": "2026-11-26T16:12+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부가 5G SA 맞춤형 서비스 활성화를 위해 망 중립성 기준과 품질평가를 손본다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "통신 3사, 5G 단독모드 전국망 서비스",
+       "source": "세계일보",
+       "link": "https://www.segye.com/newsView/20261126516878?OutUrl=naver"
+      },
+      {
+       "title": "5G라더니 6년 지나서야 진짜 5G나온다고?…요금도 오를 듯",
+       "source": "IT조선",
+       "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001947"
+      },
+      {
+       "title": "\"통신 덜 끊기고 배터리 아낄까\"…7년 만에 '5G 2막' 열린다",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261126_0003885174"
+      },
+      {
+       "title": "‘진짜 5G’ 경쟁 시작된다…이통 3사, 내달 단독모드 상용화",
+       "source": "중앙일보",
+       "link": "https://www.joongang.co.kr/article/25482390"
+      },
+      {
+       "title": "5G SA 전국망 시대…통신 3사 맞춤형 서비스 추진",
+       "source": "IT조선",
+       "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001951"
+      },
+      {
+       "title": "'진짜 5G' 시대 열린다…맞춤형 통신서비스 경쟁",
+       "source": "한국경제",
+       "link": "https://www.hankyung.com/article/2026112631821"
+      },
+      {
+       "title": "통신 3사 '5G SA' 시대로… 로봇 제어 등 서비스 경쟁 서막",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611261835553091"
+      },
+      {
+       "title": "이제 비싼 요금제값 하려나? 7년 만에 ‘진짜 5G’ 나온다",
+       "source": "한겨레",
+       "link": "https://www.hani.co.kr/arti/economy/it/1289297.html"
+      },
+      {
+       "title": "인터넷에 내 '전용 차선' 생긴다…통신3사, 5G SA 어디에 쓰나(종합)",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112617071677565"
+      },
+      {
+       "title": "KT가 이끌던 5G SA…LGU+ 11월30일·SKT 12월1일 상용화",
+       "source": "뉴스토마토",
+       "link": "http://www.newstomato.com/ReadNews.aspx?no=1322022&inflow=N"
+      },
+      {
+       "title": "통신 3사 모두 ‘5G 단독 모드’로… 다음 달 전국망 상용화",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/it-science/ict/2026/11/26/LSC3ZVHYAFHXRBR7MMOOGJNQMM/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+       "title": "12월 ‘5G 단독모드’ 전국서 시작…이통 3사 모두 상용화 [팩플]",
+       "source": "중앙일보",
+       "link": "https://www.joongang.co.kr/article/25482299"
+      }
+     ]
+    },
+    {
+     "title": "과기정통부, AI 사회정책포럼 개최…4대 정책 과제 논의",
+     "desc": "과학기술정보통신부가 AI(인공지능) 학습데이터 저작권, AI 생성물 투명성, 노동시장 전환, 청소년 보호 등 AI 확산에 따른 4대 사회정책 과제에 대한 전문가 제언을 공유하고 정책 대응 방향을 논의했다. 과기정통부는...",
+     "link": "https://www.mt.co.kr/tech/2026/11/26/2026112611163125954",
+     "naver_link": "https://n.news.naver.com/mnews/article/008/0005446840?sid=105",
+     "source": "머니투데이",
+     "pub": "2026-11-26T14:00+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부가 AI 학습데이터 저작권, 생성물 투명성, 노동시장 전환, 청소년 보호 등 4대 사회정책 과제를 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "AI 윤리원칙 자율점검표 연내 공개…해설서는 내년",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=718488"
+      },
+      {
+       "title": "\"AI 시민참여 거버넌스 필요\"…정부, 사회정책 해법 모색",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261126055200017?input=1195m"
+      },
+      {
+       "title": "\"AI가 내 글·그림 무단 학습할라\"…학습데이터 목록 보유 의무 생기나",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261126_0003883945"
+      },
+      {
+       "title": "\"AI가 바꾸는 사회, 각계 지혜 모아야\"…AI 사회정책포럼 세미나",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/it-science/internet-platform/6367053"
+      },
+      {
+       "title": "AI 저작권부터 청소년 보호까지…정부, 사회과제 논의장 마련",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112609531425058"
+      }
+     ]
+    },
+    {
+     "title": "온실가스 절반 줄일 기술 확보한다…정부, 탄소중립 로드맵 재정비",
+     "desc": "과학기술정보통신부는 26일 박인규 과학기술혁신본부장 주재로 제11회 탄소중립기술특별위원회 회의를 개최했다고 밝혔다. 탄소중립기술특별위원회는 각 부처의 탄소중립 R&D 정책을 종합·조정하고 핵심기술 확보를...",
+     "link": "https://www.newsis.com/view/NISX20261126_0003883914",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014347161?sid=105",
+     "source": "뉴시스",
+     "pub": "2026-11-26T14:00+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "과기정통부가 탄소중립기술특별위원회 회의를 열어 탄소중립 기술혁신 종합로드맵 등 4개 안건을 논의했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "2035년 온실가스 61% 감축…SMR·수소·태양광 기술혁신 가속",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10950652?ref=naver"
+      },
+      {
+       "title": "정부, 탄소중립 기술혁신 종합로드맵 마련…원자력은 빠져",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261126077900017?input=1195m"
+      },
+      {
+       "title": "정부, 탄소중립 기술개발 전략 재정비…기후변화 적응까지 확대",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=718297"
+      },
+      {
+       "title": "탄소중립 R&D, 온실가스 감축 넘어 기후변화 적응까지 확대",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112609411997856"
+      }
+     ]
+    },
+    {
+     "title": "\"공정성 논란 없앤다\"…정부, '국가대표 AI' 독파모 3차 평가체계 전면...",
+     "desc": "평가 항목별 배점 비율을 재조정할 가능성도 열어뒀으며, 평가 기준과 방향을 사전에 언론과 국민에게 투명하게 공개하는 방안도 과학기술정보통신부와 협의하고 있다. 박윤규 NIPA 원장은 \"단계마다 한 팀씩 탈락하는...",
+     "link": "https://www.newsis.com/view/NISX20261126_0003884548",
+     "naver_link": "https://n.news.naver.com/mnews/article/003/0014347135?sid=105",
+     "source": "뉴시스",
+     "pub": "2026-11-26T13:58+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "정부정책동향",
+     "sub": "과학기술정보통신부",
+     "alt_sections": {},
+     "summary": "정부가 국가대표 AI 독파모 3차 평가체계를 공정성 논란 해소를 위해 전면 손질한다고 NIPA 원장이 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "박윤규 NIPA 원장 \"독파모 평가 지적사항 해소 방안 논의 중\"",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261126135434"
+      },
+      {
+       "title": "NIPA, 공정성 논란 '독파모' 평가 손질",
+       "source": "IT조선",
+       "link": "https://it.chosun.com/news/articleView.html?idxno=3000000001908"
+      },
+      {
+       "title": "NIPA, 독파모 3차 평가 공정성 높인다…'모두의 AI' 활용 확산 추진",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=718382"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 647
+  },
+  "유관기관동향": {
+   "items": [
+    {
+     "title": "“정년퇴직 넘어 새로운 도전”…KIRD, 과학기술인 경력전환 지원",
+     "desc": "국가과학기술인력개발원(KIRD)은 고경력 과학기술인의 퇴직 전후 경력설계와 사회 재진출을 돕기 위한... KIRD는 이에 대응해 △진단·탐색 △경력전환 교육 △확산·고도화로 이어지는 3단계 지원체계를 운영하고 있다....",
+     "link": "https://www.etnews.com/20261126000081",
+     "naver_link": "https://n.news.naver.com/mnews/article/030/0003490055?sid=105",
+     "source": "전자신문",
+     "pub": "2026-11-26T09:23+09:00",
+     "keyword": "KIRD",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "국가과학기술인력개발원(KIRD)이 고경력 과학기술인의 퇴직 전후 경력설계와 사회 재진출을 돕는 경력전환 지원 체계를 추진한다고 밝혔다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "“연구 노하우 사장 막는다”…KIRD, 고경력 과학자 ‘인생 2막’ 지원",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10950867?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "과기한림원, 이성주 서울대 교수 등 신입 정회원 34명 선출",
+     "desc": "농수산학부에서는 김영목 국립부경대 교수, 김필주 경상국립대 교수, 박병배 충남대 교수, 성제경 서울대 교수, 이승구 한국생명공학연구원 국가바이오파운드리사업단장, 전체옥 중앙대 교수 등 6명이 이름을 올렸다....",
+     "link": "https://www.yna.co.kr/view/AKR20261126036800017?input=1195m",
+     "naver_link": "https://n.news.naver.com/mnews/article/001/0016464263?sid=105",
+     "source": "연합뉴스",
+     "pub": "2026-11-26T09:07+09:00",
+     "keyword": "한국생명공학연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "과기한림원이 2027년도 신입 정회원 34명을 선출했으며, 이 중 여성 과학기술인은 6명으로 2020년 이후 최다였다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "대학교수 33명, 출연연 1명···과기한림원, 신입 정회원 34명 선출",
+       "source": "대덕넷",
+       "link": "http://www.hellodd.com/news/articleView.html?idxno=114022"
+      },
+      {
+       "title": "국종성·박문정 등 34명, 과기한림원 정회원 선출",
+       "source": "아시아경제",
+       "link": "https://view.asiae.co.kr/article/2026112608544650521"
+      },
+      {
+       "title": "과기한림원, 2027년도 정회원 34명 선출…여성 과학기술인 6명",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261126000300"
+      },
+      {
+       "title": "한림원 신입 회원 34명 선출…여성 회원 6명 \"2020년 이후 역대 최다\"",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81094"
+      },
+      {
+       "title": "韓 과학기술 빛낸 석학 34명, ‘한림원’ 정회원 됐다",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10949854?ref=naver"
+      },
+      {
+       "title": "과기한림원, 신입 정회원 34명 선출… 여성 비율 17.6%",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/science-chosun/science/2026/11/26/R4N3GNNKRNH55HELIWLAILG74A/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      }
+     ]
+    },
+    {
+     "title": "“2029년 개교 광주AI영재학교에 지역 할당 필요”",
+     "desc": "3곳도 과학기술정보통신부 지침에 따라 지역인재 할당 비율을 30~50%로 배분할 방침이다. 김 의원은 이날 질의에서 “반도체 클러스터를 조성하고 있어 그 지역에서 시너지 효과를 내려면 전국단위 모집을 기본으로...",
+     "link": "https://biz.heraldcorp.com/article/10949834?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002728674?sid=102",
+     "source": "헤럴드경제",
+     "pub": "2026-11-26T09:34+09:00",
+     "keyword": "과학기술정보통신부",
+     "section": "유관기관동향",
+     "sub": "4대 과학기술원",
+     "alt_sections": {
+      "유관기관동향": "4대 과학기술원"
+     },
+     "summary": "2029년 개교 예정인 광주AI영재학교의 지역인재 할당과 관련해 과기정통부 지침에 따른 30~50% 배분 방침이 거론됐다.",
+     "importance": "★★☆",
+     "author": "",
+     "move_to": "유관기관동향",
+     "related": [
+      {
+       "title": "\"교육예산 늘었지만 성과는?\"... 전남광주통합특별시의회 '송곳' 검증",
+       "source": "뉴스워커",
+       "link": "https://www.newsworker.co.kr/news/articleView.html?idxno=516519"
+      }
+     ],
+     "moved_from": "정부정책동향"
+    },
+    {
+     "title": "목포에 ‘친환경선박 연구거점’ 출범…KRISO 친환경연료추진연구센터...",
+     "desc": "KRISO는 개소식과 연계해 한국기계연구원(KIMM), 한국조선해양기자재공업협동조합(KOMEA), 한국화재보험협회(KFPA)와 각각 업무협약을 체결하고, 친환경선박 핵심기술 공동 연구개발, 기자재 실증·실용화 지원, 화재·폭발...",
+     "link": "https://www.busan.com/view/busan/view.php?code=2026112620512688154",
+     "naver_link": "https://n.news.naver.com/mnews/article/082/0001409218?sid=101",
+     "source": "부산일보",
+     "pub": "2026-11-26T21:06+09:00",
+     "keyword": "한국기계연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "KRISO가 목포에 친환경연료추진연구센터를 개소하고 KIMM, KOMEA 등과 업무협약을 체결했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "연구인력 떠나는 출연연…정년 환원법 1년 9개월째 제자리 [국회 문턱 못...",
+     "desc": "신 의원이 국가과학기술연구회(NST)로부터 제출받은 자료에 따르면 한국전자통신연구원(ETRI)은 대학·산업계보다 상대적으로 짧은 정년과 낮은 보수, 지리적 요인과 근무 유연성 등을 연구원 이직 증가의 원인으로...",
+     "link": "https://www.daejonilbo.com/news/articleView.html?idxno=2316694",
+     "naver_link": "https://n.news.naver.com/mnews/article/656/0000193693?sid=100",
+     "source": "대전일보",
+     "pub": "2026-11-26T18:32+09:00",
+     "keyword": "ETRI",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "국가과학기술연구회 자료에 따르면 ETRI 등 출연연은 짧은 정년과 낮은 보수로 인력이 이탈하고 있으며, 정년 환원법은 제자리다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "성맹제 중앙대 교수, 한국연구재단 기초연구본부장 선임",
+     "desc": "성맹제 중앙대 교수(물리학과)가 한국연구재단 기초연구본부장에 11월 26일자로 선임됐다. 성맹제 본부장은 앞으로 2년간 정부 위탁 기초연구본부 소관 분야의 과제관리, 기획, 평가, 정보, 통계, 성과관리 등 총괄·조정...",
+     "link": "https://www.kyosu.net/news/articleView.html?idxno=212927",
+     "naver_link": "https://www.kyosu.net/news/articleView.html?idxno=212927",
+     "source": "교수신문",
+     "pub": "2026-11-26T17:12+09:00",
+     "keyword": "한국연구재단",
+     "section": "유관기관동향",
+     "sub": "기타 유관기관",
+     "alt_sections": {},
+     "summary": "성맹제 중앙대 교수가 한국연구재단 기초연구본부장에 11월 26일자로 선임됐으며 임기는 2년이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "[11월26일 인사종합] 경찰청 외",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12097558?ref=naver"
+      },
+      {
+       "title": "[인사] 한국연구재단 外",
+       "source": "국민일보",
+       "link": "https://www.kmib.co.kr/article/20261126501744"
+      },
+      {
+       "title": "[인사] ㈜HS효성 ; HS효성첨단소재 ; 삼성생명 등",
+       "source": "한국경제",
+       "link": "https://www.hankyung.com/article/2026112632681"
+      },
+      {
+       "title": "11월27일 인사",
+       "source": "한겨레",
+       "link": "https://www.hani.co.kr/arti/society/internalmove/1289305.html"
+      },
+      {
+       "title": "[인사] ㈜HS효성 외",
+       "source": "서울경제",
+       "link": "https://www.sedaily.com/article/20119462?ref=naver"
+      },
+      {
+       "title": "오늘의 인사 종합",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=03962246645649656&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "[인사] 기후에너지환경부 외",
+       "source": "한국일보",
+       "link": "https://www.hankookilbo.com/news/article/A2026112615570005696?did=NA"
+      },
+      {
+       "title": "오늘의 인사-한국연구재단, 아산복지재단, 삼성카드, 강북삼성병원",
+       "source": "경향신문",
+       "link": "https://www.khan.co.kr/article/202611261424011"
+      },
+      {
+       "title": "[인사] 강북삼성병원, 삼성증권, 삼성자산운용 외",
+       "source": "비즈니스포스트",
+       "link": "https://www.businesspost.co.kr/BP?command=article_view&num=452997"
+      },
+      {
+       "title": "[인사] 한국연구재단",
+       "source": "동아사이언스",
+       "link": "https://www.dongascience.com/news/view/81085"
+      },
+      {
+       "title": "<오늘의 인사>",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261126130202170"
+      }
+     ]
+    },
+    {
+     "title": "LH, 단지 내 커뮤니티 공간에 ‘우리동네 과학방’ 연다",
+     "desc": "한국토지주택공사(LH)는 공공임대주택 입주민의 과학 문화 향유 기회 확대를 위해 한국과학창의재단과 ‘우리동네 과학방’ 사업을 추진한다고 26일 밝혔다. ‘우리동네 과학방 사업’은 임대주택 단지 내 생활 밀착형...",
+     "link": "https://biz.heraldcorp.com/article/10950793?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002729072?sid=101",
+     "source": "헤럴드경제",
+     "pub": "2026-11-26T16:44+09:00",
+     "keyword": "과학창의재단",
+     "section": "유관기관동향",
+     "sub": "한국과학창의재단",
+     "alt_sections": {},
+     "summary": "LH가 한국과학창의재단과 협약해 임대주택 단지 내 커뮤니티 공간에 '우리동네 과학방'을 운영한다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "LH, 임대주택에 ‘우리동네 과학방’ 확대…내년 500회 이상 운영",
+       "source": "한국금융신문",
+       "link": "https://www.fntimes.com/html/view.php?ud=202611261722479409048b718333_18"
+      },
+      {
+       "title": "공공임대 공동시설이 과학배움터로… LH, ‘우리동네 과학방’ 운영",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/real_estate/real_estate_general/2026/11/26/DJ3DKRIJQRBQHI3IIVNKHLBYUI/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      },
+      {
+       "title": "LH, 임대주택 작은도서관에 '우리동네 과학방'…내년 500회 운영",
+       "source": "뉴스핌",
+       "link": "https://www.newspim.com/news/view/20261126001225"
+      },
+      {
+       "title": "LH, 공공임대 단지 과학교육 프로그램 확대 운영",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261126157300003?input=1195m"
+      }
+     ]
+    },
+    {
+     "title": "ETRI, 연구부터 논문 작성까지 스스로 하는 AI '유라' 개발",
+     "desc": "한국전자통신연구원(ETRI)은 연구 전 과정을 자율적으로 수행하는 AI 에이전트 '유라(YouRA)'를 개발하고... ETRI는 연구 전 과정을 구조화된 기록으로 관리하고, 단계별 검증과 실패 이력 분석을 통해 연구의 신뢰성을...",
+     "link": "https://www.nocutnews.co.kr/news/6613280?utm_source=naver&utm_medium=article&utm_campaign=20261126162427",
+     "naver_link": "https://n.news.naver.com/mnews/article/079/0004214341?sid=102",
+     "source": "노컷뉴스",
+     "pub": "2026-11-26T16:25+09:00",
+     "keyword": "ETRI",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "ETRI가 연구 주제 선정부터 논문 작성까지 수행하는 AI 에이전트 '유라'를 개발했다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "연구 주제 고르고 실험하고 논문까지 쓰는 AI 개발",
+       "source": "서울신문",
+       "link": "https://www.seoul.co.kr/news/society/science-news/2026/11/26/20261126500231?wlog_tag3=naver"
+      },
+      {
+       "title": "“가설 수립부터 논문 작성까지”…논문 완성형 ‘AI 과학자’ 구현",
+       "source": "디지털타임스",
+       "link": "https://www.dt.co.kr/article/12097439?ref=naver"
+      },
+      {
+       "title": "ETRI, 논문까지 쓰는 AI 개발…日·싱가포르 기술 앞서",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1720090/?sc=Naver"
+      },
+      {
+       "title": "스스로 연구하고 논문 쓰는 인공지능",
+       "source": "내일신문",
+       "link": "https://www.naeil.com/news/read/610194?ref=naver"
+      },
+      {
+       "title": "연구·논문작성 모든 과정 스스로...ETRI, 日보다 앞선 AI 에이전트 개발",
+       "source": "전자신문",
+       "link": "https://www.etnews.com/20261126000229"
+      },
+      {
+       "title": "ETRI, 연구부터 논문 작성까지 스스로 하는 AI 개발",
+       "source": "연합뉴스",
+       "link": "https://www.yna.co.kr/view/AKR20261126084100063?input=1195m"
+      },
+      {
+       "title": "ETRI, 가설 설정부터 논문 작성까지 수행하는 ‘AI 과학자’ 개발",
+       "source": "프레시안",
+       "link": "https://www.pressian.com/pages/articles/2026112609513688408?utm_source=naver&utm_medium=search"
+      },
+      {
+       "title": "연구주제 선정부터 논문 작성까지 AI가 스스로 한다",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/daejeon-chungnam/6366699"
+      },
+      {
+       "title": "ETRI, 연구주제부터 논문까지 자율 작성 AI '유라' 개발…\"연구 동반자\"",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261126_0003883947"
+      },
+      {
+       "title": "ETRI, 자율 연구 AI '유라' 개발…日·싱가포르 기술 앞서",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=718254"
+      },
+      {
+       "title": "실험부터 논문 작성까지 ‘척척’…국산 AI 과학자 나왔다",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10949715?ref=naver"
+      }
+     ]
+    },
+    {
+     "title": "순천서 조립하는 6차 누리호…나로센터까지 이송점검",
+     "desc": "우주항공청(우주청)과 한국항공우주연구원(항우연), 한화에어로스페이스는 지난 24일부터 26일까지 전남광주 순천 한화에어로스페이스사업장에서 고흥 나로우주센터까지의 육·해상 이송 절차 사전 점검을 완료했다고...",
+     "link": "https://www.mt.co.kr/tech/2026/11/26/2026112616025788689",
+     "naver_link": "https://n.news.naver.com/mnews/article/008/0005446993?sid=105",
+     "source": "머니투데이",
+     "pub": "2026-11-26T16:18+09:00",
+     "keyword": "한국항공우주연구원",
+     "section": "유관기관동향",
+     "sub": "정부출연연구기관",
+     "alt_sections": {},
+     "summary": "우주청과 항우연, 한화에어로스페이스가 순천에서 누리호 모사체의 고흥 이송 절차를 점검했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "누리호, 이제 순천 한화에서 조립해 고흥으로 이송",
+       "source": "대덕넷",
+       "link": "http://www.hellodd.com/news/articleView.html?idxno=114021"
+      },
+      {
+       "title": "우주청·항우연·한화, 누리호 이송 사전 점검 완료…내년 6차 발사 준비",
+       "source": "메트로신문",
+       "link": "http://www.metroseoul.co.kr/article/20261126500324"
+      },
+      {
+       "title": "뱃길 따라 '300리'…누리호가 간다 [지금은 우주]",
+       "source": "아이뉴스24",
+       "link": "http://www.inews24.com/view/2030705"
+      },
+      {
+       "title": "누리호 6호기부터 순천서 단별 조립···해상 이송 점검",
+       "source": "이데일리",
+       "link": "https://www.edaily.co.kr/News/Read?newsId=02473126645649656&mediaCodeNo=257&utm_source=naver&utm_medium=referral&utm_campaign=news_syndication&utm_content=original_article"
+      },
+      {
+       "title": "한화에어로, 누리호 6차 발사 '이상무'…모사체 이송 점검완료",
+       "source": "한국일보",
+       "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7195843"
+      },
+      {
+       "title": "한화에어로, 누리호 6차 발사 준비…육상·해상 이송 절차 점검",
+       "source": "한국일보",
+       "link": "https://daily.hankooki.com/news/articleView.html?idxno=1429306"
+      },
+      {
+       "title": "한화에어로, 누리호 6차 발사 대비 육상·해상 이송 점검 완료",
+       "source": "핀포인트뉴스",
+       "link": "https://www.pinpointnews.co.kr/news/articleView.html?idxno=508311"
+      },
+      {
+       "title": "누리호 6차부터 순천서 조립해 바닷길로 운송… 이송 점검 완료",
+       "source": "조선비즈",
+       "link": "https://biz.chosun.com/science-chosun/science/2026/11/26/XWJWJBV67VHZBLWRPMUL3BN3WE/?utm_source=naver&utm_medium=original&utm_campaign=biz"
+      }
+     ]
+    },
+    {
+     "title": "KAIST, 단백질 위치·방향 조절 기술 개발...유용 물질 생산 효율↑",
+     "desc": "한국과학기술원(KAIST·총장 배충식)이 세포 속 '지방 창고'를 유용 물질을 생산하는 공장으로 변화시키는 기술을 개발했다. 향료와 화장품 원료, 의약품 소재 등을 만드는 세포 공장을 만드는데 활용 가능한 기술이다. KAIST...",
+     "link": "https://www.etnews.com/20261126000245",
+     "naver_link": "https://n.news.naver.com/mnews/article/030/0003490216?sid=105",
+     "source": "전자신문",
+     "pub": "2026-11-26T12:17+09:00",
+     "keyword": "KAIST",
+     "section": "유관기관동향",
+     "sub": "4대 과학기술원",
+     "alt_sections": {},
+     "summary": "KAIST가 세포 속 지방 저장 공간에서 단백질 위치와 방향을 조절해 유용 물질 생산 효율을 높이는 기술을 개발했다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "\"효소 배치 바꿨더니\"…천연색소 생산량 13배 늘었다 [헬스LAB]",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611261458492549"
+      },
+      {
+       "title": "KAIST, 세포 지방 저장고를 생산공장으로…천연색소 생산량 13배↑",
+       "source": "뉴시스",
+       "link": "https://www.newsis.com/view/NISX20261126_0003884820"
+      },
+      {
+       "title": "효모 지방방울 계면서 효소 제어…천연색소 수율 13배 높였다",
+       "source": "충청투데이",
+       "link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241015"
+      },
+      {
+       "title": "카이스트 이주영 교수팀, 세포 속 지방방울을 맞춤형 생산공장으로 전환...",
+       "source": "한국강사신문",
+       "link": "https://www.lecturernews.com/news/articleView.html?idxno=214539"
+      },
+      {
+       "title": "각종 원료·소재 만드는 '미생물 세포공장' 생산 효율 높이는 기술 개발",
+       "source": "뉴스1",
+       "link": "https://www.news1.kr/local/daejeon-chungnam/6366421"
+      },
+      {
+       "title": "세포 속 ‘지방 창고’의 대반전…천연색소 생산량 13배 높였다",
+       "source": "헤럴드경제",
+       "link": "https://biz.heraldcorp.com/article/10949688?ref=naver"
+      },
+      {
+       "title": "KAIST, 세포 속 지방방울 활용…천연색소 생산 13배 높여",
+       "source": "데일리안",
+       "link": "https://www.dailian.co.kr/news/view/1719842/?sc=Naver"
+      }
+     ]
+    }
+   ],
+   "note": null,
+   "candidates": 232
+  },
+  "여성과학기술인": {
+   "items": [
+    {
+     "title": "여성 과학자를 키워낸, 라듐 이면의 마리 퀴리 [.txt]",
+     "desc": "그에게서 여성 과학자의 희망을 보고 전세계에서 찾아온 젊은 여성들은 여성 연구소장 아래 경험을 쌓은 뒤 그의 추천장을 들고 고향으로 돌아가 다른 여성들을 가르쳤다. 제자 엘렌 글레디치와 에바 람스테트는 각각 제...",
+     "link": "https://www.hani.co.kr/arti/culture/book/1289353.html",
+     "naver_link": "https://n.news.naver.com/mnews/article/028/0002834211?sid=103",
+     "source": "한겨레",
+     "pub": "2026-11-27T05:02+09:00",
+     "keyword": "여성 과학자",
+     "section": "여성과학기술인",
+     "sub": "여성 과학자·연구자",
+     "alt_sections": {},
+     "summary": "마리 퀴리가 여성 연구소장 아래에서 여성 과학자들을 길러냈고, 그에게서 배운 젊은 여성들이 고향에서 다른 여성들을 가르쳤다는 역사적 사례를 소개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "여성의 경험은 AI를 어떻게 바꿀까… 다큐 ‘그녀의 A.I’ 27일 첫 방송",
+     "desc": "베리미디어가 제작한 과학 휴먼 다큐멘터리 '그녀의 A.I - 혜리가 인공지능을 만났을 때'가 27일 오전 8시... 내 유리천장을 넘어설 가능성을 조명한다. 이 작품은 한국방송통신전파진흥원(KCA)의 '2026년도 AI·디지털 기반...",
+     "link": "https://www.womennews.co.kr/news/articleView.html?idxno=284997",
+     "naver_link": "https://n.news.naver.com/mnews/article/310/0000142097?sid=103",
+     "source": "여성신문",
+     "pub": "2026-11-26T18:14+09:00",
+     "keyword": "유리천장+과학",
+     "section": "여성과학기술인",
+     "sub": "이공계 여성 현황·정책",
+     "alt_sections": {},
+     "summary": "과학 휴먼 다큐멘터리 '그녀의 A.I - 혜리가 인공지능을 만났을 때'가 여성의 경험으로 AI를 조명하며 첫 방송된다고 알렸다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 47
+  },
+  "참고보도": {
+   "items": [
+    {
+     "title": "충청권 과학고·영재학교 경쟁률 상승…최상위권 중학생 지원 늘어",
+     "desc": "대전과학고 5.88대 1·세종과학예술영재학교 7.55대 1 내신 5등급제·첨단 이공계 선호가 배경으로 거론 의대... 첨단 이공계 분야에 대한 선호도가 높아진 결과로 풀이된다.26일 각 시·도교육청 등에 따르면 2027학년도...",
+     "link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241025",
+     "naver_link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241025",
+     "source": "충청투데이",
+     "pub": "2026-11-26T17:20+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "alt_sections": {},
+     "summary": "충청권 과학고·영재학교 경쟁률이 올랐고, 내신 5등급제와 첨단 이공계 선호가 배경으로 거론됐다. 의대 쏠림과 대비되는 이공계 인재 동향이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "퀄컴, 국내 이공계 대학원생 우수 논문 34편 선정… 장학금 7900만원 지원",
+     "desc": "온디바이스 AI·자율주행·피지컬 AI 등 연구 성과 발표 퀄컴이 국내 이공계 대학원생들이 제출한 인공지능... 퀄컴 테크날러지스는 국내 이공계 석·박사 과정 대학원생을 대상으로 진행한 학술 논문 경연대회 ‘퀄컴...",
+     "link": "https://biz.chosun.com/it-science/ict/2026/11/26/SAR5PG3YORGJXAT6CDURLP4M4Q/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "naver_link": "https://n.news.naver.com/mnews/article/366/0001207545?sid=105",
+     "source": "조선비즈",
+     "pub": "2026-11-26T14:42+09:00",
+     "keyword": "이공계",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "alt_sections": {},
+     "summary": "퀄컴이 국내 이공계 대학원생 우수 논문 34편을 선정해 장학금 7900만원을 지원했다. 온디바이스 AI·자율주행 등 연구 성과를 대상으로 했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "퀄컴, 이공계 인재 대상 학술대회 '이노베이션 펠로우십 코리아' 개최",
+       "source": "한국일보",
+       "link": "https://weekly.hankooki.com/news/articleView.html?idxno=7195947"
+      },
+      {
+       "title": "퀄컴 이노베이션 펠로우십 코리아 2026 성료",
+       "source": "아이뉴스24",
+       "link": "http://www.inews24.com/view/2030860"
+      },
+      {
+       "title": "퀄컴, 이공계 학술 논문 경연 대회 '퀄컴 이노베이션 펠로우십 코리아 ...",
+       "source": "아주경제",
+       "link": "https://www.ajunews.com/view/20261126082347031"
+      },
+      {
+       "title": "퀄컴, '이노베이션 펠로우십 코리아 2026' 종료",
+       "source": "지디넷코리아",
+       "link": "https://zdnet.co.kr/view/?no=20261126110617"
+      },
+      {
+       "title": "퀄컴, 한국서 미래 AI 기술 이끌 인재 키운다…대학 연구 지원 확대",
+       "source": "파이낸셜뉴스",
+       "link": "https://www.fnnews.com/news/202611261006157671"
+      },
+      {
+       "title": "퀄컴, 국내 석박사 AI 인재에 연구 장학금 7900만원 지원",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/tech/2026/11/26/2026112610165084034"
+      },
+      {
+       "title": "퀄컴, '이노베이션 펠로우십 코리아 2026' 개최…총 34편 논문 선정",
+       "source": "디지털데일리",
+       "link": "https://www.ddaily.co.kr/page/view/2026112609242199800"
+      },
+      {
+       "title": "퀄컴, 이노베이션 펠로우십 개최...국내 대학 지원 지속",
+       "source": "디지털투데이",
+       "link": "https://www.digitaltoday.co.kr/news/articleView.html?idxno=718277"
+      },
+      {
+       "title": "퀄컴, 이공계 학술논문 경연대회 성료…논문 15편 선정",
+       "source": "한국일보",
+       "link": "https://daily.hankooki.com/news/articleView.html?idxno=1429183"
+      }
+     ]
+    },
+    {
+     "title": "10년 맞은 서울시 노동이사제, 이제 참여에서 '결정'으로",
+     "desc": "서울특별시공공기관노동이사협의회는 24일 서울시청 8층 다목적홀에서 열린 '서울시 노동이사제 10주년... 운영지침에 따른 권한이 현장에서 실질적으로 보장될 수 있도록 노력하겠다\"고 밝혔다. 조례 개정으로 제도가...",
+     "link": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003288465&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+     "naver_link": "https://n.news.naver.com/mnews/article/047/0002537317?sid=102",
+     "source": "오마이뉴스",
+     "pub": "2026-11-26T11:51+09:00",
+     "keyword": "공공기관+지침",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "서울시 노동이사제 도입 10주년을 맞아 공공기관 노동이사의 권한을 실질적으로 보장하겠다는 방침이 전해졌다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "허윤정 서울시의원“거수기 넘어 실질적 경영 주체로”… 노동이사제 1...",
+       "source": "서울신문",
+       "link": "https://www.seoul.co.kr/news/publicnews/local_govern/smc_movement/2026/11/26/20261126500164?wlog_tag3=naver"
+      }
+     ]
+    },
+    {
+     "title": "오스템임플란트, 사내 동호회·가족 참여 행사로 조직문화 강화",
+     "desc": "오스템임플란트 관계자는 \"임직원들이 일과 삶의 균형을 찾고 일·가정 양립을 이루면 기업 성장과 생산성 향상에도 도움이 된다는 사실이 여러 연구를 통해 입증됐다\"며 \"직원들은 물론 그 가족들까지 소통과 화합을...",
+     "link": "https://www.kpanews.co.kr/news/articleView.html?idxno=549963",
+     "naver_link": "https://www.kpanews.co.kr/news/articleView.html?idxno=549963",
+     "source": "약사공론",
+     "pub": "2026-11-26T10:44+09:00",
+     "keyword": "일가정양립+연구",
+     "section": "참고보도",
+     "sub": "일·가정양립",
+     "alt_sections": {},
+     "summary": "오스템임플란트가 사내 동호회와 가족 참여 행사를 통해 일·가정 양립 기반의 조직문화를 강화하고 있다고 밝혔다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": [
+      {
+       "title": "오스템임플란트, 임직원 소통·가족친화 활동 지속…\"함께 성장해요\"",
+       "source": "머니투데이",
+       "link": "https://www.mt.co.kr/thebio/2026/11/26/2026112610075144817"
+      },
+      {
+       "title": "오스템임플란트, 사내 동호회·패밀리데이로 건강한 기업문화 조성",
+       "source": "이투데이",
+       "link": "https://www.etoday.co.kr/news/view/2653158"
+      }
+     ]
+    },
+    {
+     "title": "전남광주특별시, 출범 후 첫 출연기관 경영평가 워크숍 개최…“통합·...",
+     "desc": "한편, 전남광주통합특별시는 출범 이후 기존 광주광역시와 전라남도 산하 공공기관 중 기능이 유사·중복된 22개 기관을 11개 기관으로 단계적으로 통폐합하는...",
+     "link": "http://www.breaknews.com/1254020",
+     "naver_link": "http://www.breaknews.com/1254020",
+     "source": "브레이크뉴스",
+     "pub": "2026-11-26T08:56+09:00",
+     "keyword": "공공기관+통폐합",
+     "section": "참고보도",
+     "sub": "공공기관",
+     "alt_sections": {},
+     "summary": "전남광주통합특별시가 출범 후 첫 출연기관 경영평가 워크숍을 열고, 유사·중복 기관 22곳을 11곳으로 통폐합하기로 했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "“반도체 인재, 대학원 아닌 취업 선택…이러다 일본 전철”",
+     "desc": "김봉진 KAIST 전기 및 전자공학부 교수는 25일 서울 용산구 스페이스쉐어 서울역센터에서 열린 ‘국제고체회로학회(ISSCC) 2027’ 서울 기자간담회에서 “과거 대만과 일본도 학계와 산업계의 금전적 보상 격차가 많이...",
+     "link": "https://biz.heraldcorp.com/article/10950155?ref=naver",
+     "naver_link": "https://n.news.naver.com/mnews/article/016/0002728815?sid=105",
+     "source": "헤럴드경제",
+     "pub": "2026-11-26T11:23+09:00",
+     "keyword": "KAIST",
+     "section": "참고보도",
+     "sub": "인재·채용",
+     "alt_sections": {
+      "참고보도": "인재·채용"
+     },
+     "summary": "김봉진 KAIST 교수가 대학원 대신 취업을 택하는 반도체 인재 흐름에 우려를 표했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "참고보도",
+     "related": [],
+     "moved_from": "유관기관동향"
+    },
+    {
+     "title": "[KSFY] 행정고시 5년 준비하고 기업 200곳 탈락한 문과 출신 위성AI 개발...",
+     "desc": "김해동 워커린스페이스 대표는 \"저희 회사에 35명이 있는데 전체 전공을 봤을 때 항공우주 관련 학과를 나온 친구들은 30% 정도\"라며 \"학부 때 지리학을 전공했던 여성 엔지니어도 업무를 잘 하고 있다\"고 말했다. 김...",
+     "link": "https://www.dongascience.com/news/view/81096",
+     "naver_link": "https://n.news.naver.com/mnews/article/584/0000040337?sid=105",
+     "source": "동아사이언스",
+     "pub": "2026-11-26T18:16+09:00",
+     "keyword": "여성 엔지니어",
+     "section": "참고보도",
+     "sub": "다양성·포용",
+     "alt_sections": {
+      "참고보도": "다양성·포용"
+     },
+     "summary": "문과 출신 인물이 위성AI 개발 기업에 참여한 과정을 다루며, 항공우주 전공이 아닌 엔지니어들의 채용 현황을 소개했다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "참고보도",
+     "related": [],
+     "moved_from": "여성과학기술인"
+    }
+   ],
+   "note": null,
+   "candidates": 74
+  },
+  "기고칼럼": {
+   "items": [
+    {
+     "title": "[사설] 대덕연구단지 낡은 규제부터 풀어야",
+     "desc": "사설 대한민국 과학기술의 심장으로 불려온 대덕연구개발특구가 조성 50년을 맞았지만 정작 그 안에는 활용되지 못한 땅과 건물이 방치되고 있다. 연구 공간이 필요한 기업들은 부지를 구하지 못해 발을 동동 구르는 반면...",
+     "link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241064",
+     "naver_link": "https://www.cctoday.co.kr/news/articleView.html?idxno=2241064",
+     "source": "충청투데이",
+     "pub": "2026-11-27T06:02+09:00",
+     "keyword": "사설+과학",
+     "section": "기고칼럼",
+     "sub": "사설·시평",
+     "alt_sections": {},
+     "summary": "대덕연구개발특구 조성 50년을 맞았지만 활용되지 않는 땅과 건물이 방치되고 있다며, 연구 공간 확보를 막는 낡은 규제 개선을 촉구했다.",
+     "importance": "★☆☆",
+     "author": "사설",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "[박승찬의 미중 대결과 공존 ②] 레드카펫 위의 스몰딜: 선전 미중정상...",
+     "desc": "미국은 칩에서 클라우드로 통제를 넓히고, 중국은 15·5 규획의 과학기술 자립자강으로 맞선다. AI 거버넌스를... 박승찬 용인대 중국학과 교수·한중연합회 회장※본란의 칼럼은 본지 견해와 다를 수 있습니다.",
+     "link": "https://www.asiatoday.co.kr/kn/view.php?key=20261126010010209",
+     "naver_link": "https://www.asiatoday.co.kr/kn/view.php?key=20261126010010209",
+     "source": "아시아투데이",
+     "pub": "2026-11-26T18:02+09:00",
+     "keyword": "칼럼+과학기술",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "alt_sections": {},
+     "summary": "미국의 칩·클라우드 통제 확대와 중국의 15·5 규획 과학기술 자립자강 대응을 다루며 AI 거버넌스 문제를 짚었다.",
+     "importance": "★☆☆",
+     "author": "박승찬 용인대 중국학과 교수·한중연합회 회장",
+     "move_to": "",
+     "related": []
+    },
+    {
+     "title": "[사이언스칼럼]방정식에 이름을 남긴 과학자, 데이터를 남긴 과학자",
+     "desc": "현대 과학기술의 최전선에서도 이 격언의 무게는 변함이 없다. 우리가 당연하게 누리는 첨단 반도체 공정이나 정확한 기상 예보, 생명을 다루는 정밀 의료는 천재의 영감만으로 작동하지는 않는다. 전국의 실험실과...",
+     "link": "https://www.joongdo.co.kr/web/view.php?key=20261126010009185",
+     "naver_link": "https://www.joongdo.co.kr/web/view.php?key=20261126010009185",
+     "source": "중도일보",
+     "pub": "2026-11-26T17:38+09:00",
+     "keyword": "칼럼+과학기술",
+     "section": "기고칼럼",
+     "sub": "과학기술 칼럼·기고",
+     "alt_sections": {},
+     "summary": "현대 과학기술이 천재의 영감만이 아닌 데이터 축적에 기반한다는 점을 짚은 사이언스칼럼이다.",
+     "importance": "★☆☆",
+     "author": "",
+     "move_to": "",
+     "related": []
+    }
+   ],
+   "note": null,
+   "candidates": 8
+  }
+ }
+}

@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>주요 언론보도 · 11/27(금)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2e3192">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WISET 언론">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<style>
+:root {
+  --bg: #f6f7fb; --card: #ffffff; --text: #1d1f2a; --muted: #5f6475; --line: #e3e5ee;
+  --brand: #2e3192; --brand-soft: #eceefc; --link: #1f2a9c; --mark: #fff1a8;
+  --wiset: #6b2fa0; --wiset-soft: #f5eefc; --hi: #c2410c; --mid: #1d4ed8; --lo: #6b7280;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14151c; --card: #1d1f29; --text: #e9eaf1; --muted: #a3a8ba; --line: #2e3140;
+    --brand: #9fa6ff; --brand-soft: #262a46; --link: #b5bbff; --mark: #5c4b00;
+    --wiset: #d4a8ff; --wiset-soft: #2c2140; --hi: #fb923c; --mid: #93b4ff; --lo: #9ca3af;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 64px; }
+body { margin: 0; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  overflow-wrap: anywhere; word-break: keep-all; }
+a { color: var(--link); }
+mark { background: var(--mark); color: inherit; padding: 0 2px; border-radius: 3px; }
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 16px; }
+header.top { background: var(--brand); color: #fff; padding: 20px 0 16px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) header.top { background: #23266b; } }
+header.top h1 { margin: 0; font-size: 24px; letter-spacing: -0.02em; }
+header.top .date { font-size: 17px; font-weight: 600; margin-top: 2px; }
+header.top .meta { margin-top: 8px; font-size: 15px; opacity: .92; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+header.top a { color: #fff; }
+.print-only { display: none; }
+footer { color: var(--muted); font-size: 14px; padding: 24px 0 40px; }
+footer a { color: var(--muted); }
+@media print {
+  :root { --bg: #fff; --card: #fff; --text: #000; --muted: #444; --line: #ccc; --mark: #fff1a8; }
+  body { font-size: 11pt; }
+  .no-print { display: none !important; }
+  .print-only { display: block; }
+  header.top { background: none !important; color: #000; padding: 0 0 8px; border-bottom: 2px solid #000; }
+  header.top a { color: #000; text-decoration: none; }
+  a { color: #000; text-decoration: none; }
+  .wrap { max-width: none; padding: 0; }
+}
+</style><style>
+nav.tabs { position: sticky; top: 0; z-index: 10; background: var(--card); border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04); }
+nav.tabs .wrap { display: flex; gap: 6px; overflow-x: auto; padding-top: 8px; padding-bottom: 8px;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+nav.tabs .wrap::-webkit-scrollbar { display: none; }
+nav.tabs a { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px;
+  border-radius: 999px; background: var(--brand-soft); color: var(--brand); text-decoration: none; font-size: 15px;
+  font-weight: 600; white-space: nowrap; }
+nav.tabs a .n { font-size: 13px; font-weight: 700; opacity: .8; }
+nav.tabs a.wiset { background: var(--wiset-soft); color: var(--wiset); }
+nav.tabs a.empty { opacity: .55; }
+nav.tabs .tools { margin-left: auto; padding-left: 6px; display: flex; gap: 6px; }
+nav.tabs button { min-height: 40px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--card); color: var(--muted); font: inherit; font-size: 14px; cursor: pointer; white-space: nowrap; }
+main { padding: 16px 0 8px; }
+section.sec { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 14px; overflow: hidden; }
+section.sec.wiset { border: 2px solid var(--wiset); }
+section.sec > details > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 14px 16px; min-height: 52px; }
+section.sec > details > summary::-webkit-details-marker { display: none; }
+section.sec > details > summary h2 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
+section.sec > details > summary .cnt { color: var(--muted); font-size: 15px; }
+section.sec > details > summary .chev { margin-left: auto; color: var(--muted); transition: transform .15s; font-size: 14px; }
+section.sec > details:not([open]) > summary .chev { transform: rotate(-90deg); }
+section.sec.wiset > details > summary { background: var(--wiset-soft); }
+section.sec.wiset h2 { color: var(--wiset); }
+.note { margin: 0 16px 12px; padding: 10px 12px; border-radius: 10px; background: #fff4e5; color: #8a4b00; font-size: 15px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .note { background: #3a2a12; color: #ffcf8a; } }
+.empty-msg { margin: 0; padding: 4px 16px 16px; color: var(--muted); font-size: 15px; }
+ol.items { list-style: none; margin: 0; padding: 0; }
+li.item { padding: 14px 16px 16px; border-top: 1px solid var(--line); }
+.item .title { font-size: 17px; font-weight: 700; line-height: 1.5; margin: 0; }
+.item .title a { text-decoration: none; display: inline; }
+.item .title a:hover { text-decoration: underline; }
+.item .src { color: var(--muted); font-weight: 600; }
+.item .summary { margin: 6px 0 0; font-size: 16px; }
+.item .meta { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 14px; color: var(--muted); }
+.imp { font-weight: 700; letter-spacing: 1px; }
+.imp.h { color: var(--hi); } .imp.m { color: var(--mid); } .imp.l { color: var(--lo); }
+.imp small { font-weight: 600; letter-spacing: 0; margin-left: 2px; }
+.author { color: var(--text); font-weight: 600; }
+.sub { border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; }
+details.rel { margin-top: 8px; font-size: 15px; }
+details.rel summary { cursor: pointer; color: var(--link); min-height: 32px; display: inline-flex; align-items: center; }
+details.rel ul { margin: 4px 0 0; padding-left: 18px; }
+details.rel li { margin: 4px 0; }
+@media (min-width: 900px) {
+  header.top h1 { font-size: 28px; }
+  .item .title { font-size: 18px; }
+}
+@media print {
+  section.sec { border: none; border-radius: 0; margin: 0 0 10pt; break-inside: auto; }
+  section.sec.wiset { border: none; }
+  section.sec > details > summary { padding: 6pt 0; min-height: 0; border-bottom: 1px solid #000; background: none !important; }
+  section.sec > details > summary h2 { font-size: 13pt; color: #000 !important; }
+  section.sec > details > summary h2::before { content: "◆ "; }
+  .chev, details.rel { display: none; }
+  li.item { padding: 5pt 0; border-top: none; break-inside: avoid; }
+  .item .title { font-size: 11pt; }
+  .item .summary { font-size: 10pt; margin-top: 1pt; }
+  .item .meta { font-size: 9pt; margin-top: 2pt; }
+  .note { background: none; border: 1px solid #999; color: #000; }
+  .empty-msg { display: none; }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <h1>주요 언론보도</h1>
+    <div class="date">2026년 11월 27일 금요일</div>
+    <div class="meta">
+      <span>수집 기간 11/26(목) 07:30 ~ 11/27(금) 07:30</span>
+      <span>총 31건</span>
+      <a class="no-print" href="../archive/">지난 리포트 ›</a>
+    </div>
+    <div class="print-only" style="font-size:9pt;margin-top:4pt">한국여성과학기술인육성재단 대외협력홍보팀 · AI 자동 선별·요약</div>
+  </div>
+</header>
+
+<nav class="tabs no-print" aria-label="섹션 바로가기">
+  <div class="wrap">
+    <a href="#s1" class="wiset empty">WISET<span class="n">0</span></a>
+    <a href="#s2" class=" ">정부정책<span class="n">9</span></a>
+    <a href="#s3" class=" ">유관기관<span class="n">10</span></a>
+    <a href="#s4" class=" ">여성과기인<span class="n">2</span></a>
+    <a href="#s5" class=" ">참고보도<span class="n">7</span></a>
+    <a href="#s6" class=" ">기고칼럼<span class="n">3</span></a>
+    <span class="tools">
+      <button type="button" id="toggleAll">모두 접기</button>
+      <button type="button" onclick="window.print()">인쇄</button>
+    </span>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="sec wiset" id="s1">
+    <details open>
+      <summary><h2>WISET 직접 언급</h2><span class="cnt">0건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <p class="empty-msg">이번 수집 기간에 해당 기사가 없습니다.</p>
+    </details>
+  </section>
+  <section class="sec " id="s2">
+    <details open>
+      <summary><h2>정부정책동향</h2><span class="cnt">9건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(연합뉴스)</span> <a href="https://www.yna.co.kr/view/PYH20261126229100013?input=1196m" target="_blank" rel="noopener">원민경 장관, 2026 한국 IT여성의 날</a></p>
+<p class="summary">원민경 <mark>성평등가족부</mark> 장관이 26일 &#39;2026 한국 IT 여성의 날&#39; 행사에서 발언했다. 행사는 &#39;AI 혁신을 이끄는 여성&#39;을 주제로 열렸다.</p>          <div class="meta">
+            <span class="imp m" title="중요도">★★☆<small>업무 참고</small></span>
+            <span class="sub">성평등가족부·여성가족부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 1건</summary>
+            <ul>
+<li>(전자신문) <a href="https://www.etnews.com/20261126000538" target="_blank" rel="noopener">[포토] 2026 한국IT여성의 날</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(서울신문)</span> <a href="https://www.seoul.co.kr/news/economy/industry/2026/11/27/20261127029001?wlog_tag3=naver" target="_blank" rel="noopener">구글, 외부 AI에이전트에 ‘서비스 이용료’ 매긴다</a></p>
+<p class="summary">과기정통부는 제3차 과학기술·인공지능 미래전략회의에서 AI 에이전트의 법적 지위와 개념을 우선 정립할 필요가 있다고 밝혔다. 외부 AI 에이전트 접근의 유료화 논의도 나온다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 4건</summary>
+            <ul>
+<li>(서울신문) <a href="https://www.seoul.co.kr/news/economy/industry/2026/11/26/20261126500331?wlog_tag3=naver" target="_blank" rel="noopener">구글, AI 에이전트 접근에 ‘통행료’ 유료화…국내 기업도 고심</a></li><li>(머니투데이) <a href="https://www.mt.co.kr/tech/2026/11/26/2026112613472882051" target="_blank" rel="noopener">해외서도 AI 에이전트에 &#39;빗장&#39;…AI 비서 시대 &#39;새 질서&#39; 모색</a></li><li>(지디넷코리아) <a href="https://zdnet.co.kr/view/?no=20261126143706" target="_blank" rel="noopener">&#39;모두의 AI&#39;도 에이전트 부작용 대비…NIPA &#34;안전조치 강화&#34;</a></li><li>(아이뉴스24) <a href="http://www.inews24.com/view/2030669" target="_blank" rel="noopener">&#34;고객님, AI세요?&#34;⋯통신사, AI에이전트 전화에 어떻게 대응하나 [QnA]</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴시스)</span> <a href="https://www.newsis.com/view/NISX20261127_0003885388" target="_blank" rel="noopener">여야, 예결소위서 미래대응기금 사업 이견…예산 심사 잇따라 보류(종합...</a></p>
+<p class="summary">과기정통부 소관 AI 중심대학 지원 등 사업이 미래대응기금 예산 심사에서 여야 이견으로 보류됐다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 6건</summary>
+            <ul>
+<li>(뉴스1) <a href="https://www.news1.kr/politics/assembly/6367749" target="_blank" rel="noopener">예결소위 미래대응기금 심사 줄 보류…與 &#34;성장동력&#34; 野 &#34;폐기&#34;(종합)</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261126_0003885350" target="_blank" rel="noopener">여야, 예결소위서 미래대응기금 놓고 공방…세부 사업 심사서 잇따라 보...</a></li><li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10950947?ref=naver" target="_blank" rel="noopener">미래대응기금 심사 또 보류…여야, 기금 신설부터 세부 사업까지 충돌 ...</a></li><li>(SBS) <a href="https://biz.sbs.co.kr/article_hub/20000349195?division=NAVER" target="_blank" rel="noopener">예산 시한 코앞인데…여야, 미래기금 심사 &#39;평행선&#39;</a></li><li>(KBS) <a href="https://news.kbs.co.kr/news/pc/view/view.do?ncd=8723532&amp;ref=A" target="_blank" rel="noopener">여야, 미래대응기금 심사서 공방…세부 사업 줄줄이 보류</a></li><li>(연합뉴스) <a href="https://www.yna.co.kr/view/AKR20261126131851001?input=1195m" target="_blank" rel="noopener">예산 시한 일주일도 안남았는데…미래기금 심사 보류 또 보류(종합)</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(국민일보)</span> <a href="https://www.kmib.co.kr/article/20261126501703" target="_blank" rel="noopener">“위험성 크지 않은 규제 과감히 풀고 7대 시드 프로젝트 좀 더 속도 내...</a></p>
+<p class="summary">과기정통부는 7대 시드 프로젝트 관계부처 이행전략을 제출받아 분야별 검토를 진행 중이라고 전했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 1건</summary>
+            <ul>
+<li>(전자신문) <a href="https://www.etnews.com/20261126000546" target="_blank" rel="noopener">산업 융합에 방점, &#39;한국산업정보학회&#39; 30주년 추계학술대회 첫날...“산...</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(파이낸셜뉴스)</span> <a href="https://www.fnnews.com/news/202611261807053330" target="_blank" rel="noopener">[단독]&#39;모두의 AI&#39; 내달 15일 출격</a></p>
+<p class="summary">과기정통부와 관련 업계는 &#39;모두의 AI&#39; 정식 출시를 다음 달 15일 목표로 막바지 작업을 진행 중이라고 보도했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 4건</summary>
+            <ul>
+<li>(전자신문) <a href="https://www.etnews.com/20261126000509" target="_blank" rel="noopener">NIPA, AI컴퓨팅센터 완공 전 GPU 공급 추진…&#39;모두의 AI&#39;에 KTX 예매 검토</a></li><li>(조선비즈) <a href="https://biz.chosun.com/it-science/ict/2026/11/26/JAZ6PLB4KBHOHFGALCH345RZGM/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener">NIPA “‘모두의 AI’ 12월 공개… 내년 KTX 예매 연계 추진&#34;</a></li><li>(이데일리) <a href="https://www.edaily.co.kr/News/Read?newsId=02968406645649656&amp;mediaCodeNo=257&amp;utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=news_syndication&amp;utm_content=original_article" target="_blank" rel="noopener">정부 지원 AI 서비스, 네이버에도 개방 추진…‘모두의 AI’ 생태계 넓힌...</a></li><li>(아이뉴스24) <a href="http://www.inews24.com/view/2030635" target="_blank" rel="noopener">SKT 고객 84.6% &#34;&#39;모두의 AI&#39; 이용 의향 있다&#34;</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴스1)</span> <a href="https://www.news1.kr/it-science/cc-newmedia/6367404" target="_blank" rel="noopener">정부, 5G SA 맞춤형 서비스 활성화…망 중립성 기준·품질평가 손본다</a></p>
+<p class="summary">과기정통부가 5G SA 맞춤형 서비스 활성화를 위해 망 중립성 기준과 품질평가를 손본다고 밝혔다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 12건</summary>
+            <ul>
+<li>(세계일보) <a href="https://www.segye.com/newsView/20261126516878?OutUrl=naver" target="_blank" rel="noopener">통신 3사, 5G 단독모드 전국망 서비스</a></li><li>(IT조선) <a href="https://it.chosun.com/news/articleView.html?idxno=3000000001947" target="_blank" rel="noopener">5G라더니 6년 지나서야 진짜 5G나온다고?…요금도 오를 듯</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261126_0003885174" target="_blank" rel="noopener">&#34;통신 덜 끊기고 배터리 아낄까&#34;…7년 만에 &#39;5G 2막&#39; 열린다</a></li><li>(중앙일보) <a href="https://www.joongang.co.kr/article/25482390" target="_blank" rel="noopener">‘진짜 5G’ 경쟁 시작된다…이통 3사, 내달 단독모드 상용화</a></li><li>(IT조선) <a href="https://it.chosun.com/news/articleView.html?idxno=3000000001951" target="_blank" rel="noopener">5G SA 전국망 시대…통신 3사 맞춤형 서비스 추진</a></li><li>(한국경제) <a href="https://www.hankyung.com/article/2026112631821" target="_blank" rel="noopener">&#39;진짜 5G&#39; 시대 열린다…맞춤형 통신서비스 경쟁</a></li><li>(파이낸셜뉴스) <a href="https://www.fnnews.com/news/202611261835553091" target="_blank" rel="noopener">통신 3사 &#39;5G SA&#39; 시대로… 로봇 제어 등 서비스 경쟁 서막</a></li><li>(한겨레) <a href="https://www.hani.co.kr/arti/economy/it/1289297.html" target="_blank" rel="noopener">이제 비싼 요금제값 하려나? 7년 만에 ‘진짜 5G’ 나온다</a></li><li>(디지털데일리) <a href="https://www.ddaily.co.kr/page/view/2026112617071677565" target="_blank" rel="noopener">인터넷에 내 &#39;전용 차선&#39; 생긴다…통신3사, 5G SA 어디에 쓰나(종합)</a></li><li>(뉴스토마토) <a href="http://www.newstomato.com/ReadNews.aspx?no=1322022&amp;inflow=N" target="_blank" rel="noopener">KT가 이끌던 5G SA…LGU+ 11월30일·SKT 12월1일 상용화</a></li><li>(조선비즈) <a href="https://biz.chosun.com/it-science/ict/2026/11/26/LSC3ZVHYAFHXRBR7MMOOGJNQMM/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener">통신 3사 모두 ‘5G 단독 모드’로… 다음 달 전국망 상용화</a></li><li>(중앙일보) <a href="https://www.joongang.co.kr/article/25482299" target="_blank" rel="noopener">12월 ‘5G 단독모드’ 전국서 시작…이통 3사 모두 상용화 [팩플]</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(머니투데이)</span> <a href="https://www.mt.co.kr/tech/2026/11/26/2026112611163125954" target="_blank" rel="noopener">과기정통부, AI 사회정책포럼 개최…4대 정책 과제 논의</a></p>
+<p class="summary">과기정통부가 AI 학습데이터 저작권, 생성물 투명성, 노동시장 전환, 청소년 보호 등 4대 사회정책 과제를 논의했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 5건</summary>
+            <ul>
+<li>(디지털투데이) <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=718488" target="_blank" rel="noopener">AI 윤리원칙 자율점검표 연내 공개…해설서는 내년</a></li><li>(연합뉴스) <a href="https://www.yna.co.kr/view/AKR20261126055200017?input=1195m" target="_blank" rel="noopener">&#34;AI 시민참여 거버넌스 필요&#34;…정부, 사회정책 해법 모색</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261126_0003883945" target="_blank" rel="noopener">&#34;AI가 내 글·그림 무단 학습할라&#34;…학습데이터 목록 보유 의무 생기나</a></li><li>(뉴스1) <a href="https://www.news1.kr/it-science/internet-platform/6367053" target="_blank" rel="noopener">&#34;AI가 바꾸는 사회, 각계 지혜 모아야&#34;…AI 사회정책포럼 세미나</a></li><li>(디지털데일리) <a href="https://www.ddaily.co.kr/page/view/2026112609531425058" target="_blank" rel="noopener">AI 저작권부터 청소년 보호까지…정부, 사회과제 논의장 마련</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴시스)</span> <a href="https://www.newsis.com/view/NISX20261126_0003883914" target="_blank" rel="noopener">온실가스 절반 줄일 기술 확보한다…정부, 탄소중립 로드맵 재정비</a></p>
+<p class="summary">과기정통부가 탄소중립기술특별위원회 회의를 열어 탄소중립 기술혁신 종합로드맵 등 4개 안건을 논의했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 4건</summary>
+            <ul>
+<li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10950652?ref=naver" target="_blank" rel="noopener">2035년 온실가스 61% 감축…SMR·수소·태양광 기술혁신 가속</a></li><li>(연합뉴스) <a href="https://www.yna.co.kr/view/AKR20261126077900017?input=1195m" target="_blank" rel="noopener">정부, 탄소중립 기술혁신 종합로드맵 마련…원자력은 빠져</a></li><li>(디지털투데이) <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=718297" target="_blank" rel="noopener">정부, 탄소중립 기술개발 전략 재정비…기후변화 적응까지 확대</a></li><li>(아시아경제) <a href="https://view.asiae.co.kr/article/2026112609411997856" target="_blank" rel="noopener">탄소중립 R&amp;D, 온실가스 감축 넘어 기후변화 적응까지 확대</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(뉴시스)</span> <a href="https://www.newsis.com/view/NISX20261126_0003884548" target="_blank" rel="noopener">&#34;공정성 논란 없앤다&#34;…정부, &#39;국가대표 AI&#39; 독파모 3차 평가체계 전면...</a></p>
+<p class="summary">정부가 국가대표 AI 독파모 3차 평가체계를 공정성 논란 해소를 위해 전면 손질한다고 NIPA 원장이 밝혔다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술정보통신부</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 3건</summary>
+            <ul>
+<li>(지디넷코리아) <a href="https://zdnet.co.kr/view/?no=20261126135434" target="_blank" rel="noopener">박윤규 NIPA 원장 &#34;독파모 평가 지적사항 해소 방안 논의 중&#34;</a></li><li>(IT조선) <a href="https://it.chosun.com/news/articleView.html?idxno=3000000001908" target="_blank" rel="noopener">NIPA, 공정성 논란 &#39;독파모&#39; 평가 손질</a></li><li>(디지털투데이) <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=718382" target="_blank" rel="noopener">NIPA, 독파모 3차 평가 공정성 높인다…&#39;모두의 AI&#39; 활용 확산 추진</a></li>            </ul>
+          </details>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s3">
+    <details open>
+      <summary><h2>유관기관동향</h2><span class="cnt">10건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(전자신문)</span> <a href="https://www.etnews.com/20261126000081" target="_blank" rel="noopener">“정년퇴직 넘어 새로운 도전”…KIRD, 과학기술인 경력전환 지원</a></p>
+<p class="summary">국가과학기술인력개발원(KIRD)이 고경력 과학기술인의 퇴직 전후 경력설계와 사회 재진출을 돕는 경력전환 지원 체계를 추진한다고 밝혔다.</p>          <div class="meta">
+            <span class="imp m" title="중요도">★★☆<small>업무 참고</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 1건</summary>
+            <ul>
+<li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10950867?ref=naver" target="_blank" rel="noopener">“연구 노하우 사장 막는다”…KIRD, 고경력 과학자 ‘인생 2막’ 지원</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(연합뉴스)</span> <a href="https://www.yna.co.kr/view/AKR20261126036800017?input=1195m" target="_blank" rel="noopener">과기한림원, 이성주 서울대 교수 등 신입 정회원 34명 선출</a></p>
+<p class="summary">과기한림원이 2027년도 신입 정회원 34명을 선출했으며, 이 중 여성 과학기술인은 6명으로 2020년 이후 최다였다.</p>          <div class="meta">
+            <span class="imp m" title="중요도">★★☆<small>업무 참고</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 6건</summary>
+            <ul>
+<li>(대덕넷) <a href="http://www.hellodd.com/news/articleView.html?idxno=114022" target="_blank" rel="noopener">대학교수 33명, 출연연 1명···과기한림원, 신입 정회원 34명 선출</a></li><li>(아시아경제) <a href="https://view.asiae.co.kr/article/2026112608544650521" target="_blank" rel="noopener">국종성·박문정 등 34명, 과기한림원 정회원 선출</a></li><li>(전자신문) <a href="https://www.etnews.com/20261126000300" target="_blank" rel="noopener">과기한림원, 2027년도 정회원 34명 선출…여성 과학기술인 6명</a></li><li>(동아사이언스) <a href="https://www.dongascience.com/news/view/81094" target="_blank" rel="noopener">한림원 신입 회원 34명 선출…여성 회원 6명 &#34;2020년 이후 역대 최다&#34;</a></li><li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10949854?ref=naver" target="_blank" rel="noopener">韓 과학기술 빛낸 석학 34명, ‘한림원’ 정회원 됐다</a></li><li>(조선비즈) <a href="https://biz.chosun.com/science-chosun/science/2026/11/26/R4N3GNNKRNH55HELIWLAILG74A/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener">과기한림원, 신입 정회원 34명 선출… 여성 비율 17.6%</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(헤럴드경제)</span> <a href="https://biz.heraldcorp.com/article/10949834?ref=naver" target="_blank" rel="noopener">“2029년 개교 광주AI영재학교에 지역 할당 필요”</a></p>
+<p class="summary">2029년 개교 예정인 광주AI영재학교의 지역인재 할당과 관련해 과기정통부 지침에 따른 30~50% 배분 방침이 거론됐다.</p>          <div class="meta">
+            <span class="imp m" title="중요도">★★☆<small>업무 참고</small></span>
+            <span class="sub">4대 과학기술원</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 1건</summary>
+            <ul>
+<li>(뉴스워커) <a href="https://www.newsworker.co.kr/news/articleView.html?idxno=516519" target="_blank" rel="noopener">&#34;교육예산 늘었지만 성과는?&#34;... 전남광주통합특별시의회 &#39;송곳&#39; 검증</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(부산일보)</span> <a href="https://www.busan.com/view/busan/view.php?code=2026112620512688154" target="_blank" rel="noopener">목포에 ‘친환경선박 연구거점’ 출범…KRISO 친환경연료추진연구센터...</a></p>
+<p class="summary">KRISO가 목포에 친환경연료추진연구센터를 개소하고 KIMM, KOMEA 등과 업무협약을 체결했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(대전일보)</span> <a href="https://www.daejonilbo.com/news/articleView.html?idxno=2316694" target="_blank" rel="noopener">연구인력 떠나는 <mark>출연연</mark>…정년 환원법 1년 9개월째 제자리 [국회 문턱 못...</a></p>
+<p class="summary">국가과학기술연구회 자료에 따르면 ETRI 등 <mark>출연연</mark>은 짧은 정년과 낮은 보수로 인력이 이탈하고 있으며, 정년 환원법은 제자리다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(교수신문)</span> <a href="https://www.kyosu.net/news/articleView.html?idxno=212927" target="_blank" rel="noopener">성맹제 중앙대 교수, 한국연구재단 기초연구본부장 선임</a></p>
+<p class="summary">성맹제 중앙대 교수가 한국연구재단 기초연구본부장에 11월 26일자로 선임됐으며 임기는 2년이다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">기타 유관기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 11건</summary>
+            <ul>
+<li>(디지털타임스) <a href="https://www.dt.co.kr/article/12097558?ref=naver" target="_blank" rel="noopener">[11월26일 인사종합] 경찰청 외</a></li><li>(국민일보) <a href="https://www.kmib.co.kr/article/20261126501744" target="_blank" rel="noopener">[인사] 한국연구재단 外</a></li><li>(한국경제) <a href="https://www.hankyung.com/article/2026112632681" target="_blank" rel="noopener">[인사] ㈜HS효성 ; HS효성첨단소재 ; 삼성생명 등</a></li><li>(한겨레) <a href="https://www.hani.co.kr/arti/society/internalmove/1289305.html" target="_blank" rel="noopener">11월27일 인사</a></li><li>(서울경제) <a href="https://www.sedaily.com/article/20119462?ref=naver" target="_blank" rel="noopener">[인사] ㈜HS효성 외</a></li><li>(이데일리) <a href="https://www.edaily.co.kr/News/Read?newsId=03962246645649656&amp;mediaCodeNo=257&amp;utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=news_syndication&amp;utm_content=original_article" target="_blank" rel="noopener">오늘의 인사 종합</a></li><li>(한국일보) <a href="https://www.hankookilbo.com/news/article/A2026112615570005696?did=NA" target="_blank" rel="noopener">[인사] 기후에너지환경부 외</a></li><li>(경향신문) <a href="https://www.khan.co.kr/article/202611261424011" target="_blank" rel="noopener">오늘의 인사-한국연구재단, 아산복지재단, 삼성카드, 강북삼성병원</a></li><li>(비즈니스포스트) <a href="https://www.businesspost.co.kr/BP?command=article_view&amp;num=452997" target="_blank" rel="noopener">[인사] 강북삼성병원, 삼성증권, 삼성자산운용 외</a></li><li>(동아사이언스) <a href="https://www.dongascience.com/news/view/81085" target="_blank" rel="noopener">[인사] 한국연구재단</a></li><li>(아주경제) <a href="https://www.ajunews.com/view/20261126130202170" target="_blank" rel="noopener">&lt;오늘의 인사&gt;</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(헤럴드경제)</span> <a href="https://biz.heraldcorp.com/article/10950793?ref=naver" target="_blank" rel="noopener">LH, 단지 내 커뮤니티 공간에 ‘우리동네 과학방’ 연다</a></p>
+<p class="summary">LH가 한국과학창의재단과 협약해 임대주택 단지 내 커뮤니티 공간에 &#39;우리동네 과학방&#39;을 운영한다고 밝혔다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">한국과학창의재단</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 4건</summary>
+            <ul>
+<li>(한국금융신문) <a href="https://www.fntimes.com/html/view.php?ud=202611261722479409048b718333_18" target="_blank" rel="noopener">LH, 임대주택에 ‘우리동네 과학방’ 확대…내년 500회 이상 운영</a></li><li>(조선비즈) <a href="https://biz.chosun.com/real_estate/real_estate_general/2026/11/26/DJ3DKRIJQRBQHI3IIVNKHLBYUI/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener">공공임대 공동시설이 과학배움터로… LH, ‘우리동네 과학방’ 운영</a></li><li>(뉴스핌) <a href="https://www.newspim.com/news/view/20261126001225" target="_blank" rel="noopener">LH, 임대주택 작은도서관에 &#39;우리동네 과학방&#39;…내년 500회 운영</a></li><li>(연합뉴스) <a href="https://www.yna.co.kr/view/AKR20261126157300003?input=1195m" target="_blank" rel="noopener">LH, 공공임대 단지 과학교육 프로그램 확대 운영</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(노컷뉴스)</span> <a href="https://www.nocutnews.co.kr/news/6613280?utm_source=naver&amp;utm_medium=article&amp;utm_campaign=20261126162427" target="_blank" rel="noopener">ETRI, 연구부터 논문 작성까지 스스로 하는 AI &#39;유라&#39; 개발</a></p>
+<p class="summary">ETRI가 연구 주제 선정부터 논문 작성까지 수행하는 AI 에이전트 &#39;유라&#39;를 개발했다고 밝혔다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 11건</summary>
+            <ul>
+<li>(서울신문) <a href="https://www.seoul.co.kr/news/society/science-news/2026/11/26/20261126500231?wlog_tag3=naver" target="_blank" rel="noopener">연구 주제 고르고 실험하고 논문까지 쓰는 AI 개발</a></li><li>(디지털타임스) <a href="https://www.dt.co.kr/article/12097439?ref=naver" target="_blank" rel="noopener">“가설 수립부터 논문 작성까지”…논문 완성형 ‘AI 과학자’ 구현</a></li><li>(데일리안) <a href="https://www.dailian.co.kr/news/view/1720090/?sc=Naver" target="_blank" rel="noopener">ETRI, 논문까지 쓰는 AI 개발…日·싱가포르 기술 앞서</a></li><li>(내일신문) <a href="https://www.naeil.com/news/read/610194?ref=naver" target="_blank" rel="noopener">스스로 연구하고 논문 쓰는 인공지능</a></li><li>(전자신문) <a href="https://www.etnews.com/20261126000229" target="_blank" rel="noopener">연구·논문작성 모든 과정 스스로...ETRI, 日보다 앞선 AI 에이전트 개발</a></li><li>(연합뉴스) <a href="https://www.yna.co.kr/view/AKR20261126084100063?input=1195m" target="_blank" rel="noopener">ETRI, 연구부터 논문 작성까지 스스로 하는 AI 개발</a></li><li>(프레시안) <a href="https://www.pressian.com/pages/articles/2026112609513688408?utm_source=naver&amp;utm_medium=search" target="_blank" rel="noopener">ETRI, 가설 설정부터 논문 작성까지 수행하는 ‘AI 과학자’ 개발</a></li><li>(뉴스1) <a href="https://www.news1.kr/local/daejeon-chungnam/6366699" target="_blank" rel="noopener">연구주제 선정부터 논문 작성까지 AI가 스스로 한다</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261126_0003883947" target="_blank" rel="noopener">ETRI, 연구주제부터 논문까지 자율 작성 AI &#39;유라&#39; 개발…&#34;연구 동반자&#34;</a></li><li>(디지털투데이) <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=718254" target="_blank" rel="noopener">ETRI, 자율 연구 AI &#39;유라&#39; 개발…日·싱가포르 기술 앞서</a></li><li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10949715?ref=naver" target="_blank" rel="noopener">실험부터 논문 작성까지 ‘척척’…국산 AI 과학자 나왔다</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(머니투데이)</span> <a href="https://www.mt.co.kr/tech/2026/11/26/2026112616025788689" target="_blank" rel="noopener">순천서 조립하는 6차 누리호…나로센터까지 이송점검</a></p>
+<p class="summary">우주청과 항우연, 한화에어로스페이스가 순천에서 누리호 모사체의 고흥 이송 절차를 점검했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">정부출연연구기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 8건</summary>
+            <ul>
+<li>(대덕넷) <a href="http://www.hellodd.com/news/articleView.html?idxno=114021" target="_blank" rel="noopener">누리호, 이제 순천 한화에서 조립해 고흥으로 이송</a></li><li>(메트로신문) <a href="http://www.metroseoul.co.kr/article/20261126500324" target="_blank" rel="noopener">우주청·항우연·한화, 누리호 이송 사전 점검 완료…내년 6차 발사 준비</a></li><li>(아이뉴스24) <a href="http://www.inews24.com/view/2030705" target="_blank" rel="noopener">뱃길 따라 &#39;300리&#39;…누리호가 간다 [지금은 우주]</a></li><li>(이데일리) <a href="https://www.edaily.co.kr/News/Read?newsId=02473126645649656&amp;mediaCodeNo=257&amp;utm_source=naver&amp;utm_medium=referral&amp;utm_campaign=news_syndication&amp;utm_content=original_article" target="_blank" rel="noopener">누리호 6호기부터 순천서 단별 조립···해상 이송 점검</a></li><li>(한국일보) <a href="https://weekly.hankooki.com/news/articleView.html?idxno=7195843" target="_blank" rel="noopener">한화에어로, 누리호 6차 발사 &#39;이상무&#39;…모사체 이송 점검완료</a></li><li>(한국일보) <a href="https://daily.hankooki.com/news/articleView.html?idxno=1429306" target="_blank" rel="noopener">한화에어로, 누리호 6차 발사 준비…육상·해상 이송 절차 점검</a></li><li>(핀포인트뉴스) <a href="https://www.pinpointnews.co.kr/news/articleView.html?idxno=508311" target="_blank" rel="noopener">한화에어로, 누리호 6차 발사 대비 육상·해상 이송 점검 완료</a></li><li>(조선비즈) <a href="https://biz.chosun.com/science-chosun/science/2026/11/26/XWJWJBV67VHZBLWRPMUL3BN3WE/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener">누리호 6차부터 순천서 조립해 바닷길로 운송… 이송 점검 완료</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(전자신문)</span> <a href="https://www.etnews.com/20261126000245" target="_blank" rel="noopener"><mark>KAIST</mark>, 단백질 위치·방향 조절 기술 개발...유용 물질 생산 효율↑</a></p>
+<p class="summary"><mark>KAIST</mark>가 세포 속 지방 저장 공간에서 단백질 위치와 방향을 조절해 유용 물질 생산 효율을 높이는 기술을 개발했다고 밝혔다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">4대 과학기술원</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 7건</summary>
+            <ul>
+<li>(파이낸셜뉴스) <a href="https://www.fnnews.com/news/202611261458492549" target="_blank" rel="noopener">&#34;효소 배치 바꿨더니&#34;…천연색소 생산량 13배 늘었다 [헬스LAB]</a></li><li>(뉴시스) <a href="https://www.newsis.com/view/NISX20261126_0003884820" target="_blank" rel="noopener">KAIST, 세포 지방 저장고를 생산공장으로…천연색소 생산량 13배↑</a></li><li>(충청투데이) <a href="https://www.cctoday.co.kr/news/articleView.html?idxno=2241015" target="_blank" rel="noopener">효모 지방방울 계면서 효소 제어…천연색소 수율 13배 높였다</a></li><li>(한국강사신문) <a href="https://www.lecturernews.com/news/articleView.html?idxno=214539" target="_blank" rel="noopener">카이스트 이주영 교수팀, 세포 속 지방방울을 맞춤형 생산공장으로 전환...</a></li><li>(뉴스1) <a href="https://www.news1.kr/local/daejeon-chungnam/6366421" target="_blank" rel="noopener">각종 원료·소재 만드는 &#39;미생물 세포공장&#39; 생산 효율 높이는 기술 개발</a></li><li>(헤럴드경제) <a href="https://biz.heraldcorp.com/article/10949688?ref=naver" target="_blank" rel="noopener">세포 속 ‘지방 창고’의 대반전…천연색소 생산량 13배 높였다</a></li><li>(데일리안) <a href="https://www.dailian.co.kr/news/view/1719842/?sc=Naver" target="_blank" rel="noopener">KAIST, 세포 속 지방방울 활용…천연색소 생산 13배 높여</a></li>            </ul>
+          </details>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s4">
+    <details open>
+      <summary><h2>여성과학기술인</h2><span class="cnt">2건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(한겨레)</span> <a href="https://www.hani.co.kr/arti/culture/book/1289353.html" target="_blank" rel="noopener">여성 과학자를 키워낸, 라듐 이면의 마리 퀴리 [.txt]</a></p>
+<p class="summary">마리 퀴리가 여성 연구소장 아래에서 여성 과학자들을 길러냈고, 그에게서 배운 젊은 여성들이 고향에서 다른 여성들을 가르쳤다는 역사적 사례를 소개했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">여성 과학자·연구자</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(여성신문)</span> <a href="https://www.womennews.co.kr/news/articleView.html?idxno=284997" target="_blank" rel="noopener">여성의 경험은 AI를 어떻게 바꿀까… 다큐 ‘그녀의 A.I’ 27일 첫 방송</a></p>
+<p class="summary">과학 휴먼 다큐멘터리 &#39;그녀의 A.I - 혜리가 인공지능을 만났을 때&#39;가 여성의 경험으로 AI를 조명하며 첫 방송된다고 알렸다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">이공계 여성 현황·정책</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s5">
+    <details open>
+      <summary><h2>참고보도</h2><span class="cnt">7건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(충청투데이)</span> <a href="https://www.cctoday.co.kr/news/articleView.html?idxno=2241025" target="_blank" rel="noopener">충청권 과학고·영재학교 경쟁률 상승…최상위권 중학생 지원 늘어</a></p>
+<p class="summary">충청권 과학고·영재학교 경쟁률이 올랐고, 내신 5등급제와 첨단 <mark>이공계</mark> 선호가 배경으로 거론됐다. 의대 쏠림과 대비되는 <mark>이공계</mark> 인재 동향이다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(조선비즈)</span> <a href="https://biz.chosun.com/it-science/ict/2026/11/26/SAR5PG3YORGJXAT6CDURLP4M4Q/?utm_source=naver&amp;utm_medium=original&amp;utm_campaign=biz" target="_blank" rel="noopener">퀄컴, 국내 <mark>이공계</mark> 대학원생 우수 논문 34편 선정… 장학금 7900만원 지원</a></p>
+<p class="summary">퀄컴이 국내 <mark>이공계</mark> 대학원생 우수 논문 34편을 선정해 장학금 7900만원을 지원했다. 온디바이스 AI·자율주행 등 연구 성과를 대상으로 했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 9건</summary>
+            <ul>
+<li>(한국일보) <a href="https://weekly.hankooki.com/news/articleView.html?idxno=7195947" target="_blank" rel="noopener">퀄컴, 이공계 인재 대상 학술대회 &#39;이노베이션 펠로우십 코리아&#39; 개최</a></li><li>(아이뉴스24) <a href="http://www.inews24.com/view/2030860" target="_blank" rel="noopener">퀄컴 이노베이션 펠로우십 코리아 2026 성료</a></li><li>(아주경제) <a href="https://www.ajunews.com/view/20261126082347031" target="_blank" rel="noopener">퀄컴, 이공계 학술 논문 경연 대회 &#39;퀄컴 이노베이션 펠로우십 코리아 ...</a></li><li>(지디넷코리아) <a href="https://zdnet.co.kr/view/?no=20261126110617" target="_blank" rel="noopener">퀄컴, &#39;이노베이션 펠로우십 코리아 2026&#39; 종료</a></li><li>(파이낸셜뉴스) <a href="https://www.fnnews.com/news/202611261006157671" target="_blank" rel="noopener">퀄컴, 한국서 미래 AI 기술 이끌 인재 키운다…대학 연구 지원 확대</a></li><li>(머니투데이) <a href="https://www.mt.co.kr/tech/2026/11/26/2026112610165084034" target="_blank" rel="noopener">퀄컴, 국내 석박사 AI 인재에 연구 장학금 7900만원 지원</a></li><li>(디지털데일리) <a href="https://www.ddaily.co.kr/page/view/2026112609242199800" target="_blank" rel="noopener">퀄컴, &#39;이노베이션 펠로우십 코리아 2026&#39; 개최…총 34편 논문 선정</a></li><li>(디지털투데이) <a href="https://www.digitaltoday.co.kr/news/articleView.html?idxno=718277" target="_blank" rel="noopener">퀄컴, 이노베이션 펠로우십 개최...국내 대학 지원 지속</a></li><li>(한국일보) <a href="https://daily.hankooki.com/news/articleView.html?idxno=1429183" target="_blank" rel="noopener">퀄컴, 이공계 학술논문 경연대회 성료…논문 15편 선정</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(오마이뉴스)</span> <a href="https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003288465&amp;CMPT_CD=P0010&amp;utm_source=naver&amp;utm_medium=newsearch&amp;utm_campaign=naver_news" target="_blank" rel="noopener">10년 맞은 서울시 노동이사제, 이제 참여에서 &#39;결정&#39;으로</a></p>
+<p class="summary">서울시 노동이사제 도입 10주년을 맞아 공공기관 노동이사의 권한을 실질적으로 보장하겠다는 방침이 전해졌다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">공공기관</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 1건</summary>
+            <ul>
+<li>(서울신문) <a href="https://www.seoul.co.kr/news/publicnews/local_govern/smc_movement/2026/11/26/20261126500164?wlog_tag3=naver" target="_blank" rel="noopener">허윤정 서울시의원“거수기 넘어 실질적 경영 주체로”… 노동이사제 1...</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(약사공론)</span> <a href="https://www.kpanews.co.kr/news/articleView.html?idxno=549963" target="_blank" rel="noopener">오스템임플란트, 사내 동호회·가족 참여 행사로 조직문화 강화</a></p>
+<p class="summary">오스템임플란트가 사내 동호회와 가족 참여 행사를 통해 일·가정 양립 기반의 조직문화를 강화하고 있다고 밝혔다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">일·가정양립</span>
+          </div>
+          <details class="rel">
+            <summary>관련 기사 2건</summary>
+            <ul>
+<li>(머니투데이) <a href="https://www.mt.co.kr/thebio/2026/11/26/2026112610075144817" target="_blank" rel="noopener">오스템임플란트, 임직원 소통·가족친화 활동 지속…&#34;함께 성장해요&#34;</a></li><li>(이투데이) <a href="https://www.etoday.co.kr/news/view/2653158" target="_blank" rel="noopener">오스템임플란트, 사내 동호회·패밀리데이로 건강한 기업문화 조성</a></li>            </ul>
+          </details>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(브레이크뉴스)</span> <a href="http://www.breaknews.com/1254020" target="_blank" rel="noopener">전남광주특별시, 출범 후 첫 출연기관 경영평가 워크숍 개최…“통합·...</a></p>
+<p class="summary">전남광주통합특별시가 출범 후 첫 출연기관 경영평가 워크숍을 열고, 유사·중복 기관 22곳을 11곳으로 통폐합하기로 했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">공공기관</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(헤럴드경제)</span> <a href="https://biz.heraldcorp.com/article/10950155?ref=naver" target="_blank" rel="noopener">“반도체 인재, 대학원 아닌 취업 선택…이러다 일본 전철”</a></p>
+<p class="summary">김봉진 <mark>KAIST</mark> 교수가 대학원 대신 취업을 택하는 반도체 인재 흐름에 우려를 표했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">인재·채용</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(동아사이언스)</span> <a href="https://www.dongascience.com/news/view/81096" target="_blank" rel="noopener">[KSFY] 행정고시 5년 준비하고 기업 200곳 탈락한 문과 출신 위성AI 개발...</a></p>
+<p class="summary">문과 출신 인물이 위성AI 개발 기업에 참여한 과정을 다루며, 항공우주 전공이 아닌 엔지니어들의 채용 현황을 소개했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">다양성·포용</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+  <section class="sec " id="s6">
+    <details open>
+      <summary><h2>기고칼럼</h2><span class="cnt">3건</span><span class="chev" aria-hidden="true">▼</span></summary>
+      <ol class="items">
+        <li class="item">
+          <p class="title"><span class="src">(충청투데이)</span> <a href="https://www.cctoday.co.kr/news/articleView.html?idxno=2241064" target="_blank" rel="noopener">[사설] 대덕연구단지 낡은 규제부터 풀어야</a></p>
+<p class="summary">대덕연구개발특구 조성 50년을 맞았지만 활용되지 않는 땅과 건물이 방치되고 있다며, 연구 공간 확보를 막는 낡은 규제 개선을 촉구했다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+<span class="author">✎ 사설</span>            <span class="sub">사설·시평</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(아시아투데이)</span> <a href="https://www.asiatoday.co.kr/kn/view.php?key=20261126010010209" target="_blank" rel="noopener">[박승찬의 미중 대결과 공존 ②] 레드카펫 위의 스몰딜: 선전 미중정상...</a></p>
+<p class="summary">미국의 칩·클라우드 통제 확대와 중국의 15·5 규획 과학기술 자립자강 대응을 다루며 AI 거버넌스 문제를 짚었다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+<span class="author">✎ 박승찬 용인대 중국학과 교수·한중연합회 회장</span>            <span class="sub">과학기술 칼럼·기고</span>
+          </div>
+        </li>
+        <li class="item">
+          <p class="title"><span class="src">(중도일보)</span> <a href="https://www.joongdo.co.kr/web/view.php?key=20261126010009185" target="_blank" rel="noopener">[사이언스칼럼]방정식에 이름을 남긴 과학자, 데이터를 남긴 과학자</a></p>
+<p class="summary">현대 과학기술이 천재의 영감만이 아닌 데이터 축적에 기반한다는 점을 짚은 사이언스칼럼이다.</p>          <div class="meta">
+            <span class="imp l" title="중요도">★☆☆<small>동향 파악</small></span>
+            <span class="sub">과학기술 칼럼·기고</span>
+          </div>
+        </li>
+      </ol>
+    </details>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div>생성 2026-11-27 07:30 (KST) · 네이버 뉴스 검색 + AI(claude-haiku-5-5) 자동 선별·요약. 요약은 제목·첫 문단 기준이니 원문을 확인하세요.</div>
+  <div class="no-print" style="margin-top:6px"><a href="../archive/">지난 리포트 보기</a> · <a href="../">최신 리포트</a></div>
+</footer>
+
+<script>
+(function () {
+  var all = document.querySelectorAll('section.sec > details');
+  var btn = document.getElementById('toggleAll');
+  function sync() { var anyOpen = [].some.call(all, function (d) { return d.open; }); btn.textContent = anyOpen ? '모두 접기' : '모두 펼치기'; }
+  btn.addEventListener('click', function () {
+    var open = ![].some.call(all, function (d) { return d.open; });
+    all.forEach(function (d) { d.open = open; }); sync();
+  });
+  all.forEach(function (d) { d.addEventListener('toggle', sync); });
+  document.querySelectorAll('nav.tabs a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function () { var d = document.querySelector(a.getAttribute('href') + ' > details'); if (d) d.open = true; });
+  });
+  window.addEventListener('beforeprint', function () { all.forEach(function (d) { d.open = true; }); });
+})();
+</script>
+</body>
+</html>
